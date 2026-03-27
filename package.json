@@ -13,6 +13,7 @@
     "generate:pathogens": "tsx scripts/generate-pathogen-cases.ts"
   },
   "dependencies": {
+    "@vercel/analytics": "^2.0.1",
     "better-sqlite3": "^12.8.0",
     "fuse.js": "^7.1.0",
     "next": "^16.2.1",

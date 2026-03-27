@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { Analytics } from "@vercel/analytics/next";
 import TopNav from "@/components/TopNav";
 import "./globals.css";
 
@@ -67,6 +68,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         >
           {children}
         </main>
+        <Analytics />
       </body>
     </html>
   );
