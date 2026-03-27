@@ -171,6 +171,7 @@ body {
   .gameboard-shell {
     max-width: none !important;
     width: 100%;
+    scroll-margin-top: calc(env(safe-area-inset-top) + 136px);
   }
 
   .gameboard-card {

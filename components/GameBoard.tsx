@@ -47,6 +47,7 @@ export default function GameBoard({
   const [freeplayStreak, setFreeplayStreakState] = useState(0);
   const [reveal, setReveal] = useState<CaseReveal | null>(null);
   const [submittingGuess, setSubmittingGuess] = useState(false);
+  const boardShellRef = useRef<HTMLDivElement | null>(null);
   const hintsRegionRef = useRef<HTMLDivElement | null>(null);
 
   const storageKey =
@@ -114,7 +115,33 @@ export default function GameBoard({
   }, [mode, router]);
 
   useEffect(() => {
-    if (typeof window === "undefined" || !window.matchMedia("(max-width: 768px)").matches) {
+    if (
+      !state ||
+      mode !== "daily" ||
+      !isGameOver(state) ||
+      showModal ||
+      typeof window === "undefined"
+    ) {
+      return;
+    }
+
+    const timer = window.setTimeout(() => {
+      boardShellRef.current?.scrollIntoView({
+        behavior: "auto",
+        block: "start",
+      });
+    }, 40);
+
+    return () => window.clearTimeout(timer);
+  }, [mode, showModal, state]);
+
+  useEffect(() => {
+    if (
+      !state ||
+      isGameOver(state) ||
+      typeof window === "undefined" ||
+      !window.matchMedia("(max-width: 768px)").matches
+    ) {
       return;
     }
 
@@ -124,7 +151,7 @@ export default function GameBoard({
         block: "start",
       });
     });
-  }, [caseData.id]);
+  }, [caseData.id, state]);
 
   useEffect(() => {
     if (!state || !isGameOver(state)) return;
@@ -221,14 +248,15 @@ export default function GameBoard({
   }
 
   const gameOver = isGameOver(state);
+  const won = state.status === "won";
   const lost = state.status === "lost";
   const remaining = guessesRemaining(state);
   const correctIndex =
-    state.status === "won" ? state.guesses.length - 1 : undefined;
+    won ? state.guesses.length - 1 : undefined;
 
   return (
     <>
-      <div className="gameboard-shell" style={{ maxWidth: "860px", margin: "0 auto" }}>
+      <div ref={boardShellRef} className="gameboard-shell" style={{ maxWidth: "860px", margin: "0 auto" }}>
         {/* Main game card */}
         <div
           className="gameboard-card"
@@ -300,14 +328,20 @@ export default function GameBoard({
                 style={{
                   padding: "5px 10px",
                   borderRadius: "999px",
-                  background: lost ? "var(--danger-dim)" : "var(--surface-subtle)",
-                  border: `1px solid ${lost ? "var(--danger-border)" : "var(--border)"}`,
-                  color: lost ? "var(--danger-fg)" : "var(--fg-2)",
+                  background: lost
+                    ? "var(--danger-dim)"
+                    : won
+                    ? "var(--correct-dim)"
+                    : "var(--surface-subtle)",
+                  border: `1px solid ${
+                    lost ? "var(--danger-border)" : won ? "rgba(31, 122, 92, 0.22)" : "var(--border)"
+                  }`,
+                  color: lost ? "var(--danger-fg)" : won ? "var(--correct-fg)" : "var(--fg-2)",
                   whiteSpace: "nowrap",
                 }}
               >
                 {gameOver
-                  ? state.status === "won"
+                  ? won
                     ? `Solved in ${state.guesses.length}`
                     : "Failed"
                   : `${remaining} left`}
@@ -319,13 +353,27 @@ export default function GameBoard({
                   borderRadius: "999px",
                   background: lost
                     ? "var(--danger-dim)"
+                    : won
+                    ? "var(--correct-dim)"
                     : gameOver
                     ? "var(--surface-subtle)"
                     : "var(--accent-soft)",
                   border: `1px solid ${
-                    lost ? "var(--danger-border)" : gameOver ? "var(--border)" : "var(--accent-border)"
+                    lost
+                      ? "var(--danger-border)"
+                      : won
+                      ? "rgba(31, 122, 92, 0.22)"
+                      : gameOver
+                      ? "var(--border)"
+                      : "var(--accent-border)"
                   }`,
-                  color: lost ? "var(--danger-fg)" : gameOver ? "var(--fg-2)" : "var(--accent)",
+                  color: lost
+                    ? "var(--danger-fg)"
+                    : won
+                    ? "var(--correct-fg)"
+                    : gameOver
+                    ? "var(--fg-2)"
+                    : "var(--accent)",
                   whiteSpace: "nowrap",
                 }}
               >
