@@ -1,11 +1,16 @@
 import fs from "fs";
 import path from "path";
-import Database from "better-sqlite3";
 import { PATHOGEN_PLAN_BY_ID, applyTierDifficultyFloor } from "../data/pathogen-generation-plan";
+import { ORGANISM_MAP } from "./organisms";
 import { normalizeCaseAnswers } from "./caseAnswers";
 import { getDailyCase, getExpiredDailyCases } from "./dailyCase";
-import { dedupeCasesById, normalizeGeneratedPathogenCases } from "./generatedCases";
-import type { MicrobleCase, PathogenKind } from "./types";
+import { dedupeCasesById } from "./generatedCases";
+import type {
+  CaseReveal,
+  MicrobleCase,
+  PathogenKind,
+  PublicMicrobleCase,
+} from "./types";
 
 export type CasePool = "daily" | "freeplay" | "legacy_daily";
 
@@ -41,25 +46,11 @@ export interface InsertableCaseRecord {
   style?: string;
 }
 
-interface StoredCaseRow {
-  id: string;
-  pathogen_id: string;
-  pool: CasePool;
-  accepted_organism_ids_json: string | null;
-  hints_json: string;
-  difficulty: MicrobleCase["difficulty"];
-  explanation: string;
-  source: MicrobleCase["source"];
-  validated: number;
-  created_at: string;
-  pathogen_kind: PathogenKind | null;
-  model: string | null;
-  style: string | null;
-  sort_order: number;
-}
+type GeneratedJsonCase = InsertableCaseRecord & {
+  pool?: CasePool;
+};
 
-const DB_PATH = path.join(process.cwd(), "data", "microble.db");
-const JSON_SEED_FILES = {
+const JSON_FILES = {
   legacyDaily: path.join(process.cwd(), "data", "legacy-daily-cases.json"),
   daily: path.join(process.cwd(), "data", "daily-cases.json"),
   generatedDaily: path.join(process.cwd(), "data", "generated-daily-pathogen-cases.json"),
@@ -69,8 +60,6 @@ const JSON_SEED_FILES = {
     "generated-freeplay-pathogen-cases.json"
   ),
 } as const;
-
-let cachedDb: Database.Database | null = null;
 
 function loadJsonFile<T>(filePath: string): T[] {
   if (!fs.existsSync(filePath)) return [];
@@ -82,25 +71,102 @@ function loadJsonFile<T>(filePath: string): T[] {
   }
 }
 
-function toStoredCaseRecord(row: StoredCaseRow): StoredCaseRecord {
+function ensureParentDir(filePath: string): void {
+  fs.mkdirSync(path.dirname(filePath), { recursive: true });
+}
+
+function normalizeStoredRecord(record: StoredCaseRecord): StoredCaseRecord {
+  const normalizedAnswers = normalizeCaseAnswers({
+    organismId: record.pathogenId,
+    acceptedOrganismIds: record.acceptedOrganismIds,
+    hints: record.hints,
+    explanation: record.explanation,
+  });
+
+  const pathogen = PATHOGEN_PLAN_BY_ID.get(normalizedAnswers.organismId);
+  const difficulty =
+    record.source === "ai_generated" && pathogen
+      ? applyTierDifficultyFloor(pathogen.tier, record.difficulty)
+      : record.difficulty;
+
   return {
-    id: row.id,
-    pathogenId: row.pathogen_id,
-    pool: row.pool,
-    acceptedOrganismIds: row.accepted_organism_ids_json
-      ? (JSON.parse(row.accepted_organism_ids_json) as string[])
-      : undefined,
-    hints: JSON.parse(row.hints_json) as MicrobleCase["hints"],
-    difficulty: row.difficulty,
-    explanation: row.explanation,
-    source: row.source,
-    validated: Boolean(row.validated),
-    createdAt: row.created_at,
-    pathogenKind: row.pathogen_kind ?? undefined,
-    model: row.model ?? undefined,
-    style: row.style ?? undefined,
-    sortOrder: row.sort_order,
+    ...record,
+    pathogenId: normalizedAnswers.organismId,
+    acceptedOrganismIds: normalizedAnswers.acceptedOrganismIds,
+    difficulty,
   };
+}
+
+function fromMicrobleCase(
+  caseData: MicrobleCase,
+  pool: CasePool,
+  sortOrder: number
+): StoredCaseRecord {
+  return normalizeStoredRecord({
+    id: caseData.id,
+    pathogenId: caseData.organismId,
+    pool,
+    acceptedOrganismIds: caseData.acceptedOrganismIds,
+    hints: caseData.hints,
+    difficulty: caseData.difficulty,
+    explanation: caseData.explanation,
+    source: caseData.source,
+    validated: caseData.validated,
+    createdAt: caseData.createdAt,
+    sortOrder,
+  });
+}
+
+function fromGeneratedJsonCase(
+  caseData: GeneratedJsonCase,
+  pool: Extract<CasePool, "daily" | "freeplay">,
+  sortOrder: number
+): StoredCaseRecord | null {
+  if (!ORGANISM_MAP.has(caseData.pathogenId)) {
+    return null;
+  }
+
+  if (!Array.isArray(caseData.hints) || caseData.hints.length !== 5) {
+    return null;
+  }
+
+  return normalizeStoredRecord({
+    id: caseData.id,
+    pathogenId: caseData.pathogenId,
+    pool,
+    acceptedOrganismIds: caseData.acceptedOrganismIds,
+    hints: caseData.hints as MicrobleCase["hints"],
+    difficulty: caseData.difficulty,
+    explanation: caseData.explanation,
+    source: caseData.source,
+    validated: caseData.validated,
+    createdAt: caseData.createdAt,
+    pathogenKind: caseData.pathogenKind,
+    model: caseData.model,
+    style: caseData.style,
+    sortOrder,
+  });
+}
+
+function loadLegacyDailyRecords(): StoredCaseRecord[] {
+  return loadJsonFile<MicrobleCase>(JSON_FILES.legacyDaily).map((caseData, index) =>
+    fromMicrobleCase(caseData, "legacy_daily", index)
+  );
+}
+
+function loadCuratedDailyRecords(): StoredCaseRecord[] {
+  return loadJsonFile<MicrobleCase>(JSON_FILES.daily).map((caseData, index) =>
+    fromMicrobleCase(caseData, "daily", index)
+  );
+}
+
+function loadGeneratedPoolRecords(
+  pool: Extract<CasePool, "daily" | "freeplay">
+): StoredCaseRecord[] {
+  const filePath = pool === "daily" ? JSON_FILES.generatedDaily : JSON_FILES.generatedFreeplay;
+  return loadJsonFile<GeneratedJsonCase>(filePath)
+    .map((caseData, index) => fromGeneratedJsonCase(caseData, pool, index))
+    .filter((record): record is StoredCaseRecord => !!record);
 }
 
 function toMicrobleCase(record: StoredCaseRecord): MicrobleCase {
@@ -117,372 +183,47 @@ function toMicrobleCase(record: StoredCaseRecord): MicrobleCase {
   };
 }
 
-function ensureSchema(db: Database.Database): void {
-  db.exec(`
-    CREATE TABLE IF NOT EXISTS cases (
-      id TEXT PRIMARY KEY,
-      pathogen_id TEXT NOT NULL,
-      pool TEXT NOT NULL CHECK (pool IN ('daily', 'freeplay', 'legacy_daily')),
-      accepted_organism_ids_json TEXT,
-      hints_json TEXT NOT NULL,
-      difficulty TEXT NOT NULL CHECK (difficulty IN ('easy', 'medium', 'hard')),
-      explanation TEXT NOT NULL,
-      source TEXT NOT NULL CHECK (source IN ('handcrafted', 'ai_generated')),
-      validated INTEGER NOT NULL DEFAULT 1,
-      created_at TEXT NOT NULL,
-      pathogen_kind TEXT,
-      model TEXT,
-      style TEXT,
-      sort_order INTEGER NOT NULL
-    );
-    CREATE INDEX IF NOT EXISTS idx_cases_pool_sort
-      ON cases(pool, sort_order);
-    CREATE INDEX IF NOT EXISTS idx_cases_pathogen_pool
-      ON cases(pathogen_id, pool);
-  `);
-
-  const columns = db
-    .prepare("PRAGMA table_info(cases)")
-    .all() as Array<{ name: string }>;
-  const hasAcceptedIdsColumn = columns.some(
-    (column) => column.name === "accepted_organism_ids_json"
-  );
-
-  if (!hasAcceptedIdsColumn) {
-    db.exec("ALTER TABLE cases ADD COLUMN accepted_organism_ids_json TEXT");
-  }
-}
-
-function normalizeStoredCaseDifficulties(db: Database.Database): void {
-  const rows = db
-    .prepare(
-      `
-        SELECT id, pathogen_id, difficulty, source
-        FROM cases
-        WHERE source = 'ai_generated'
-      `
-    )
-    .all() as Array<{
-    id: string;
-    pathogen_id: string;
-    difficulty: MicrobleCase["difficulty"];
-    source: MicrobleCase["source"];
-  }>;
-
-  const updates = rows
-    .map((row) => {
-      const pathogen = PATHOGEN_PLAN_BY_ID.get(row.pathogen_id);
-      if (!pathogen) return null;
-
-      const normalizedDifficulty = applyTierDifficultyFloor(
-        pathogen.tier,
-        row.difficulty
-      );
-
-      if (normalizedDifficulty === row.difficulty) return null;
-      return { id: row.id, difficulty: normalizedDifficulty };
-    })
-    .filter(Boolean) as Array<{ id: string; difficulty: MicrobleCase["difficulty"] }>;
-
-  if (updates.length === 0) return;
-
-  const update = db.prepare("UPDATE cases SET difficulty = ? WHERE id = ?");
-  const transaction = db.transaction(
-    (records: Array<{ id: string; difficulty: MicrobleCase["difficulty"] }>) => {
-      for (const record of records) {
-        update.run(record.difficulty, record.id);
-      }
-    }
-  );
-
-  transaction(updates);
-}
-
-function normalizeStoredCaseAnswers(db: Database.Database): void {
-  const rows = db
-    .prepare(
-      `
-        SELECT id, pathogen_id, accepted_organism_ids_json, hints_json, explanation
-        FROM cases
-      `
-    )
-    .all() as Array<{
-    id: string;
-    pathogen_id: string;
-    accepted_organism_ids_json: string | null;
-    hints_json: string;
-    explanation: string;
-  }>;
-
-  const updates = rows
-    .map((row) => {
-      const normalized = normalizeCaseAnswers({
-        organismId: row.pathogen_id,
-        acceptedOrganismIds: row.accepted_organism_ids_json
-          ? (JSON.parse(row.accepted_organism_ids_json) as string[])
-          : undefined,
-        hints: JSON.parse(row.hints_json) as MicrobleCase["hints"],
-        explanation: row.explanation,
-      });
-
-      const existingAccepted = row.accepted_organism_ids_json
-        ? JSON.stringify(JSON.parse(row.accepted_organism_ids_json))
-        : null;
-      const nextAccepted = normalized.acceptedOrganismIds
-        ? JSON.stringify(normalized.acceptedOrganismIds)
-        : null;
-
-      if (
-        normalized.organismId === row.pathogen_id &&
-        existingAccepted === nextAccepted
-      ) {
-        return null;
-      }
-
-      return {
-        id: row.id,
-        pathogenId: normalized.organismId,
-        acceptedOrganismIdsJson: nextAccepted,
-      };
-    })
-    .filter(Boolean) as Array<{
-    id: string;
-    pathogenId: string;
-    acceptedOrganismIdsJson: string | null;
-  }>;
-
-  if (updates.length === 0) return;
-
-  const update = db.prepare(
-    `
-      UPDATE cases
-      SET pathogen_id = ?, accepted_organism_ids_json = ?
-      WHERE id = ?
-    `
-  );
-  const transaction = db.transaction(
-    (
-      records: Array<{
-        id: string;
-        pathogenId: string;
-        acceptedOrganismIdsJson: string | null;
-      }>
-    ) => {
-      for (const record of records) {
-        update.run(record.pathogenId, record.acceptedOrganismIdsJson, record.id);
-      }
-    }
-  );
-
-  transaction(updates);
-}
-
-function seedFromJsonIfEmpty(db: Database.Database): void {
-  const count = db.prepare("SELECT COUNT(*) AS count FROM cases").get() as {
-    count: number;
+function toPublicMicrobleCase(caseData: MicrobleCase): PublicMicrobleCase {
+  return {
+    id: caseData.id,
+    hints: caseData.hints,
+    difficulty: caseData.difficulty,
+    source: caseData.source,
+    validated: caseData.validated,
+    createdAt: caseData.createdAt,
   };
-  if (count.count > 0) return;
-
-  const legacyDaily = loadJsonFile<MicrobleCase>(JSON_SEED_FILES.legacyDaily).map(
-    (caseData, index) => ({
-      id: caseData.id,
-      pathogenId: caseData.organismId,
-      pool: "legacy_daily" as const,
-      acceptedOrganismIds: caseData.acceptedOrganismIds,
-      hints: caseData.hints,
-      difficulty: caseData.difficulty,
-      explanation: caseData.explanation,
-      source: caseData.source,
-      validated: caseData.validated,
-      createdAt: caseData.createdAt,
-      sortOrder: index,
-    })
-  );
-
-  const dailySeed = loadJsonFile<MicrobleCase>(JSON_SEED_FILES.daily).map(
-    (caseData, index) => ({
-      id: caseData.id,
-      pathogenId: caseData.organismId,
-      pool: "daily" as const,
-      acceptedOrganismIds: caseData.acceptedOrganismIds,
-      hints: caseData.hints,
-      difficulty: caseData.difficulty,
-      explanation: caseData.explanation,
-      source: caseData.source,
-      validated: caseData.validated,
-      createdAt: caseData.createdAt,
-      sortOrder: index,
-    })
-  );
-
-  const generatedDaily = normalizeGeneratedPathogenCases(
-    loadJsonFile<
-      InsertableCaseRecord & { pathogenId: string }
-    >(JSON_SEED_FILES.generatedDaily)
-  ).map((caseData, index) => ({
-    id: caseData.id,
-    pathogenId: caseData.organismId,
-    pool: "daily" as const,
-    acceptedOrganismIds: caseData.acceptedOrganismIds,
-    hints: caseData.hints,
-    difficulty: caseData.difficulty,
-    explanation: caseData.explanation,
-    source: caseData.source,
-    validated: caseData.validated,
-    createdAt: caseData.createdAt,
-    sortOrder: dailySeed.length + index,
-  }));
-
-  const generatedFreeplay = normalizeGeneratedPathogenCases(
-    loadJsonFile<
-      InsertableCaseRecord & { pathogenId: string }
-    >(JSON_SEED_FILES.generatedFreeplay)
-  ).map((caseData, index) => ({
-    id: caseData.id,
-    pathogenId: caseData.organismId,
-    pool: "freeplay" as const,
-    acceptedOrganismIds: caseData.acceptedOrganismIds,
-    hints: caseData.hints,
-    difficulty: caseData.difficulty,
-    explanation: caseData.explanation,
-    source: caseData.source,
-    validated: caseData.validated,
-    createdAt: caseData.createdAt,
-    sortOrder: index,
-  }));
-
-  const insert = db.prepare(`
-    INSERT INTO cases (
-      id, pathogen_id, pool, hints_json, difficulty, explanation, source,
-      validated, created_at, pathogen_kind, model, style, sort_order, accepted_organism_ids_json
-    ) VALUES (
-      @id, @pathogen_id, @pool, @hints_json, @difficulty, @explanation, @source,
-      @validated, @created_at, @pathogen_kind, @model, @style, @sort_order, @accepted_organism_ids_json
-    )
-  `);
-
-  const seedCases = [...legacyDaily, ...dailySeed, ...generatedDaily, ...generatedFreeplay];
-  const transaction = db.transaction((records: typeof seedCases) => {
-    for (const record of records) {
-      insert.run({
-        id: record.id,
-        pathogen_id: record.pathogenId,
-        pool: record.pool,
-        accepted_organism_ids_json: record.acceptedOrganismIds
-          ? JSON.stringify(record.acceptedOrganismIds)
-          : null,
-        hints_json: JSON.stringify(record.hints),
-        difficulty: record.difficulty,
-        explanation: record.explanation,
-        source: record.source,
-        validated: record.validated ? 1 : 0,
-        created_at: record.createdAt,
-        pathogen_kind: null,
-        model: null,
-        style: null,
-        sort_order: record.sortOrder,
-      });
-    }
-  });
-
-  transaction(seedCases);
 }
 
-function getDb(): Database.Database {
-  if (cachedDb) return cachedDb;
-
-  fs.mkdirSync(path.dirname(DB_PATH), { recursive: true });
-  const db = new Database(DB_PATH);
-  db.pragma("journal_mode = WAL");
-  ensureSchema(db);
-  seedFromJsonIfEmpty(db);
-  normalizeStoredCaseAnswers(db);
-  normalizeStoredCaseDifficulties(db);
-  cachedDb = db;
-  return db;
+function getGeneratedFilePath(pool: Extract<CasePool, "daily" | "freeplay">): string {
+  return pool === "daily" ? JSON_FILES.generatedDaily : JSON_FILES.generatedFreeplay;
 }
 
-export function getCaseStorePath(): string {
-  return DB_PATH;
-}
+function writeGeneratedPoolRecords(
+  pool: Extract<CasePool, "daily" | "freeplay">,
+  records: StoredCaseRecord[]
+): void {
+  const filePath = getGeneratedFilePath(pool);
+  ensureParentDir(filePath);
 
-export function listStoredCasesByPool(pool: CasePool): StoredCaseRecord[] {
-  const db = getDb();
-  const rows = db
-    .prepare(
-      `
-        SELECT *
-        FROM cases
-        WHERE pool = ?
-        ORDER BY sort_order ASC, created_at ASC, id ASC
-      `
-    )
-    .all(pool) as StoredCaseRow[];
+  const payload = records
+    .sort((a, b) => a.sortOrder - b.sortOrder || a.createdAt.localeCompare(b.createdAt))
+    .map((record) => ({
+      id: record.id,
+      pathogenId: record.pathogenId,
+      acceptedOrganismIds: record.acceptedOrganismIds,
+      pathogenKind: record.pathogenKind,
+      pool,
+      hints: record.hints,
+      difficulty: record.difficulty,
+      explanation: record.explanation,
+      source: record.source,
+      validated: record.validated,
+      createdAt: record.createdAt,
+      style: record.style,
+      model: record.model,
+    }));
 
-  return rows.map(toStoredCaseRecord);
-}
-
-export function upsertCases(pool: CasePool, cases: InsertableCaseRecord[]): void {
-  if (cases.length === 0) return;
-
-  const db = getDb();
-  const existingRows = db
-    .prepare("SELECT id, sort_order FROM cases WHERE pool = ?")
-    .all(pool) as Array<{ id: string; sort_order: number }>;
-  const sortOrderById = new Map(existingRows.map((row) => [row.id, row.sort_order]));
-  let nextSortOrder =
-    existingRows.reduce((max, row) => Math.max(max, row.sort_order), -1) + 1;
-
-  const statement = db.prepare(`
-    INSERT INTO cases (
-      id, pathogen_id, pool, hints_json, difficulty, explanation, source,
-      validated, created_at, pathogen_kind, model, style, sort_order, accepted_organism_ids_json
-    ) VALUES (
-      @id, @pathogen_id, @pool, @hints_json, @difficulty, @explanation, @source,
-      @validated, @created_at, @pathogen_kind, @model, @style, @sort_order, @accepted_organism_ids_json
-    )
-    ON CONFLICT(id) DO UPDATE SET
-      pathogen_id = excluded.pathogen_id,
-      pool = excluded.pool,
-      accepted_organism_ids_json = excluded.accepted_organism_ids_json,
-      hints_json = excluded.hints_json,
-      difficulty = excluded.difficulty,
-      explanation = excluded.explanation,
-      source = excluded.source,
-      validated = excluded.validated,
-      created_at = excluded.created_at,
-      pathogen_kind = excluded.pathogen_kind,
-      model = excluded.model,
-      style = excluded.style,
-      sort_order = excluded.sort_order
-  `);
-
-  const transaction = db.transaction((records: InsertableCaseRecord[]) => {
-    for (const record of records) {
-      const existingSortOrder = sortOrderById.get(record.id);
-      const sortOrder = existingSortOrder ?? nextSortOrder++;
-      statement.run({
-        id: record.id,
-        pathogen_id: record.pathogenId,
-        pool,
-        accepted_organism_ids_json: record.acceptedOrganismIds
-          ? JSON.stringify(record.acceptedOrganismIds)
-          : null,
-        hints_json: JSON.stringify(record.hints),
-        difficulty: record.difficulty,
-        explanation: record.explanation,
-        source: record.source,
-        validated: record.validated ? 1 : 0,
-        created_at: record.createdAt,
-        pathogen_kind: record.pathogenKind ?? null,
-        model: record.model ?? null,
-        style: record.style ?? null,
-        sort_order: sortOrder,
-      });
-    }
-  });
-
-  transaction(cases);
+  fs.writeFileSync(filePath, `${JSON.stringify(payload, null, 2)}\n`, "utf8");
 }
 
 function getUtcDayStart(date = new Date()): number {
@@ -500,33 +241,119 @@ function filterCasesVisibleAtDayStart(
   });
 }
 
-function getPrimaryDailyPool(now = new Date()): MicrobleCase[] {
-  const generatedDaily = listStoredCasesByPool("daily").map(toMicrobleCase);
-  const visibleGeneratedDaily = filterCasesVisibleAtDayStart(generatedDaily, now);
+function loadRuntimeGeneratedDailyCases(): MicrobleCase[] {
+  return loadGeneratedPoolRecords("daily").map(toMicrobleCase);
+}
 
+function loadRuntimeCuratedDailyCases(): MicrobleCase[] {
+  return loadCuratedDailyRecords().map(toMicrobleCase);
+}
+
+function loadRuntimeLegacyDailyCases(): MicrobleCase[] {
+  return loadLegacyDailyRecords().map(toMicrobleCase);
+}
+
+function loadRuntimeGeneratedFreeplayCases(): MicrobleCase[] {
+  return loadGeneratedPoolRecords("freeplay").map(toMicrobleCase);
+}
+
+function getPrimaryDailyPool(now = new Date()): MicrobleCase[] {
+  const visibleGeneratedDaily = filterCasesVisibleAtDayStart(
+    loadRuntimeGeneratedDailyCases(),
+    now
+  );
   if (visibleGeneratedDaily.length > 0) return visibleGeneratedDaily;
-  return listStoredCasesByPool("legacy_daily").map(toMicrobleCase);
+
+  const visibleCuratedDaily = filterCasesVisibleAtDayStart(
+    loadRuntimeCuratedDailyCases(),
+    now
+  );
+  if (visibleCuratedDaily.length > 0) return visibleCuratedDaily;
+
+  return loadRuntimeLegacyDailyCases();
 }
 
 function getPrimaryFreeplayPool(activeDailyPool: MicrobleCase[]): MicrobleCase[] {
-  const generatedFreeplay = listStoredCasesByPool("freeplay").map(toMicrobleCase);
+  const generatedFreeplay = loadRuntimeGeneratedFreeplayCases();
   const expiredDaily = getExpiredDailyCases(activeDailyPool);
 
   if (generatedFreeplay.length > 0 || expiredDaily.length > 0) {
     return dedupeCasesById([...generatedFreeplay, ...expiredDaily]);
   }
 
-  return listStoredCasesByPool("legacy_daily").map(toMicrobleCase);
+  return loadRuntimeLegacyDailyCases();
 }
 
-export function getDailyRuntimeCases(): MicrobleCase[] {
-  return getPrimaryDailyPool();
+function getAllRuntimeCases(now = new Date()): MicrobleCase[] {
+  return dedupeCasesById([
+    ...loadRuntimeGeneratedDailyCases(),
+    ...loadRuntimeCuratedDailyCases(),
+    ...loadRuntimeLegacyDailyCases(),
+    ...loadRuntimeGeneratedFreeplayCases(),
+    ...getExpiredDailyCases(getPrimaryDailyPool(now)),
+  ]);
+}
+
+export function getCaseStorePath(): string {
+  return path.join(process.cwd(), "data");
+}
+
+export function listStoredCasesByPool(pool: CasePool): StoredCaseRecord[] {
+  switch (pool) {
+    case "daily":
+      return loadGeneratedPoolRecords("daily");
+    case "freeplay":
+      return loadGeneratedPoolRecords("freeplay");
+    case "legacy_daily":
+      return loadLegacyDailyRecords();
+  }
+}
+
+export function upsertCases(pool: CasePool, cases: InsertableCaseRecord[]): void {
+  if (pool === "legacy_daily") {
+    throw new Error("Legacy daily cases are read-only.");
+  }
+
+  const existingRows = listStoredCasesByPool(pool);
+  const sortOrderById = new Map(existingRows.map((row) => [row.id, row.sortOrder]));
+  let nextSortOrder =
+    existingRows.reduce((max, row) => Math.max(max, row.sortOrder), -1) + 1;
+
+  const merged = cases.map((record) => {
+    const existingSortOrder = sortOrderById.get(record.id);
+    return normalizeStoredRecord({
+      id: record.id,
+      pathogenId: record.pathogenId,
+      pool,
+      acceptedOrganismIds: record.acceptedOrganismIds,
+      hints: record.hints,
+      difficulty: record.difficulty,
+      explanation: record.explanation,
+      source: record.source,
+      validated: record.validated,
+      createdAt: record.createdAt,
+      pathogenKind: record.pathogenKind,
+      model: record.model,
+      style: record.style,
+      sortOrder: existingSortOrder ?? nextSortOrder++,
+    });
+  });
+
+  writeGeneratedPoolRecords(pool, merged);
+}
+
+export function getDailyRuntimeCases(): PublicMicrobleCase[] {
+  return getPrimaryDailyPool().map(toPublicMicrobleCase);
 }
 
 export function getCurrentDailyCase(): MicrobleCase {
   const dailyCases = getPrimaryDailyPool();
   const fallbackCases = getPrimaryFreeplayPool(dailyCases);
   return getDailyCase(dailyCases, fallbackCases);
+}
+
+export function getPublicCurrentDailyCase(): PublicMicrobleCase {
+  return toPublicMicrobleCase(getCurrentDailyCase());
 }
 
 export function getFreeplayRuntimeCases(): MicrobleCase[] {
@@ -538,6 +365,27 @@ export function getFreeplayRuntimeCases(): MicrobleCase[] {
   const currentDailyCase = getDailyCase(dailyCases, freeplayCases);
   const filtered = freeplayCases.filter((caseData) => caseData.id !== currentDailyCase.id);
   return filtered.length > 0 ? filtered : freeplayCases;
+}
+
+export function getCaseById(caseId: string): MicrobleCase | null {
+  return getAllRuntimeCases().find((caseData) => caseData.id === caseId) ?? null;
+}
+
+export function getCaseReveal(caseId: string): CaseReveal | null {
+  const caseData = getCaseById(caseId);
+  if (!caseData) return null;
+
+  const organism = ORGANISM_MAP.get(caseData.organismId);
+  if (!organism) return null;
+
+  return {
+    organism,
+    explanation: caseData.explanation,
+  };
+}
+
+export function toPublicCase(caseData: MicrobleCase): PublicMicrobleCase {
+  return toPublicMicrobleCase(caseData);
 }
 
 export const __testing = {

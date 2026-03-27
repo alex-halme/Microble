@@ -1,13 +1,13 @@
 "use client";
 
 import { useEffect, useState } from "react";
-import type { GameState, Organism, MicrobleCase } from "@/lib/types";
+import type { CaseReveal, GameState, Organism, PublicMicrobleCase } from "@/lib/types";
 import { buildShareText } from "@/lib/gameState";
 
 interface ResultModalProps {
   state: GameState;
-  organism: Organism;
-  caseData: MicrobleCase;
+  reveal: CaseReveal | null;
+  caseData: PublicMicrobleCase;
   onClose?: () => void;
   onNewGame?: () => void;
   showNewGame?: boolean;
@@ -55,7 +55,7 @@ function getClassificationTags(organism: Organism): string[] {
 
 export default function ResultModal({
   state,
-  organism,
+  reveal,
   caseData,
   onClose,
   onNewGame,
@@ -65,7 +65,8 @@ export default function ResultModal({
   const [copied, setCopied] = useState(false);
   const won = state.status === "won";
   const lost = state.status === "lost";
-  const classificationTags = getClassificationTags(organism);
+  const organism = reveal?.organism;
+  const classificationTags = organism ? getClassificationTags(organism) : [];
 
   useEffect(() => {
     const handleAdvance = onNewGame;
@@ -93,6 +94,7 @@ export default function ResultModal({
   }, [onNewGame, showNewGame]);
 
   async function handleShare() {
+    if (!organism) return;
     const text = buildShareText(state, organism.canonical);
     try {
       await navigator.clipboard.writeText(text);
@@ -203,7 +205,7 @@ export default function ResultModal({
               letterSpacing: "-0.06em",
             }}
           >
-            {organism.canonical}
+            {organism?.canonical ?? "Revealing diagnosis..."}
           </h2>
           {classificationTags.length > 0 && (
             <p className="label" style={{ marginTop: "8px", color: "var(--fg-3)" }}>
@@ -230,7 +232,7 @@ export default function ResultModal({
               margin: 0,
             }}
           >
-            {caseData.explanation}
+            {reveal?.explanation ?? "Loading explanation..."}
           </p>
         </div>
 
@@ -300,6 +302,7 @@ export default function ResultModal({
         >
           <button
             onClick={handleShare}
+            disabled={!organism}
             style={{
               flex: showNewGame || onClose ? 1 : undefined,
               minWidth: "140px",
@@ -307,11 +310,12 @@ export default function ResultModal({
               background: "var(--surface-subtle)",
               border: "1px solid var(--border)",
               borderRadius: "999px",
-              cursor: "pointer",
               fontFamily: "var(--font-sans)",
               fontSize: "15px",
               fontWeight: 500,
               color: copied ? "var(--correct-fg)" : "var(--fg-2)",
+              opacity: organism ? 1 : 0.55,
+              cursor: organism ? "pointer" : "default",
               transition: "color 150ms, border-color 150ms, background 150ms",
             }}
             onMouseEnter={(e) => {

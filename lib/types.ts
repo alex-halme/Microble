@@ -52,6 +52,20 @@ export interface MicrobleCase {
   createdAt: string; // ISO date string
 }
 
+export interface PublicMicrobleCase {
+  id: string;
+  hints: [Hint, Hint, Hint, Hint, Hint];
+  difficulty: "easy" | "medium" | "hard";
+  source: "handcrafted" | "ai_generated";
+  validated: boolean;
+  createdAt: string; // ISO date string
+}
+
+export interface CaseReveal {
+  organism: Organism;
+  explanation: string;
+}
+
 // ─── Game State ───────────────────────────────────────────────────────────────
 
 export type GameStatus = "playing" | "won" | "lost";

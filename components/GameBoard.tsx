@@ -2,9 +2,8 @@
 
 import { useState, useEffect, useCallback } from "react";
 import { useRouter } from "next/navigation";
-import type { MicrobleCase, GameState, Organism } from "@/lib/types";
-import { ORGANISMS, ORGANISM_MAP } from "@/lib/organisms";
-import { getAcceptedOrganismIdsForCase } from "@/lib/caseAnswers";
+import type { CaseReveal, GameState, PublicMicrobleCase } from "@/lib/types";
+import { ORGANISMS } from "@/lib/organisms";
 import { matchGuess } from "@/lib/matcher";
 import {
   clearGameState,
@@ -28,7 +27,7 @@ import GuessHistory from "./GuessHistory";
 import ResultModal from "./ResultModal";
 
 interface GameBoardProps {
-  caseData: MicrobleCase;
+  caseData: PublicMicrobleCase;
   mode: "daily" | "freeplay";
   date?: string;
   onNewGame?: () => void;
@@ -46,11 +45,11 @@ export default function GameBoard({
   const [state, setState] = useState<GameState | null>(null);
   const [showModal, setShowModal] = useState(false);
   const [freeplayStreak, setFreeplayStreakState] = useState(0);
+  const [reveal, setReveal] = useState<CaseReveal | null>(null);
+  const [submittingGuess, setSubmittingGuess] = useState(false);
 
   const storageKey =
     mode === "daily" && date ? dailyKey(date) : freeplaylKey(caseData.id);
-
-  const organism: Organism | undefined = ORGANISM_MAP.get(caseData.organismId);
 
   useEffect(() => {
     let saved = loadGameState(storageKey);
@@ -73,6 +72,9 @@ export default function GameBoard({
     if (shouldAutoShow) {
       saveGameState(storageKey, hydratedState);
     }
+
+    setReveal(null);
+    setSubmittingGuess(false);
   }, [caseData.id, mode, date, storageKey]);
 
   useEffect(() => {
@@ -110,33 +112,74 @@ export default function GameBoard({
     return () => window.clearTimeout(timer);
   }, [mode, router]);
 
+  useEffect(() => {
+    if (!state || !isGameOver(state)) return;
+
+    let cancelled = false;
+    fetch(`/api/cases/${caseData.id}/reveal`, { cache: "no-store" })
+      .then((response) => (response.ok ? response.json() : null))
+      .then((payload: CaseReveal | null) => {
+        if (!cancelled) {
+          setReveal(payload);
+        }
+      })
+      .catch(() => {
+        if (!cancelled) {
+          setReveal(null);
+        }
+      });
+
+    return () => {
+      cancelled = true;
+    };
+  }, [caseData.id, state]);
+
   const handleGuess = useCallback(
-    (input: string) => {
-      if (!state || !organism || isGameOver(state)) return;
-      const result = matchGuess(input, ORGANISMS);
-      if (!result.matched) return;
-      const canonicalGuess = result.organism.canonical;
-      const acceptedOrganismIds = getAcceptedOrganismIdsForCase(caseData);
-      const isCorrect = acceptedOrganismIds.includes(result.organism.id);
-      const nextState = isCorrect
-        ? applyCorrectGuess(state, canonicalGuess)
-        : applyWrongGuess(state, canonicalGuess);
-      const next = isGameOver(nextState) ? markResultSeen(nextState) : nextState;
-      setState(next);
-      saveGameState(storageKey, next);
-      if (isGameOver(next)) setTimeout(() => setShowModal(true), 300);
+    async (input: string) => {
+      if (!state || isGameOver(state) || submittingGuess) return;
+
+      setSubmittingGuess(true);
+      try {
+        const response = await fetch(`/api/cases/${caseData.id}/guess`, {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({ guess: input }),
+        });
+        const payload = (await response.json().catch(() => null)) as
+          | {
+              ok: true;
+              canonicalGuess: string;
+              correct: boolean;
+            }
+          | {
+              ok: false;
+            }
+          | null;
+
+        if (!payload?.ok) return;
+
+        const nextState = payload.correct
+          ? applyCorrectGuess(state, payload.canonicalGuess)
+          : applyWrongGuess(state, payload.canonicalGuess);
+        const next = isGameOver(nextState) ? markResultSeen(nextState) : nextState;
+        setState(next);
+        saveGameState(storageKey, next);
+        if (isGameOver(next)) setTimeout(() => setShowModal(true), 300);
+      } finally {
+        setSubmittingGuess(false);
+      }
     },
-    [state, organism, storageKey]
+    [caseData.id, state, storageKey, submittingGuess]
   );
 
   const handleSkip = useCallback(() => {
-    if (!state || isGameOver(state)) return;
+    if (!state || isGameOver(state) || submittingGuess) return;
     const nextState = applySkip(state);
     const next = isGameOver(nextState) ? markResultSeen(nextState) : nextState;
     setState(next);
     saveGameState(storageKey, next);
     if (isGameOver(next)) setTimeout(() => setShowModal(true), 300);
-  }, [state, storageKey]);
+  }, [state, storageKey, submittingGuess]);
 
   if (!state) {
     return (
@@ -160,14 +203,6 @@ export default function GameBoard({
           ))}
         </div>
       </div>
-    );
-  }
-
-  if (!organism) {
-    return (
-      <p style={{ color: "var(--accent)", fontFamily: "var(--font-sans)", fontSize: "15px" }}>
-        Error: pathogen not found. Please report this issue.
-      </p>
     );
   }
 
@@ -301,7 +336,7 @@ export default function GameBoard({
                 onSkip={handleSkip}
                 hintsRevealed={state.hintsRevealed}
                 guessesRemaining={remaining}
-                disabled={gameOver}
+                disabled={gameOver || submittingGuess}
                 matchGuess={(input) => matchGuess(input, ORGANISMS)}
               />
             ) : (
@@ -401,7 +436,7 @@ export default function GameBoard({
       {showModal && (
         <ResultModal
           state={state}
-          organism={organism}
+          reveal={reveal}
           caseData={caseData}
           onClose={() => setShowModal(false)}
           onNewGame={onNewGame}

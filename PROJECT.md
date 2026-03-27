@@ -63,21 +63,20 @@ lib/
   matcher.ts          4-pass answer matching logic (pure function, fully testable)
   gameState.ts        localStorage persistence, state transitions, share text builder
   dailyCase.ts        UTC epoch-based daily case selection
-  caseStore.ts        SQLite-backed case storage, seeding, and pool queries
+  caseStore.ts        Server-side JSON case storage, sanitization, and pool queries
   generatedCases.ts   Helpers that normalize generated pathogen cases into live game cases
 
 data/
-  microble.db         SQLite database used by the live app and generation scripts
-  daily-cases.json    Seed/fallback generated daily cases JSON
+  daily-cases.json    Optional curated daily fallback JSON
   legacy-daily-cases.json Archived hand-crafted daily seed cases
-  pathogen-catalog.ts Expanded editorial pathogen list: 164 bacteria/viruses/parasites for future pool growth
+  pathogen-catalog.ts Expanded editorial pathogen list for bacteria, viruses, parasites, and fungi
   pathogen-generation-plan.ts Quota plan for separate daily vs free-play expansion pools
-  generated-freeplay-pathogen-cases.json Legacy seed/export file for generated free-play cases
-  generated-daily-pathogen-cases.json Legacy seed/export file for generated daily cases
+  generated-freeplay-pathogen-cases.json Live generated free-play pool JSON
+  generated-daily-pathogen-cases.json Live generated daily pool JSON
 
 scripts/
-  generate-cases.ts   Offline AI case generation pipeline that now writes free-play cases into SQLite
-  generate-pathogen-cases.ts Broader offline pipeline for bacteria + viruses + parasites, writing daily/free-play pools into SQLite
+  generate-cases.ts   Offline AI case generation pipeline that writes free-play cases into JSON
+  generate-pathogen-cases.ts Broader offline pipeline writing daily/free-play pools into JSON
 
 tests/
   matcher.test.ts     22 unit tests for the matching logic — all passing
@@ -276,7 +275,7 @@ OPENAI_API_KEY=sk-...  npm run generate -- --batch-status <id>
 OPENAI_API_KEY=sk-...  npm run generate -- --batch-retrieve <id>
 ```
 
-Output: `data/microble.db` (`cases` table, `freeplay` pool rows).
+Output: `data/generated-freeplay-pathogen-cases.json`.
 
 ### Expanded Pathogen Pipeline
 
@@ -286,7 +285,7 @@ To support a larger future pool that includes **viruses and parasites** in addit
 - `data/pathogen-generation-plan.ts`: quota plan that separates **daily** and **free play** generation targets
   - free play target: **2060** AI-generated candidate cases
   - daily candidate target: **324** higher-quality candidate cases
-- `scripts/generate-pathogen-cases.ts`: offline generator that writes into the SQLite `cases` table for:
+- `scripts/generate-pathogen-cases.ts`: offline generator that writes JSON pool files for:
   - `freeplay`
   - `daily`
 
@@ -315,9 +314,9 @@ OPENAI_API_KEY=sk-... npm run generate:pathogens -- --pathogen-id=influenza-a-vi
 These are the next planned phases. They are not implemented yet.
 
 ### Hosted multi-instance storage
-- The app now uses local SQLite (`data/microble.db`) for case storage.
-- This is appropriate for local development and a lightweight single-instance deployment.
-- If the project outgrows file-based SQLite, the next migration target should be a hosted Postgres database.
+- The app now uses server-side JSON files as its runtime case store.
+- This is appropriate while production is read-only and the game only needs to ship curated snapshots.
+- If the project later needs multi-instance writes or hidden server-managed progression, the next migration target should be a hosted database.
 
 ### Vercel cron for pool replenishment
 - `vercel.json` with a cron entry hitting `/api/admin/generate-cases`
@@ -358,4 +357,4 @@ The build must pass cleanly (`npm run build` exits 0) before any change is consi
 | No `src/` directory | The project root is flat. Imports use `@/` alias pointing to the project root |
 | System font stack, not webfonts | Keeps the UI fast, native-feeling, and closer to Apple platform typography without external font loading |
 | `EPOCH = 2026-04-01` | Do not change after launch. Moving the epoch shifts every case assignment globally |
-| SQLite is the live case store | Daily and free-play case selection now read from `data/microble.db`; JSON files are seed/export artifacts, not the runtime source of truth |
+| Server-side JSON is the live case store | Daily and free-play case selection now read from generated JSON snapshots on the server; the full dataset is not imported into client components |

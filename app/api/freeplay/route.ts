@@ -1,5 +1,5 @@
 import { NextRequest, NextResponse } from "next/server";
-import { getFreeplayRuntimeCases } from "@/lib/caseStore";
+import { getFreeplayRuntimeCases, toPublicCase } from "@/lib/caseStore";
 import {
   ALL_FREEPLAY_PATHOGEN_TYPES,
   DEFAULT_FREEPLAY_FILTERS,
@@ -42,7 +42,7 @@ export async function POST(request: NextRequest) {
   );
 
   return NextResponse.json({
-    caseData: remaining.length > 0 ? pickRandom(remaining) : null,
+    caseData: remaining.length > 0 ? toPublicCase(pickRandom(remaining)) : null,
     totalCases: allCases.length,
     completedMatchingCount,
   });

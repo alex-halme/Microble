@@ -2,7 +2,7 @@
 
 import { useState, useEffect, useCallback, useMemo } from "react";
 import GameBoard from "@/components/GameBoard";
-import type { MicrobleCase } from "@/lib/types";
+import type { PublicMicrobleCase } from "@/lib/types";
 import {
   ALL_FREEPLAY_PATHOGEN_TYPES,
   DEFAULT_FREEPLAY_FILTERS,
@@ -479,7 +479,7 @@ function CompletionView({
 }
 
 export default function PlayPage() {
-  const [currentCase, setCurrentCase] = useState<MicrobleCase | null>(null);
+  const [currentCase, setCurrentCase] = useState<PublicMicrobleCase | null>(null);
   const [totalCases, setTotalCases] = useState(0);
   const [completedMatchingCount, setCompletedMatchingCount] = useState(0);
   const [hydrated, setHydrated] = useState(false);
@@ -505,7 +505,7 @@ export default function PlayPage() {
         }),
       });
       const payload = (await response.json()) as {
-        caseData: MicrobleCase | null;
+        caseData: PublicMicrobleCase | null;
         totalCases: number;
         completedMatchingCount: number;
       };
