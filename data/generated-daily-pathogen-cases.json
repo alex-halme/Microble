@@ -3292,5 +3292,1165 @@
     "createdAt": "2026-03-27T20:29:34.396Z",
     "style": "mgh_case_report",
     "model": "gpt-5-mini"
+  },
+  {
+    "id": "path-daily-candida-albicans-medium-1774646355341-1-0",
+    "pathogenId": "candida-albicans",
+    "pathogenKind": "fungus",
+    "pool": "daily",
+    "hints": [
+      {
+        "order": 1,
+        "text": "A 58-year-old woman presented with 12 days of progressive odynophagia and retrosternal burning. She now avoids solids and liquids because of pain, has lost 3 kg, and has low-grade fevers and new hoarseness.",
+        "category": "presentation"
+      },
+      {
+        "order": 2,
+        "text": "Medical history notable for insulin-treated type 2 diabetes with recent poor glycaemic control. Three weeks earlier she had a severe COPD exacerbation treated with a short course of oral corticosteroids after long-standing high-dose inhaled corticosteroid use. She completed a 10-day course of broad-spectrum antibiotics for pneumonia two weeks before symptoms began.",
+        "category": "history"
+      },
+      {
+        "order": 3,
+        "text": "Flexible upper endoscopy demonstrated multiple white, adherent plaque-like lesions from the mid to distal oesophagus. The plaques scraped away, exposing friable erythematous mucosa. Multiple biopsies and brushings were obtained.",
+        "category": "imaging"
+      },
+      {
+        "order": 4,
+        "text": "She uses a spacer-less inhaler daily and wears an upper denture that she reports fits poorly. She also recalled two episodes of symptomatic vulvovaginal candidosis in the past year treated with over-the-counter topical azole preparations.",
+        "category": "exposure"
+      },
+      {
+        "order": 5,
+        "text": "Microscopy of oesophageal brushings with potassium hydroxide preparation showed budding yeast and pseudohyphae. Tissue culture produced colonies that formed germ tubes within two hours at 37°C.",
+        "category": "lab"
+      }
+    ],
+    "difficulty": "medium",
+    "explanation": "Risk factors in this patient include insulin-treated diabetes, recent systemic and inhaled corticosteroid exposure, and recent broad-spectrum antibiotics. Endoscopy showing adherent white plaques that scrape off plus KOH microscopy demonstrating budding yeast and pseudohyphae indicate a mucosal yeast infection. A positive germ tube test from culture identifies Candida albicans. Other causes of infectious oesophagitis such as herpes simplex virus or cytomegalovirus are less likely given the plaque morphology and absence of viral cytopathic changes on biopsy.",
+    "source": "ai_generated",
+    "validated": true,
+    "createdAt": "2026-03-27T21:19:15.341Z",
+    "style": "mgh_case_report",
+    "model": "gpt-5-mini"
+  },
+  {
+    "id": "path-daily-cytomegalovirus-hard-1774646363956-3-0",
+    "pathogenId": "cytomegalovirus",
+    "pathogenKind": "virus",
+    "pool": "daily",
+    "hints": [
+      {
+        "order": 1,
+        "text": "A 52-year-old man presents to clinic with 2 weeks of fever to 38.2°C, crampy lower abdominal pain, and progressive watery diarrhoea that became bloody over 3 days. He reports a 3 kg weight loss and low urine output. On exam he is febrile, blood pressure 112/68 mmHg, abdomen diffusely tender without peritonism, and there is mild peripheral oedema.",
+        "category": "presentation"
+      },
+      {
+        "order": 2,
+        "text": "Three months earlier he received a deceased-donor kidney transplant for diabetic nephropathy. Current immunosuppression is tacrolimus, mycophenolate mofetil, and prednisone. He received a 6-week course of post-transplant antiviral prophylaxis that was stopped 6 weeks ago. No recent travel. No known sick contacts.",
+        "category": "history"
+      },
+      {
+        "order": 3,
+        "text": "Blood tests show WBC 2.1 × 10^9/L, neutrophils 0.9 × 10^9/L, platelets 85 × 10^9/L, creatinine 210 µmol/L (baseline 120 µmol/L), ALT 78 U/L, CRP 120 mg/L. Stool PCR for common bacterial pathogens and for Clostridioides difficile toxin is negative. Quantitative plasma DNA PCR returned at 4.4 × 10^5 copies/mL for a DNA virus commonly monitored after solid-organ transplant.",
+        "category": "lab"
+      },
+      {
+        "order": 4,
+        "text": "Flexible sigmoidoscopy shows patchy mucosal erythema, several deep linear and punched-out ulcers in the sigmoid and descending colon, and areas of friable mucosa. Multiple biopsies were obtained from ulcer margins and base.",
+        "category": "imaging"
+      },
+      {
+        "order": 5,
+        "text": "Empiric intravenous therapy with an antiherpetic nucleoside analogue was started. Fever and diarrhoea began to improve within 72 hours. Repeat plasma quantitative PCR fell from 4.4 × 10^5 copies/mL to 2.1 × 10^3 copies/mL after 7 days. Histopathology of colonic biopsies later reported markedly enlarged stromal and epithelial cells containing a single large basophilic intranuclear inclusion with a clear peri-nuclear halo and occasional smaller cytoplasmic inclusions.",
+        "category": "treatment_response"
+      }
+    ],
+    "difficulty": "hard",
+    "explanation": "Solid-organ transplant recipient who completed short-course antiviral prophylaxis and now presents 3 months post-transplant with fever, colitis, cytopenias, rising creatinine, high-level plasma DNAemia, characteristic enlarged cells with large intranuclear inclusions on biopsy, and rapid clinical and virologic response to intravenous ganciclovir. These findings identify Cytomegalovirus as the pathogen. Confirmatory tests include quantitative DNA PCR and immunohistochemistry on tissue; treatment is intravenous ganciclovir followed by oral valganciclovir with attention to dose adjustment for renal function.",
+    "source": "ai_generated",
+    "validated": true,
+    "createdAt": "2026-03-27T21:19:23.956Z",
+    "style": "mgh_case_report",
+    "model": "gpt-5-mini"
+  },
+  {
+    "id": "path-daily-echinococcus-granulosus-medium-1774646413335-5-0",
+    "pathogenId": "echinococcus-granulosus",
+    "pathogenKind": "parasite",
+    "pool": "daily",
+    "hints": [
+      {
+        "order": 1,
+        "text": "A 38-year-old woman who works on a small mixed livestock farm presents with 6 months of progressive right upper quadrant discomfort and early satiety. She reports a dry cough at times and a 5 kg weight loss. On examination her temperature is 37.4°C, there is a firm palpable liver edge 3 cm below the right costal margin, and no scleral icterus.",
+        "category": "presentation"
+      },
+      {
+        "order": 2,
+        "text": "Past medical history is notable only for well controlled hypothyroidism. She is not on corticosteroids or other immunosuppressants. Two months earlier she completed a 10-day oral antibiotic course for presumed pyogenic hepatic abscess without symptomatic improvement. There is no history of recent travel outside the region.",
+        "category": "history"
+      },
+      {
+        "order": 3,
+        "text": "Full blood count shows white blood cells 7.2 × 10^9/L with eosinophils 0.9 × 10^9/L. Haemoglobin 130 g/L. Platelets 260 × 10^9/L. Liver tests show ALT 42 U/L, AST 35 U/L, alkaline phosphatase 210 U/L, total bilirubin 12 μmol/L. C reactive protein 18 mg/L. Entamoeba serology is negative.",
+        "category": "lab"
+      },
+      {
+        "order": 4,
+        "text": "Ultrasound of the liver demonstrates a 9.5 cm well circumscribed complex cystic lesion in the right lobe with internal septations and a partially calcified rim. Contrast CT confirms a large non-enhancing cyst that exerts mass effect on adjacent biliary radicles but no solid enhancing nodule.",
+        "category": "imaging"
+      },
+      {
+        "order": 5,
+        "text": "On further questioning she describes lifelong work on the family farm with regular involvement in home slaughter of sheep and goats. The household keeps several dogs that are fed raw viscera. She often handles the animals and cleans the yard where dogs defecate.",
+        "category": "exposure"
+      }
+    ],
+    "difficulty": "medium",
+    "explanation": "The combination of a long-standing solitary hepatic cyst with internal septations and peripheral calcification, mild eosinophilia, failure to respond to antibiotics, and close contact with dogs that are fed raw offal points to cystic echinococcosis caused by a tapeworm transmitted through a dog–livestock cycle. Management considerations include anti-parasitic therapy with benzimidazole derivatives and coordinated surgical or percutaneous intervention depending on cyst stage and risk of spillage.",
+    "source": "ai_generated",
+    "validated": true,
+    "createdAt": "2026-03-27T21:20:13.335Z",
+    "style": "mgh_case_report",
+    "model": "gpt-5-mini"
+  },
+  {
+    "id": "path-daily-hepatitis-a-virus-hard-1774646476905-8-0",
+    "pathogenId": "hepatitis-a-virus",
+    "pathogenKind": "virus",
+    "pool": "daily",
+    "hints": [
+      {
+        "order": 1,
+        "text": "A 34-year-old man presents to the emergency department with 8 days of progressive fatigue, anorexia, nausea and dark urine, and 48 hours of increasing pruritus and yellowing of his eyes. He describes a dull right upper quadrant ache without vomiting. On examination he is visibly jaundiced with scleral icterus and mild right upper quadrant tenderness, afebrile and haemodynamically stable.",
+        "category": "presentation"
+      },
+      {
+        "order": 2,
+        "text": "No prior chronic liver disease and no regular medications. Drinks alcohol only on weekends. He reports not having received childhood immunisations for certain viral hepatitides. He is HIV negative and has no history of intravenous drug use. Symptoms began about two weeks after a short coastal weekend trip.",
+        "category": "history"
+      },
+      {
+        "order": 3,
+        "text": "Blood tests show ALT 1 420 U/L, AST 1 030 U/L, alkaline phosphatase 210 U/L, total bilirubin 112 µmol/L, albumin 38 g/L and INR 1.0. Full blood count is within reference ranges with WBC 6.4 × 10^9/L and platelets 230 × 10^9/L. Serology for common blood-borne viral hepatitides returned negative.",
+        "category": "lab"
+      },
+      {
+        "order": 4,
+        "text": "Abdominal ultrasound shows a mildly echogenic liver, patent portal and hepatic veins, no biliary ductal dilatation and no cholelithiasis. There is no ascites and Doppler flow to the liver is normal.",
+        "category": "imaging"
+      },
+      {
+        "order": 5,
+        "text": "Public health follow-up identified a cluster of similar acute jaundice among attendees at a seaside communal seafood event he attended 4 weeks earlier. Leftover oyster samples and stool from several affected attendees yielded identical viral RNA by PCR. The patient has detectable virus-specific IgM consistent with an acute infection by an enterically transmitted non-enveloped single-stranded RNA virus that is vaccine preventable and causes self-limited acute hepatitis.",
+        "category": "exposure"
+      }
+    ],
+    "difficulty": "hard",
+    "explanation": "Presentation and labs indicate an acute hepatocellular injury with marked transaminase elevation and hyperbilirubinaemia but preserved synthetic function. Imaging excludes obstructive biliary disease. The epidemiology points to a point-source exposure from contaminated shellfish with an incubation period compatible with an enteric viral hepatitis. Detection of virus-specific IgM and identical viral RNA in oysters and multiple cases identifies the agent as Hepatitis A virus. The case illustrates an outbreak-linked, foodborne transmission producing acute, usually self-limited hepatitis in an unvaccinated adult.",
+    "source": "ai_generated",
+    "validated": true,
+    "createdAt": "2026-03-27T21:21:16.905Z",
+    "style": "mgh_case_report",
+    "model": "gpt-5-mini"
+  },
+  {
+    "id": "path-daily-hepatitis-c-virus-hard-1774646452388-10-0",
+    "pathogenId": "hepatitis-c-virus",
+    "pathogenKind": "virus",
+    "pool": "daily",
+    "hints": [
+      {
+        "order": 1,
+        "text": "A 54-year-old man is referred to hepatology with a 3-month history of progressive numbness and burning in his feet, intermittent non-blanching purpuric lesions on both lower legs, increasing fatigue, and new lower‑limb swelling. He denies fever or abdominal pain. On examination he has palpable purpura over the shins, reduced distal vibration sensation in both feet, mild scleral icterus, and a spleen tip palpable 3 cm below the costal margin.",
+        "category": "presentation"
+      },
+      {
+        "order": 2,
+        "text": "Medical history notable for type 2 diabetes and hypertension. He underwent multiple units transfusion after a road traffic collision in 1984. Drinks 1–2 alcoholic units daily and stopped smoking 10 years ago. No history of current injection drug use, no recent tattoos. Childhood vaccination against hepatitis B given. No known family liver disease.",
+        "category": "history"
+      },
+      {
+        "order": 3,
+        "text": "Laboratory testing: haemoglobin 124 g/L, platelets 95 × 10^9/L, white cell count 6.8 × 10^9/L. ALT 102 U/L, AST 88 U/L, alkaline phosphatase 125 U/L, total bilirubin 28 µmol/L, albumin 32 g/L, INR 1.2. Creatinine 145 µmol/L. Urinalysis with 2+ protein and red cell casts. Complement C4 reduced at 0.06 g/L, rheumatoid factor 120 IU/mL, serum cryoglobulins positive. Serology negative for acute hepatitis A IgM and for hepatitis B surface antigen and core IgM.",
+        "category": "lab"
+      },
+      {
+        "order": 4,
+        "text": "Abdominal ultrasound shows a coarse, nodular liver contour and splenomegaly to 15 cm, without focal hepatic lesion. Doppler flow in portal and hepatic veins is patent. Transient elastography yields a liver stiffness of 18.5 kPa, consistent with advanced fibrosis or cirrhosis.",
+        "category": "imaging"
+      },
+      {
+        "order": 5,
+        "text": "He recalls the 1984 transfusion occurred before routine donor screening for a specific blood‑borne RNA virus was implemented. A current nucleic acid amplification test on serum detected viral RNA at 3.2 × 10^6 IU/mL and reported genotype 1b. The team deferred liver biopsy and planned antiviral therapy after counselling.",
+        "category": "exposure"
+      }
+    ],
+    "difficulty": "hard",
+    "explanation": "Chronic infection with the hepatitis C virus best explains this presentation. The patient has chronic liver disease with portal hypertension and thrombocytopenia, extrahepatic manifestations including mixed cryoglobulinaemia with low C4, palpable purpura, peripheral neuropathy and proteinuric renal involvement. The remote transfusion before implementation of screening provides a plausible long-standing exposure. The diagnosis is confirmed by detectable viral RNA and genotype determination. Management focuses on direct‑acting antiviral therapy tailored to genotype and comorbidity, with monitoring for hepatic fibrosis and extrahepatic complications.",
+    "source": "ai_generated",
+    "validated": true,
+    "createdAt": "2026-03-27T21:20:52.388Z",
+    "style": "mgh_case_report",
+    "model": "gpt-5-mini"
+  },
+  {
+    "id": "path-daily-histoplasma-capsulatum-hard-1774646448478-11-0",
+    "pathogenId": "histoplasma-capsulatum",
+    "pathogenKind": "fungus",
+    "pool": "daily",
+    "hints": [
+      {
+        "order": 1,
+        "text": "A 49-year-old man presents to clinic with three weeks of intermittent fevers, drenching night sweats, non-productive cough and progressive exertional dyspnoea. He reports a 4 kg weight loss and new painful shallow ulcers on his tongue. On exam he is febrile 38.3°C, has small bilateral cervical lymph nodes and a spleen palpable 3 cm below the costal margin.",
+        "category": "presentation"
+      },
+      {
+        "order": 2,
+        "text": "He has seropositive rheumatoid arthritis treated for two years with a tumour necrosis factor alpha inhibitor and low-dose prednisone 5 mg daily. He stopped methotrexate six months ago. He has no known prior tuberculosis exposure and received routine childhood vaccinations. Symptoms evolved subacutely after several weeks of malaise.",
+        "category": "history"
+      },
+      {
+        "order": 3,
+        "text": "Blood tests show haemoglobin 92 g/L, white cell count 2.1 × 10^9/L with neutrophils 1.0 × 10^9/L, platelets 95 × 10^9/L. C reactive protein is 150 mg/L. Liver tests show ALT 110 U/L and alkaline phosphatase 420 U/L. Peripheral blood cultures remain sterile at 48 hours.",
+        "category": "lab"
+      },
+      {
+        "order": 4,
+        "text": "Contrast CT of chest and abdomen demonstrates innumerable 1–3 mm pulmonary nodules in a diffuse miliary pattern, bilateral hilar and mediastinal lymphadenopathy, splenomegaly and mild bilateral adrenal enlargement without frank cavitation.",
+        "category": "imaging"
+      },
+      {
+        "order": 5,
+        "text": "On further questioning he reports leading a weekend caving trip two months before symptom onset in a limestone cave in the Ohio River valley where heavy bat guano was disturbed. He also spent a day clearing an abandoned chicken coop on his property several weeks after the trip.",
+        "category": "exposure"
+      }
+    ],
+    "difficulty": "hard",
+    "explanation": "This patient with an anti-TNF agent and subacute febrile respiratory illness, mucosal ulcers, hepatosplenomegaly and pancytopenia who has a miliary pulmonary pattern and mediastinal lymphadenopathy after heavy exposure to bat guano is most consistent with disseminated infection by Histoplasma capsulatum. Confirmatory testing for this patient would include urine antigen assay and tissue diagnosis from bone marrow or lymph node showing small intracellular yeasts within macrophages, with fungal culture for definitive identification. Management for severe disseminated disease involves initial amphotericin B followed by prolonged oral azole therapy and holding TNF blockade, with close monitoring of organ dysfunction and hematologic recovery.",
+    "source": "ai_generated",
+    "validated": true,
+    "createdAt": "2026-03-27T21:20:48.478Z",
+    "style": "mgh_case_report",
+    "model": "gpt-5-mini"
+  },
+  {
+    "id": "path-daily-legionella-pneumophila-easy-1774646527375-13-0",
+    "pathogenId": "legionella-pneumophila",
+    "pathogenKind": "bacterium",
+    "pool": "daily",
+    "hints": [
+      {
+        "order": 1,
+        "text": "A 65-year-old man presented to the emergency department with 48 hours of high fever, productive cough and increasing shortness of breath. He also reported two episodes of watery diarrhoea and mild confusion. He had returned three days earlier from a 72-hour business conference at a city hotel. On examination he was febrile 39.6°C, tachypnoeic at 24/min, oxygen saturation 89% on room air and had coarse crackles at the right lung base.",
+        "category": "presentation"
+      },
+      {
+        "order": 2,
+        "text": "Medical history included COPD treated with an inhaled corticosteroid and long-acting bronchodilator, hypertension and a 40 pack-year smoking history. He had taken oral amoxicillin prescribed by his general practitioner for 48 hours before presentation without clinical improvement. No recent travel overseas, no known immunosuppressive medications.",
+        "category": "history"
+      },
+      {
+        "order": 3,
+        "text": "Blood tests showed WBC 14.2 × 10^9/L with neutrophil predominance, C-reactive protein 210 mg/L and serum sodium 126 mmol/L. ALT was 78 U/L. Arterial blood gas on room air showed PaO2 7.5 kPa. Sputum Gram stain revealed many neutrophils and no predominant Gram-positive cocci.",
+        "category": "lab"
+      },
+      {
+        "order": 4,
+        "text": "Chest radiograph demonstrated a dense lobar consolidation of the right lower lobe with small blunting of the right costophrenic sulcus compatible with a small pleural effusion.",
+        "category": "imaging"
+      },
+      {
+        "order": 5,
+        "text": "He was admitted and started on an agent active against atypical pathogens. He defervesced within 48 hours and oxygenation improved. A urinary antigen test returned positive for the causative organism and a lower respiratory specimen later produced small colonies on buffered charcoal yeast extract after 72 hours.",
+        "category": "treatment_response"
+      }
+    ],
+    "difficulty": "easy",
+    "explanation": "Community-acquired lobar pneumonia with gastrointestinal symptoms, hyponatraemia, recent hotel exposure and poor response to a beta-lactam suggests an atypical, water-associated cause. Rapid clinical response to therapy directed at atypical pathogens plus a positive urinary antigen and growth on buffered charcoal yeast extract are diagnostic for the specific waterborne, intracellular Gram-negative bacillus implicated in outbreaks from building water systems.",
+    "source": "ai_generated",
+    "validated": true,
+    "createdAt": "2026-03-27T21:22:07.375Z",
+    "style": "mgh_case_report",
+    "model": "gpt-5-mini"
+  },
+  {
+    "id": "path-daily-malassezia-furfur-hard-1774646515715-14-0",
+    "pathogenId": "malassezia-furfur",
+    "pathogenKind": "fungus",
+    "pool": "daily",
+    "hints": [
+      {
+        "order": 1,
+        "text": "A 34-year-old woman on day 12 of an ICU admission for necrotizing pancreatitis develops persistent fever to 38.9°C and new tachycardia despite broad-spectrum antibiotics. She remains intubated and has a right internal jugular central venous catheter in place for total parenteral nutrition. Bedside chest radiograph shows no focal lobar consolidation and the catheter exit site has no erythema or purulence.",
+        "category": "presentation"
+      },
+      {
+        "order": 2,
+        "text": "She has received continuous lipid-containing parenteral nutrition for 10 days and multiple courses of broad-spectrum antibiotics for infected pancreatic necrosis. She is not neutropenic, has no known HIV infection, and has received no systemic corticosteroids. There was no preceding dermatologic complaint before admission.",
+        "category": "history"
+      },
+      {
+        "order": 3,
+        "text": "Blood cultures from two peripheral draws and the central line flagged positive for yeast after 48 hours. Peripheral blood showed a WBC of 15.2 × 10^9/L and CRP 220 mg/L. Subculture onto routine fungal media produced no growth, but colonies grew when plates were overlaid with an olive oil supplement.",
+        "category": "lab"
+      },
+      {
+        "order": 4,
+        "text": "Contrast CT of the chest demonstrated numerous bilateral peripheral nodular opacities 2–8 mm in diameter, some with small central cavitation, most consistent with septic emboli. Transesophageal echocardiography identified no valvular vegetations.",
+        "category": "imaging"
+      },
+      {
+        "order": 5,
+        "text": "An echinocandin was started empirically but fevers persisted and repeat blood cultures remained positive. After removal of the central line and stopping the lipid infusion, therapy was changed to an oral azole. Blood cultures cleared within 48 hours. Microscopy of the lipid-dependent colonies on KOH showed short septate hyphal fragments with clusters of round budding yeast forms.",
+        "category": "treatment_response"
+      }
+    ],
+    "difficulty": "hard",
+    "explanation": "This is catheter-related fungemia due to the lipid-dependent yeast Malassezia furfur. Key diagnostic clues are bloodstream yeast in a patient receiving lipid-rich parenteral nutrition, failure of growth on routine media with growth only on lipid-supplemented agar, characteristic mixed yeast and short hyphal forms on microscopy, persistent positive cultures despite echinocandin therapy, and rapid clearance after catheter removal, cessation of lipid infusion, and initiation of an azole. Management requires catheter removal, stopping the lipid source and antifungal therapy guided by susceptibility; azoles are usually effective where echinocandins are not.",
+    "source": "ai_generated",
+    "validated": true,
+    "createdAt": "2026-03-27T21:21:55.715Z",
+    "style": "mgh_case_report",
+    "model": "gpt-5-mini"
+  },
+  {
+    "id": "path-daily-mycobacterium-leprae-easy-1774646499229-15-0",
+    "pathogenId": "mycobacterium-leprae",
+    "pathogenKind": "bacterium",
+    "pool": "daily",
+    "hints": [
+      {
+        "order": 1,
+        "text": "A 24-year-old woman presents to the clinic with a 6-month history of slowly progressive numbness in the right hand and multiple pale skin patches on her forearms and cheeks. She reports loss of sensation to light touch and cold over one forearm patch. On examination there is focal weakness of right hand intrinsic muscles and a palpable, firm enlargement of the right ulnar nerve at the elbow.",
+        "category": "presentation"
+      },
+      {
+        "order": 2,
+        "text": "Symptoms began insidiously and were initially treated as eczema with topical corticosteroids without improvement. She has no diabetes or other chronic illness and a rapid HIV test was negative. She is a seamstress and notes gradual difficulty with fine finger movements, but no systemic B symptoms.",
+        "category": "history"
+      },
+      {
+        "order": 3,
+        "text": "Punch biopsy from the edge of a forearm patch shows a dermal granulomatous infiltrate with prominent involvement of peripheral nerves. Modified acid-fast stain of skin tissue and slit-skin smear reveal numerous acid-fast bacilli within macrophages and cutaneous nerves.",
+        "category": "lab"
+      },
+      {
+        "order": 4,
+        "text": "High-resolution ultrasound of the right ulnar nerve shows fusiform enlargement of the nerve with hypoechoic fascicles and increased intraneural vascularity. MRI of the elbow confirms focal nerve enlargement without joint or bone abnormality.",
+        "category": "imaging"
+      },
+      {
+        "order": 5,
+        "text": "She was born and raised in a riverside community in northern Brazil and lived in the same household with her grandmother, who had years of untreated chronic skin lesions. She moved to the city two years ago and has had no other relevant animal exposures.",
+        "category": "exposure"
+      }
+    ],
+    "difficulty": "easy",
+    "explanation": "The combination of chronic hypopigmented, anesthetic skin lesions, focal peripheral nerve enlargement with neuropathy, numerous acid-fast bacilli on slit-skin smear and biopsy, and prolonged residence with a household contact in an endemic region is diagnostic of infection by Mycobacterium leprae. Diagnosis is supported by the multibacillary histology and peripheral nerve imaging. Confirmatory management involves multidrug therapy specific for this pathogen and early initiation reduces progressive neuropathy.",
+    "source": "ai_generated",
+    "validated": true,
+    "createdAt": "2026-03-27T21:21:39.229Z",
+    "style": "mgh_case_report",
+    "model": "gpt-5-mini"
+  },
+  {
+    "id": "path-daily-plasmodium-falciparum-medium-1774646562537-16-0",
+    "pathogenId": "plasmodium-falciparum",
+    "pathogenKind": "parasite",
+    "pool": "daily",
+    "hints": [
+      {
+        "order": 1,
+        "text": "A 36-year-old man presented to the emergency department with 48 hours of high fevers, drenching sweats, severe headache, and progressive confusion. He returned 9 days earlier from a 14-day work trip in northern Nigeria. On arrival he was febrile 39.8°C, tachycardic 120/min, blood pressure 90/60 mmHg, jaundiced on inspection, and reported dark urine and oliguria.",
+        "category": "presentation"
+      },
+      {
+        "order": 2,
+        "text": "He had no pretravel medical visit and did not take any malaria chemoprophylaxis. He spent several nights sleeping outdoors near an irrigation canal and recalled multiple nocturnal insect bites despite intermittent repellent use. He has no splenectomy history and is otherwise well.",
+        "category": "history"
+      },
+      {
+        "order": 3,
+        "text": "Initial blood tests showed haemoglobin 78 g/L, white cell count 3.2 × 10^9/L, platelets 42 × 10^9/L, total bilirubin 96 μmol/L, creatinine 220 μmol/L, and lactate 5.1 mmol/L. Fingerstick glucose was 2.9 mmol/L. Blood cultures were drawn. A rapid diagnostic test for a parasitic blood infection was reported positive and microscopy was requested.",
+        "category": "lab"
+      },
+      {
+        "order": 4,
+        "text": "Non-contrast CT of the brain performed because of confusion showed diffuse cerebral swelling without focal intracranial haemorrhage. Portable chest radiograph demonstrated mild bilateral interstitial shadowing consistent with early pulmonary oedema.",
+        "category": "imaging"
+      },
+      {
+        "order": 5,
+        "text": "A thin peripheral blood film returned showing 14% of erythrocytes parasitized with multiple delicate ring forms per red cell and discrete crescent-shaped sexual stages on thin smear. Intravenous artesunate was started and parasitaemia fell to 2% within 24 hours with gradual improvement in mental status and organ perfusion.",
+        "category": "treatment_response"
+      }
+    ],
+    "difficulty": "medium",
+    "explanation": "This presentation is severe malaria caused by Plasmodium falciparum. The clinical picture of recent travel to a high-transmission area without prophylaxis, fever with jaundice and oliguria, and markers of severe disease (high parasitaemia >10%, severe anaemia, thrombocytopenia, elevated lactate, acute kidney injury, cerebral involvement) point to falciparum infection. Thin film morphology with multiple ring forms per erythrocyte and crescent-shaped gametocytes confirms the species. Intravenous artesunate is the treatment of choice for severe disease and produces a rapid fall in parasitaemia and clinical improvement.",
+    "source": "ai_generated",
+    "validated": true,
+    "createdAt": "2026-03-27T21:22:42.537Z",
+    "style": "mgh_case_report",
+    "model": "gpt-5-mini"
+  },
+  {
+    "id": "path-daily-plasmodium-vivax-medium-1774646558722-17-0",
+    "pathogenId": "plasmodium-vivax",
+    "pathogenKind": "parasite",
+    "pool": "daily",
+    "hints": [
+      {
+        "order": 1,
+        "text": "A 28-year-old man presents to urgent care with 6 days of intermittent high fevers, drenching sweats, rigors, severe headache and diffuse myalgias. He reports progressive dark urine and new yellowing of his eyes. On examination temperature is 39.2°C, heart rate 112/min, he is mildly icteric and the spleen is palpable 3 cm below the left costal margin.",
+        "category": "presentation"
+      },
+      {
+        "order": 2,
+        "text": "He returned to his home country 7 weeks ago after a 3-month work placement in rural eastern India where he slept outdoors without consistent mosquito netting. He admits missing doses of his malaria prophylaxis on several occasions. He recalls a similar, self-limited febrile illness 11 months ago following a different trip that required no formal treatment.",
+        "category": "history"
+      },
+      {
+        "order": 3,
+        "text": "Blood tests show haemoglobin 92 g/L, white blood cell count 3.6 × 10^9/L, platelets 68 × 10^9/L, total bilirubin 48 μmol/L, ALT 38 IU/L. A Giemsa-stained peripheral thin smear demonstrates low parasite density, roughly 0.7% of erythrocytes, infected red cells are slightly enlarged, contain single amoeboid trophozoites and exhibit fine Schüffner's stippling.",
+        "category": "lab"
+      },
+      {
+        "order": 4,
+        "text": "Abdominal ultrasound shows an enlarged spleen measuring 15.0 cm in longitudinal axis without focal lesions or portal venous thrombosis.",
+        "category": "imaging"
+      },
+      {
+        "order": 5,
+        "text": "He received standard blood-stage antimalarial therapy and defervesced within 48 hours with smear clearance. No liver-stage specific therapy was administered because G6PD testing was pending. Six weeks later he returned with recrudescent fevers and an identical peripheral smear morphology.",
+        "category": "treatment_response"
+      }
+    ],
+    "difficulty": "medium",
+    "explanation": "The combination of recent travel to an endemic region with mosquito exposure, anaemia, thrombocytopenia and splenomegaly suggests malaria. The thin smear shows low parasitaemia, enlarged infected erythrocytes with amoeboid trophozoites and Schüffner's stippling, features characteristic of Plasmodium vivax. Recurrence after adequate blood-stage therapy alone reflects dormant liver stages that cause relapse, which requires targeted anti-relapse treatment after confirming G6PD status.",
+    "source": "ai_generated",
+    "validated": true,
+    "createdAt": "2026-03-27T21:22:38.722Z",
+    "style": "mgh_case_report",
+    "model": "gpt-5-mini"
+  },
+  {
+    "id": "path-daily-pneumocystis-jirovecii-medium-1774646556265-18-0",
+    "pathogenId": "pneumocystis-jirovecii",
+    "pathogenKind": "fungus",
+    "pool": "daily",
+    "hints": [
+      {
+        "order": 1,
+        "text": "A 34-year-old man presents to an urban emergency department with 3 weeks of progressive exertional dyspnea and a dry cough. He reports low-grade fevers and 5 kg weight loss over 2 months. On arrival he is tachypneic at 24 breaths/min and hypoxaemic with peripheral oxygen saturation 88% on room air. Lung auscultation reveals fine bilateral crackles without focal bronchial breath sounds.",
+        "category": "presentation"
+      },
+      {
+        "order": 2,
+        "text": "He has HIV infection diagnosed 9 months earlier. He started antiretroviral therapy but stopped taking medications about 4 months ago. He is not on any prophylactic antimicrobials. A clinic CD4 count obtained two weeks ago was 0.12 × 10^9/L.",
+        "category": "history"
+      },
+      {
+        "order": 3,
+        "text": "Arterial blood gas on room air shows PaO2 7.3 kPa and PaCO2 4.6 kPa. Peripheral blood lymphocyte count is 0.7 × 10^9/L. Serum lactate dehydrogenase is 620 U/L. Serum (1→3)-β-D-glucan returned markedly elevated at 620 pg/mL.",
+        "category": "lab"
+      },
+      {
+        "order": 4,
+        "text": "Non-contrast chest CT demonstrates diffuse, bilateral ground-glass opacities with a perihilar predominance and relative subpleural sparing. There is no dense lobar consolidation, no cavitation, and no appreciable pleural effusion.",
+        "category": "imaging"
+      },
+      {
+        "order": 5,
+        "text": "Empiric high-dose trimethoprim-sulfamethoxazole and adjunctive oral corticosteroids were started for presumed opportunistic pneumonia. Over 72 hours his oxygenation and work of breathing improved. Bronchoalveolar lavage cytology showed foamy eosinophilic alveolar casts and cup-shaped cysts highlighted by methenamine silver stain.",
+        "category": "treatment_response"
+      }
+    ],
+    "difficulty": "medium",
+    "explanation": "The combination of subacute progressive hypoxaemic pneumonia in a patient with untreated HIV and CD4 0.12 × 10^9/L, elevated LDH and β-D-glucan, diffuse bilateral ground-glass opacities on CT, and demonstration of cup-shaped cysts on methenamine silver stain of BAL strongly indicates Pneumocystis jirovecii. Rapid clinical improvement after high-dose trimethoprim-sulfamethoxazole with corticosteroids for hypoxaemia supports the diagnosis.",
+    "source": "ai_generated",
+    "validated": true,
+    "createdAt": "2026-03-27T21:22:36.265Z",
+    "style": "mgh_case_report",
+    "model": "gpt-5-mini"
+  },
+  {
+    "id": "path-daily-rhizopus-species-hard-1774646591359-20-0",
+    "pathogenId": "rhizopus-species",
+    "pathogenKind": "fungus",
+    "pool": "daily",
+    "hints": [
+      {
+        "order": 1,
+        "text": "A 58-year-old man inpatient on day 12 after induction chemotherapy for acute myeloid leukaemia develops fever to 38.9°C, pleuritic left-sided chest pain and a dry cough. He reports a small amount of blood-tinged sputum. On examination he is tachycardic, oxygen saturation 90% on room air and has reduced breath sounds at the left upper chest with dullness to percussion.",
+        "category": "presentation"
+      },
+      {
+        "order": 2,
+        "text": "He has prolonged neutropenia after cytarabine and anthracycline induction. Current medications include broad-spectrum antibiotics and antifungal prophylaxis with a triazole started 8 days earlier. He required a brief high-dose corticosteroid course for chemotherapy-related nausea five days before symptom onset.",
+        "category": "history"
+      },
+      {
+        "order": 3,
+        "text": "On hospital day 4 a nearby wing underwent demolition for renovation and construction dust was visible in corridors. The patient had been transported through that area twice while neutropenic and spent time in a garden courtyard before admission.",
+        "category": "exposure"
+      },
+      {
+        "order": 4,
+        "text": "Contrast-enhanced CT chest shows a 5 cm cavitary consolidation in the left upper lobe with a crescent of central ground-glass attenuation and adjacent vascular occlusion of a subsegmental pulmonary artery branch. Lesion size increased by 2 cm on repeat imaging over 48 hours despite broad antibiotics.",
+        "category": "imaging"
+      },
+      {
+        "order": 5,
+        "text": "Bronchoscopy with transbronchial biopsy performed on day 3 of deterioration shows necrotic lung with profuse angioinvasive fungal hyphae on silver stain. Hyphae are broad, ribbon-like and pauciseptate with irregular wide-angle branching. Culture on routine fungal media yielded rapidly growing woolly colonies within 48 hours that produced rhizoids at the base of sporangiophores.",
+        "category": "lab"
+      }
+    ],
+    "difficulty": "hard",
+    "explanation": "This patient with profound neutropenia, recent triazole exposure and hospital construction developed a rapidly progressive angioinvasive fungal pneumonia. Histology shows broad, pauciseptate, ribbon-like hyphae with wide-angle branching and culture with rhizoids on unbranched sporangiophores. These findings identify a member of the Mucorales, most consistent with Rhizopus species. Management required urgent surgical debridement when possible and high-dose liposomal amphotericin B rather than continued triazole therapy.",
+    "source": "ai_generated",
+    "validated": true,
+    "createdAt": "2026-03-27T21:23:11.359Z",
+    "style": "mgh_case_report",
+    "model": "gpt-5-mini"
+  },
+  {
+    "id": "path-daily-sarcoptes-scabiei-hard-1774646599592-21-0",
+    "pathogenId": "sarcoptes-scabiei",
+    "pathogenKind": "parasite",
+    "pool": "daily",
+    "hints": [
+      {
+        "order": 1,
+        "text": "A 72-year-old male resident of a long-term care facility presents with a 3-month history of progressive thick, yellowish crusting and scaling over both hands, interdigital spaces, soles and scalp. The lesions are fissured and painful with some serous discharge. He reports surprisingly little pruritus. Facility clinicians prescribed emollients and medium-potency topical corticosteroids without benefit. Low-grade fever to 37.8 °C and a 3 kg weight loss over 6 weeks are noted.",
+        "category": "presentation"
+      },
+      {
+        "order": 2,
+        "text": "Past medical history includes chronic lymphocytic leukaemia treated with purine analogue chemotherapy 5 months ago and a prolonged oral corticosteroid taper for a drug reaction. He is bedbound and requires help for washing. Staff report that several other residents developed new nocturnal itch and superficial rash in the prior month. No recent travel or fresh water exposures.",
+        "category": "history"
+      },
+      {
+        "order": 3,
+        "text": "Dermoscopic examination of palmar and interdigital regions shows numerous linear serpiginous tracks beneath adherent crust, each terminating in a small dark triangular focus. High-resolution clinical photographs document thick hyperkeratosis with fissuring and yellowish scale rather than isolated papules.",
+        "category": "imaging"
+      },
+      {
+        "order": 4,
+        "text": "He failed empiric topical antifungal therapy and two courses of oral antibiotics. After a single supervised dose of oral ivermectin combined with mechanical keratolytic debridement of crusts, the thick scales began to slough and odour and serous discharge decreased within 7 days. Several symptomatic staff improved after application of a prescribed topical agent.",
+        "category": "treatment_response"
+      },
+      {
+        "order": 5,
+        "text": "Mineral oil skin scrapings obtained from beneath the crust yielded numerous oval translucent arthropods approximately 0.3–0.4 mm in length with a stout rounded body and four pairs of short legs visible anteriorly, together with multiple ovoid eggs and dark faecal pellets on microscopy. Peripheral blood eosinophils were 1.6 × 10^9/L, CRP 22 mg/L.",
+        "category": "lab"
+      }
+    ],
+    "difficulty": "hard",
+    "explanation": "Immunosuppressed, institutionalized patient with thick hyperkeratotic crusting, low itch, outbreak among contacts, dermoscopic linear burrows, rapid response to oral ivermectin plus keratolysis, and mineral oil scrapings showing numerous small oval arthropods with eggs identifies infection by Sarcoptes scabiei presenting as crusted (Norwegian) infestation. Diagnostic and infection-control measures include confirmatory microscopy, keratolytic removal of crusts, systemic antiparasitic therapy, topical treatment of close contacts, and environmental cleaning.",
+    "source": "ai_generated",
+    "validated": true,
+    "createdAt": "2026-03-27T21:23:19.592Z",
+    "style": "mgh_case_report",
+    "model": "gpt-5-mini"
+  },
+  {
+    "id": "path-daily-streptococcus-pneumoniae-easy-1774646632628-24-0",
+    "pathogenId": "streptococcus-pneumoniae",
+    "pathogenKind": "bacterium",
+    "pool": "daily",
+    "hints": [
+      {
+        "order": 1,
+        "text": "A 72-year-old woman presents to clinic with a 24-hour history of high fever, rigors, sharp right-sided pleuritic chest pain, and a productive cough that produced rust-coloured sputum. She reports sudden dyspnoea. On exam temperature 39.5°C, respiratory rate 28/min, heart rate 110/min, oxygen saturation 90% on room air. Focal bronchial breath sounds and dullness to percussion are present over the right lower chest.",
+        "category": "presentation"
+      },
+      {
+        "order": 2,
+        "text": "She is a current smoker with a 40 pack-year history and has well controlled hypertension. Five days before presentation she had a brief influenza-like illness after contact with a grandchild who had a runny nose. She did not receive the seasonal influenza vaccine this year. She has no history of splenectomy or known immune deficiency.",
+        "category": "history"
+      },
+      {
+        "order": 3,
+        "text": "Blood tests show white blood cell count 18.6 × 10^9/L with 92% neutrophils, and C-reactive protein 220 mg/L. Blood cultures were drawn. Sputum Gram stain demonstrates numerous gram-positive cocci predominantly in pairs.",
+        "category": "lab"
+      },
+      {
+        "order": 4,
+        "text": "Chest radiograph shows dense lobar consolidation confined to the right lower lobe with air bronchograms and a small right-sided pleural effusion. No cavitation is seen.",
+        "category": "imaging"
+      },
+      {
+        "order": 5,
+        "text": "Empiric intravenous amoxicillin started. Within 48 hours fever and oxygenation improved. Concurrent microbiology report notes alpha-haemolytic colonies on blood agar composed of gram-positive diplococci that are optochin-sensitive and bile-soluble.",
+        "category": "treatment_response"
+      }
+    ],
+    "difficulty": "easy",
+    "explanation": "The patient has community-acquired lobar pneumonia in an older smoker, precipitated by a recent influenza-like illness. The lobar consolidation, rust-coloured sputum, neutrophilic leukocytosis, and rapid clinical response to a beta-lactam point to an encapsulated gram-positive diplococcus. The microbiology phenotype of alpha-haemolysis with optochin sensitivity and bile solubility identifies Streptococcus pneumoniae. Risk factors present here include advanced age, smoking, and recent viral respiratory infection. Standard management is appropriate beta-lactam therapy guided by susceptibilities and supportive care.",
+    "source": "ai_generated",
+    "validated": true,
+    "createdAt": "2026-03-27T21:23:52.629Z",
+    "style": "mgh_case_report",
+    "model": "gpt-5-mini"
+  },
+  {
+    "id": "path-daily-toxoplasma-gondii-hard-1774646627911-25-0",
+    "pathogenId": "toxoplasma-gondii",
+    "pathogenKind": "parasite",
+    "pool": "daily",
+    "hints": [
+      {
+        "order": 1,
+        "text": "A 46-year-old woman presents to the emergency unit with a 3-week history of progressive frontal headache, confusion, intermittent word-finding difficulty, and new weakness of the right arm. She had one brief witnessed focal seizure yesterday. On arrival she is febrile 37.9°C, alert but disoriented, and has mild right-sided hemiparesis with pronator drift.",
+        "category": "presentation"
+      },
+      {
+        "order": 2,
+        "text": "One year after a deceased-donor kidney transplant she remains on tacrolimus, mycophenolate mofetil, and low-dose prednisone. Six weeks ago she received high-dose corticosteroids for suspected acute cellular rejection. Trimethoprim-sulfamethoxazole prophylaxis was stopped four months ago because of a serum creatinine rise.",
+        "category": "history"
+      },
+      {
+        "order": 3,
+        "text": "Blood leukocyte count 4.2 × 10^9/L with lymphocytes 0.6 × 10^9/L. CRP 26 mg/L. Lumbar puncture opening pressure 200 mmH2O, CSF WBC 150 × 10^6/L with 80% lymphocytes, protein 1.1 g/L, glucose 3.5 mmol/L with concurrent serum glucose 5.8 mmol/L. CSF bacterial cultures sterile. PCR for herpes simplex virus 1/2 and enterovirus negative.",
+        "category": "lab"
+      },
+      {
+        "order": 4,
+        "text": "MRI brain with gadolinium shows three irregular ring-enhancing lesions, largest 2.5 cm in the left basal ganglia with prominent surrounding vasogenic oedema and mild midline shift. No central diffusion restriction is seen. There are smaller enhancing lesions at the grey-white junction.",
+        "category": "imaging"
+      },
+      {
+        "order": 5,
+        "text": "Review of pretransplant screening reveals the donor had high IgG seroreactivity to a common intracellular protozoan while the recipient was seronegative. The transplant team considers donor-derived reactivation as a possible cause of the current intracerebral lesions.",
+        "category": "exposure"
+      }
+    ],
+    "difficulty": "hard",
+    "explanation": "In a solid-organ transplant recipient with recent augmented immunosuppression, multiple ring-enhancing lesions in deep grey structures plus CSF lymphocytic pleocytosis suggest an opportunistic CNS infection. The donor seropositive / recipient seronegative pattern points to donor-derived or primary infection with an intracellular protozoan that reactivates in immunosuppressed hosts and preferentially involves basal ganglia. Correlating epidemiology, imaging distribution, and loss of prophylactic coverage supports the diagnosis of infection by Toxoplasma gondii. Confirmation is by CSF PCR or brain biopsy when needed. First-line therapy is a combination regimen that includes pyrimethamine with a sulfonamide and folinic acid, adjusted for renal function and drug interactions with immunosuppressants.",
+    "source": "ai_generated",
+    "validated": true,
+    "createdAt": "2026-03-27T21:23:47.911Z",
+    "style": "mgh_case_report",
+    "model": "gpt-5-mini"
+  },
+  {
+    "id": "path-daily-aeromonas-hydrophila-hard-1774646757474-30-0",
+    "pathogenId": "aeromonas-hydrophila",
+    "pathogenKind": "bacterium",
+    "pool": "daily",
+    "hints": [
+      {
+        "order": 1,
+        "text": "A 58-year-old man presented to the emergency department with 48 hours of escalating pain, swelling, and warmth of his left lower leg. He reported fever to 38.9°C and increasing difficulty bearing weight. On examination the left shin was tense and erythematous over a 15 cm area with a 1 cm superficial crusted abrasion, the skin was tender beyond the visible erythema, capillary refill was brisk, heart rate 110 min−1 and blood pressure 100/64 mmHg.",
+        "category": "presentation"
+      },
+      {
+        "order": 2,
+        "text": "Medical history notable for compensated alcoholic cirrhosis and insulin treated type 2 diabetes. He denied recent hospital admissions or indwelling catheters. He recalled a brief self-limited watery diarrhoeal illness 6 days earlier that resolved within 24 hours. He had not taken antibiotics before presentation.",
+        "category": "history"
+      },
+      {
+        "order": 3,
+        "text": "Blood tests showed WBC 21.4 × 10^9/L, CRP 210 mg/L, lactate 4.2 mmol/L and creatinine 210 µmol/L from a baseline of 95 µmol/L. Two sets of blood cultures and a wound swab were sent. Both blood culture bottles flagged positive at 14 hours with Gram stain showing Gram-negative bacilli; preliminary microscopy of the wound showed abundant neutrophils and similar Gram-negative rods.",
+        "category": "lab"
+      },
+      {
+        "order": 4,
+        "text": "Contrast MRI of the lower leg demonstrated marked subcutaneous and fascial oedema with multiple small fluid collections along the anterior compartment, and striking enhancement of the deep fascia. There was no soft tissue gas and no bone involvement. Surgical debridement was undertaken because of clinical progression despite intravenous flucloxacillin started in ED.",
+        "category": "imaging"
+      },
+      {
+        "order": 5,
+        "text": "During surgical review the patient said the abrasion occurred while filleting a freshly caught freshwater carp three days before symptoms began. Microbiology from the wound yielded beta-haemolytic colonies on sheep blood agar that grew on MacConkey agar, the isolate was motile and oxidase positive, grew without added salt, and showed intrinsic resistance to ampicillin but susceptibility to ciprofloxacin. The patient improved rapidly after debridement and a switch to intravenous ciprofloxacin.",
+        "category": "exposure"
+      }
+    ],
+    "difficulty": "hard",
+    "explanation": "Acute fulminant wound infection and bacteremia in a patient with liver disease after freshwater fish exposure, plus the microbiology profile of a motile, oxidase positive, beta-haemolytic Gram-negative bacillus that grows on MacConkey without salt and is ampicillin resistant but ciprofloxacin susceptible, point to Aeromonas hydrophila. The preceding brief diarrhoeal illness, the freshwater fish injury, rapid culture positivity, and the clinical response after targeted therapy support this diagnosis and distinguish it from saltwater-associated Vibrio species and from typical streptococcal or staphylococcal cellulitis.",
+    "source": "ai_generated",
+    "validated": true,
+    "createdAt": "2026-03-27T21:25:57.474Z",
+    "style": "mgh_case_report",
+    "model": "gpt-5-mini"
+  },
+  {
+    "id": "path-daily-angiostrongylus-cantonensis-hard-1774646710371-31-0",
+    "pathogenId": "angiostrongylus-cantonensis",
+    "pathogenKind": "parasite",
+    "pool": "daily",
+    "hints": [
+      {
+        "order": 1,
+        "text": "A 34-year-old man presented to the emergency department with 10 days of progressive, severe bifrontal headache, new photophobia, nausea and intermittent paresthesias of both hands. He works as a vegetable vendor in a coastal city. Symptoms began after a night shift and worsened despite over-the-counter analgesics. On examination he was afebrile, alert, had mild neck stiffness, brisk lower limb reflexes and subtle decreased facial sensation on the left. No focal limb weakness was detected.",
+        "category": "presentation"
+      },
+      {
+        "order": 2,
+        "text": "He was previously healthy, not on immunosuppressive therapy and had no recent hospital admissions. Five days before admission he received a 5 day course of oral amoxicillin for presumed sinusitis without improvement. On day 7 of illness he developed transient horizontal diplopia and gait unsteadiness on uneven ground. He denied intravenous drug use and had not eaten undercooked meat in the prior month.",
+        "category": "history"
+      },
+      {
+        "order": 3,
+        "text": "Peripheral blood showed white cell count 10.8 × 10^9/L with eosinophils 1.3 × 10^9/L. C-reactive protein 12 mg/L. Lumbar puncture opening pressure 220 mmH2O. CSF contained 320 × 10^6/L white cells with 65% eosinophils, protein 1.1 g/L and glucose 2.8 mmol/L with paired serum glucose 5.6 mmol/L. CSF Gram stain and bacterial cultures were negative.",
+        "category": "lab"
+      },
+      {
+        "order": 4,
+        "text": "Contrast MRI of the brain showed diffuse leptomeningeal enhancement over the cerebral convexities and posterior fossa. There was faint enhancement of the left facial and vestibulocochlear nerve roots. No focal intracerebral abscess or mass lesion was identified.",
+        "category": "imaging"
+      },
+      {
+        "order": 5,
+        "text": "On targeted questioning he recalled eating a raw garden salad at a local festival about three weeks before symptom onset. He remembered many small snails on the lettuce and that the leaves were only briefly rinsed before serving. He denied recent travel outside the region and had not handled domestic livestock.",
+        "category": "exposure"
+      }
+    ],
+    "difficulty": "hard",
+    "explanation": "The combination of subacute headache with meningeal signs, peripheral and marked CSF eosinophilia, leptomeningeal and cranial nerve root enhancement on MRI, and a history of ingesting raw produce contaminated with small snails points to infection by the nematode that uses rats as definitive hosts and gastropods as intermediate hosts. The incubation interval of about two to three weeks fits. Definitive diagnosis can be made by detection of larvae in CSF or by regionally available serology or PCR. Management focuses on supportive care and control of inflammation, often with corticosteroids. Anthelmintic therapy is considered in many cases but can provoke inflammatory worsening and is used in conjunction with steroids when chosen.",
+    "source": "ai_generated",
+    "validated": true,
+    "createdAt": "2026-03-27T21:25:10.371Z",
+    "style": "mgh_case_report",
+    "model": "gpt-5-mini"
+  },
+  {
+    "id": "path-daily-balantidium-coli-hard-1774646796893-32-0",
+    "pathogenId": "balantidium-coli",
+    "pathogenKind": "parasite",
+    "pool": "daily",
+    "hints": [
+      {
+        "order": 1,
+        "text": "A 43-year-old man presents from a rural river valley with three weeks of progressively watery diarrhoea, new streaks of blood per rectum, tenesmus, and crampy abdominal pain. He reports a 5 kg weight loss and two brief episodes of lightheadedness when standing. On examination he is afebrile, heart rate 102 beats per minute, blood pressure 105/68 mmHg, mucous membranes dry, and there is focal tenderness in the right lower quadrant without peritonism.",
+        "category": "presentation"
+      },
+      {
+        "order": 2,
+        "text": "He works in wet agriculture and lives at home. He has no known chronic immunosuppressive disease, is not on systemic corticosteroids, and tested HIV negative last year. Outpatient treatment with a five day course of ciprofloxacin was given two weeks ago for presumed bacterial gastroenteritis with only transient improvement.",
+        "category": "history"
+      },
+      {
+        "order": 3,
+        "text": "Blood tests show white cell count 12.5 × 10^9/L with neutrophil predominance, haemoglobin 112 g/L, and C reactive protein 58 mg/L. Stool bacterial culture is negative. Wet mount microscopy of fresh stool demonstrates large ovoid motile protozoan forms measuring approximately 50 to 70 µm, covered with short surface cilia, accompanied by numerous neutrophils and red blood cells.",
+        "category": "lab"
+      },
+      {
+        "order": 4,
+        "text": "Ileocolonoscopy shows multiple discrete deep ulcers in the caecum and ascending colon with surrounding oedema and friability. Biopsies from the ulcer base show ulceration with numerous large protozoan forms adherent to and invading the mucosa on fresh tissue inspection.",
+        "category": "imaging"
+      },
+      {
+        "order": 5,
+        "text": "Further questioning reveals he keeps a small herd of pigs at the rear of his property and collects well water that drains alongside the pig enclosure for household use. Animals often roam near the water source.",
+        "category": "exposure"
+      }
+    ],
+    "difficulty": "hard",
+    "explanation": "The combination of a farming exposure with pig contact, prolonged dysentery with colonic ulcers, and identification on fresh stool and tissue of large motile ciliated trophozoites establishes the diagnosis of infection by Balantidium coli. The organism is a large ciliated protozoan that can invade colonic mucosa and produce deep ulcers that mimic other causes of invasive colitis. Diagnosis rests on demonstration of trophozoites in fresh stool or biopsy. Recommended therapy includes tetracycline for 10 days. Metronidazole can be used where tetracycline is not suitable. Public health measures include improving water sanitation and reducing direct contact between pig feces and household water supplies.",
+    "source": "ai_generated",
+    "validated": true,
+    "createdAt": "2026-03-27T21:26:36.893Z",
+    "style": "mgh_case_report",
+    "model": "gpt-5-mini"
+  },
+  {
+    "id": "path-daily-brucella-species-medium-1774646828671-36-0",
+    "pathogenId": "brucella-species",
+    "pathogenKind": "bacterium",
+    "pool": "daily",
+    "hints": [
+      {
+        "order": 1,
+        "text": "A 38-year-old male presents to an outpatient infectious disease clinic with 3 weeks of intermittent fevers to 38.5 °C, drenching night sweats, progressive low back pain and diffuse arthralgia, and a 4 kg weight loss. He reports worsening difficulty bending and rising from a chair. On exam he is afebrile, lumbar spine range of motion is limited by pain, there is mild hepatomegaly of about 3 cm, and no focal neurological deficit.",
+        "category": "presentation"
+      },
+      {
+        "order": 2,
+        "text": "He is otherwise healthy, takes no regular medications, and is not known to be immunocompromised. He delayed care while trying two short courses of oral amoxicillin prescribed at a pharmacy without relief. Two months earlier he spent several weeks helping relatives in a rural area during lambing season but has not had international travel beyond that region.",
+        "category": "history"
+      },
+      {
+        "order": 3,
+        "text": "Complete blood count shows haemoglobin 110 g/L, white blood cells 4.2 × 10^9/L with a normal differential, platelets 210 × 10^9/L. CRP 68 mg/L and ESR 52 mm/h. ALT 95 U/L, AST 72 U/L. Initial blood cultures were reported negative at 48 hours. A repeat set flagged positive after extended incubation and Gram stain showed small faintly staining coccobacillary Gram-negative organisms.",
+        "category": "lab"
+      },
+      {
+        "order": 4,
+        "text": "MRI of the lumbosacral spine demonstrates focal spondylodiscitis at L4–L5 with endplate erosions, moderate adjacent marrow oedema, and a small prevertebral collection without large epidural abscess or cord compression.",
+        "category": "imaging"
+      },
+      {
+        "order": 5,
+        "text": "On further questioning he recalls frequent consumption of unpasteurised goat milk and fresh cheese while helping at the family farm, and handling the products of several does that aborted during the same lambing period about eight weeks before symptom onset.",
+        "category": "exposure"
+      }
+    ],
+    "difficulty": "medium",
+    "explanation": "The patient has a subacute febrile illness with night sweats, hepatomegaly, mild transaminitis, relative leukopenia, and lumbar spondylodiscitis. Blood cultures that required prolonged incubation and yielded small faintly staining Gram-negative coccobacilli plus clear exposure to unpasteurised dairy and aborting small ruminants point to infection with Brucella species. Brucella is a cause of osteoarticular infection including spinal involvement and often needs combination antimicrobial therapy with agents chosen for intracellular activity and prolonged duration.",
+    "source": "ai_generated",
+    "validated": true,
+    "createdAt": "2026-03-27T21:27:08.671Z",
+    "style": "mgh_case_report",
+    "model": "gpt-5-mini"
+  },
+  {
+    "id": "path-daily-burkholderia-cepacia-hard-1774646841770-37-0",
+    "pathogenId": "burkholderia-cepacia",
+    "pathogenKind": "bacterium",
+    "pool": "daily",
+    "hints": [
+      {
+        "order": 1,
+        "text": "A 62-year-old woman presented to the oncology day unit with 18 hours of fever, rigors and lightheadedness. She has an implantable central venous port used for chemotherapy. On arrival temperature was 38.9°C, blood pressure 90/56 mmHg, pulse 115/min. The port site had mild erythema without fluctuance. Lungs were clear to auscultation and there were no skin lesions elsewhere.",
+        "category": "presentation"
+      },
+      {
+        "order": 2,
+        "text": "She is receiving adjuvant chemotherapy for breast cancer. Her last infusion was 5 days earlier at an outpatient clinic where staff accessed and flushed the port using a shared multi-dose saline reservoir. She had an ANC nadir of 0.3 × 10^9/L after the prior cycle. She does not have cystic fibrosis or chronic lung disease. No recent travel or household sick contacts.",
+        "category": "history"
+      },
+      {
+        "order": 3,
+        "text": "Initial blood tests showed WBC 0.8 × 10^9/L, neutrophils 0.2 × 10^9/L, CRP 180 mg/L. Blood cultures were drawn from peripheral veins and the port before empiric piperacillin-tazobactam and vancomycin were started. At 24 hours both sets grew gram-negative rods that were non-lactose fermenting and oxidase-variable on preliminary testing. Early susceptibility results showed resistance to gentamicin and colistin and retained activity of trimethoprim-sulfamethoxazole and ceftazidime.",
+        "category": "lab"
+      },
+      {
+        "order": 4,
+        "text": "Contrast CT of chest, abdomen and pelvis showed no focal pulmonary consolidation and no intra-abdominal source. Ultrasound of the port pocket demonstrated soft tissue oedema but no discrete fluid collection. Chest radiograph did not show new infiltrates.",
+        "category": "imaging"
+      },
+      {
+        "order": 5,
+        "text": "Infection control cultured environmental materials from the outpatient clinic. The opened multi-dose saline bag used for port flushes and an aqueous antiseptic bottle yielded the same non-fermenting gram-negative bacillus with mucoid pale colonies that matched the blood isolates by molecular sequencing. The environmental and blood isolates shared intrinsic resistance to polymyxins and aminoglycosides and susceptibility to trimethoprim-sulfamethoxazole.",
+        "category": "exposure"
+      }
+    ],
+    "difficulty": "hard",
+    "explanation": "This presentation is best explained by bloodstream infection from an environmental non-fermenting gram-negative bacillus acquired via contaminated aqueous solutions used to access a central venous port. The organism's recovery from both the multi-dose saline and an aqueous antiseptic, its ability to cause disease in a neutropenic chemotherapy patient, and the antimicrobial phenotype with resistance to aminoglycosides and polymyxins but susceptibility to trimethoprim-sulfamethoxazole point to Burkholderia cepacia complex. Management priorities are removal of the infected device when feasible, targeted therapy guided by susceptibility testing (agents often used include trimethoprim-sulfamethoxazole or a susceptible cephalosporin), and prompt infection control measures to halt the outbreak and eliminate the contaminated product.",
+    "source": "ai_generated",
+    "validated": true,
+    "createdAt": "2026-03-27T21:27:21.771Z",
+    "style": "mgh_case_report",
+    "model": "gpt-5-mini"
+  },
+  {
+    "id": "path-daily-burkholderia-pseudomallei-hard-1774646838361-38-0",
+    "pathogenId": "burkholderia-pseudomallei",
+    "pathogenKind": "bacterium",
+    "pool": "daily",
+    "hints": [
+      {
+        "order": 1,
+        "text": "A 42-year-old male rice farmer presented to a district hospital with six weeks of productive cough, intermittent fevers and night sweats, and a 6 kg weight loss. Over the preceding ten days he developed a painful, fluctuant 4 cm subcutaneous nodule on the left anterior thigh. On examination he was febrile at 38.6°C, heart rate 102 bpm, and had coarse breath sounds over the right upper lung.",
+        "category": "presentation"
+      },
+      {
+        "order": 2,
+        "text": "He has poorly controlled type 2 diabetes and admits poor adherence to oral medication. Two weeks into the illness he was given amoxicillin-clavulanate for presumed bacterial pneumonia without improvement. Local clinicians later started empiric anti-tuberculosis therapy after chest radiography reportedly showed cavitation, despite repeatedly negative sputum smears for acid-fast bacilli.",
+        "category": "history"
+      },
+      {
+        "order": 3,
+        "text": "Complete blood count showed leucocytosis 14.2 × 10^9/L with neutrophils 11.3 × 10^9/L. C-reactive protein was 185 mg/L. Sputum microscopy for acid-fast bacilli remained negative. Two sets of blood cultures drawn on admission signalled positive at 48 hours and Gram stain showed a non-lactose-fermenting Gram-negative bacillus.",
+        "category": "lab"
+      },
+      {
+        "order": 4,
+        "text": "Contrast CT of the chest demonstrated patchy consolidation in the right upper lobe with multiple small cavitations and nodular bilateral infiltrates. Because fevers persisted an abdominal ultrasound was performed and showed multiple 0.5 to 2.0 cm hypoechoic lesions in the liver and spleen consistent with microabscesses.",
+        "category": "imaging"
+      },
+      {
+        "order": 5,
+        "text": "Three weeks before symptom onset he had worked barefoot in flooded rice paddies during the regional monsoon and recalled a superficial laceration on his foot that became inflamed. Aspirate from the thigh nodule later produced wrinkled, dry colonies on selective medium and the isolate was intrinsically resistant to several aminoglycosides while remaining susceptible to ceftazidime.",
+        "category": "exposure"
+      }
+    ],
+    "difficulty": "hard",
+    "explanation": "Subacute cavitary pulmonary disease with weight loss in a patient with poorly controlled diabetes, dissemination with hepatic and splenic microabscesses, and a history of percutaneous exposure to flooded soil in an endemic region points to melioidosis caused by Burkholderia pseudomallei. Blood culture growth of a non-lactose-fermenting Gram-negative bacillus that forms wrinkled colonies and shows intrinsic aminoglycoside resistance but susceptibility to ceftazidime supports that identification. Appropriate management consists of an intensive intravenous agent with activity against this pathogen followed by prolonged oral eradication therapy to reduce risk of relapse.",
+    "source": "ai_generated",
+    "validated": true,
+    "createdAt": "2026-03-27T21:27:18.361Z",
+    "style": "mgh_case_report",
+    "model": "gpt-5-mini"
+  },
+  {
+    "id": "path-daily-candida-auris-hard-1774646896760-39-0",
+    "pathogenId": "candida-auris",
+    "pathogenKind": "fungus",
+    "pool": "daily",
+    "hints": [
+      {
+        "order": 1,
+        "text": "A 68-year-old man was transferred from a long-term acute care facility with 6 days of fever, rigors and progressive confusion. On arrival he was febrile 38.9°C, blood pressure 90/56 mmHg and heart rate 115/min. He had a right internal jugular central venous catheter, tracheostomy tube, indwelling urinary catheter and a sacral pressure ulcer with purulent drainage. Family reported he had been bedbound since an ischaemic stroke three months earlier.",
+        "category": "presentation"
+      },
+      {
+        "order": 2,
+        "text": "Medical history included ischaemic stroke with residual paralysis, type 2 diabetes and chronic kidney disease stage 4. Over the prior 4 weeks he received multiple courses of broad-spectrum antibiotics including a carbapenem, and he had been transferred twice between two hospitals and the same long-term care facility. There was no recent documented antifungal therapy.",
+        "category": "history"
+      },
+      {
+        "order": 3,
+        "text": "Two sets of blood cultures drawn on admission flagged positive after 48 hours and Gram stain showed yeast forms. White cell count was 14.2 × 10^9/L, C-reactive protein 210 mg/L and serum creatinine 250 µmol/L. An automated phenotypic identification returned a low-confidence result for a non-albicans yeast. Preliminary susceptibility testing reported fluconazole MIC >64 mg/L and amphotericin B MIC 2 mg/L. MALDI-TOF was requested.",
+        "category": "lab"
+      },
+      {
+        "order": 4,
+        "text": "Contrast CT of the chest identified multiple peripheral nodular opacities in both lungs, some with central cavitation, most consistent with septic emboli. Transthoracic echocardiography showed no valvular vegetations. Brain MRI identified several small diffusion-restricted lesions in the right frontal lobe compatible with embolic microabscesses.",
+        "category": "imaging"
+      },
+      {
+        "order": 5,
+        "text": "An echinocandin was started and the central venous catheter was removed on day 2, but blood cultures remained positive through day 5. The microbiology laboratory reported that the isolate grew at 42°C, MALDI-TOF and sequencing confirmed a multidrug-resistant yeast. Axilla and groin screening swabs from the patient were positive, and environmental swabs from the patient’s bed rails and mattress in the long-term care facility also yielded the same organism.",
+        "category": "treatment_response"
+      }
+    ],
+    "difficulty": "hard",
+    "explanation": "The clinical picture is persistent bloodstream infection with a non-albicans yeast in a patient with prolonged healthcare exposure, multiple indwelling devices and recent broad-spectrum antibiotics. Key discriminating features are low-confidence biochemical identification, growth at 42°C, skin colonisation and recovery from environmental surfaces, plus a phenotype of high-level azole resistance with variable amphotericin and echinocandin susceptibility. Those features point to Candida auris. Management implications include using antifungal therapy guided by full susceptibility testing, aggressive source control, and strict infection control and contact precautions to interrupt transmission.",
+    "source": "ai_generated",
+    "validated": true,
+    "createdAt": "2026-03-27T21:28:16.760Z",
+    "style": "mgh_case_report",
+    "model": "gpt-5-mini"
+  },
+  {
+    "id": "path-daily-candida-glabrata-medium-1774646919007-40-0",
+    "pathogenId": "candida-glabrata",
+    "pathogenKind": "fungus",
+    "pool": "daily",
+    "hints": [
+      {
+        "order": 1,
+        "text": "A 76-year-old woman from a nursing facility presents with 5 days of fever, rigors and progressive confusion. She has new onset dysuria and suprapubic tenderness. Temp 38.9°C, heart rate 112/min, blood pressure 102/62 mmHg. A silicone urinary catheter has been in place for six weeks.",
+        "category": "presentation"
+      },
+      {
+        "order": 2,
+        "text": "Medical history includes type 2 diabetes, chronic kidney disease stage 3b and prior stroke with reduced mobility. She received a 7 day course of broad spectrum antibiotics for aspiration pneumonia two weeks earlier and a 5 day course of oral antifungal therapy for oral thrush four weeks ago. The catheter was exchanged at the nursing facility six weeks ago.",
+        "category": "history"
+      },
+      {
+        "order": 3,
+        "text": "White cell count 15.8 × 10^9/L, creatinine 180 µmol/L, CRP 210 mg/L. Two sets of blood cultures flagged positive at 36 hours. Gram stain from blood culture showed small oval budding yeast forms without visible hyphae. Urine culture grew yeast at >10^5 CFU/mL.",
+        "category": "lab"
+      },
+      {
+        "order": 4,
+        "text": "Contrast CT of the abdomen and pelvis shows moderate bilateral hydronephrosis and a thickened bladder wall around the catheter tip, no renal calculi. Transthoracic echocardiography shows no valvular vegetations.",
+        "category": "imaging"
+      },
+      {
+        "order": 5,
+        "text": "Empiric oral antifungal was continued after cultures. The patient remained febrile and blood cultures stayed positive at 48 hours. Antifungal susceptibility returned with a high minimum inhibitory concentration to that azole agent, and the patient cleared blood cultures and defervesced only after switching to an echinocandin.",
+        "category": "treatment_response"
+      }
+    ],
+    "difficulty": "medium",
+    "explanation": "An older patient with a long term urinary catheter, recent broad spectrum antibiotics and prior azole exposure developed fungemia with small budding yeasts on microscopy. The isolate demonstrated reduced susceptibility to fluconazole and responded to an echinocandin. These features point to Candida glabrata as the most likely pathogen in this clinical context.",
+    "source": "ai_generated",
+    "validated": true,
+    "createdAt": "2026-03-27T21:28:39.007Z",
+    "style": "mgh_case_report",
+    "model": "gpt-5-mini"
+  },
+  {
+    "id": "path-daily-dracunculus-medinensis-hard-1774646984090-44-0",
+    "pathogenId": "dracunculus-medinensis",
+    "pathogenKind": "parasite",
+    "pool": "daily",
+    "hints": [
+      {
+        "order": 1,
+        "text": "A 35-year-old man presents to the infectious diseases clinic with a 10-week history of a painful, nonhealing ulcer over the dorsum of his right foot. The lesion began as a tender blister that ruptured, then produced intermittent serous and sometimes clear filamentous discharge. He has had no fever or systemic symptoms but reports difficulty wearing shoes and walking.",
+        "category": "presentation"
+      },
+      {
+        "order": 2,
+        "text": "He spent three months doing humanitarian construction work in rural Chad 13 months before presentation. He received multiple outpatient courses of oral antibiotics for presumed cellulitis without improvement and had one bedside debridement that temporarily increased drainage. He has no diabetes, takes no immunosuppressants, and is HIV negative.",
+        "category": "history"
+      },
+      {
+        "order": 3,
+        "text": "Haematology shows white blood cell count 9.8 × 10^9/L with eosinophils 1.9 × 10^9/L. C-reactive protein 14 mg/L. Swab cultures of the ulcer grew mixed skin flora only. Mycobacterial cultures and routine ova and parasite testing of stool were negative.",
+        "category": "lab"
+      },
+      {
+        "order": 4,
+        "text": "Point-of-care soft tissue ultrasound of the ulcer demonstrates a long, tubular, anechoic to hypoechoic structure in the subcutaneous plane that tracks centrally and connects to the skin opening. With continuous observation the structure shows slow directional movement along its length.",
+        "category": "imaging"
+      },
+      {
+        "order": 5,
+        "text": "While soaking his foot at home for comfort he noted a white, thin, threadlike structure protruding from the ulcer into the water. Over the next several days he gently wound segments of the motile structure onto a stick as it slowly emerged, reporting a total extracted length of roughly 60 cm.",
+        "category": "exposure"
+      }
+    ],
+    "difficulty": "hard",
+    "explanation": "The chronology, travel to an endemic rural Sahel region about a year earlier, marked subcutaneous eosinophilia, ultrasound demonstration of a long tubular motile structure, and the emergence of a long white female worm when the lesion was immersed point to infection with Dracunculus medinensis. Management focuses on careful progressive extraction of the emerging female, local wound care, prevention of secondary bacterial infection, and public-health measures to prevent future transmission such as provision of safe drinking water and filtration.",
+    "source": "ai_generated",
+    "validated": true,
+    "createdAt": "2026-03-27T21:29:44.090Z",
+    "style": "mgh_case_report",
+    "model": "gpt-5-mini"
+  },
+  {
+    "id": "path-daily-echovirus-medium-1774646996636-45-0",
+    "pathogenId": "echovirus",
+    "pathogenKind": "virus",
+    "pool": "daily",
+    "hints": [
+      {
+        "order": 1,
+        "text": "A 28-year-old kindergarten teacher presents in late June with 48 hours of fever, severe holocranial headache, photophobia, vomiting and neck stiffness. She also noticed a diffuse non-pruritic maculopapular rash over her trunk yesterday. On arrival temperature 38.9 °C, heart rate 100 min−1, she is febrile and alert, with marked nuchal rigidity but no focal neurological deficit.",
+        "category": "presentation"
+      },
+      {
+        "order": 2,
+        "text": "She is otherwise healthy, takes no regular medications and has no immunosuppression. She reports that three children in her class had brief febrile illnesses with rashes 5–7 days earlier. Her sister's newborn had been admitted with fever and irritability 10 days ago. No recent travel, no animal or tick exposures, and no recent antibiotic use.",
+        "category": "history"
+      },
+      {
+        "order": 3,
+        "text": "Blood tests: WBC 11.2 × 10^9/L, neutrophils 7.4 × 10^9/L, CRP 12 mg/L. Lumbar puncture: CSF leukocytes 420 × 10^6/L with 85% lymphocytes, protein 0.85 g/L, glucose 3.4 mmol/L with simultaneous serum glucose 5.8 mmol/L. Gram stain negative. Bacterial cultures of CSF remain negative at 48 hours. A multiplex viral PCR on CSF detected RNA from a small non-enveloped single-stranded virus that is not poliovirus.",
+        "category": "lab"
+      },
+      {
+        "order": 4,
+        "text": "Contrast MRI brain performed on hospital day 2 is normal with no leptomeningeal enhancement and no focal parenchymal abnormality. Chest radiograph is unremarkable. No intracranial complication was identified to explain focal signs.",
+        "category": "imaging"
+      },
+      {
+        "order": 5,
+        "text": "Regional public health investigation finds that stool samples from several affected daycare children and CSF from two pediatric meningitis cases in the same district yielded identical viral RNA sequences. The sequence corresponds to a serotype that has recently caused summer outbreaks of community aseptic meningitis and febrile neonatal illness. The patient had daily close contact with those children.",
+        "category": "exposure"
+      }
+    ],
+    "difficulty": "medium",
+    "explanation": "Most likely diagnosis is infection with an echovirus serotype. The clinical picture is viral (aseptic) meningitis in early summer with mild systemic rash, lymphocytic CSF pleocytosis, negative bacterial cultures and a CSF viral PCR positive for a small non-enveloped single-stranded RNA virus that is not poliovirus. The epidemiology of recent linked cases in daycare attendees and neonates, and matching serotype sequencing from CSF and stool, point to an echovirus serotype that commonly produces community outbreaks of aseptic meningitis. Management is supportive for immunocompetent adults, with notification and infection control for contacts and vigilance for neonatal or severe systemic disease in young infants.",
+    "source": "ai_generated",
+    "validated": true,
+    "createdAt": "2026-03-27T21:29:56.636Z",
+    "style": "mgh_case_report",
+    "model": "gpt-5-mini"
+  },
+  {
+    "id": "path-daily-ehrlichia-chaffeensis-medium-1774646990849-46-0",
+    "pathogenId": "ehrlichia-chaffeensis",
+    "pathogenKind": "bacterium",
+    "pool": "daily",
+    "hints": [
+      {
+        "order": 1,
+        "text": "A 47-year-old woman presents to the emergency department in late June with 6 days of fever to 39.5 °C, severe bifrontal headache, diffuse myalgias and progressive confusion. She lives in a rural county and was brought by a colleague after she became disoriented at work. On exam she is febrile at 39.0 °C, heart rate 110 min−1, blood pressure 105/60 mmHg, and oriented only to person. There is no petechial rash on trunk or extremities.",
+        "category": "presentation"
+      },
+      {
+        "order": 2,
+        "text": "Medical history is type 2 diabetes, treated with metformin. She works at a wildlife rehabilitation centre and last week cleaned a white-tailed deer carcass and managed small mammals. She reports frequent walks through tall grass on the property. Her primary clinician prescribed oral amoxicillin two days before admission without clinical improvement.",
+        "category": "history"
+      },
+      {
+        "order": 3,
+        "text": "Admission blood tests show WBC 2.3 × 10^9/L, neutrophils 1.4 × 10^9/L, platelets 58 × 10^9/L, haemoglobin 125 g/L. AST 210 U/L, ALT 96 U/L. C-reactive protein 112 mg/L. Blood cultures remain negative at 48 hours. A peripheral blood smear shows no schistocytes and no obvious bacterial growth.",
+        "category": "lab"
+      },
+      {
+        "order": 4,
+        "text": "Chest radiograph is unremarkable. Focused abdominal ultrasound shows mild splenomegaly with spleen length 14.5 cm. Head CT without contrast shows no acute intracranial abnormality to explain the altered mental state.",
+        "category": "imaging"
+      },
+      {
+        "order": 5,
+        "text": "Because of progressive confusion and cytopenias the team started empiric doxycycline on admission. Fever and mental status improved markedly within 36 hours. A specific PCR panel run on admission whole blood later returned positive for DNA of an obligately intracellular organism that infects mononuclear leukocytes.",
+        "category": "treatment_response"
+      }
+    ],
+    "difficulty": "medium",
+    "explanation": "The combination of a summer presentation after rural work with deer exposure, progressive febrile illness with headache and confusion, leukopenia, thrombocytopenia, transaminitis and splenomegaly strongly suggests human monocytic ehrlichiosis due to Ehrlichia chaffeensis. Rapid clinical response to doxycycline and detection of DNA from an intracellular mononuclear-cell parasite on PCR support the diagnosis. Diagnosis is commonly confirmed by PCR on whole blood or by visualization of intracytoplasmic morulae in monocytes. Early empiric doxycycline is indicated when this syndrome is suspected because delays in therapy increase morbidity.",
+    "source": "ai_generated",
+    "validated": true,
+    "createdAt": "2026-03-27T21:29:50.849Z",
+    "style": "mgh_case_report",
+    "model": "gpt-5-mini"
+  },
+  {
+    "id": "path-daily-enterococcus-faecium-medium-1774646993914-47-0",
+    "pathogenId": "enterococcus-faecium",
+    "pathogenKind": "bacterium",
+    "pool": "daily",
+    "hints": [
+      {
+        "order": 1,
+        "text": "A 76-year-old man on an orthopaedic ward, day 12 after open reduction and internal fixation of a femoral neck fracture, develops 36 hours of fever, rigors, dysuria and new confusion. Temperature is 38.9°C, blood pressure 95/58 mmHg, heart rate 110 bpm. A Foley catheter has been in place since surgery. Suprapubic tenderness is present on examination.",
+        "category": "presentation"
+      },
+      {
+        "order": 2,
+        "text": "Medical history notable for type 2 diabetes and chronic kidney disease stage 3. Hospital course complicated by hospital-acquired pneumonia treated with ceftriaxone then piperacillin-tazobactam from postoperative day 4 to 9. Indwelling urinary catheter was left for postoperative urinary retention. No recent travel or animal exposures.",
+        "category": "history"
+      },
+      {
+        "order": 3,
+        "text": "WBC 15.8 × 10^9/L, CRP 220 mg/L, creatinine 150 µmol/L. Urinalysis: leukocyte esterase positive, >100 leucocytes per high-power field, nitrite negative. Two sets of blood cultures and a urine culture grew catalase-negative Gram-positive cocci in short chains and pairs. Isolates hydrolysed esculin in bile and grew in 6.5% NaCl. Antimicrobial testing showed resistance to ceftriaxone and ampicillin, retained susceptibility to linezolid.",
+        "category": "lab"
+      },
+      {
+        "order": 4,
+        "text": "Contrast CT abdomen and pelvis demonstrates left-sided pyelonephritis with cortical striated nephrogram changes and perinephric fat stranding. No drainable renal or perinephric abscess and no evidence of hardware or bone infection near the orthopaedic site.",
+        "category": "imaging"
+      },
+      {
+        "order": 5,
+        "text": "Empiric vancomycin plus piperacillin-tazobactam were started. Blood cultures remained positive after 48 hours. Laboratory reported vancomycin MIC >32 mg/L for the blood isolate. Foley catheter was removed and antimicrobial therapy changed to linezolid, after which blood cultures cleared within 72 hours and the patient defervesced.",
+        "category": "treatment_response"
+      }
+    ],
+    "difficulty": "medium",
+    "explanation": "The combination of hospital-acquired urinary source with an indwelling catheter, catalase-negative Gram-positive cocci in short chains that hydrolyse esculin and grow in 6.5% NaCl, plus ampicillin resistance and a very high vancomycin MIC that correlated with persistence on vancomycin, identifies a vancomycin-resistant enterococcal bloodstream infection. Ampicillin resistance makes Enterococcus faecium the more likely species in this setting. Clinical improvement following catheter removal and linezolid supports that organism as the pathogen.",
+    "source": "ai_generated",
+    "validated": true,
+    "createdAt": "2026-03-27T21:29:53.914Z",
+    "style": "mgh_case_report",
+    "model": "gpt-5-mini"
+  },
+  {
+    "id": "path-daily-fasciola-hepatica-hard-1774647023848-49-0",
+    "pathogenId": "fasciola-hepatica",
+    "pathogenKind": "parasite",
+    "pool": "daily",
+    "hints": [
+      {
+        "order": 1,
+        "text": "A 38-year-old woman presents to hepatology with an 8-week history of dull right upper-quadrant pain, intermittent low-grade fevers, progressive pruritus, and a 4 kg weight loss. She noticed scleral icterus for the past 10 days. Examination shows a tender liver edge 3 cm below the right costal margin and jaundice of the sclerae.",
+        "category": "presentation"
+      },
+      {
+        "order": 2,
+        "text": "She has no chronic liver disease, takes no regular medications, and is not immunosuppressed. She underwent laparoscopic cholecystectomy five years ago. Over the prior two months she had two brief admissions for presumed biliary sepsis treated with intravenous antibiotics, with only transient symptom relief.",
+        "category": "history"
+      },
+      {
+        "order": 3,
+        "text": "Peripheral blood count shows WBC 15.6 × 10^9/L with eosinophils 3.8 × 10^9/L. Total bilirubin 46 µmol/L. ALP 710 U/L, GGT 520 U/L, ALT 89 U/L. CRP 22 mg/L. Blood cultures are negative. Two separate stool examinations for ova and parasites returned negative.",
+        "category": "lab"
+      },
+      {
+        "order": 4,
+        "text": "Contrast CT of the abdomen demonstrates multiple serpiginous low-attenuation tracts extending from the subcapsular surface into the right hepatic lobe and periportal region. MRCP shows mild intrahepatic biliary dilatation and a 12 mm elongated intraductal filling defect that appears partly mobile rather than a discrete stone.",
+        "category": "imaging"
+      },
+      {
+        "order": 5,
+        "text": "On targeted reinterview she reports helping at a family smallholding three months earlier. While there she washed and frequently ate raw watercress harvested from a slow-moving stream that ran through pasture grazed by sheep and goats. Her first systemic symptoms began about five weeks after that exposure.",
+        "category": "exposure"
+      }
+    ],
+    "difficulty": "hard",
+    "explanation": "The combination of a delayed onset after ingestion of raw freshwater plants from sheep-grazed areas, prominent eosinophilia, migrating serpiginous hepatic tracts on imaging, and later biliary obstruction is most consistent with infection by Fasciola hepatica. The parasite migrates through the hepatic parenchyma during an acute hepatic phase causing eosinophilia and subcapsular tracts, then the biliary phase produces cholestatic liver tests and intraductal filling defects. Stool examination often remains negative early because eggs appear months after infection. Diagnosis is confirmed by serology or later demonstration of large operculated eggs in stool or by endoscopic retrieval of flukes. Treatment of choice is a nitrothiazol derivative effective against adult and immature flukes.",
+    "source": "ai_generated",
+    "validated": true,
+    "createdAt": "2026-03-27T21:30:23.848Z",
+    "style": "mgh_case_report",
+    "model": "gpt-5-mini"
   }
 ]
