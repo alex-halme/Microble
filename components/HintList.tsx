@@ -40,39 +40,40 @@ export default function HintList({
       window.requestAnimationFrame(() => {
         const hint = newestHintRef.current;
         if (!hint) return;
+        const placeholder = remaining > 0 ? placeholderRef.current : null;
 
         const desktopContainer = hint.closest<HTMLElement>(".gameboard-hints");
         const desktopScrollable =
           window.matchMedia("(min-width: 901px)").matches &&
           !!desktopContainer &&
           desktopContainer.scrollHeight > desktopContainer.clientHeight + 1;
-        const placeholderHeight =
-          remaining > 0
-            ? (placeholderRef.current?.getBoundingClientRect().height ?? 0) + 12
-            : 0;
+        const hintRect = hint.getBoundingClientRect();
+        const placeholderRect = placeholder?.getBoundingClientRect() ?? null;
+        const selectionTop = hintRect.top;
+        const selectionBottom = placeholderRect?.bottom ?? hintRect.bottom;
+        const selectionHeight = selectionBottom - selectionTop;
 
         if (desktopScrollable && desktopContainer) {
-          const hintRect = hint.getBoundingClientRect();
           const containerRect = desktopContainer.getBoundingClientRect();
           const topInset = 10;
-          const bottomInset = 18 + placeholderHeight;
+          const bottomInset = 18;
           const availableHeight =
             containerRect.height - topInset - bottomInset;
 
           let delta = 0;
 
-          if (hintRect.height <= availableHeight) {
-            if (hintRect.top < containerRect.top + topInset) {
-              delta = hintRect.top - containerRect.top - topInset;
+          if (selectionHeight <= availableHeight) {
+            if (selectionTop < containerRect.top + topInset) {
+              delta = selectionTop - containerRect.top - topInset;
             } else if (
-              hintRect.bottom >
+              selectionBottom >
               containerRect.bottom - bottomInset
             ) {
               delta =
-                hintRect.bottom - (containerRect.bottom - bottomInset);
+                selectionBottom - (containerRect.bottom - bottomInset);
             }
           } else {
-            delta = hintRect.top - containerRect.top - topInset;
+            delta = selectionTop - containerRect.top - topInset;
           }
 
           if (Math.abs(delta) > 1) {
@@ -92,26 +93,35 @@ export default function HintList({
         const headerHeight =
           document.querySelector<HTMLElement>(".site-header")?.getBoundingClientRect()
             .height ?? 0;
+        const statusRect =
+          document
+            .querySelector<HTMLElement>(".gameboard-status-pills")
+            ?.getBoundingClientRect() ?? null;
         const inputTrayHeight =
           document
             .querySelector<HTMLElement>(".gameboard-input-region")
             ?.getBoundingClientRect().height ?? 0;
 
-        const topInset = headerHeight + 12;
-        const bottomInset = inputTrayHeight + 12 + placeholderHeight;
+        const topInset = headerHeight + 4;
+        const bottomInset = inputTrayHeight + 16;
         const availableBottom = window.innerHeight - bottomInset;
         const availableHeight = availableBottom - topInset;
+        const statusAwareTop =
+          statusRect &&
+          selectionBottom - (statusRect.top - 8) <= availableHeight
+            ? statusRect.top - 8
+            : selectionTop;
 
         let delta = 0;
 
-        if (rect.height <= availableHeight) {
-          if (rect.top < topInset) {
-            delta = rect.top - topInset;
-          } else if (rect.bottom > availableBottom) {
-            delta = rect.bottom - availableBottom;
+        if (selectionHeight <= availableHeight) {
+          if (statusAwareTop < topInset) {
+            delta = statusAwareTop - topInset;
+          } else if (selectionBottom > availableBottom) {
+            delta = selectionBottom - availableBottom;
           }
         } else {
-          delta = rect.top - topInset;
+          delta = statusAwareTop - topInset;
         }
 
         if (Math.abs(delta) > 1) {

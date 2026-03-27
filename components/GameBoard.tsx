@@ -48,12 +48,23 @@ export default function GameBoard({
   const [reveal, setReveal] = useState<CaseReveal | null>(null);
   const [submittingGuess, setSubmittingGuess] = useState(false);
   const [inputFocused, setInputFocused] = useState(false);
+  const [isCompactMobile, setIsCompactMobile] = useState(false);
   const boardShellRef = useRef<HTMLDivElement | null>(null);
   const hintsRegionRef = useRef<HTMLDivElement | null>(null);
   const initialFocusCaseRef = useRef<string | null>(null);
 
   const storageKey =
     mode === "daily" && date ? dailyKey(date) : freeplaylKey(caseData.id);
+
+  useEffect(() => {
+    if (typeof window === "undefined") return;
+
+    const media = window.matchMedia("(max-width: 768px)");
+    const update = () => setIsCompactMobile(media.matches);
+    update();
+    media.addEventListener("change", update);
+    return () => media.removeEventListener("change", update);
+  }, []);
 
   useEffect(() => {
     let saved = loadGameState(storageKey);
@@ -170,10 +181,18 @@ export default function GameBoard({
           board
             .querySelector<HTMLElement>(".gameboard-input-region")
             ?.getBoundingClientRect().height ?? 0;
+        const statusHeight =
+          board
+            .querySelector<HTMLElement>(".gameboard-status-pills")
+            ?.getBoundingClientRect().height ?? 0;
+        const placeholderHeight =
+          board
+            .querySelector<HTMLElement>(".hint-card-placeholder")
+            ?.getBoundingClientRect().height ?? 0;
         const availableHeight =
-          window.innerHeight - headerHeight - inputTrayHeight - 24;
+          window.innerHeight - headerHeight - inputTrayHeight - 18;
 
-        if (boardHeaderHeight + firstHintHeight <= availableHeight) {
+        if (boardHeaderHeight + statusHeight + firstHintHeight + placeholderHeight <= availableHeight) {
           board.scrollIntoView({
             behavior: "smooth",
             block: "start",
@@ -537,8 +556,8 @@ export default function GameBoard({
             )}
 
             {/* Guess history shown below input when playing */}
-            {!gameOver && state.guesses.length > 0 && (
-              <div style={{ marginTop: "10px" }}>
+            {!gameOver && state.guesses.length > 0 && !isCompactMobile && (
+              <div className="gameboard-active-history" style={{ marginTop: "10px" }}>
                 <GuessHistory guesses={state.guesses} correctIndex={correctIndex} inline />
               </div>
             )}
