@@ -293,7 +293,7 @@ export default function ResultModal({
         </div>
 
         <div
-          className="result-modal-actions"
+          className={`result-modal-actions${showNewGame ? "" : " result-modal-actions-daily"}`}
           style={{
             padding: "20px 30px 0",
             display: "flex",

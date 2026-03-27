@@ -116,6 +116,17 @@ body {
   color: var(--fg);
 }
 
+@media (min-width: 901px) {
+  .gameboard-hints {
+    max-height: clamp(340px, calc(100dvh - 330px), 760px);
+    overflow-y: auto;
+    overscroll-behavior: contain;
+    scrollbar-gutter: stable;
+    scroll-behavior: smooth;
+    padding-right: 18px !important;
+  }
+}
+
 @media (max-width: 768px) {
   .site-header-inner {
     padding: 10px 14px !important;
@@ -279,6 +290,15 @@ body {
   .result-modal-action {
     width: 100%;
     min-width: 0 !important;
+  }
+
+  .result-modal-actions-daily {
+    grid-template-columns: 1fr !important;
+    justify-items: center;
+  }
+
+  .result-modal-actions-daily .result-modal-action-secondary {
+    max-width: 320px;
   }
 
   .result-modal-action-close {

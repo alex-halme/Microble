@@ -31,10 +31,7 @@ export default function HintList({
   const mountedFocusRef = useRef(false);
 
   function scrollNewestHint(behavior: ScrollBehavior) {
-    if (
-      typeof window === "undefined" ||
-      !window.matchMedia("(max-width: 768px)").matches
-    ) {
+    if (typeof window === "undefined") {
       return;
     }
 
@@ -42,6 +39,49 @@ export default function HintList({
       window.requestAnimationFrame(() => {
         const hint = newestHintRef.current;
         if (!hint) return;
+
+        const desktopContainer = hint.closest<HTMLElement>(".gameboard-hints");
+        const desktopScrollable =
+          window.matchMedia("(min-width: 901px)").matches &&
+          !!desktopContainer &&
+          desktopContainer.scrollHeight > desktopContainer.clientHeight + 1;
+
+        if (desktopScrollable && desktopContainer) {
+          const hintRect = hint.getBoundingClientRect();
+          const containerRect = desktopContainer.getBoundingClientRect();
+          const topInset = 10;
+          const bottomInset = 18;
+          const availableHeight =
+            containerRect.height - topInset - bottomInset;
+
+          let delta = 0;
+
+          if (hintRect.height <= availableHeight) {
+            if (hintRect.top < containerRect.top + topInset) {
+              delta = hintRect.top - containerRect.top - topInset;
+            } else if (
+              hintRect.bottom >
+              containerRect.bottom - bottomInset
+            ) {
+              delta =
+                hintRect.bottom - (containerRect.bottom - bottomInset);
+            }
+          } else {
+            delta = hintRect.top - containerRect.top - topInset;
+          }
+
+          if (Math.abs(delta) > 1) {
+            desktopContainer.scrollTo({
+              top: Math.max(0, desktopContainer.scrollTop + delta),
+              behavior,
+            });
+          }
+          return;
+        }
+
+        if (!window.matchMedia("(max-width: 768px)").matches) {
+          return;
+        }
 
         const rect = hint.getBoundingClientRect();
         const headerHeight =
@@ -106,7 +146,7 @@ export default function HintList({
       className="hint-grid"
       style={{
         display: "grid",
-        gridTemplateColumns: "1fr 1fr",
+        gridTemplateColumns: "1fr",
         gap: "8px",
         alignItems: "stretch",
       }}

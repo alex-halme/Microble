@@ -49,6 +49,7 @@ export default function GameBoard({
   const [submittingGuess, setSubmittingGuess] = useState(false);
   const boardShellRef = useRef<HTMLDivElement | null>(null);
   const hintsRegionRef = useRef<HTMLDivElement | null>(null);
+  const initialFocusCaseRef = useRef<string | null>(null);
 
   const storageKey =
     mode === "daily" && date ? dailyKey(date) : freeplaylKey(caseData.id);
@@ -141,17 +142,51 @@ export default function GameBoard({
       !state ||
       isGameOver(state) ||
       typeof window === "undefined" ||
-      !window.matchMedia("(max-width: 768px)").matches
+      !window.matchMedia("(max-width: 768px)").matches ||
+      initialFocusCaseRef.current === caseData.id
     ) {
       return;
     }
 
-    window.requestAnimationFrame(() => {
+    initialFocusCaseRef.current = caseData.id;
+
+    const timer = window.setTimeout(() => {
+      const board = boardShellRef.current;
+      if (!board) return;
+
+      if (state.hintsRevealed === 1) {
+        const headerHeight =
+          document.querySelector<HTMLElement>(".site-header")?.getBoundingClientRect()
+            .height ?? 0;
+        const boardHeaderHeight =
+          board
+            .querySelector<HTMLElement>(".gameboard-header")
+            ?.getBoundingClientRect().height ?? 0;
+        const firstHintHeight =
+          board.querySelector<HTMLElement>(".hint-card")?.getBoundingClientRect().height ?? 0;
+        const inputTrayHeight =
+          board
+            .querySelector<HTMLElement>(".gameboard-input-region")
+            ?.getBoundingClientRect().height ?? 0;
+        const availableHeight =
+          window.innerHeight - headerHeight - inputTrayHeight - 24;
+
+        if (boardHeaderHeight + firstHintHeight <= availableHeight) {
+          board.scrollIntoView({
+            behavior: "smooth",
+            block: "start",
+          });
+          return;
+        }
+      }
+
       hintsRegionRef.current?.scrollIntoView({
         behavior: "smooth",
         block: "start",
       });
-    });
+    }, 40);
+
+    return () => window.clearTimeout(timer);
   }, [caseData.id, state]);
 
   useEffect(() => {
@@ -384,11 +419,15 @@ export default function GameBoard({
           </div>
 
           {/* Clue list */}
-          <div ref={hintsRegionRef} className="gameboard-hints" style={{ padding: "14px 22px" }}>
+          <div
+            ref={hintsRegionRef}
+            className="gameboard-hints"
+            style={{ padding: "14px 22px" }}
+          >
             <HintList
               hints={caseData.hints}
               revealed={state.hintsRevealed}
-              focusNewestOnMount={mode === "freeplay" && !gameOver && state.hintsRevealed > 1}
+              focusNewestOnMount={!gameOver && state.hintsRevealed > 1}
             />
           </div>
 
