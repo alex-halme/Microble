@@ -167,6 +167,14 @@ export default function GameBoard({
       const board = boardShellRef.current;
       if (!board) return;
 
+      if (mode === "freeplay" && state.hintsRevealed === 1) {
+        board.scrollIntoView({
+          behavior: "smooth",
+          block: "start",
+        });
+        return;
+      }
+
       if (state.hintsRevealed === 1) {
         const headerHeight =
           document.querySelector<HTMLElement>(".site-header")?.getBoundingClientRect()
@@ -208,7 +216,7 @@ export default function GameBoard({
     }, 40);
 
     return () => window.clearTimeout(timer);
-  }, [caseData.id, state]);
+  }, [caseData.id, mode, state]);
 
   useEffect(() => {
     if (!state || !isGameOver(state)) return;
