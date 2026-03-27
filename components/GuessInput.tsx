@@ -11,6 +11,8 @@ interface GuessInputProps {
   guessesRemaining: number;
   disabled?: boolean;
   matchGuess: (input: string) => MatchResult;
+  autoFocus?: boolean;
+  onFocusChange?: (focused: boolean) => void;
 }
 
 export default function GuessInput({
@@ -20,6 +22,8 @@ export default function GuessInput({
   guessesRemaining,
   disabled,
   matchGuess,
+  autoFocus = false,
+  onFocusChange,
 }: GuessInputProps) {
   const [input, setInput] = useState("");
   const [suggestions, setSuggestions] = useState<string[]>([]);
@@ -55,6 +59,19 @@ export default function GuessInput({
     setSelectedIdx(-1);
   }, [input]);
 
+  useEffect(() => {
+    if (!autoFocus || disabled || typeof window === "undefined") {
+      return;
+    }
+
+    const timer = window.setTimeout(() => {
+      inputRef.current?.focus({ preventScroll: true });
+      inputRef.current?.select();
+    }, 40);
+
+    return () => window.clearTimeout(timer);
+  }, [autoFocus, disabled]);
+
   function handleSubmit(value?: string) {
     const guess = (value ?? input).trim();
     if (!guess || disabled) return;
@@ -72,6 +89,7 @@ export default function GuessInput({
     setFeedback(null);
     setInput("");
     setSuggestions([]);
+    inputRef.current?.focus({ preventScroll: true });
     onGuess(result.organism.canonical);
   }
 
@@ -139,9 +157,16 @@ export default function GuessInput({
               setTimeout(() => {
                 setSuggestions([]);
                 setFocused(false);
+                onFocusChange?.(false);
               }, 150)
             }
-            onFocus={() => setFocused(true)}
+            onFocus={() => {
+              setFocused(true);
+              onFocusChange?.(true);
+              if (inputRef.current?.value) {
+                inputRef.current.select();
+              }
+            }}
             disabled={disabled}
             placeholder="Type pathogen name"
             autoComplete="off"

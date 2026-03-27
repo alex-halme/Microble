@@ -27,6 +27,7 @@ export default function HintList({
   const newest = visible.length - 1;
   const remaining = 5 - revealed;
   const newestHintRef = useRef<HTMLElement | null>(null);
+  const placeholderRef = useRef<HTMLDivElement | null>(null);
   const previousRevealedRef = useRef(revealed);
   const mountedFocusRef = useRef(false);
 
@@ -45,12 +46,16 @@ export default function HintList({
           window.matchMedia("(min-width: 901px)").matches &&
           !!desktopContainer &&
           desktopContainer.scrollHeight > desktopContainer.clientHeight + 1;
+        const placeholderHeight =
+          remaining > 0
+            ? (placeholderRef.current?.getBoundingClientRect().height ?? 0) + 12
+            : 0;
 
         if (desktopScrollable && desktopContainer) {
           const hintRect = hint.getBoundingClientRect();
           const containerRect = desktopContainer.getBoundingClientRect();
           const topInset = 10;
-          const bottomInset = 18;
+          const bottomInset = 18 + placeholderHeight;
           const availableHeight =
             containerRect.height - topInset - bottomInset;
 
@@ -93,7 +98,7 @@ export default function HintList({
             ?.getBoundingClientRect().height ?? 0;
 
         const topInset = headerHeight + 12;
-        const bottomInset = inputTrayHeight + 12;
+        const bottomInset = inputTrayHeight + 12 + placeholderHeight;
         const availableBottom = window.innerHeight - bottomInset;
         const availableHeight = availableBottom - topInset;
 
@@ -226,6 +231,7 @@ export default function HintList({
 
       {remaining > 0 && (
         <div
+          ref={placeholderRef}
           className="hint-card hint-card-placeholder"
           style={{
             border: "1px dashed var(--border)",

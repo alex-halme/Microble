@@ -47,6 +47,7 @@ export default function GameBoard({
   const [freeplayStreak, setFreeplayStreakState] = useState(0);
   const [reveal, setReveal] = useState<CaseReveal | null>(null);
   const [submittingGuess, setSubmittingGuess] = useState(false);
+  const [inputFocused, setInputFocused] = useState(false);
   const boardShellRef = useRef<HTMLDivElement | null>(null);
   const hintsRegionRef = useRef<HTMLDivElement | null>(null);
   const initialFocusCaseRef = useRef<string | null>(null);
@@ -71,6 +72,7 @@ export default function GameBoard({
 
     setReveal(null);
     setSubmittingGuess(false);
+    setInputFocused(false);
   }, [caseData.id, mode, date, storageKey]);
 
   useEffect(() => {
@@ -433,7 +435,7 @@ export default function GameBoard({
 
           {/* Divider + input area */}
           <div
-            className="gameboard-input-region"
+            className={`gameboard-input-region${inputFocused ? " gameboard-input-region-focused" : ""}`}
             style={{
               borderTop: "1px solid var(--border)",
               padding: "14px 22px 16px",
@@ -447,6 +449,8 @@ export default function GameBoard({
                 guessesRemaining={remaining}
                 disabled={gameOver || submittingGuess}
                 matchGuess={(input) => matchGuess(input, ORGANISMS)}
+                autoFocus
+                onFocusChange={setInputFocused}
               />
             ) : (
               <div style={{ display: "flex", alignItems: "center", gap: "10px", flexWrap: "wrap" }}>
