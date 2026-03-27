@@ -79,6 +79,7 @@ Players must identify the causative organism from 5 sequential clinical hints.
 RULES (strictly enforced):
 1. Hints must move from initial patient presentation toward the most specific later clue
 2. Hint 1 must be a patient presentation vignette, not a generic background statement
+2a. Hint 1 should usually begin with a direct patient-first construction such as "A 43-year-old..." or "A previously well 6-year-old..."
 3. Hint 1 must use the "presentation" category
 4. Hint 5 should allow a medical student to identify the organism
 5. No hint may contain the organism's genus name, species name, any abbreviation, or common name
@@ -90,6 +91,7 @@ RULES (strictly enforced):
 11. Avoid US-centered assumptions unless location is essential; prefer globally legible terminology and settings.
 12. Medium and hard cases must not be too guessable from hint 1 alone. The presentation should support a differential diagnosis rather than immediately revealing the organism through a classic textbook syndrome.
 13. Avoid LLM-style punctuation mannerisms. Do not use semicolons, em dashes, or en dashes in hints or explanations. Prefer short, direct sentences with commas or full stops.
+14. Explanations should read like short diagnostic reasoning, not a textbook mini-essay. Prefer 2-4 direct sentences explaining why this patient's clues support the diagnosis.
 
 OUTPUT: Return a JSON object with a "cases" array containing exactly ${CASES_PER_ORGANISM} distinct case objects.
 Each case must be a different clinical scenario for the same organism (different patient, setting, or presentation).`;
@@ -302,9 +304,12 @@ async function generateCasesForOrganism(
 Each case must represent a different patient scenario, presentation, or clinical setting.
 Each case should feel in-depth like a compact teaching case rather than a generic summary.
 Use concrete patient details and globally legible medical framing rather than US-specific assumptions.
+Make hint 1 literally read like a vignette opening, ideally beginning with "A [age]-year-old..." or an equivalent patient-first construction.
+Make the first two sentences of hint 1 describe the patient, setting, time course, and at least one concrete examination, severity, or exposure detail.
 US references are acceptable when natural to the case, but the vignette should not depend on specifically US-only agencies, insurance, or holiday framing.
 If you label a case "medium", keep hint 1 clinically suggestive but not strongly diagnostic on its own; do not stack several classic hallmark findings at once, and hold back at least one important discriminator for later hints.
 If you label a case "hard", make hint 1 genuinely non-obvious from a pathogen-identification standpoint: start with a plausible but broader clinical presentation, avoid the signature giveaway syndrome, and reserve the most pathogen-specific clue for hint 4 or hint 5.
+Write the explanation as short diagnostic reasoning for this case, not as a generic pathogen mini-essay.
 Remember: do NOT include "${organism.genus ?? ""}", "${organism.species ?? ""}", or any of these in the hints: ${[...organism.abbreviations, ...organism.commonNames].join(", ") || "none"}`;
 
   for (let attempt = 0; attempt <= MAX_RETRIES; attempt++) {

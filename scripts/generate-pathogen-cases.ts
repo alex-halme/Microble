@@ -140,6 +140,7 @@ Style target:
 Rules:
 1. Write exactly 5 sequential hints per case, ordered from initial patient presentation to the most discriminating later clue.
 2. Hint 1 must be a patient presentation, not a generic background statement. It should open like a real vignette with age, setting, symptoms, and enough specificity that a learner can start forming a differential immediately.
+2a. Hint 1 should usually begin with a direct patient-first construction such as "A 43-year-old..." or "A previously well 6-year-old...".
 3. Hint 5 should allow an informed medical student to identify the pathogen.
 4. Every hint must use a different category from: presentation, history, lab, imaging, exposure, treatment_response.
 5. Hint 1 must use the "presentation" category.
@@ -153,6 +154,7 @@ Rules:
 13. Avoid US-centered assumptions unless location is essential; prefer globally legible terminology and settings.
 14. Never write lab counts in /uL, /μL, /µL, or K/µL. Use SI-style notation such as × 10^9/L, × 10^6/L, mmol/L, mg/L, or g/L.
 15. Do not use generic filler phrases such as "classically", "typically", "this organism is", "this infection is", or "is associated with".
+15a. Explanations should read like short diagnostic reasoning, not a textbook mini-essay. Prefer 2-4 direct sentences explaining why this patient's clues support the diagnosis.
 16. US references are allowed when clinically natural, but the case should remain globally legible and should not depend on specifically US-only insurance, agency, or holiday framing.
 17. Medium and hard cases must not be too guessable from hint 1 alone. The opening presentation should support a reasonable differential diagnosis rather than essentially naming the pathogen through a classic board-style syndrome.
 18. Hard cases should require integration of later hints to solve. Hint 1 may be concerning or distinctive, but it should not by itself make the pathogen obvious to a well-prepared student.
@@ -239,13 +241,32 @@ function buildForbiddenTokens(pathogen: PathogenGenerationPlanEntry): string[] {
     "c",
     "d",
   ]);
+  const genericClinicalWords = new Set([
+    "respiratory",
+    "fever",
+    "hemorrhagic",
+    "haemorrhagic",
+    "disease",
+    "syndrome",
+    "coli",
+  ]);
 
   const canonicalPieces = canonicalWords
-    .filter((piece) => piece.length >= 4 && !stopwords.has(piece));
+    .filter(
+      (piece) =>
+        piece.length >= 4 &&
+        !stopwords.has(piece) &&
+        !genericClinicalWords.has(piece)
+    );
   const idPieces = pathogen.id
     .split("-")
     .map((piece) => normalizeToken(piece))
-    .filter((piece) => piece.length >= 4 && !stopwords.has(piece));
+    .filter(
+      (piece) =>
+        piece.length >= 4 &&
+        !stopwords.has(piece) &&
+        !genericClinicalWords.has(piece)
+    );
 
   const tokens = new Set<string>([
     normalizedCanonical,
@@ -704,8 +725,10 @@ Each case must:
 - feel comparably detailed to a strong teaching case, not a short board-review flashcard
 - include concrete patient details such as age, time course, comorbidity, procedure, travel, immune status, examination finding, or named investigation results
 - make hint 1 a concrete patient vignette, never a generic background clue
+- make hint 1 literally read like a vignette opening, ideally beginning with "A [age]-year-old..." or an equivalent patient-first construction
 - make hint 1 specific enough that a learner could form a real differential diagnosis from it alone
 - make hint 1 include age, time course, setting, key symptoms, and at least one nontrivial detail such as an exposure, comorbidity, severity marker, or examination finding
+- make the first two sentences of hint 1 describe the patient, setting, time course, and at least one concrete examination, severity, or exposure detail
 - if difficulty is "easy", hint 1 may be fairly classic and suggestive
 - if difficulty is "medium", hint 1 should be clinically plausible but not strongly diagnostic on its own; avoid stacking hallmark findings or a signature board-style presentation in the opening clue
 - if difficulty is "medium", hold back at least one major discriminator for hints 3-5
@@ -718,6 +741,7 @@ Each case must:
 - if you mention blood counts, prefer notation like "14.2 × 10^9/L"; never use /uL, /μL, /µL, K/uL, or K/µL
 - use exactly the JSON field names "order", "category", and "text" inside hints
 - include a top-level "difficulty" and "explanation" for every case
+- write the explanation as short diagnostic reasoning for this case, not as a generic pathogen mini-essay
 - include no extra keys such as "patient", "vignette", or "diagnosis"
 - avoid generic pathogen facts that are not explicitly tied to this patient
 - avoid making the case depend on specifically US-only agencies, insurance, or holiday framing unless clinically essential
