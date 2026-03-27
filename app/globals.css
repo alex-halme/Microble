@@ -47,6 +47,8 @@ html {
   font-family: var(--font-sans);
   font-size: 16px;
   color-scheme: light only;
+  overflow-x: clip;
+  scrollbar-gutter: stable both-edges;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
@@ -55,6 +57,7 @@ body {
   min-height: 100vh;
   margin: 0;
   background: #f5f5f7;
+  overflow-x: clip;
 }
 
 /* Prevent any dark-mode override from the OS or browser */
@@ -118,12 +121,15 @@ body {
 
 @media (min-width: 901px) {
   .gameboard-hints {
-    max-height: clamp(340px, calc(100dvh - 330px), 760px);
+    max-height: clamp(280px, 42dvh, 500px);
     overflow-y: auto;
     overscroll-behavior: contain;
     scrollbar-gutter: stable;
     scroll-behavior: smooth;
+    scroll-padding-bottom: 18px;
     padding-right: 18px !important;
+    padding-bottom: 14px !important;
+    border-bottom: 1px solid rgba(217, 217, 222, 0.6);
   }
 }
 
