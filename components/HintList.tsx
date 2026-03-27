@@ -85,7 +85,7 @@ export default function HintList({
           return;
         }
 
-        if (!window.matchMedia("(max-width: 768px)").matches) {
+        if (!window.matchMedia("(max-width: 900px)").matches) {
           return;
         }
 

@@ -133,7 +133,7 @@ body {
   }
 }
 
-@media (max-width: 768px) {
+@media (max-width: 900px) {
   .site-header-inner {
     padding: 10px 14px !important;
     align-items: flex-start !important;
@@ -194,7 +194,7 @@ body {
   .gameboard-card {
     border-radius: 16px !important;
     overflow: visible !important;
-    padding-bottom: calc(132px + env(safe-area-inset-bottom)) !important;
+    padding-bottom: calc(110px + env(safe-area-inset-bottom)) !important;
   }
 
   .gameboard-header {
@@ -241,7 +241,7 @@ body {
     bottom: calc(env(safe-area-inset-bottom) + 6px);
     z-index: 8;
     margin: 0 !important;
-    padding: 10px !important;
+    padding: 8px !important;
     border: 1px solid rgba(217, 217, 222, 0.92) !important;
     border-radius: 16px !important;
     background: rgba(255, 255, 255, 0.94) !important;

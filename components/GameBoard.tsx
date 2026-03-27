@@ -59,7 +59,7 @@ export default function GameBoard({
   useEffect(() => {
     if (typeof window === "undefined") return;
 
-    const media = window.matchMedia("(max-width: 768px)");
+    const media = window.matchMedia("(max-width: 900px)");
     const update = () => setIsCompactMobile(media.matches);
     update();
     media.addEventListener("change", update);
@@ -155,7 +155,7 @@ export default function GameBoard({
       !state ||
       isGameOver(state) ||
       typeof window === "undefined" ||
-      !window.matchMedia("(max-width: 768px)").matches ||
+      !window.matchMedia("(max-width: 900px)").matches ||
       initialFocusCaseRef.current === caseData.id
     ) {
       return;
