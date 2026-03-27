@@ -485,9 +485,26 @@ export function upsertCases(pool: CasePool, cases: InsertableCaseRecord[]): void
   transaction(cases);
 }
 
-function getPrimaryDailyPool(): MicrobleCase[] {
+function getUtcDayStart(date = new Date()): number {
+  return Date.UTC(date.getUTCFullYear(), date.getUTCMonth(), date.getUTCDate());
+}
+
+function filterCasesVisibleAtDayStart(
+  cases: MicrobleCase[],
+  now = new Date()
+): MicrobleCase[] {
+  const dayStart = getUtcDayStart(now);
+  return cases.filter((caseData) => {
+    const createdAt = Date.parse(caseData.createdAt);
+    return Number.isFinite(createdAt) && createdAt < dayStart;
+  });
+}
+
+function getPrimaryDailyPool(now = new Date()): MicrobleCase[] {
   const generatedDaily = listStoredCasesByPool("daily").map(toMicrobleCase);
-  if (generatedDaily.length > 0) return generatedDaily;
+  const visibleGeneratedDaily = filterCasesVisibleAtDayStart(generatedDaily, now);
+
+  if (visibleGeneratedDaily.length > 0) return visibleGeneratedDaily;
   return listStoredCasesByPool("legacy_daily").map(toMicrobleCase);
 }
 
@@ -522,3 +539,7 @@ export function getFreeplayRuntimeCases(): MicrobleCase[] {
   const filtered = freeplayCases.filter((caseData) => caseData.id !== currentDailyCase.id);
   return filtered.length > 0 ? filtered : freeplayCases;
 }
+
+export const __testing = {
+  filterCasesVisibleAtDayStart,
+};

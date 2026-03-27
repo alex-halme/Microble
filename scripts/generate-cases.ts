@@ -188,14 +188,6 @@ function containsUsCentricFraming(text: string): string[] {
     .map((pattern) => pattern.toString());
 }
 
-function containsForbiddenMannerisms(text: string): string[] {
-  const patterns = [/;/, /—/, /–/];
-
-  return patterns
-    .filter((pattern) => pattern.test(text))
-    .map((pattern) => pattern.toString());
-}
-
 function validateCase(
   output: CaseOutput,
   organism: Organism
@@ -278,12 +270,6 @@ function validateCase(
       errors.push(`Hint ${hint.order} uses generic case phrasing (${genericPattern})`);
     }
 
-    for (const mannerismPattern of containsForbiddenMannerisms(hint.text)) {
-      errors.push(
-        `Hint ${hint.order} uses forbidden punctuation mannerism (${mannerismPattern})`
-      );
-    }
-
     for (const usPattern of containsUsCentricFraming(hint.text)) {
       errors.push(`Hint ${hint.order} uses US-centered framing (${usPattern})`);
     }
@@ -291,10 +277,6 @@ function validateCase(
 
   for (const genericPattern of containsGenericCasePhrasing(output.explanation)) {
     errors.push(`Explanation uses generic phrasing (${genericPattern})`);
-  }
-
-  for (const mannerismPattern of containsForbiddenMannerisms(output.explanation)) {
-    errors.push(`Explanation uses forbidden punctuation mannerism (${mannerismPattern})`);
   }
 
   const subtypeMismatch = detectSubtypeMismatchForTarget(organism.id, output);

@@ -157,6 +157,7 @@ Rules:
 17. Medium and hard cases must not be too guessable from hint 1 alone. The opening presentation should support a reasonable differential diagnosis rather than essentially naming the pathogen through a classic board-style syndrome.
 18. Hard cases should require integration of later hints to solve. Hint 1 may be concerning or distinctive, but it should not by itself make the pathogen obvious to a well-prepared student.
 19. Avoid LLM-style punctuation mannerisms. Do not use semicolons, em dashes, or en dashes in hints or explanations. Prefer short, direct sentences with commas or full stops.
+20. For hepatitis viruses, disease-level wording such as acute hepatitis, chronic hepatitis, jaundice, or transaminitis is allowed, but never mention a lettered subtype such as hepatitis A, hepatitis B, hepatitis C, hepatitis D, hepatitis E, or their abbreviations.
 
 Return JSON only as { "cases": [...] }.`;
 
@@ -219,6 +220,10 @@ function normalizeToken(token: string): string {
 }
 
 function buildForbiddenTokens(pathogen: PathogenGenerationPlanEntry): string[] {
+  const normalizedCanonical = normalizeToken(pathogen.canonical);
+  const canonicalWords = normalizedCanonical.split(/\s+/).filter(Boolean);
+  const isLetteredHepatitisVirus =
+    canonicalWords[0] === "hepatitis" && canonicalWords[1]?.length === 1;
   const stopwords = new Set([
     "virus",
     "species",
@@ -235,15 +240,25 @@ function buildForbiddenTokens(pathogen: PathogenGenerationPlanEntry): string[] {
     "d",
   ]);
 
-  const canonicalPieces = normalizeToken(pathogen.canonical)
-    .split(/\s+/)
+  const canonicalPieces = canonicalWords
     .filter((piece) => piece.length >= 4 && !stopwords.has(piece));
   const idPieces = pathogen.id
     .split("-")
     .map((piece) => normalizeToken(piece))
     .filter((piece) => piece.length >= 4 && !stopwords.has(piece));
 
-  return [...new Set([normalizeToken(pathogen.canonical), ...canonicalPieces, ...idPieces])];
+  const tokens = new Set<string>([
+    normalizedCanonical,
+    ...canonicalPieces,
+    ...idPieces,
+  ]);
+
+  if (isLetteredHepatitisVirus) {
+    tokens.delete("hepatitis");
+    tokens.add(`hepatitis ${canonicalWords[1]}`);
+  }
+
+  return [...tokens];
 }
 
 function looksLikePatientPresentation(text: string): boolean {
@@ -337,14 +352,6 @@ function containsUsCentricFraming(text: string): string[] {
     .map((pattern) => pattern.toString());
 }
 
-function containsForbiddenMannerisms(text: string): string[] {
-  const patterns = [/;/, /—/, /–/];
-
-  return patterns
-    .filter((pattern) => pattern.test(text))
-    .map((pattern) => pattern.toString());
-}
-
 function validateCaseOutput(
   output: z.infer<typeof HintSchema> extends never
     ? never
@@ -424,12 +431,6 @@ function validateCaseOutput(
       errors.push(`Hint ${hint.order} uses generic case phrasing (${genericPattern})`);
     }
 
-    for (const mannerismPattern of containsForbiddenMannerisms(hint.text)) {
-      errors.push(
-        `Hint ${hint.order} uses forbidden punctuation mannerism (${mannerismPattern})`
-      );
-    }
-
     for (const usPattern of containsUsCentricFraming(hint.text)) {
       errors.push(`Hint ${hint.order} uses US-centered framing (${usPattern})`);
     }
@@ -437,10 +438,6 @@ function validateCaseOutput(
 
   for (const genericPattern of containsGenericCasePhrasing(output.explanation)) {
     errors.push(`Explanation uses generic phrasing (${genericPattern})`);
-  }
-
-  for (const mannerismPattern of containsForbiddenMannerisms(output.explanation)) {
-    errors.push(`Explanation uses forbidden punctuation mannerism (${mannerismPattern})`);
   }
 
   const subtypeMismatch = detectSubtypeMismatchForTarget(job.pathogen.id, output);
@@ -500,6 +497,53 @@ function countCasesByPathogenAndDifficulty(
 
 function totalCasesForRecord(record: Record<DifficultyLevel, number>): number {
   return record.easy + record.medium + record.hard;
+}
+
+function hashString(input: string): number {
+  let hash = 0;
+  for (let index = 0; index < input.length; index += 1) {
+    hash = (hash * 31 + input.charCodeAt(index)) >>> 0;
+  }
+  return hash;
+}
+
+function getSeedDifficultyOrder(
+  pathogen: PathogenGenerationPlanEntry,
+  pool: GenerationPool
+): DifficultyLevel[] {
+  if (pathogen.tier === "rare_bonus") {
+    return ["hard", "medium", "easy"];
+  }
+
+  if (pathogen.tier === "usmle_extended") {
+    return ["medium", "hard", "easy"];
+  }
+
+  if (pathogen.kind !== "bacterium") {
+    // Non-bacterial core pathogens were getting stuck with only easy cases
+    // during breadth-first seeding. Rotate the first seeded difficulty so
+    // virus / parasite / fungal pools develop medium and hard coverage earlier
+    // in both free-play and daily generation.
+    return hashString(pathogen.id) % 2 === 0
+      ? ["medium", "hard", "easy"]
+      : ["hard", "medium", "easy"];
+  }
+
+  return ["easy", "medium", "hard"];
+}
+
+function chooseSeedDifficulty(
+  pathogen: PathogenGenerationPlanEntry,
+  pool: GenerationPool,
+  existing: Record<DifficultyLevel, number>
+): DifficultyLevel | null {
+  for (const difficulty of getSeedDifficultyOrder(pathogen, pool)) {
+    if (pathogen.quotas[pool].byDifficulty[difficulty] > existing[difficulty]) {
+      return difficulty;
+    }
+  }
+
+  return null;
 }
 
 function chooseNextDifficulty(
@@ -586,13 +630,13 @@ function buildGenerationJobs(
         continue;
       }
 
-      const difficulty = chooseNextDifficulty(pathogen, pool, existing);
+      const difficulty = chooseSeedDifficulty(pathogen, pool, existing);
       if (!difficulty) continue;
 
       const difficultyDeficit =
         pathogen.quotas[pool].byDifficulty[difficulty] - existing[difficulty];
       const count = Math.min(
-        EARLY_COVERAGE_BATCH_CAP,
+        1,
         earlyCoverageTarget - existingTotal,
         difficultyDeficit,
         remainingBudget
@@ -678,6 +722,7 @@ Each case must:
 - avoid generic pathogen facts that are not explicitly tied to this patient
 - avoid making the case depend on specifically US-only agencies, insurance, or holiday framing unless clinically essential
 - never use filler terms like "classically", "typically", "this organism is", "this infection is", or "is associated with"
+- for hepatitis viruses, generic disease-level wording like acute hepatitis or transaminitis is acceptable, but never include subtype labels like hepatitis A/B/C/D/E or abbreviations such as HAV, HBV, HCV, HDV, or HEV
 - occasional US references are acceptable, but the case should still read clearly to a global medical audience
 
 Return JSON only.

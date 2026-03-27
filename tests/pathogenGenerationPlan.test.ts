@@ -23,6 +23,24 @@ describe("pathogen generation plan", () => {
     );
   });
 
+  it("gives core pathogens representation across all difficulties when the pool size allows it", () => {
+    for (const entry of PATHOGEN_GENERATION_PLAN) {
+      if (entry.tier !== "usmle_core") continue;
+
+      if (entry.quotas.freeplay.total >= 3) {
+        expect(entry.quotas.freeplay.byDifficulty.easy).toBeGreaterThan(0);
+        expect(entry.quotas.freeplay.byDifficulty.medium).toBeGreaterThan(0);
+        expect(entry.quotas.freeplay.byDifficulty.hard).toBeGreaterThan(0);
+      }
+
+      if (entry.quotas.daily.total >= 3) {
+        expect(entry.quotas.daily.byDifficulty.easy).toBeGreaterThan(0);
+        expect(entry.quotas.daily.byDifficulty.medium).toBeGreaterThan(0);
+        expect(entry.quotas.daily.byDifficulty.hard).toBeGreaterThan(0);
+      }
+    }
+  });
+
   it("never assigns daily quota to non-daily-eligible pathogens", () => {
     for (const entry of PATHOGEN_GENERATION_PLAN) {
       if (entry.dailyEligible) continue;

@@ -72,17 +72,29 @@ function allocateDifficultyCounts(
   }
 
   const levels: DifficultyLevel[] = ["easy", "medium", "hard"];
+  const positiveLevels = levels.filter((level) => mix[level] > 0);
+  const base: DifficultyDistribution = { easy: 0, medium: 0, hard: 0 };
+  let assigned = 0;
+
+  // If the pool has enough room to represent every intended difficulty bucket,
+  // seed one case into each nonzero bucket before distributing the remainder.
+  if (total >= positiveLevels.length) {
+    positiveLevels.forEach((level) => {
+      base[level] = 1;
+      assigned += 1;
+    });
+  }
+
+  const remaining = total - assigned;
   const raw = levels.map((level) => ({
     level,
-    exact: total * mix[level],
+    exact: remaining * mix[level],
   }));
-
-  const base: DifficultyDistribution = { easy: 0, medium: 0, hard: 0 };
   raw.forEach(({ level, exact }) => {
-    base[level] = Math.floor(exact);
+    base[level] += Math.floor(exact);
   });
 
-  let assigned = base.easy + base.medium + base.hard;
+  assigned = base.easy + base.medium + base.hard;
 
   raw
     .sort((a, b) => (b.exact % 1) - (a.exact % 1))
