@@ -476,7 +476,7 @@ export default function GameBoard({
                 guessesRemaining={remaining}
                 disabled={gameOver || submittingGuess}
                 matchGuess={(input) => matchGuess(input, ORGANISMS)}
-                autoFocus
+                autoFocus={!isCompactMobile}
                 onFocusChange={setInputFocused}
               />
             ) : (

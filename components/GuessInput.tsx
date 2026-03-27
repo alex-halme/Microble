@@ -30,6 +30,7 @@ export default function GuessInput({
   const [selectedIdx, setSelectedIdx] = useState(-1);
   const [feedback, setFeedback] = useState<string | null>(null);
   const [focused, setFocused] = useState(false);
+  const [compactLayout, setCompactLayout] = useState(false);
   const inputRef = useRef<HTMLInputElement>(null);
 
   const organismsByCanonical = ORGANISMS.map((organism) => ({
@@ -40,6 +41,16 @@ export default function GuessInput({
       ...organism.commonNames,
     ],
   }));
+
+  useEffect(() => {
+    if (typeof window === "undefined") return;
+
+    const media = window.matchMedia("(max-width: 900px)");
+    const update = () => setCompactLayout(media.matches);
+    update();
+    media.addEventListener("change", update);
+    return () => media.removeEventListener("change", update);
+  }, []);
 
   useEffect(() => {
     if (input.length < 2) {
@@ -66,11 +77,16 @@ export default function GuessInput({
 
     const timer = window.setTimeout(() => {
       inputRef.current?.focus({ preventScroll: true });
-      inputRef.current?.select();
+      const valueLength = inputRef.current?.value.length ?? 0;
+      if (compactLayout) {
+        inputRef.current?.setSelectionRange(valueLength, valueLength);
+      } else {
+        inputRef.current?.select();
+      }
     }, 40);
 
     return () => window.clearTimeout(timer);
-  }, [autoFocus, disabled]);
+  }, [autoFocus, compactLayout, disabled]);
 
   function handleSubmit(value?: string) {
     const guess = (value ?? input).trim();
@@ -163,8 +179,11 @@ export default function GuessInput({
             onFocus={() => {
               setFocused(true);
               onFocusChange?.(true);
-              if (inputRef.current?.value) {
+              if (inputRef.current?.value && !compactLayout) {
                 inputRef.current.select();
+              } else if (inputRef.current?.value) {
+                const valueLength = inputRef.current.value.length;
+                inputRef.current.setSelectionRange(valueLength, valueLength);
               }
             }}
             disabled={disabled}
@@ -176,13 +195,18 @@ export default function GuessInput({
             style={{
               flex: 1,
               minWidth: 0,
+              height: "1.3em",
               background: "transparent",
               border: "none",
               outline: "none",
               fontFamily: "var(--font-sans)",
               fontSize: "15px",
+              lineHeight: 1.3,
               color: "var(--fg)",
-              padding: "7px 0",
+              padding: 0,
+              margin: 0,
+              appearance: "none",
+              WebkitAppearance: "none",
               caretColor: "var(--accent)",
             }}
           />
@@ -211,9 +235,11 @@ export default function GuessInput({
 
         {suggestions.length > 0 && (
           <div
+            className="guess-suggestions"
             style={{
               position: "absolute",
-              top: "calc(100% + 6px)",
+              top: compactLayout ? "auto" : "calc(100% + 6px)",
+              bottom: compactLayout ? "calc(100% + 6px)" : "auto",
               left: 0,
               right: 0,
               zIndex: 20,
@@ -222,6 +248,8 @@ export default function GuessInput({
               borderRadius: "12px",
               boxShadow: "0 8px 24px rgba(15,23,42,0.10)",
               overflow: "hidden",
+              maxHeight: compactLayout ? "min(240px, 36vh)" : "none",
+              overflowY: compactLayout ? "auto" : "hidden",
             }}
           >
             {suggestions.map((s, i) => (
