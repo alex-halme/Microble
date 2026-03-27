@@ -115,3 +115,172 @@ body {
 .nav-link:hover {
   color: var(--fg);
 }
+
+@media (max-width: 768px) {
+  .site-header-inner {
+    padding: 10px 14px !important;
+    align-items: flex-start !important;
+    flex-direction: column !important;
+    gap: 10px !important;
+  }
+
+  .site-main {
+    padding: 12px 12px calc(120px + env(safe-area-inset-bottom)) !important;
+  }
+
+  .top-nav {
+    width: 100%;
+    justify-content: stretch;
+  }
+
+  .top-nav .nav-link {
+    flex: 1 1 0;
+    text-align: center;
+    padding: 10px 12px !important;
+    font-size: 14px !important;
+  }
+
+  .filter-toolbar {
+    margin-bottom: 12px !important;
+    padding: 14px 16px !important;
+    border-radius: 16px !important;
+    gap: 10px !important;
+    align-items: stretch !important;
+  }
+
+  .filter-toolbar > div {
+    width: 100%;
+  }
+
+  .filter-toolbar button {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .filter-popup-overlay {
+    padding: 60px 12px 12px !important;
+    align-items: flex-end !important;
+  }
+
+  .filter-popup-panel {
+    max-width: none !important;
+    border-radius: 22px 22px 0 0 !important;
+    padding: 18px 16px calc(18px + env(safe-area-inset-bottom)) !important;
+  }
+
+  .gameboard-shell {
+    max-width: none !important;
+    width: 100%;
+  }
+
+  .gameboard-card {
+    border-radius: 16px !important;
+    overflow: visible !important;
+  }
+
+  .gameboard-header {
+    padding: 16px 16px 12px !important;
+    flex-direction: column !important;
+    align-items: flex-start !important;
+  }
+
+  .gameboard-header h1 {
+    font-size: 18px !important;
+    line-height: 1.1 !important;
+  }
+
+  .gameboard-status-pills {
+    width: 100%;
+    flex-wrap: wrap;
+  }
+
+  .gameboard-hints {
+    padding: 12px 12px 0 !important;
+  }
+
+  .hint-grid {
+    grid-template-columns: 1fr !important;
+    gap: 10px !important;
+  }
+
+  .hint-card {
+    width: 100%;
+    padding: 12px 14px !important;
+    border-radius: 14px !important;
+  }
+
+  .hint-card p {
+    font-size: 16px !important;
+    line-height: 1.55 !important;
+  }
+
+  .gameboard-input-region {
+    position: sticky;
+    bottom: calc(env(safe-area-inset-bottom) + 6px);
+    z-index: 8;
+    margin: 8px 8px 0;
+    padding: 10px !important;
+    border: 1px solid var(--border) !important;
+    border-radius: 16px !important;
+    background: rgba(255, 255, 255, 0.94) !important;
+    backdrop-filter: saturate(180%) blur(20px);
+    box-shadow: 0 18px 44px rgba(15, 23, 42, 0.14);
+  }
+
+  .guess-input-row {
+    padding: 8px 8px 8px 12px !important;
+    border-radius: 14px !important;
+    align-items: stretch !important;
+  }
+
+  .guess-input-row input {
+    min-height: 42px;
+    font-size: 16px !important;
+  }
+
+  .guess-submit-button {
+    min-width: 76px;
+    padding: 0 12px !important;
+    font-size: 14px !important;
+  }
+
+  .guess-input-footer {
+    margin-top: 8px !important;
+    align-items: center !important;
+    flex-direction: row !important;
+    justify-content: flex-end !important;
+    gap: 8px !important;
+    flex-wrap: wrap !important;
+    min-height: 0 !important;
+  }
+
+  .guess-input-helper {
+    display: none !important;
+  }
+
+  .guess-input-helper-feedback {
+    display: block !important;
+    width: 100%;
+  }
+
+  .guess-pass-button {
+    padding: 4px 10px !important;
+    font-size: 12px !important;
+  }
+
+  .result-modal-actions {
+    display: grid !important;
+    grid-template-columns: 1fr 1fr !important;
+    gap: 10px !important;
+    padding: 16px 16px 0 !important;
+  }
+
+  .result-modal-action {
+    width: 100%;
+    min-width: 0 !important;
+  }
+
+  .result-modal-action-close {
+    grid-column: 1 / -1;
+  }
+}

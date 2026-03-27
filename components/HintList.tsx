@@ -1,5 +1,6 @@
 "use client";
 
+import { useEffect, useRef } from "react";
 import type { Hint } from "@/lib/types";
 
 const CATEGORY_LABELS: Record<string, string> = {
@@ -20,14 +21,37 @@ export default function HintList({ hints, revealed }: HintListProps) {
   const visible = hints.slice(0, revealed);
   const newest = visible.length - 1;
   const remaining = 5 - revealed;
+  const newestHintRef = useRef<HTMLElement | null>(null);
+  const previousRevealedRef = useRef(revealed);
+
+  useEffect(() => {
+    const previousRevealed = previousRevealedRef.current;
+
+    if (
+      revealed > previousRevealed &&
+      previousRevealed > 0 &&
+      typeof window !== "undefined" &&
+      window.matchMedia("(max-width: 768px)").matches
+    ) {
+      window.requestAnimationFrame(() => {
+        newestHintRef.current?.scrollIntoView({
+          behavior: "smooth",
+          block: "start",
+        });
+      });
+    }
+
+    previousRevealedRef.current = revealed;
+  }, [revealed]);
 
   return (
     <div
+      className="hint-grid"
       style={{
         display: "grid",
         gridTemplateColumns: "1fr 1fr",
         gap: "8px",
-        alignItems: "start",
+        alignItems: "stretch",
       }}
     >
       {visible.map((hint, i) => {
@@ -36,11 +60,17 @@ export default function HintList({ hints, revealed }: HintListProps) {
         return (
           <article
             key={hint.order}
+            className="hint-card"
+            ref={isNewest ? newestHintRef : null}
             style={{
               border: `1px solid ${isNewest ? "var(--accent-border)" : "var(--border)"}`,
               borderRadius: "12px",
               padding: "10px 14px",
               background: isNewest ? "var(--surface-tint)" : "var(--surface-subtle)",
+              scrollMarginTop: "96px",
+              height: "100%",
+              display: "flex",
+              flexDirection: "column",
             }}
           >
             <div
@@ -99,6 +129,7 @@ export default function HintList({ hints, revealed }: HintListProps) {
 
       {remaining > 0 && (
         <div
+          className="hint-card hint-card-placeholder"
           style={{
             border: "1px dashed var(--border)",
             borderRadius: "12px",

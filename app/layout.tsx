@@ -18,9 +18,14 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
     <html lang="en" style={{ colorScheme: "light", background: "#f5f5f7" }}>
       <head>
         <meta name="color-scheme" content="light" />
+        <meta
+          name="format-detection"
+          content="telephone=no, date=no, email=no, address=no"
+        />
       </head>
       <body style={{ background: "#f5f5f7" }}>
         <header
+          className="site-header"
           style={{
             position: "sticky",
             top: 0,
@@ -31,6 +36,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           }}
         >
           <div
+            className="site-header-inner"
             style={{
               maxWidth: "1200px",
               margin: "0 auto",
@@ -60,6 +66,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         </header>
 
         <main
+          className="site-main"
           style={{
             maxWidth: "1200px",
             margin: "0 auto",

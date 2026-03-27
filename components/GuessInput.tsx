@@ -105,10 +105,11 @@ export default function GuessInput({
   const canSkip = hintsRevealed < 5 && guessesRemaining > 1 && !disabled;
 
   return (
-    <div>
+    <div className="guess-input-shell">
       {/* Input row */}
-      <div style={{ position: "relative" }}>
+      <div className="guess-input-row-shell" style={{ position: "relative" }}>
         <div
+          className="guess-input-row"
           style={{
             display: "flex",
             alignItems: "center",
@@ -142,7 +143,7 @@ export default function GuessInput({
             }
             onFocus={() => setFocused(true)}
             disabled={disabled}
-            placeholder="Start typing the pathogen name"
+            placeholder="Type pathogen name"
             autoComplete="off"
             autoCorrect="off"
             autoCapitalize="off"
@@ -162,6 +163,7 @@ export default function GuessInput({
           />
 
           <button
+            className="guess-submit-button"
             onClick={() => handleSubmit()}
             disabled={disabled || !input.trim()}
             style={{
@@ -224,6 +226,7 @@ export default function GuessInput({
 
       {/* Footer row */}
       <div
+        className="guess-input-footer"
         style={{
           display: "flex",
           justifyContent: "space-between",
@@ -234,6 +237,7 @@ export default function GuessInput({
         }}
       >
         <span
+          className={`guess-input-helper${feedback ? " guess-input-helper-feedback" : ""}`}
           style={{
             fontFamily: "var(--font-sans)",
             fontSize: "12px",
@@ -246,6 +250,7 @@ export default function GuessInput({
 
         {canSkip && (
           <button
+            className="guess-pass-button"
             onClick={onSkip}
             style={{
               background: "transparent",

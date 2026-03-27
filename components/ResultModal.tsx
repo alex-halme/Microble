@@ -293,6 +293,7 @@ export default function ResultModal({
         </div>
 
         <div
+          className="result-modal-actions"
           style={{
             padding: "20px 30px 0",
             display: "flex",
@@ -301,6 +302,7 @@ export default function ResultModal({
           }}
         >
           <button
+            className="result-modal-action result-modal-action-secondary"
             onClick={handleShare}
             disabled={!organism}
             style={{
@@ -336,6 +338,7 @@ export default function ResultModal({
 
           {showNewGame && onNewGame && (
             <button
+              className="result-modal-action result-modal-action-primary"
               onClick={onNewGame}
               style={{
                 flex: 1,
@@ -364,6 +367,7 @@ export default function ResultModal({
 
           {onClose && (
             <button
+              className="result-modal-action result-modal-action-close"
               onClick={onClose}
               style={{
                 minWidth: "120px",

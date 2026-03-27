@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useEffect, useCallback } from "react";
+import { useState, useEffect, useCallback, useRef } from "react";
 import { useRouter } from "next/navigation";
 import type { CaseReveal, GameState, PublicMicrobleCase } from "@/lib/types";
 import { ORGANISMS } from "@/lib/organisms";
@@ -47,6 +47,7 @@ export default function GameBoard({
   const [freeplayStreak, setFreeplayStreakState] = useState(0);
   const [reveal, setReveal] = useState<CaseReveal | null>(null);
   const [submittingGuess, setSubmittingGuess] = useState(false);
+  const hintsRegionRef = useRef<HTMLDivElement | null>(null);
 
   const storageKey =
     mode === "daily" && date ? dailyKey(date) : freeplaylKey(caseData.id);
@@ -111,6 +112,19 @@ export default function GameBoard({
 
     return () => window.clearTimeout(timer);
   }, [mode, router]);
+
+  useEffect(() => {
+    if (typeof window === "undefined" || !window.matchMedia("(max-width: 768px)").matches) {
+      return;
+    }
+
+    window.requestAnimationFrame(() => {
+      hintsRegionRef.current?.scrollIntoView({
+        behavior: "smooth",
+        block: "start",
+      });
+    });
+  }, [caseData.id]);
 
   useEffect(() => {
     if (!state || !isGameOver(state)) return;
@@ -214,9 +228,10 @@ export default function GameBoard({
 
   return (
     <>
-      <div style={{ maxWidth: "860px", margin: "0 auto" }}>
+      <div className="gameboard-shell" style={{ maxWidth: "860px", margin: "0 auto" }}>
         {/* Main game card */}
         <div
+          className="gameboard-card"
           style={{
             background: "var(--surface)",
             borderRadius: "18px",
@@ -227,6 +242,7 @@ export default function GameBoard({
         >
           {/* Card header */}
           <div
+            className="gameboard-header"
             style={{
               padding: "18px 22px 14px",
               borderBottom: "1px solid var(--border)",
@@ -263,7 +279,7 @@ export default function GameBoard({
             </div>
 
             {/* Status pills */}
-            <div style={{ display: "flex", gap: "6px", flexShrink: 0 }}>
+            <div className="gameboard-status-pills" style={{ display: "flex", gap: "6px", flexShrink: 0 }}>
               {mode === "freeplay" && freeplayStreak >= 2 && (
                 <span
                   className="label"
@@ -319,12 +335,13 @@ export default function GameBoard({
           </div>
 
           {/* Clue list */}
-          <div style={{ padding: "14px 22px" }}>
+          <div ref={hintsRegionRef} className="gameboard-hints" style={{ padding: "14px 22px" }}>
             <HintList hints={caseData.hints} revealed={state.hintsRevealed} />
           </div>
 
           {/* Divider + input area */}
           <div
+            className="gameboard-input-region"
             style={{
               borderTop: "1px solid var(--border)",
               padding: "14px 22px 16px",

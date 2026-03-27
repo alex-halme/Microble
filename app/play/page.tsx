@@ -81,6 +81,7 @@ function FilterPopup({
   return (
     <div
       onClick={onClose}
+      className="filter-popup-overlay"
       style={{
         position: "fixed",
         inset: 0,
@@ -95,6 +96,7 @@ function FilterPopup({
     >
       <div
         onClick={(event) => event.stopPropagation()}
+        className="filter-popup-panel"
         style={{
           width: "100%",
           maxWidth: "680px",
@@ -323,6 +325,7 @@ function FilterToolbar({
 
   return (
     <section
+      className="filter-toolbar"
       style={{
         maxWidth: "860px",
         margin: "0 auto 18px",

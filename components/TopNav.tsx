@@ -14,6 +14,7 @@ export default function TopNav() {
   return (
     <nav
       aria-label="Primary"
+      className="top-nav"
       style={{
         display: "inline-flex",
         gap: "3px",
