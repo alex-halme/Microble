@@ -1,0 +1,1762 @@
+[
+  {
+    "id": "path-freeplay-streptococcus-pyogenes-easy-1774625044429-0-0",
+    "pathogenId": "streptococcus-pyogenes",
+    "pathogenKind": "bacterium",
+    "pool": "freeplay",
+    "hints": [
+      {
+        "order": 1,
+        "text": "A 24-year-old medical student presents to the walk-in clinic with 48 hours of progressive sore throat, odynophagia and fever to 39.0 °C. Examination shows bilateral tonsillar exudates, tender anterior cervical lymphadenopathy and absence of cough.",
+        "category": "presentation"
+      },
+      {
+        "order": 2,
+        "text": "Symptoms began two days after a busy clinical shift on a paediatric ward; the patient is otherwise healthy, a non-smoker, not taking medications, and reports no recent travel or antibiotic use.",
+        "category": "history"
+      },
+      {
+        "order": 3,
+        "text": "A lateral neck radiograph obtained to evaluate for complication shows normal prevertebral soft tissues and no evidence of retropharyngeal or parapharyngeal collection.",
+        "category": "imaging"
+      },
+      {
+        "order": 4,
+        "text": "Housemate developed a similar febrile sore throat three days earlier; several children on the ward had fever and pharyngitis the same week.",
+        "category": "exposure"
+      },
+      {
+        "order": 5,
+        "text": "Throat swab cultured on blood agar grew β-haemolytic, Gram‑positive cocci in chains; isolate was bacitracin-sensitive and PYR-positive. Peripheral blood: leukocytes 12.8 × 10^9/L, C-reactive protein 48 mg/L.",
+        "category": "lab"
+      }
+    ],
+    "difficulty": "easy",
+    "explanation": "Clinical picture (acute fever, tonsillar exudates, tender anterior cervical nodes, absence of cough) and the culture phenotype—β-haemolytic, Gram‑positive cocci in chains that are bacitracin-sensitive and PYR-positive—are characteristic of Streptococcus pyogenes, the typical cause of acute bacterial pharyngitis in this age group.",
+    "source": "ai_generated",
+    "validated": true,
+    "createdAt": "2026-03-27T15:24:04.429Z",
+    "style": "mgh_case_report",
+    "model": "gpt-5-mini"
+  },
+  {
+    "id": "path-freeplay-streptococcus-pyogenes-easy-1774625044431-0-1",
+    "pathogenId": "streptococcus-pyogenes",
+    "pathogenKind": "bacterium",
+    "pool": "freeplay",
+    "hints": [
+      {
+        "order": 1,
+        "text": "A 6-year-old girl is brought from nursery with a 24-hour history of high fever (peak 39.5 °C), diffuse erythematous rash described as 'sandpaper-like', sore throat and a conspicuously red, fissured tongue.",
+        "category": "presentation"
+      },
+      {
+        "order": 2,
+        "text": "Rash began on the trunk and spread to the limbs; parents note flushed cheeks with circumoral pallor. She had no prior medical problems and is up to date with routine immunisations. Several classmates were sent home with febrile illness earlier this week.",
+        "category": "history"
+      },
+      {
+        "order": 3,
+        "text": "A clinical photograph taken on admission documents fine papular erythema with accentuation in skin creases; no imaging studies of the chest or soft tissues were required as respiratory examination was normal.",
+        "category": "imaging"
+      },
+      {
+        "order": 4,
+        "text": "Daycare outbreak reported: three other children developed fever and sore throat this week and one had similar rash; no recent travel or insect exposure.",
+        "category": "exposure"
+      },
+      {
+        "order": 5,
+        "text": "Throat swab and pharyngeal culture produced β-haemolytic, Gram‑positive cocci in chains; the isolate was bacitracin-sensitive and PYR-positive. Blood tests: leukocytes 15.6 × 10^9/L, C-reactive protein 62 mg/L.",
+        "category": "lab"
+      }
+    ],
+    "difficulty": "easy",
+    "explanation": "The combination of fever, sore throat, diffuse sandpaper rash with Pastia-like accentuation and 'strawberry' tongue in a child during a daycare outbreak points to toxin-mediated streptococcal disease. Culture results—β-haemolytic, Gram‑positive cocci in chains that are bacitracin-sensitive and PYR-positive—are diagnostic for Streptococcus pyogenes.",
+    "source": "ai_generated",
+    "validated": true,
+    "createdAt": "2026-03-27T15:24:04.431Z",
+    "style": "mgh_case_report",
+    "model": "gpt-5-mini"
+  },
+  {
+    "id": "path-freeplay-streptococcus-pyogenes-easy-1774625044431-0-2",
+    "pathogenId": "streptococcus-pyogenes",
+    "pathogenKind": "bacterium",
+    "pool": "freeplay",
+    "hints": [
+      {
+        "order": 1,
+        "text": "A 78-year-old woman with type 2 diabetes presents with sudden onset of a well-demarcated, intensely painful erythematous plaque over the left cheek and lower eyelid accompanied by fever to 38.6 °C and rigors.",
+        "category": "presentation"
+      },
+      {
+        "order": 2,
+        "text": "Two days earlier she scratched her cheek on a gardening stake. Medical history includes long-standing diabetes (last HbA1c 7.9%), hypertension and osteoarthritis; she lives at home and tends a small garden.",
+        "category": "history"
+      },
+      {
+        "order": 3,
+        "text": "Soft-tissue ultrasound of the face showed diffuse dermal and subcutaneous oedema without a discrete fluid collection or abscess; no sinus tracts were seen.",
+        "category": "imaging"
+      },
+      {
+        "order": 4,
+        "text": "She reports no recent travel, animal bites, or contact with sick contacts; the scratch occurred while working with soil and plant material in her garden.",
+        "category": "exposure"
+      },
+      {
+        "order": 5,
+        "text": "Wound swab culture grew β-haemolytic, Gram‑positive cocci in chains; isolate was bacitracin-sensitive and PYR-positive. Blood tests: leukocytes 14.2 × 10^9/L, C-reactive protein 118 mg/L.",
+        "category": "lab"
+      }
+    ],
+    "difficulty": "easy",
+    "explanation": "Rapid-onset, sharply demarcated erythematous facial plaque in an older patient with diabetes, following minor skin trauma, is typical of non-purulent streptococcal cellulitis/erysipelas. The culture phenotype—β-haemolytic, Gram‑positive cocci in chains with bacitracin sensitivity and PYR positivity—identifies Streptococcus pyogenes.",
+    "source": "ai_generated",
+    "validated": true,
+    "createdAt": "2026-03-27T15:24:04.431Z",
+    "style": "mgh_case_report",
+    "model": "gpt-5-mini"
+  },
+  {
+    "id": "path-freeplay-streptococcus-pyogenes-easy-1774625115726-1-0",
+    "pathogenId": "streptococcus-pyogenes",
+    "pathogenKind": "bacterium",
+    "pool": "freeplay",
+    "hints": [
+      {
+        "order": 1,
+        "text": "A 19‑year‑old male university student presents to the campus health clinic with a 48‑hour history of abrupt onset sore throat and odynophagia. He reports fever and difficulty swallowing solids; measured temperature 39.2 °C. On examination he has prominent tonsillar exudates and tender, enlarged anterior cervical lymph nodes; there is no cough and no rhinorrhoea.",
+        "category": "presentation"
+      },
+      {
+        "order": 2,
+        "text": "Previously well, no regular medications, no known drug allergies. Lives in a six‑person dormitory and attended choir practice three nights ago. One roommate developed a sore throat two days before him. No recent travel, no dental procedures.",
+        "category": "history"
+      },
+      {
+        "order": 3,
+        "text": "Blood count shows WBC 12.8 x10^9/L with 78% neutrophils; CRP 43 mg/L. A throat swab rapid antigen test for a bacterial pharyngitis pathogen returned positive. Gram stain of the throat swab revealed Gram‑positive cocci in chains; catalase test was negative.",
+        "category": "lab"
+      },
+      {
+        "order": 4,
+        "text": "Soft‑tissue ultrasound of the neck performed to exclude a peritonsillar collection showed enlarged tonsillar tissue with surrounding oedema but no discrete fluid collection or drainable abscess.",
+        "category": "imaging"
+      },
+      {
+        "order": 5,
+        "text": "Empiric oral phenoxymethylpenicillin was started; the patient reported marked symptomatic improvement within 24 hours and was afebrile by 48 hours. Throat culture later grew β‑haemolytic, catalase‑negative, Gram‑positive cocci in chains that were bacitracin‑sensitive and PYR‑positive; the isolate was penicillin‑susceptible.",
+        "category": "treatment_response"
+      }
+    ],
+    "difficulty": "easy",
+    "explanation": "Abrupt onset exudative pharyngitis with fever, tender anterior cervical nodes and absence of cough suggests bacterial pharyngitis. The combination of β‑haemolysis, Gram‑positive cocci in chains, catalase negativity, bacitracin sensitivity and a positive PYR test is diagnostic of the organism targeted in these cases; rapid clinical response to penicillin supports the diagnosis.",
+    "source": "ai_generated",
+    "validated": true,
+    "createdAt": "2026-03-27T15:25:15.726Z",
+    "style": "mgh_case_report",
+    "model": "gpt-5-mini"
+  },
+  {
+    "id": "path-freeplay-streptococcus-pyogenes-easy-1774625115728-1-2",
+    "pathogenId": "streptococcus-pyogenes",
+    "pathogenKind": "bacterium",
+    "pool": "freeplay",
+    "hints": [
+      {
+        "order": 1,
+        "text": "A 62‑year‑old woman with pain and a rapidly advancing, well‑demarcated, raised erythematous plaque over the anterior right lower leg for 24 hours. She reports fever and chills; temperature 38.9 °C. The affected area is intensely painful, warm, tender and shows lymphangitic streaking proximally.",
+        "category": "presentation"
+      },
+      {
+        "order": 2,
+        "text": "Type 2 diabetes mellitus (poorly controlled; last known HbA1c 9.2% [77 mmol/mol]). Two days earlier she had a fissure between the toes. No recent intravenous lines or surgery. No immunosuppressive medications.",
+        "category": "history"
+      },
+      {
+        "order": 3,
+        "text": "Admission bloods: WBC 15.6 x10^9/L with 88% neutrophils; CRP 152 mg/L. Blood cultures and a swab from the leading edge of the lesion were sent. Gram stain of the lesion swab showed Gram‑positive cocci in chains.",
+        "category": "lab"
+      },
+      {
+        "order": 4,
+        "text": "Venous duplex ultrasound excluded deep venous thrombosis. Soft‑tissue ultrasound of the leg revealed diffuse dermal and subcutaneous thickening consistent with cellulitis/erysipelas but no focal fluid collection or gas.",
+        "category": "imaging"
+      },
+      {
+        "order": 5,
+        "text": "Intravenous benzylpenicillin was started; the patient defervesced within 24 hours and pain and erythema began to recede. Subsequent blood cultures grew β‑haemolytic, catalase‑negative, Gram‑positive cocci in chains that were bacitracin‑sensitive and PYR‑positive; isolates were penicillin‑susceptible.",
+        "category": "treatment_response"
+      }
+    ],
+    "difficulty": "easy",
+    "explanation": "A sharply demarcated, rapidly spreading erythematous plaque with systemic features and preceding interdigital skin break in a diabetic patient is typical of erysipelas/cellulitis due to the implicated β‑haemolytic organism. Laboratory identification as β‑haemolytic, catalase‑negative cocci in chains that are bacitracin‑sensitive and PYR‑positive, together with excellent response to penicillin, confirms the diagnosis.",
+    "source": "ai_generated",
+    "validated": true,
+    "createdAt": "2026-03-27T15:25:15.728Z",
+    "style": "mgh_case_report",
+    "model": "gpt-5-mini"
+  },
+  {
+    "id": "path-freeplay-streptococcus-pyogenes-medium-1774625160011-2-0",
+    "pathogenId": "streptococcus-pyogenes",
+    "pathogenKind": "bacterium",
+    "pool": "freeplay",
+    "hints": [
+      {
+        "order": 1,
+        "text": "A 14-year-old girl presents to the clinic with 48 hours of severe sore throat, odynophagia and fever. Temperature 39.3 °C, pulse 110/min. Examination shows enlarged, tender anterior cervical lymph nodes, tonsillar erythema with patchy exudate and a diffuse, sandpaper-like erythematous rash over the trunk that spares the area around the mouth; the tongue is erythematous with prominent papillae.",
+        "category": "presentation"
+      },
+      {
+        "order": 2,
+        "text": "No cough or coryzal symptoms. Two classmates were sent home with similar illness last week. No recent antibiotic use; vaccinated according to local schedule. No significant past medical history.",
+        "category": "history"
+      },
+      {
+        "order": 3,
+        "text": "A focused bedside soft-tissue neck ultrasound shows enlarged tonsils without a discrete peritonsillar collection and no airway compromise.",
+        "category": "imaging"
+      },
+      {
+        "order": 4,
+        "text": "Empiric oral narrow-spectrum penicillin was started on the day of presentation; within 24 hours the fever settled and throat pain markedly improved.",
+        "category": "treatment_response"
+      },
+      {
+        "order": 5,
+        "text": "Throat swab culture grew beta-haemolytic colonies on blood agar; Gram stain showed gram-positive cocci in chains. Isolate was bacitracin sensitive and PYR positive.",
+        "category": "lab"
+      }
+    ],
+    "difficulty": "medium",
+    "explanation": "The combination of acute pharyngitis with a scarlatiniform rash, close-contact spread and prompt clinical response to penicillin is characteristic. Definitive identification came from a beta-haemolytic, bacitracin-sensitive, PYR-positive gram-positive coccus in chains—findings consistent with the implicated species.",
+    "source": "ai_generated",
+    "validated": true,
+    "createdAt": "2026-03-27T15:26:00.011Z",
+    "style": "mgh_case_report",
+    "model": "gpt-5-mini"
+  },
+  {
+    "id": "path-freeplay-streptococcus-pyogenes-medium-1774625160011-2-2",
+    "pathogenId": "streptococcus-pyogenes",
+    "pathogenKind": "bacterium",
+    "pool": "freeplay",
+    "hints": [
+      {
+        "order": 1,
+        "text": "A 63-year-old man with type 2 diabetes presents with 36 hours of severe left thigh pain and rapidly spreading redness. He appears toxic: temperature 38.9 °C, pulse 122/min, blood pressure 95/60 mmHg. Skin over the anterolateral thigh is tense, exquisitely tender beyond the erythema, with early blistering.",
+        "category": "presentation"
+      },
+      {
+        "order": 2,
+        "text": "He reports a superficial puncture wound from gardening 48 hours before symptom onset. Known diabetic with HbA1c 9.2% last month; on oral hypoglycaemic agents. No recent antibiotic exposure.",
+        "category": "history"
+      },
+      {
+        "order": 3,
+        "text": "Contrast-enhanced CT of the left thigh shows diffuse subcutaneous and fascial plane thickening with stranding along the deep fascia but minimal gas in tissues and no focal collection amenable to drainage.",
+        "category": "imaging"
+      },
+      {
+        "order": 4,
+        "text": "Urgent surgical exploration with extensive debridement was performed and broad-spectrum intravenous antibiotics were started. Addition of high-dose penicillin and clindamycin after intraoperative specimens led to clinical stabilization over the next 24–48 hours.",
+        "category": "treatment_response"
+      },
+      {
+        "order": 5,
+        "text": "Tissue cultures yielded beta-haemolytic colonies; microscopy showed gram-positive cocci in chains. The isolate was bacitracin sensitive and PYR positive.",
+        "category": "lab"
+      }
+    ],
+    "difficulty": "medium",
+    "explanation": "Rapidly progressive soft-tissue infection in a diabetic with minimal gas on imaging, dramatic surgical need and marked improvement after penicillin plus clindamycin is typical for an aggressive beta-haemolytic pathogen. Culture characteristics—beta-haemolysis, bacitracin sensitivity and PYR positivity in chain-forming gram-positive cocci—identify the species responsible.",
+    "source": "ai_generated",
+    "validated": true,
+    "createdAt": "2026-03-27T15:26:00.011Z",
+    "style": "mgh_case_report",
+    "model": "gpt-5-mini"
+  },
+  {
+    "id": "path-freeplay-streptococcus-pyogenes-medium-1774625160011-2-3",
+    "pathogenId": "streptococcus-pyogenes",
+    "pathogenKind": "bacterium",
+    "pool": "freeplay",
+    "hints": [
+      {
+        "order": 1,
+        "text": "A 29-year-old woman, three days after an uncomplicated vaginal delivery at home, presents with fever, rigors and diffuse myalgia. On arrival she is hypotensive (BP 86/50 mmHg), tachycardic and febrile at 39.5 °C; uterine fundal tenderness is prominent on pelvic examination.",
+        "category": "presentation"
+      },
+      {
+        "order": 2,
+        "text": "Delivery was at home with a midwife; there was a second-degree perineal tear that was sutured without prophylactic antibiotics. She has no relevant past medical history and is breastfeeding. No known sick contacts.",
+        "category": "history"
+      },
+      {
+        "order": 3,
+        "text": "Transvaginal ultrasound shows an enlarged, heterogeneous uterus with small intrauterine echoes consistent with clot or haemorrhagic debris but no retained products clearly identified.",
+        "category": "imaging"
+      },
+      {
+        "order": 4,
+        "text": "Initial broad-spectrum intravenous antibiotics were given, but after blood and uterine culture results guided therapy to high-dose penicillin plus clindamycin the patient’s vasopressor requirements fell and fever curve abated over the subsequent 24 hours.",
+        "category": "treatment_response"
+      },
+      {
+        "order": 5,
+        "text": "Blood cultures and a uterine swab both grew beta-haemolytic colonies; Gram stain showed gram-positive cocci in chains. The organism was bacitracin sensitive and PYR positive.",
+        "category": "lab"
+      }
+    ],
+    "difficulty": "medium",
+    "explanation": "Postpartum sepsis with rapid progression to shock and uterine tenderness suggests an invasive puerperal pathogen. The isolates from blood and uterine site were beta-haemolytic, bacitracin sensitive and PYR positive gram-positive cocci in chains—findings diagnostic for the target bacterium and consistent with the clinical syndrome and response to penicillin plus clindamycin.",
+    "source": "ai_generated",
+    "validated": true,
+    "createdAt": "2026-03-27T15:26:00.011Z",
+    "style": "mgh_case_report",
+    "model": "gpt-5-mini"
+  },
+  {
+    "id": "path-freeplay-streptococcus-pyogenes-medium-1774625209556-3-0",
+    "pathogenId": "streptococcus-pyogenes",
+    "pathogenKind": "bacterium",
+    "pool": "freeplay",
+    "hints": [
+      {
+        "order": 1,
+        "text": "A 47-year-old male gardener presents to the emergency department with 48 hours of rapidly worsening pain and swelling of his left lower leg after a thorn prick while pruning. He is febrile to 38.9 °C, heart rate 110/min, blood pressure 100/60 mmHg. Examination shows a 15-cm area of intense erythema and warmth, tense oedema, several flaccid haemorrhagic bullae and exquisitely severe pain out of proportion to surface findings; faint lymphangitic streaking extends proximally.",
+        "category": "presentation"
+      },
+      {
+        "order": 2,
+        "text": "He has type 2 diabetes treated with metformin (no insulin), recent HbA1c 58 mmol/mol 3 months ago. He is otherwise well, not taking immunosuppressants. He reports a self‑limited upper respiratory illness 1 week ago and that his 6‑year‑old son had a febrile sore throat and rash 4 days before the patient’s symptoms began.",
+        "category": "history"
+      },
+      {
+        "order": 3,
+        "text": "Contrast CT of the lower limb shows marked subcutaneous oedema with diffuse fascial thickening and fluid tracking along fascial planes but no loculated fluid collection and no gas in soft tissues; radiologist comments that findings are concerning for early necrotising infection involving superficial fascia.",
+        "category": "imaging"
+      },
+      {
+        "order": 4,
+        "text": "No freshwater or seawater exposure, no animal bite, no recent surgery. The thorn wound was cleansed at home but not formally debrided; he recalls handling toys at his son’s preschool the week before, where several children had high fevers and sore throats.",
+        "category": "exposure"
+      },
+      {
+        "order": 5,
+        "text": "Two sets of blood cultures and wound swab sent. Preliminary microbiology: Gram‑positive cocci in chains on Gram stain; growth on sheep blood agar shows small, smooth colonies with complete haemolysis. The organism is catalase‑negative, inhibited by bacitracin, and gives a positive PYR reaction; blood cultures later flagged positive for the same organism.",
+        "category": "lab"
+      }
+    ],
+    "difficulty": "medium",
+    "explanation": "Clinical picture—rapidly progressive, intensely painful soft‑tissue infection with systemic toxicity and imaging showing fascial plane involvement—together with Gram‑positive cocci in chains, beta‑haemolysis, bacitracin sensitivity and PYR positivity is characteristic of Streptococcus pyogenes. This organism can cause fulminant soft‑tissue infection (necrotising fasciitis) and bacteraemia; management requires urgent surgical debridement plus intravenous beta‑lactam therapy and an inhibitor of toxin production (for example, clindamycin added while awaiting sensitivities).",
+    "source": "ai_generated",
+    "validated": true,
+    "createdAt": "2026-03-27T15:26:49.556Z",
+    "style": "mgh_case_report",
+    "model": "gpt-5-mini"
+  },
+  {
+    "id": "path-freeplay-streptococcus-pyogenes-medium-1774625209556-3-1",
+    "pathogenId": "streptococcus-pyogenes",
+    "pathogenKind": "bacterium",
+    "pool": "freeplay",
+    "hints": [
+      {
+        "order": 1,
+        "text": "An 8-year-old girl is brought by her parents with 36 hours of fever (peak 39.2 °C), sore throat, odynophagia and a new coarse, sandpaper-like rash over the trunk. On examination she is febrile, appears uncomfortable, has erythematous tonsils with white exudates, a “strawberry” tongue, tender anterior cervical lymphadenopathy and a blanching diffuse erythematous papular rash accentuated in the axillae and antecubital fossae; there is no significant cough or coryzal discharge.",
+        "category": "presentation"
+      },
+      {
+        "order": 2,
+        "text": "She is up to date with vaccinations, has no chronic medical problems, and has had sudden onset of symptoms without preceding cough. Parents report an outbreak of sore throats at her primary school during the past week; one classmate was reported to have fever and a similar rash.",
+        "category": "history"
+      },
+      {
+        "order": 3,
+        "text": "Point‑of‑care ultrasound of the neck demonstrates enlarged, reactive cervical lymph nodes bilaterally without peritonsillar collection. A lateral neck radiograph shows no evidence of retropharyngeal or parapharyngeal abscess.",
+        "category": "imaging"
+      },
+      {
+        "order": 4,
+        "text": "The child had close contact with multiple classmates during indoor activities; there was direct contact with toys and shared cups. No recent travel, no insect bites, and no exposure to animals. Parents note that several classmates developed high fevers and sore throats in the same 48–72 hour window before her illness.",
+        "category": "exposure"
+      },
+      {
+        "order": 5,
+        "text": "A rapid antigen detection test on a throat swab returned positive. Throat culture incubated on sheep blood agar grew small, smooth colonies with complete haemolysis; Gram stain showed Gram‑positive cocci in chains. The isolate was catalase‑negative, inhibited by bacitracin, and yielded a positive PYR test.",
+        "category": "lab"
+      }
+    ],
+    "difficulty": "medium",
+    "explanation": "The constellation of abrupt febrile pharyngitis with tonsillar exudates, tender anterior cervical nodes, absence of cough, and a diffuse sandpaper rash (scarlet‑like eruption) in the context of an outbreak is classic for infection by Streptococcus pyogenes. The positive rapid antigen test plus culture demonstrating beta‑haemolytic, bacitracin‑sensitive, PYR‑positive Gram‑positive cocci in chains confirms the diagnosis. First‑line therapy is oral penicillin or amoxicillin; macrolide or lincosamide alternatives are used for true penicillin allergy. Untreated infection carries risks such as rheumatic fever and postinfectious glomerulonephritis in susceptible hosts.",
+    "source": "ai_generated",
+    "validated": true,
+    "createdAt": "2026-03-27T15:26:49.556Z",
+    "style": "mgh_case_report",
+    "model": "gpt-5-mini"
+  },
+  {
+    "id": "path-freeplay-streptococcus-pyogenes-hard-1774625255417-4-0",
+    "pathogenId": "streptococcus-pyogenes",
+    "pathogenKind": "bacterium",
+    "pool": "freeplay",
+    "hints": [
+      {
+        "order": 1,
+        "text": "A 9-year-old girl is brought to clinic with 48 hours of sore throat, odynophagia and fever to 39.0 °C; on examination she has diffuse pharyngeal erythema with blanching, finely papular sandpaper rash over the trunk sparing the area around the mouth, tender anterior cervical lymphadenopathy and a ‘strawberry’ appearance of the tongue.",
+        "category": "presentation"
+      },
+      {
+        "order": 2,
+        "text": "Illness began 2 days after return from school; no recent antibiotics, no chronic medical problems, immunisations up to date. Mother reports two classmates had similar sore throats last week; no household members with chronic skin disease.",
+        "category": "history"
+      },
+      {
+        "order": 3,
+        "text": "Blood count: leucocytes 13.5 ×10^9/L with neutrophil predominance; CRP 62 mg/L. Throat swab Gram stain shows gram‑positive cocci in chains; culture on blood agar produced small, completely haemolytic colonies; catalase negative.",
+        "category": "lab"
+      },
+      {
+        "order": 4,
+        "text": "Lateral neck radiograph performed to exclude a deep neck collection shows normal prevertebral soft tissues and no evidence of retropharyngeal or parapharyngeal abscess.",
+        "category": "imaging"
+      },
+      {
+        "order": 5,
+        "text": "Empiric oral phenoxymethylpenicillin started; she became afebrile within 24 hours and throat pain improved rapidly. Isolate from throat culture was bacitracin‑sensitive and PYR‑positive on laboratory testing.",
+        "category": "treatment_response"
+      }
+    ],
+    "difficulty": "hard",
+    "explanation": "Presentation (fever, pharyngitis, ‘sandpaper’ rash and strawberry tongue) is consistent with toxin‑mediated pharyngotonsillitis. Laboratory identification of a beta‑haemolytic, catalase‑negative, gram‑positive coccus in chains that is bacitracin‑sensitive and PYR‑positive points to Streptococcus pyogenes. Rapid clinical response to penicillin supports the diagnosis. Distinguishing features from other causes of purulent pharyngitis include the characteristic rash and the organism’s bacitracin susceptibility and PYR positivity.",
+    "source": "ai_generated",
+    "validated": true,
+    "createdAt": "2026-03-27T15:27:35.417Z",
+    "style": "mgh_case_report",
+    "model": "gpt-5-mini"
+  },
+  {
+    "id": "path-freeplay-streptococcus-pyogenes-hard-1774625255417-4-1",
+    "pathogenId": "streptococcus-pyogenes",
+    "pathogenKind": "bacterium",
+    "pool": "freeplay",
+    "hints": [
+      {
+        "order": 1,
+        "text": "A 32-year-old woman presents 36 hours after an uncomplicated vaginal delivery with high fever (40.2 °C), rigors, diffuse lower abdominal pain, uterine tenderness and hypotension (BP 88/52 mmHg). She appears toxic with a faint diffuse erythematous rash on her trunk.",
+        "category": "presentation"
+      },
+      {
+        "order": 2,
+        "text": "Labour was 18 hours from rupture of membranes to delivery; there was a manual removal of a small adherent placental fragment in theatre. No prior maternal comorbidity; peri‑partum prophylactic antibiotics were not given.",
+        "category": "history"
+      },
+      {
+        "order": 3,
+        "text": "Blood tests: leucocytes 22.0 ×10^9/L, neutrophils predominant; CRP 330 mg/L; serum creatinine 145 µmol/L. Multiple sets of blood cultures flagged positive for gram‑positive cocci in chains on preliminary Gram stain.",
+        "category": "lab"
+      },
+      {
+        "order": 4,
+        "text": "Transvaginal ultrasound demonstrates a bulky, heterogeneous uterus with a 3-cm echogenic focus consistent with retained products and small adjacent fluid collection; no free intraperitoneal gas.",
+        "category": "imaging"
+      },
+      {
+        "order": 5,
+        "text": "Empiric IV benzylpenicillin and clindamycin were started and the patient stabilised after source evacuation. Blood culture isolates were beta‑haemolytic on blood agar, bacitracin‑sensitive and PYR‑positive, correlating with the rapid clinical improvement.",
+        "category": "treatment_response"
+      }
+    ],
+    "difficulty": "hard",
+    "explanation": "This is a case of postpartum invasive infection with rapid systemic toxicity following retained products and membrane rupture. The blood culture pattern—beta‑haemolytic, gram‑positive cocci in chains, bacitracin sensitivity and PYR positivity—indicates Streptococcus pyogenes. Recognition is important because this organism can cause severe puerperal sepsis; penicillin plus clindamycin and prompt uterine evacuation are standard acute management.",
+    "source": "ai_generated",
+    "validated": true,
+    "createdAt": "2026-03-27T15:27:35.417Z",
+    "style": "mgh_case_report",
+    "model": "gpt-5-mini"
+  },
+  {
+    "id": "path-freeplay-streptococcus-pyogenes-hard-1774625255417-4-2",
+    "pathogenId": "streptococcus-pyogenes",
+    "pathogenKind": "bacterium",
+    "pool": "freeplay",
+    "hints": [
+      {
+        "order": 1,
+        "text": "A 56-year-old man with type 2 diabetes mellitus presents with 18 hours of severe, disproportionate pain in his right forearm after a superficial laceration while gardening 48 hours earlier; he has fever 38.9 °C, tense oedema with erythema extending rapidly up the forearm, several tense serous blisters and marked pain on passive stretch.",
+        "category": "presentation"
+      },
+      {
+        "order": 2,
+        "text": "Past medical history includes poorly controlled diabetes (most recent HbA1c 9.2%), no chronic immunosuppressive medications. He delayed cleaning the wound and applied an over‑the‑counter topical herbal paste before coming to hospital.",
+        "category": "history"
+      },
+      {
+        "order": 3,
+        "text": "Bloods: leucocytes 28.0 ×10^9/L, CRP 420 mg/L, serum lactate 4.6 mmol/L. Wound swab Gram stain from the blister fluid shows gram‑positive cocci in chains; creatine kinase 1 200 U/L.",
+        "category": "lab"
+      },
+      {
+        "order": 4,
+        "text": "Contrast CT of the forearm demonstrates diffuse fascial plane thickening with fluid tracking along fascial compartments but no subcutaneous gas or focal abscess; radiologic appearance is most compatible with necrotising soft‑tissue infection without gas‑forming organisms.",
+        "category": "imaging"
+      },
+      {
+        "order": 5,
+        "text": "He underwent urgent surgical debridement and was started on IV benzylpenicillin plus clindamycin. Intraoperative tissue cultures grew beta‑haemolytic colonies on blood agar; isolates were PYR‑positive and inhibited by bacitracin. Clinical shock and local inflammation improved over subsequent 48 hours with targeted therapy and repeat debridement.",
+        "category": "treatment_response"
+      }
+    ],
+    "difficulty": "hard",
+    "explanation": "Clinical picture of rapidly progressive soft‑tissue infection with severe pain out of proportion, fascial involvement on imaging and systemic toxicity is consistent with necrotising fasciitis. Culture characteristics—beta‑haemolytic, gram‑positive cocci in chains, bacitracin sensitivity and PYR positivity—identify Streptococcus pyogenes as the causative organism. The organism’s toxin‑mediated virulence explains rapid progression; management requires prompt surgical debridement and parenteral penicillin with adjunctive clindamycin.",
+    "source": "ai_generated",
+    "validated": true,
+    "createdAt": "2026-03-27T15:27:35.417Z",
+    "style": "mgh_case_report",
+    "model": "gpt-5-mini"
+  },
+  {
+    "id": "path-freeplay-streptococcus-agalactiae-easy-1774625300032-5-1",
+    "pathogenId": "streptococcus-agalactiae",
+    "pathogenKind": "bacterium",
+    "pool": "freeplay",
+    "hints": [
+      {
+        "order": 1,
+        "text": "A 29‑year‑old woman presents 48 hours after an uncomplicated vaginal delivery with fever to 38.9 °C, lower abdominal pain and foul‑smelling lochia; uterine fundal tenderness is noted on pelvic examination and there is mild tachycardia.",
+        "category": "presentation"
+      },
+      {
+        "order": 2,
+        "text": "Delivery followed a labour complicated by prolonged rupture of membranes (approximately 28 hours). She had not received intrapartum antimicrobials. Her antenatal record documents no complications and she has no significant comorbidities.",
+        "category": "history"
+      },
+      {
+        "order": 3,
+        "text": "Transvaginal ultrasound shows a mildly enlarged endometrial cavity with echogenic intrauterine fluid collection but no retained gross products of conception or focal pelvic abscess.",
+        "category": "imaging"
+      },
+      {
+        "order": 4,
+        "text": "IV ampicillin and gentamicin were initiated for suspected puerperal endometritis. Fever resolved within 36 hours and uterine tenderness decreased; she was transitioned to oral therapy to complete a 10‑day course.",
+        "category": "treatment_response"
+      },
+      {
+        "order": 5,
+        "text": "Endometrial swab culture grew Gram‑positive cocci in chains forming narrow zones of beta‑haemolysis; the isolate was bacitracin‑resistant, CAMP test positive and hydrolysed hippurate.",
+        "category": "lab"
+      }
+    ],
+    "difficulty": "easy",
+    "explanation": "Postpartum endometritis after prolonged rupture of membranes with an isolate that is beta‑haemolytic, CAMP positive and hippurate‑positive is most consistent with Streptococcus agalactiae, a common cause of puerperal infection and normally susceptible to penicillin.",
+    "source": "ai_generated",
+    "validated": true,
+    "createdAt": "2026-03-27T15:28:20.032Z",
+    "style": "mgh_case_report",
+    "model": "gpt-5-mini"
+  },
+  {
+    "id": "path-freeplay-streptococcus-agalactiae-easy-1774625300032-5-2",
+    "pathogenId": "streptococcus-agalactiae",
+    "pathogenKind": "bacterium",
+    "pool": "freeplay",
+    "hints": [
+      {
+        "order": 1,
+        "text": "A 78‑year‑old woman with type 2 diabetes presents with 36 hours of dysuria, fever (38.2 °C), rigours and new confusion. On exam she is mildly hypotensive and has costovertebral angle tenderness on the right.",
+        "category": "presentation"
+      },
+      {
+        "order": 2,
+        "text": "She has long‑standing poor glycaemic control (recent HbA1c 9.2%) and uses a chronic indwelling urinary catheter intermittently at home. She has no recent travel, but had a lower urinary tract infection treated in the community 3 months ago.",
+        "category": "history"
+      },
+      {
+        "order": 3,
+        "text": "Non‑contrast CT abdomen and pelvis shows right moderate hydronephrosis without obstructing calculus and perinephric stranding consistent with acute pyelonephritis.",
+        "category": "imaging"
+      },
+      {
+        "order": 4,
+        "text": "IV ceftriaxone was started empirically. After 48 hours the patient's fever settled and mental status improved; blood pressure stabilised and urinary symptoms lessened.",
+        "category": "treatment_response"
+      },
+      {
+        "order": 5,
+        "text": "Urine and blood cultures both yielded Gram‑positive cocci in chains producing narrow beta‑haemolysis; isolates were bacitracin‑resistant, CAMP test positive and hippurate hydrolysis positive, with low penicillin MICs.",
+        "category": "lab"
+      }
+    ],
+    "difficulty": "easy",
+    "explanation": "An older patient with diabetes and urinary tract instrumentation who develops pyelonephritis and bacteremia caused by a beta‑haemolytic, CAMP‑positive, hippurate‑positive organism is typical for Streptococcus agalactiae, which can cause invasive urinary tract infections in this population.",
+    "source": "ai_generated",
+    "validated": true,
+    "createdAt": "2026-03-27T15:28:20.032Z",
+    "style": "mgh_case_report",
+    "model": "gpt-5-mini"
+  },
+  {
+    "id": "path-freeplay-streptococcus-agalactiae-easy-1774625300032-5-3",
+    "pathogenId": "streptococcus-agalactiae",
+    "pathogenKind": "bacterium",
+    "pool": "freeplay",
+    "hints": [
+      {
+        "order": 1,
+        "text": "A 54‑year‑old man with alcohol‑related cirrhosis presents with 3 days of progressive erythema, swelling and pain of the left lower leg following a minor abrasion; temperature is 38.3 °C and the area is warm with diffuse cellulitic erythema.",
+        "category": "presentation"
+      },
+      {
+        "order": 2,
+        "text": "He reports a superficial skin break sustained gardening one week earlier. He is a daily drinker with ascites; he takes no regular antibiotics and reports no known immune suppression beyond cirrhosis.",
+        "category": "history"
+      },
+      {
+        "order": 3,
+        "text": "Soft‑tissue ultrasound of the leg shows diffuse subcutaneous oedema without discrete fluid collection or drainable abscess; Doppler exam excludes deep venous thrombosis.",
+        "category": "imaging"
+      },
+      {
+        "order": 4,
+        "text": "Empiric IV ampicillin was started after blood cultures were drawn; within 24 hours his fever abated and the erythema's margin became less well demarcated with reduced tenderness.",
+        "category": "treatment_response"
+      },
+      {
+        "order": 5,
+        "text": "Wound swab and blood cultures grew Gram‑positive cocci in chains showing beta‑haemolysis on blood agar. The organism was bacitracin‑resistant, CAMP test positive and hippurate hydrolysis positive; antimicrobial susceptibility showed sensitivity to penicillin.",
+        "category": "lab"
+      }
+    ],
+    "difficulty": "easy",
+    "explanation": "Cellulitis in a patient with chronic liver disease and a culture demonstrating beta‑haemolytic, CAMP‑positive, hippurate‑positive Gram‑positive cocci is consistent with Streptococcus agalactiae, an invasive cause of soft‑tissue infections in adults with comorbidity.",
+    "source": "ai_generated",
+    "validated": true,
+    "createdAt": "2026-03-27T15:28:20.032Z",
+    "style": "mgh_case_report",
+    "model": "gpt-5-mini"
+  },
+  {
+    "id": "path-freeplay-staphylococcus-aureus-easy-1774625676437-0-0",
+    "pathogenId": "staphylococcus-aureus",
+    "pathogenKind": "bacterium",
+    "model": "gpt-5-mini",
+    "pool": "freeplay",
+    "hints": [
+      {
+        "order": 1,
+        "text": "A 24-year-old male university rugby player presents with 3 days of a painful, rapidly enlarging lump on the anterior right thigh. He is febrile to 38.5°C, the lesion is 4 cm, erythematous, warm and fluctuant with a 2-cm central pustule and surrounding cellulitis; he has painful limitation of hip flexion.",
+        "category": "presentation"
+      },
+      {
+        "order": 2,
+        "text": "He shaves his legs before matches and reports close skin-to-skin contact with teammates; one teammate had a pustule last week. He is otherwise healthy, takes no regular medication, and has no history of diabetes or immunodeficiency.",
+        "category": "history"
+      },
+      {
+        "order": 3,
+        "text": "Blood tests show WBC 15.2 ×10^9/L (neutrophils 12.0 ×10^9/L), CRP 86 mg/L; point-of-care glucose 5.8 mmol/L. No bacteraemia documented initially on single peripheral culture drawn in emergency.",
+        "category": "lab"
+      },
+      {
+        "order": 4,
+        "text": "Soft-tissue ultrasound of the thigh demonstrates a 3.4 × 2.1 cm compressible hypoechoic fluid collection within subcutaneous tissue with a hyperaemic rim and no deep fascial involvement—findings consistent with a localized abscess.",
+        "category": "imaging"
+      },
+      {
+        "order": 5,
+        "text": "Incision and drainage yielded purulent fluid. Gram stain showed gram‑positive cocci in clusters; cultures produced beta-haemolytic, golden-pigmented colonies that were catalase-positive and coagulase-positive. The patient defervesced within 24 hours of IV oxacillin and completed a short course of oral anti-staphylococcal therapy with full recovery.",
+        "category": "treatment_response"
+      }
+    ],
+    "difficulty": "easy",
+    "explanation": "A young adult with a post‑shaving skin abscess, gram‑positive cocci in clusters that are catalase- and coagulase-positive and produce golden, beta‑haemolytic colonies, with rapid clinical response to anti‑staphylococcal beta‑lactam therapy — classic for Staphylococcus aureus skin and soft‑tissue infection.",
+    "source": "ai_generated",
+    "validated": true,
+    "createdAt": "2026-03-27T15:34:36.437Z",
+    "style": "mgh_case_report"
+  },
+  {
+    "id": "path-freeplay-staphylococcus-aureus-easy-1774625676439-0-1",
+    "pathogenId": "staphylococcus-aureus",
+    "pathogenKind": "bacterium",
+    "model": "gpt-5-mini",
+    "pool": "freeplay",
+    "hints": [
+      {
+        "order": 1,
+        "text": "A 62-year-old man presents with a 3-week history of a non-healing ulcer beneath the left first metatarsal head. He reports increasing local pain, foul-smelling purulent discharge and low‑grade fevers. The ulcer exposes palpable bone under the base.",
+        "category": "presentation"
+      },
+      {
+        "order": 2,
+        "text": "He has longstanding type 2 diabetes with distal sensory neuropathy and peripheral vascular disease. He previously completed an incomplete course of oral antibiotics prescribed in primary care with only transient improvement.",
+        "category": "history"
+      },
+      {
+        "order": 3,
+        "text": "WBC 10.6 ×10^9/L, CRP 128 mg/L, ESR 75 mm/h. Renal function is preserved (creatinine 92 µmol/L). Blood glucose at presentation 11.2 mmol/L.",
+        "category": "lab"
+      },
+      {
+        "order": 4,
+        "text": "MRI of the foot demonstrates marrow oedema and cortical destruction of the proximal first metatarsal measuring 2.5 cm contiguous with the ulcer base, with a small sinus tract to the skin—appearance diagnostic of osteomyelitis.",
+        "category": "imaging"
+      },
+      {
+        "order": 5,
+        "text": "Debridement and deep bone cultures yielded gram‑positive cocci in clusters; isolates produced beta‑haemolytic, mannitol‑fermenting colonies on high‑salt medium and were catalase- and coagulase‑positive. Antimicrobial testing showed an oxacillin‑susceptible phenotype; the patient improved on targeted therapy.",
+        "category": "exposure"
+      }
+    ],
+    "difficulty": "easy",
+    "explanation": "Diabetic foot osteomyelitis contiguous with a skin ulcer and growth of catalase- and coagulase‑positive, mannitol‑fermenting, beta‑haemolytic gram‑positive cocci in clusters is characteristic of Staphylococcus aureus as the causative organism.",
+    "source": "ai_generated",
+    "validated": true,
+    "createdAt": "2026-03-27T15:34:36.439Z",
+    "style": "mgh_case_report"
+  },
+  {
+    "id": "path-freeplay-staphylococcus-aureus-easy-1774625676440-0-2",
+    "pathogenId": "staphylococcus-aureus",
+    "pathogenKind": "bacterium",
+    "model": "gpt-5-mini",
+    "pool": "freeplay",
+    "hints": [
+      {
+        "order": 1,
+        "text": "A 45-year-old woman receiving adjuvant chemotherapy via an implanted port presents with acute onset rigors and fever to 38.9°C. On examination she has erythema and tenderness over the port site and a new, soft pansystolic murmur best heard at the left lower sternal border.",
+        "category": "presentation"
+      },
+      {
+        "order": 2,
+        "text": "The port was placed 8 days ago; she received her most recent cytotoxic infusion 5 days ago. She is not neutropenic at baseline but reports malaise for 48 hours prior to presentation.",
+        "category": "history"
+      },
+      {
+        "order": 3,
+        "text": "WBC 14.0 ×10^9/L, CRP 95 mg/L. Two sets of blood cultures were drawn from peripheral veins and from the port prior to empiric antibiotic administration.",
+        "category": "lab"
+      },
+      {
+        "order": 4,
+        "text": "Transthoracic echocardiography shows a 1.0 cm mobile vegetation on the tricuspid valve with mild tricuspid regurgitation; no left‑sided valvular lesions are seen.",
+        "category": "imaging"
+      },
+      {
+        "order": 5,
+        "text": "Both peripheral and port-drawn blood cultures grew gram‑positive cocci in clusters; isolates were catalase- and coagulase-positive. The port was removed; after initiating IV anti‑staphylococcal beta‑lactam therapy the patient became afebrile within 48 hours and blood cultures cleared.",
+        "category": "treatment_response"
+      }
+    ],
+    "difficulty": "easy",
+    "explanation": "A catheter‑related bloodstream infection causing acute tricuspid valve endocarditis with growth of catalase‑ and coagulase‑positive gram‑positive cocci in clusters is most consistent with Staphylococcus aureus; removal of the device and targeted therapy produced expected clinical improvement.",
+    "source": "ai_generated",
+    "validated": true,
+    "createdAt": "2026-03-27T15:34:36.440Z",
+    "style": "mgh_case_report"
+  },
+  {
+    "id": "path-freeplay-staphylococcus-aureus-easy-1774625676440-0-3",
+    "pathogenId": "staphylococcus-aureus",
+    "pathogenKind": "bacterium",
+    "model": "gpt-5-mini",
+    "pool": "freeplay",
+    "hints": [
+      {
+        "order": 1,
+        "text": "A 2-year-old previously healthy girl is brought with 24 hours of fever and rapidly spreading erythema. She has widespread superficial blistering and gentle pressure produces epidermal peeling (positive Nikolsky sign). She is tachycardic and mildly dehydrated.",
+        "category": "presentation"
+      },
+      {
+        "order": 2,
+        "text": "Three days of mild upper respiratory symptoms preceded the rash. A sibling in the household has a small crusted pustule on the nose. No recent medication exposures and no known immunodeficiency.",
+        "category": "history"
+      },
+      {
+        "order": 3,
+        "text": "WBC 18.5 ×10^9/L, CRP 62 mg/L. Electrolytes show mild hyponatraemia (Na 132 mmol/L) from insensible losses; renal function normal.",
+        "category": "lab"
+      },
+      {
+        "order": 4,
+        "text": "Dermatology inspection and an image of the affected skin show widespread flaccid bullae and denuded superficial epidermis. Skin biopsy from a blister roof demonstrates cleavage within the granular layer of the epidermis with an intact dermis beneath.",
+        "category": "imaging"
+      },
+      {
+        "order": 5,
+        "text": "Perioral pustule and nasopharyngeal swabs cultured gram‑positive cocci in clusters; isolates were catalase‑positive and coagulase‑positive. With systemic anti‑staphylococcal antibiotics and supportive care the child re‑epithelialised over several days.",
+        "category": "exposure"
+      }
+    ],
+    "difficulty": "easy",
+    "explanation": "A young child with fever, widespread superficial epidermal cleavage at the granular layer and cultures yielding catalase‑ and coagulase‑positive gram‑positive cocci in clusters indicates toxin‑mediated epidermal injury caused by Staphylococcus aureus (bullous impetigo / staphylococcal scalded skin syndrome).",
+    "source": "ai_generated",
+    "validated": true,
+    "createdAt": "2026-03-27T15:34:36.440Z",
+    "style": "mgh_case_report"
+  },
+  {
+    "id": "path-freeplay-staphylococcus-aureus-easy-1774625723815-1-0",
+    "pathogenId": "staphylococcus-aureus",
+    "pathogenKind": "bacterium",
+    "model": "gpt-5-mini",
+    "pool": "freeplay",
+    "hints": [
+      {
+        "order": 1,
+        "text": "A 32-year-old man presents to the emergency clinic with 24 hours of rapidly worsening right knee pain, marked swelling, erythema and inability to bear weight. Temperature 38.9°C; the joint is tense, very tender, and range of motion is limited by pain.",
+        "category": "presentation"
+      },
+      {
+        "order": 2,
+        "text": "He is otherwise healthy, works as a landscape gardener, and recalls a puncture from a thorn while gardening 5 days ago. He also reports a small painful boil on his anterior thigh that appeared 3 days ago and then partly drained at home.",
+        "category": "history"
+      },
+      {
+        "order": 3,
+        "text": "Arthrocentesis yielded turbid fluid with synovial leukocyte count 95.0 x10^9/L (predominantly neutrophils). Peripheral white cell count 15.2 x10^9/L. Gram stain of synovial fluid shows gram-positive cocci arranged in clusters.",
+        "category": "lab"
+      },
+      {
+        "order": 4,
+        "text": "Point-of-care ultrasound of the knee confirms a large complex effusion with synovial thickening; plain radiograph shows soft-tissue swelling without periarticular osteolysis.",
+        "category": "imaging"
+      },
+      {
+        "order": 5,
+        "text": "Culture of synovial fluid grew haemolytic, golden-pigmented colonies on blood agar; organisms were catalase-positive and produced clot in a tube coagulase test. The isolate was susceptible to flucloxacillin.",
+        "category": "exposure"
+      }
+    ],
+    "difficulty": "easy",
+    "explanation": "This patient has acute septic arthritis caused by Staphylococcus aureus. Clinical picture (acute monoarticular arthritis after skin puncture/boil), synovial fluid with very high neutrophil count and gram-positive cocci in clusters, plus growth of catalase-positive, coagulase-positive, golden haemolytic colonies that are flucloxacillin-susceptible, identify S. aureus as the pathogen.",
+    "source": "ai_generated",
+    "validated": true,
+    "createdAt": "2026-03-27T15:35:23.815Z",
+    "style": "mgh_case_report"
+  },
+  {
+    "id": "path-freeplay-staphylococcus-aureus-easy-1774625723815-1-1",
+    "pathogenId": "staphylococcus-aureus",
+    "pathogenKind": "bacterium",
+    "model": "gpt-5-mini",
+    "pool": "freeplay",
+    "hints": [
+      {
+        "order": 1,
+        "text": "A 74-year-old woman is admitted with 3 days of high fevers, pleuritic right-sided chest pain and purulent cough. She developed dyspnoea and increasing sputum production two days after a laboratory-confirmed influenza infection last week.",
+        "category": "presentation"
+      },
+      {
+        "order": 2,
+        "text": "Her comorbidities include moderate chronic obstructive pulmonary disease and hypertension. She is an ex-smoker. She had not been hospitalised recently and received oseltamivir as an outpatient for influenza.",
+        "category": "history"
+      },
+      {
+        "order": 3,
+        "text": "Blood tests show white cell count 22.5 x10^9/L and CRP 210 mg/L. Sputum Gram stain demonstrates gram-positive cocci in clusters; two sets of blood cultures have been drawn and are pending.",
+        "category": "lab"
+      },
+      {
+        "order": 4,
+        "text": "Chest radiograph shows dense consolidation of the right upper lobe with early cavitary change and a small loculated pleural effusion; CT thorax confirms multifocal cavitating consolidation with adjacent empyema.",
+        "category": "imaging"
+      },
+      {
+        "order": 5,
+        "text": "Thoracostomy drained purulent pleural fluid and cultures grew beta-haemolytic, golden colonies that were catalase-positive and coagulase-positive; the isolate was susceptible to isoxazolyl penicillins. After targeted intravenous therapy and drainage the patient’s fever and oxygenation improved.",
+        "category": "treatment_response"
+      }
+    ],
+    "difficulty": "easy",
+    "explanation": "This is a classic case of post-influenza necrotizing pneumonia with empyema due to Staphylococcus aureus. The temporal association with recent influenza, cavitating lobar consolidation, gram-positive cocci in clusters on sputum, and growth of catalase- and coagulase-positive golden colonies that respond to anti-staphylococcal penicillins support the diagnosis.",
+    "source": "ai_generated",
+    "validated": true,
+    "createdAt": "2026-03-27T15:35:23.815Z",
+    "style": "mgh_case_report"
+  },
+  {
+    "id": "path-freeplay-staphylococcus-aureus-easy-1774625723815-1-2",
+    "pathogenId": "staphylococcus-aureus",
+    "pathogenKind": "bacterium",
+    "model": "gpt-5-mini",
+    "pool": "freeplay",
+    "hints": [
+      {
+        "order": 1,
+        "text": "A 5-year-old girl is brought by her mother with 4 days of perioral crusted lesions. Examination shows multiple erythematous papules and honey-coloured crusts around the mouth and on the cheeks; she has low-grade fever 37.8°C and mild regional lymphadenopathy.",
+        "category": "presentation"
+      },
+      {
+        "order": 2,
+        "text": "The child has a history of atopic eczema with excoriated skin. Two children in her daycare developed similar lesions during the past week. There is no history of recent travel or insect bite.",
+        "category": "history"
+      },
+      {
+        "order": 3,
+        "text": "A swab of the crusts was taken; Gram stain shows gram-positive cocci in clusters. Routine blood tests are unremarkable with white cell count 9.8 x10^9/L.",
+        "category": "lab"
+      },
+      {
+        "order": 4,
+        "text": "Mother reports direct contact between the child and an older sibling who had boils last month; several daycare classmates share towels and toys and a teacher noted multiple children with skin lesions.",
+        "category": "exposure"
+      },
+      {
+        "order": 5,
+        "text": "Topical mupirocin was started while culture returned: growth of beta-haemolytic, golden colonies that were catalase-positive and coagulase-positive; isolates were sensitive to topical mupirocin and to oral isoxazolyl penicillins. The lesions improved markedly over 5 days.",
+        "category": "treatment_response"
+      }
+    ],
+    "difficulty": "easy",
+    "explanation": "The presentation is consistent with non-bullous impetigo due to Staphylococcus aureus. Eczema and close-contact daycare exposure predisposed to infection; Gram-positive cocci in clusters on the lesion swab and growth of catalase- and coagulase-positive golden colonies that responded to topical and oral anti-staphylococcal therapy confirm the diagnosis.",
+    "source": "ai_generated",
+    "validated": true,
+    "createdAt": "2026-03-27T15:35:23.815Z",
+    "style": "mgh_case_report"
+  },
+  {
+    "id": "path-freeplay-staphylococcus-aureus-medium-1774625772874-2-0",
+    "pathogenId": "staphylococcus-aureus",
+    "pathogenKind": "bacterium",
+    "model": "gpt-5-mini",
+    "pool": "freeplay",
+    "hints": [
+      {
+        "order": 1,
+        "text": "A 32-year-old man presents to the ambulatory clinic with 48 hours of a painful, swollen area on the lateral right thigh. He has fever to 38.9 °C, a 3-cm fluctuant, erythematous nodule with central tenderness and purulent drainage expressed on gentle pressure.",
+        "category": "presentation"
+      },
+      {
+        "order": 2,
+        "text": "He injects recreational drugs intermittently and reports injecting into his groin and thigh region several times in the past week. No known diabetes or other chronic illness. No recent antibiotic use.",
+        "category": "history"
+      },
+      {
+        "order": 3,
+        "text": "Peripheral blood count: leucocytes 15.8 × 10^9/L with 85% neutrophils, CRP 180 mg/L. Gram stain of aspirated pus shows Gram-positive cocci appearing in irregular clusters; no organisms seen inside neutrophils.",
+        "category": "lab"
+      },
+      {
+        "order": 4,
+        "text": "Point-of-care ultrasound of the thigh demonstrates a 4.2 × 2.1 cm complex subcutaneous fluid collection with peripheral hyperaemia and no deep fascial extension.",
+        "category": "imaging"
+      },
+      {
+        "order": 5,
+        "text": "After incision and drainage and initiation of intravenous antistaphylococcal penicillin, the patient defervesces within 24 hours. Wound culture yields golden-pigmented, beta-haemolytic colonies on blood agar that ferment mannitol and are catalase- and coagulase-positive.",
+        "category": "treatment_response"
+      }
+    ],
+    "difficulty": "medium",
+    "explanation": "The rapid development of a purulent, fluctuant skin abscess in an injection drug user, Gram-positive cocci in clusters on pus Gram stain, and culture producing golden, beta-haemolytic, catalase- and coagulase-positive colonies that ferment mannitol point to the typical pyogenic skin pathogen responsible for community soft-tissue abscesses. Prompt response to an anti-staphylococcal penicillin supports the organism’s expected susceptibility.",
+    "source": "ai_generated",
+    "validated": true,
+    "createdAt": "2026-03-27T15:36:12.874Z",
+    "style": "mgh_case_report"
+  },
+  {
+    "id": "path-freeplay-staphylococcus-aureus-medium-1774625772874-2-1",
+    "pathogenId": "staphylococcus-aureus",
+    "pathogenKind": "bacterium",
+    "model": "gpt-5-mini",
+    "pool": "freeplay",
+    "hints": [
+      {
+        "order": 1,
+        "text": "A 68-year-old woman presents with 5 weeks of progressive pain in her right hip and low-grade fevers following an elective total hip arthroplasty performed 7 weeks earlier. She describes worsening stiffness and inability to weight-bear comfortably.",
+        "category": "presentation"
+      },
+      {
+        "order": 2,
+        "text": "Her medical history includes type 2 diabetes treated with oral agents and obesity. The arthroplasty was uncomplicated; she received standard perioperative prophylaxis. Wound healed initially, but she noted increasing scarring tenderness three weeks postoperatively.",
+        "category": "history"
+      },
+      {
+        "order": 3,
+        "text": "Inflammatory markers are elevated: CRP 120 mg/L, ESR 68 mm/h. Joint aspiration yields turbid synovial fluid with WBC 62 × 10^9/L (neutrophil predominance). Direct Gram stain of the fluid shows Gram-positive cocci in clusters.",
+        "category": "lab"
+      },
+      {
+        "order": 4,
+        "text": "Plain radiographs show peri-prosthetic radiolucency around the femoral stem and early loosening. Ultrasound-guided aspiration confirms collection around the prosthesis modest in size.",
+        "category": "imaging"
+      },
+      {
+        "order": 5,
+        "text": "Intraoperative cultures taken at prosthesis exchange grow beta-haemolytic, golden-pigmented colonies that are catalase- and coagulase-positive; targeted intravenous anti-staphylococcal beta-lactam therapy leads to gradual resolution of fever and falling CRP over the next 10 days.",
+        "category": "treatment_response"
+      }
+    ],
+    "difficulty": "medium",
+    "explanation": "A subacute peri-prosthetic joint infection with high synovial WBC and Gram-positive cocci in clusters on fluid Gram stain suggests a pyogenic coccus. Growth of beta-haemolytic, golden colonies that are catalase- and coagulase-positive from intraoperative samples, with clinical improvement on anti-staphylococcal beta-lactam therapy, is diagnostic of the common organism implicated in early and subacute prosthetic infections.",
+    "source": "ai_generated",
+    "validated": true,
+    "createdAt": "2026-03-27T15:36:12.874Z",
+    "style": "mgh_case_report"
+  },
+  {
+    "id": "path-freeplay-staphylococcus-aureus-medium-1774625772874-2-3",
+    "pathogenId": "staphylococcus-aureus",
+    "pathogenKind": "bacterium",
+    "model": "gpt-5-mini",
+    "pool": "freeplay",
+    "hints": [
+      {
+        "order": 1,
+        "text": "A 9-year-old boy presents with 4 days of fever to 39.0 °C, refusal to bear weight on his left leg, and progressive swelling of the left ankle region. He appears unwell and holds the hip slightly flexed and externally rotated.",
+        "category": "presentation"
+      },
+      {
+        "order": 2,
+        "text": "Two weeks earlier he sustained a small puncture of the plantar surface of the left foot while playing barefoot at a riverbank; the wound healed superficially. No history of sickle cell disease or recent immunizations beyond routine childhood schedule.",
+        "category": "history"
+      },
+      {
+        "order": 3,
+        "text": "WBC 18.4 × 10^9/L with neutrophilia, CRP 160 mg/L, blood cultures sent. Plain film is unremarkable for fracture but inflammatory markers remain high.",
+        "category": "lab"
+      },
+      {
+        "order": 4,
+        "text": "MRI of the pelvis and left femur shows marrow oedema in the proximal femur with a small subperiosteal collection and surrounding soft-tissue inflammation consistent with acute haematogenous osteomyelitis.",
+        "category": "imaging"
+      },
+      {
+        "order": 5,
+        "text": "Bone aspirate and blood cultures grow catalase- and coagulase-positive, golden-pigmented, beta-haemolytic colonies; the child improves on intravenous cloxacillin with defervescence within 48 hours and reduction in pain over the first week.",
+        "category": "treatment_response"
+      }
+    ],
+    "difficulty": "medium",
+    "explanation": "A previously healthy child with acute onset limb pain after a remote puncture wound, MRI evidence of proximal femoral osteomyelitis, and blood and bone cultures yielding golden, beta-haemolytic, catalase- and coagulase-positive colonies, points to the common pyogenic organism responsible for paediatric haematogenous osteomyelitis. Rapid clinical response to an anti-staphylococcal beta-lactam further supports the identification.",
+    "source": "ai_generated",
+    "validated": true,
+    "createdAt": "2026-03-27T15:36:12.874Z",
+    "style": "mgh_case_report"
+  },
+  {
+    "id": "path-freeplay-staphylococcus-aureus-medium-1774625833924-3-0",
+    "pathogenId": "staphylococcus-aureus",
+    "pathogenKind": "bacterium",
+    "model": "gpt-5-mini",
+    "pool": "freeplay",
+    "hints": [
+      {
+        "order": 1,
+        "text": "A 68-year-old woman presents to the orthopaedic clinic 21 days after an uncomplicated elective total knee arthroplasty with progressive pain, swelling and a seropurulent dressing saturated over the last 48 hours. She is febrile to 38.2°C; the operated knee is warm, erythematous, tender to passive motion and has a 2-cm area of superficial wound breakdown with cloudy drainage.",
+        "category": "presentation"
+      },
+      {
+        "order": 2,
+        "text": "Medical history notable for type 2 diabetes mellitus treated with oral agents and obesity (BMI 34 kg/m²). She received single-dose perioperative antibiotic prophylaxis, had superficial wound dehiscence noted on postoperative day 7 that was managed non-operatively, and reports poor glycaemic control in the weeks after surgery.",
+        "category": "history"
+      },
+      {
+        "order": 3,
+        "text": "Blood tests show leukocytosis 14.8 × 10^9/L with neutrophilia and CRP 182 mg/L. Two sets of peripheral blood cultures were obtained; initial Gram stain pending. A bedside aspiration yielded turbid synovial fluid.",
+        "category": "lab"
+      },
+      {
+        "order": 4,
+        "text": "Plain radiographs of the knee demonstrate new peri‑prosthetic radiolucency along the femoral component compared with immediate postoperative films. Ultrasound confirms a sizeable joint effusion; there is no obvious periosteal new bone formation on these films to suggest chronic osteomyelitis.",
+        "category": "imaging"
+      },
+      {
+        "order": 5,
+        "text": "She underwent urgent irrigation, debridement and single-stage exchange of the prosthetic components. Intraoperative tissue cultures grew Gram‑positive cocci in clusters that were catalase‑positive and coagulase‑positive and produced beta‑haemolysis on blood agar; targeted therapy with an anti‑staphylococcal penicillin was started and fevers resolved within 48 hours with falling CRP.",
+        "category": "treatment_response"
+      }
+    ],
+    "difficulty": "medium",
+    "explanation": "This presentation — early postoperative prosthetic joint infection with purulent drainage, leukocytosis/marked CRP elevation, radiographic loosening and intraoperative cultures showing catalase‑positive, coagulase‑positive gram‑positive cocci in clusters — is most consistent with infection by Staphylococcus aureus. Source control (debridement and prosthesis exchange) plus targeted anti‑staphylococcal therapy is the standard approach; methicillin susceptibility guides choice of beta‑lactam (oxacillin/nafcillin/flucloxacillin) versus glycopeptide therapy if resistant.",
+    "source": "ai_generated",
+    "validated": true,
+    "createdAt": "2026-03-27T15:37:13.924Z",
+    "style": "mgh_case_report"
+  },
+  {
+    "id": "path-freeplay-staphylococcus-aureus-medium-1774625833924-3-1",
+    "pathogenId": "staphylococcus-aureus",
+    "pathogenKind": "bacterium",
+    "model": "gpt-5-mini",
+    "pool": "freeplay",
+    "hints": [
+      {
+        "order": 1,
+        "text": "A 29-year-old man presents to the emergency department with three days of fever, pleuritic right‑sided chest pain, dyspnoea and small‑volume haemoptysis. On examination he is febrile 38.9°C, tachycardic and has multiple tender pustules and indurated nodules along both forearms with visible injection track marks.",
+        "category": "presentation"
+      },
+      {
+        "order": 2,
+        "text": "He admits to daily intravenous opioid use and recent self‑lancing of a painful forearm nodule. He has no known history of valvular heart disease. He reports sharing needles within his social network over the last week.",
+        "category": "history"
+      },
+      {
+        "order": 3,
+        "text": "Laboratory results show leukocytosis 16.3 × 10^9/L with neutrophil predominance and CRP 210 mg/L. Two sets of blood cultures were drawn prior to empiric antimicrobials.",
+        "category": "lab"
+      },
+      {
+        "order": 4,
+        "text": "Contrast chest CT demonstrates multiple bilateral, peripheral nodules several of which are cavitating, and peripheral wedge‑shaped infarcts consistent with septic emboli. Transthoracic echocardiography identifies a 12 mm mobile vegetation on the tricuspid valve with moderate tricuspid regurgitation.",
+        "category": "imaging"
+      },
+      {
+        "order": 5,
+        "text": "He acknowledges sharing needles with a friend who had a draining thigh abscess the prior week; culture from that abscess grew Gram‑positive cocci in clusters that were catalase‑positive and coagulase‑positive. The antibiogram of that isolate matched the organism later recovered from the patient’s blood cultures.",
+        "category": "exposure"
+      }
+    ],
+    "difficulty": "medium",
+    "explanation": "Right‑sided infective endocarditis with septic pulmonary emboli in an intravenous drug user, together with matching isolates from a linked skin abscess that are catalase‑ and coagulase‑positive gram‑positive cocci in clusters, point to Staphylococcus aureus as the causative organism. Management centers on appropriate bactericidal anti‑staphylococcal antibiotics (choice dictated by methicillin susceptibility) and assessment for indications for surgical intervention on the tricuspid valve, plus source control and harm‑reduction counselling.",
+    "source": "ai_generated",
+    "validated": true,
+    "createdAt": "2026-03-27T15:37:13.924Z",
+    "style": "mgh_case_report"
+  },
+  {
+    "id": "path-freeplay-staphylococcus-aureus-hard-1774625888587-4-0",
+    "pathogenId": "staphylococcus-aureus",
+    "pathogenKind": "bacterium",
+    "model": "gpt-5-mini",
+    "pool": "freeplay",
+    "hints": [
+      {
+        "order": 1,
+        "text": "A 67-year-old woman presents to orthopaedic clinic 6 weeks after elective total knee arthroplasty with increasing pain, swelling and a seropurulent discharge from the surgical scar. She is febrile to 38.5 °C and the joint is warm, erythematous and tender with restricted range of motion.",
+        "category": "presentation"
+      },
+      {
+        "order": 2,
+        "text": "Her past medical history includes type 2 diabetes controlled with metformin and HbA1c 68 mmol/mol (8.4%). The immediate postoperative course was notable for superficial wound dehiscence on day 10 managed with local care; she received a single perioperative dose of cefazolin but no prolonged antibiotics.",
+        "category": "history"
+      },
+      {
+        "order": 3,
+        "text": "Blood tests: leucocytosis 15.6 ×10^9/L, CRP 220 mg/L. Aspiration of the joint yielded turbid fluid: leukocyte count 85 ×10^9/L with 92% neutrophils and Gram stain showing Gram-positive cocci in clusters; synovial fluid and two sets of blood cultures later grew beta-haemolytic, catalase-positive colonies on culture.",
+        "category": "lab"
+      },
+      {
+        "order": 4,
+        "text": "Plain radiographs show peri-prosthetic lucency around the tibial component and early component loosening. Ultrasound demonstrates a small complex fluid collection tracking to the skin; no deep vein thrombosis.",
+        "category": "imaging"
+      },
+      {
+        "order": 5,
+        "text": "The patient underwent irrigation and debridement with exchange of mobile parts and was started on high-dose IV flucloxacillin. Fever and drainage resolved within 72 hours and repeat blood cultures became sterile; intraoperative cultures had the same colony morphology and antibiotic profile as the preoperative isolates.",
+        "category": "treatment_response"
+      }
+    ],
+    "difficulty": "hard",
+    "explanation": "Prosthetic joint infection due to Staphylococcus aureus. The time course (early postoperative infection), wound dehiscence, diabetes, purulent joint aspirate with high neutrophil count, Gram-positive cocci in clusters and catalase-positive, beta-haemolytic growth point to this organism. Rapid clinical response to anti-staphylococcal beta-lactam after source control is typical of a flucloxacillin-susceptible strain. Definitive management required surgical debridement with appropriate targeted antibiotics and prosthesis management.",
+    "source": "ai_generated",
+    "validated": true,
+    "createdAt": "2026-03-27T15:38:08.587Z",
+    "style": "mgh_case_report"
+  },
+  {
+    "id": "path-freeplay-staphylococcus-aureus-hard-1774625888587-4-1",
+    "pathogenId": "staphylococcus-aureus",
+    "pathogenKind": "bacterium",
+    "model": "gpt-5-mini",
+    "pool": "freeplay",
+    "hints": [
+      {
+        "order": 1,
+        "text": "A 48-year-old man presents to the emergency department with 48 hours of rapidly progressive dyspnoea, pleuritic chest pain and hemoptysis. He is tachypnoeic, hypoxaemic on room air and febrile to 39.2 °C.",
+        "category": "presentation"
+      },
+      {
+        "order": 2,
+        "text": "Ten days earlier he had an influenza-like illness confirmed by a positive rapid influenza A test; he recovered at home but then developed new high fevers and productive cough. He is a non-smoker with no chronic lung disease and no recent travel.",
+        "category": "history"
+      },
+      {
+        "order": 3,
+        "text": "Admission bloods show leukopenia 2.1 ×10^9/L, CRP 310 mg/L, and arterial blood gas with PaO2 7.8 kPa on room air. Two sets of blood cultures drawn on admission grew Gram-positive cocci in clusters in both aerobic and anaerobic bottles within 12 hours.",
+        "category": "lab"
+      },
+      {
+        "order": 4,
+        "text": "Chest CT demonstrates multilobar consolidation with areas of cavitation and multiple bilateral nodular cavitating lesions consistent with septic pulmonary infarcts.",
+        "category": "imaging"
+      },
+      {
+        "order": 5,
+        "text": "Empiric beta-lactam/β-lactamase–inhibitor therapy produced no clinical improvement; after switching to high-dose IV flucloxacillin the patient’s fever curve and oxygenation began to improve within 48–72 hours and subsequent isolates had an antibiogram consistent with a beta-lactam–susceptible Gram-positive coccus.",
+        "category": "treatment_response"
+      }
+    ],
+    "difficulty": "hard",
+    "explanation": "Post-influenza necrotizing pneumonia caused by Staphylococcus aureus. The sequence of recent influenza followed by fulminant cavitating pneumonia, leukopenia, rapid growth of Gram-positive cocci in clusters from blood cultures and clinical response to an anti-staphylococcal beta-lactam identify this pathogen. This presentation is characteristic of toxin-producing strains causing severe necrotising disease after influenza infection.",
+    "source": "ai_generated",
+    "validated": true,
+    "createdAt": "2026-03-27T15:38:08.587Z",
+    "style": "mgh_case_report"
+  },
+  {
+    "id": "path-freeplay-staphylococcus-aureus-hard-1774625888587-4-2",
+    "pathogenId": "staphylococcus-aureus",
+    "pathogenKind": "bacterium",
+    "model": "gpt-5-mini",
+    "pool": "freeplay",
+    "hints": [
+      {
+        "order": 1,
+        "text": "A 58-year-old man receiving thrice-weekly haemodialysis via a tunnelled right internal jugular catheter presents with subacute low back pain and fever for 10 days. He has increasing difficulty mobilising because of severe lumbar pain and reports intermittent rigors.",
+        "category": "presentation"
+      },
+      {
+        "order": 2,
+        "text": "He has end-stage kidney disease secondary to hypertensive nephropathy and has had the same tunnelled catheter in situ for 9 months with two prior admissions for catheter-associated bacteraemia in the past year; attempts at fistula creation have been delayed by poor veins.",
+        "category": "history"
+      },
+      {
+        "order": 3,
+        "text": "Blood tests show leucocytosis 17.2 ×10^9/L, CRP 176 mg/L and two pairs of blood cultures drawn from catheter and peripheral sites flagged positive within 10 hours, with Gram-positive cocci in clusters seen on direct smear.",
+        "category": "lab"
+      },
+      {
+        "order": 4,
+        "text": "MRI of the lumbar spine reveals L3–L4 discitis with endplate destruction and a small epidural and paravertebral abscess extending posteriorly, causing mild canal narrowing but no cord compression.",
+        "category": "imaging"
+      },
+      {
+        "order": 5,
+        "text": "The long-term dialysis catheter was removed and the catheter tip culture grew the same cluster-forming Gram-positive organism with an identical antibiogram to the patient’s blood isolates; a nasal swab from the patient also grew the same organism.",
+        "category": "exposure"
+      }
+    ],
+    "difficulty": "hard",
+    "explanation": "Haematogenous vertebral osteomyelitis due to Staphylococcus aureus originating from an infected central venous dialysis catheter. Recurrent catheter-related bacteraemia, rapid growth of Gram-positive cocci in clusters from blood and catheter-tip cultures, MRI evidence of discitis/epidural abscess, and matching nasal carriage support this diagnosis. Management requires catheter removal, targeted anti-staphylococcal therapy and, when indicated, surgical drainage.",
+    "source": "ai_generated",
+    "validated": true,
+    "createdAt": "2026-03-27T15:38:08.587Z",
+    "style": "mgh_case_report"
+  },
+  {
+    "id": "path-freeplay-staphylococcus-epidermidis-easy-1774625930468-5-0",
+    "pathogenId": "staphylococcus-epidermidis",
+    "pathogenKind": "bacterium",
+    "model": "gpt-5-mini",
+    "pool": "freeplay",
+    "hints": [
+      {
+        "order": 1,
+        "text": "A 68-year-old woman presents to the orthopaedic clinic with six weeks of progressive pain and swelling in her right knee. She had an uncomplicated total knee arthroplasty 7 weeks ago; wound healed initially but she now reports increasing stiffness, erythema limited to the incision, and difficulty weight-bearing.",
+        "category": "presentation"
+      },
+      {
+        "order": 2,
+        "text": "Her past medical history includes type 2 diabetes mellitus (HbA1c 7.9%), osteoarthritis, and obesity. Perioperative course was uneventful; she received standard perioperative prophylactic antibiotics. There were no early postoperative fevers and she was discharged home on postoperative day 3.",
+        "category": "history"
+      },
+      {
+        "order": 3,
+        "text": "Serum CRP is 68 mg/L, white blood cell count 9.6 ×10^9/L. Arthrocentesis yields cloudy fluid with leukocyte count 48 ×10^9/L (92% neutrophils). Gram stain shows gram‑positive cocci in clusters; three separate synovial fluid cultures later grow identical small, white, non-haemolytic colonies.",
+        "category": "lab"
+      },
+      {
+        "order": 4,
+        "text": "Plain radiographs of the knee show a well-seated prosthesis without periprosthetic lucency; soft-tissue swelling around the incision is present but no acute fracture or gross loosening is seen.",
+        "category": "imaging"
+      },
+      {
+        "order": 5,
+        "text": "Intraoperative sonication of the removed prosthetic components grew the same organism in high quantity; isolates are catalase-positive, coagulase-negative and sensitive to novobiocin. The clinical course improved only after prosthesis exchange and targeted intravenous therapy.",
+        "category": "exposure"
+      }
+    ],
+    "difficulty": "easy",
+    "explanation": "This presentation—subacute prosthetic joint infection with gram-positive cocci in clusters, positive cultures from sonicate fluid, catalase-positive/coagulase-negative organism that is novobiocin-sensitive—points to Staphylococcus epidermidis, a skin commensal capable of biofilm-associated prosthetic infections.",
+    "source": "ai_generated",
+    "validated": true,
+    "createdAt": "2026-03-27T15:38:50.468Z",
+    "style": "mgh_case_report"
+  },
+  {
+    "id": "path-freeplay-staphylococcus-epidermidis-easy-1774625930468-5-2",
+    "pathogenId": "staphylococcus-epidermidis",
+    "pathogenKind": "bacterium",
+    "model": "gpt-5-mini",
+    "pool": "freeplay",
+    "hints": [
+      {
+        "order": 1,
+        "text": "A 3-year-old boy is brought to the emergency department with 48 hours of irritability, poor feeding and two episodes of non-bilious vomiting. His temperature is 38.1°C and parents note his fontanelle seems more tense than usual.",
+        "category": "presentation"
+      },
+      {
+        "order": 2,
+        "text": "He has congenital hydrocephalus treated with a ventriculoperitoneal shunt placed 12 days earlier. Postoperative course was uncomplicated and he was discharged home. No recent head trauma or respiratory infection reported.",
+        "category": "history"
+      },
+      {
+        "order": 3,
+        "text": "Lumbar puncture yields cloudy cerebrospinal fluid: WBC 3.2 ×10^9/L with 85% neutrophils, protein 1.2 g/L, glucose 1.8 mmol/L (serum glucose 5.6 mmol/L). CSF Gram stain shows gram‑positive cocci in clusters; CSF cultures subsequently grow identical small, white colonies from multiple specimens.",
+        "category": "lab"
+      },
+      {
+        "order": 4,
+        "text": "Non-contrast CT head demonstrates enlarged lateral ventricles compared with prior imaging, consistent with shunt obstruction; no acute haemorrhage. Shunt series radiographs show intact hardware.",
+        "category": "imaging"
+      },
+      {
+        "order": 5,
+        "text": "At shunt revision, biofilm was visible on the catheter tubing; explanted hardware and CSF cultures grew a catalase-positive, coagulase-negative organism sensitive to novobiocin and to vancomycin but resistant to penicillin.",
+        "category": "exposure"
+      }
+    ],
+    "difficulty": "easy",
+    "explanation": "A child with early post‑operative shunt malfunction, CSF with neutrophilic pleocytosis and culture of a catalase-positive, coagulase-negative, novobiocin‑sensitive organism from shunt biofilm is typical of Staphylococcus epidermidis shunt infection.",
+    "source": "ai_generated",
+    "validated": true,
+    "createdAt": "2026-03-27T15:38:50.468Z",
+    "style": "mgh_case_report"
+  },
+  {
+    "id": "path-freeplay-staphylococcus-epidermidis-easy-1774625988445-6-1",
+    "pathogenId": "staphylococcus-epidermidis",
+    "pathogenKind": "bacterium",
+    "model": "gpt-5-mini",
+    "pool": "freeplay",
+    "hints": [
+      {
+        "order": 1,
+        "text": "A 45-year-old woman receiving adjuvant chemotherapy for breast carcinoma presents to the oncology day ward with sudden rigors and fever to 38.9 °C during an infusion administered through a long‑standing subcutaneous port.",
+        "category": "presentation"
+      },
+      {
+        "order": 2,
+        "text": "She has had the port in situ for 9 months and receives weekly infusions. Recent counts show chemotherapy‑related leucopenia (total white cell count low). The port site appears only mildly erythematous without fluctuance.",
+        "category": "history"
+      },
+      {
+        "order": 3,
+        "text": "Peripheral blood: WBC 2.1 × 10^9/L with neutropenia. Paired blood cultures drawn from the port and peripherally show growth: central (port) bottle positive at 12 h, peripheral positive at 28 h. Gram stain from the culture demonstrates Gram‑positive cocci in clusters; isolates grew as small, white colonies and were novobiocin sensitive.",
+        "category": "lab"
+      },
+      {
+        "order": 4,
+        "text": "Transthoracic echocardiography performed to evaluate for endocarditis shows no valvular vegetations. Chest radiograph excludes pulmonary source and confirms port catheter tip projecting over the superior vena cava.",
+        "category": "imaging"
+      },
+      {
+        "order": 5,
+        "text": "Fever and rigors resolved only after removal of the port and initiation of targeted intravenous glycopeptide therapy; culture of the catheter tip yielded the same organism as blood cultures, consistent with an intravascular device infection by a skin commensal.",
+        "category": "treatment_response"
+      }
+    ],
+    "difficulty": "easy",
+    "explanation": "Catheter‑related bloodstream infection due to a skin commensal adhering to intravascular devices. The combination of earlier central than peripheral culture positivity, Gram‑positive cocci in clusters, small white colonies and novobiocin sensitivity — with clinical cure after catheter removal — is characteristic of Staphylococcus epidermidis.",
+    "source": "ai_generated",
+    "validated": true,
+    "createdAt": "2026-03-27T15:39:48.445Z",
+    "style": "mgh_case_report"
+  },
+  {
+    "id": "path-freeplay-staphylococcus-epidermidis-medium-1774626068092-7-0",
+    "pathogenId": "staphylococcus-epidermidis",
+    "pathogenKind": "bacterium",
+    "model": "gpt-5-mini",
+    "pool": "freeplay",
+    "hints": [
+      {
+        "order": 1,
+        "text": "A 68-year-old man presents to orthopaedics with six weeks of progressive deep right hip pain and intermittent serous drainage from a healed surgical scar; he has low-grade fevers up to 38.0°C and difficulty weightbearing after walking short distances.",
+        "category": "presentation"
+      },
+      {
+        "order": 2,
+        "text": "He underwent an uncomplicated total right hip arthroplasty 8 months earlier for osteoarthritis. Past medical history notable for type 2 diabetes mellitus (HbA1c 7.8%). Wound healed initially; he reports a single superficial wound erythema episode 2 months after surgery that settled with topical care.",
+        "category": "history"
+      },
+      {
+        "order": 3,
+        "text": "Blood tests: WBC 9,8 ×10^9/L, neutrophils 7,6 ×10^9/L, CRP 46 mg/L, ESR 55 mm/h. Joint aspiration produced cloudy fluid; Gram stain showed white blood cells but no organisms; routine synovial fluid cultures were incubated and were initially negative at 48 h.",
+        "category": "lab"
+      },
+      {
+        "order": 4,
+        "text": "Plain radiographs of the right hip show periprosthetic lucency at the femoral stem and subtle subsidence compared with images taken 6 months earlier, consistent with loosening; no acute periosteal reaction or large soft-tissue collection on ultrasound.",
+        "category": "imaging"
+      },
+      {
+        "order": 5,
+        "text": "The prosthesis was explanted with debridement; sonicate fluid from the removed components grew small, white colonies after 72 h. Microscopy: Gram-positive cocci in clusters, catalase-positive, coagulase-negative and susceptible to novobiocin. The patient improved clinically after device removal and a 6-week targeted antibiotic course.",
+        "category": "treatment_response"
+      }
+    ],
+    "difficulty": "medium",
+    "explanation": "This presentation (subacute prosthetic joint infection with sinus tract and prosthesis loosening), plus growth of catalase-positive, coagulase-negative, novobiocin-sensitive Gram-positive cocci from sonicate fluid and clinical improvement after device removal, is most consistent with Staphylococcus epidermidis. S. epidermidis is a skin commensal that forms biofilm on prosthetic material and is a leading cause of chronic, low-grade prosthetic joint infections where removal of the device is often required.",
+    "source": "ai_generated",
+    "validated": true,
+    "createdAt": "2026-03-27T15:41:08.092Z",
+    "style": "mgh_case_report"
+  },
+  {
+    "id": "path-freeplay-staphylococcus-epidermidis-medium-1774626068092-7-1",
+    "pathogenId": "staphylococcus-epidermidis",
+    "pathogenKind": "bacterium",
+    "model": "gpt-5-mini",
+    "pool": "freeplay",
+    "hints": [
+      {
+        "order": 1,
+        "text": "A 45-year-old woman receiving cyclical chemotherapy for metastatic breast cancer develops new-onset rigors and fever to 38.5°C the day after infusion; she reports chills but no focal pain; her implanted subcutaneous port has intact insertion site skin without erythema.",
+        "category": "presentation"
+      },
+      {
+        "order": 2,
+        "text": "Port placed 4 months earlier for repeated infusions. She is neutropenic during nadir periods but at presentation her ANC is 1,2 ×10^9/L. No recent skin infections or dental procedures. She self-reports meticulous at-home port flushing between cycles.",
+        "category": "history"
+      },
+      {
+        "order": 3,
+        "text": "Blood cultures were drawn simultaneously from the port and a peripheral vein. Laboratory results: WBC 2,9 ×10^9/L, neutrophils 1,2 ×10^9/L, CRP 85 mg/L. The port-drawn aerobic culture flagged positive 6 hours earlier than the peripheral culture; Gram stain of positive bottles showed Gram-positive cocci in clusters.",
+        "category": "lab"
+      },
+      {
+        "order": 4,
+        "text": "Chest radiograph and focused ultrasound at the port site show no fluid collection or radiographic pulmonary infiltrate; transthoracic echocardiography is without vegetations.",
+        "category": "imaging"
+      },
+      {
+        "order": 5,
+        "text": "The port was removed; catheter tip culture grew catalase-positive, coagulase-negative, novobiocin-sensitive Gram-positive cocci and blood cultures cleared within 48 hours of device removal and initiation of targeted IV therapy.",
+        "category": "treatment_response"
+      }
+    ],
+    "difficulty": "medium",
+    "explanation": "A central-line–associated bloodstream infection with earlier positivity of central vs peripheral cultures, and catheter-tip culture yielding catalase-positive, coagulase-negative, novobiocin-sensitive Gram-positive cocci that clears after device removal, is most consistent with Staphylococcus epidermidis. This organism commonly causes device-related bacteremia in patients with implanted vascular access.",
+    "source": "ai_generated",
+    "validated": true,
+    "createdAt": "2026-03-27T15:41:08.092Z",
+    "style": "mgh_case_report"
+  },
+  {
+    "id": "path-freeplay-staphylococcus-epidermidis-medium-1774626068092-7-3",
+    "pathogenId": "staphylococcus-epidermidis",
+    "pathogenKind": "bacterium",
+    "model": "gpt-5-mini",
+    "pool": "freeplay",
+    "hints": [
+      {
+        "order": 1,
+        "text": "A 72-year-old woman is evaluated for persistent low-grade fever and mild dyspnoea that developed over 3 weeks; she also notes new exertional fatigue and a small petechial rash on the palate.",
+        "category": "presentation"
+      },
+      {
+        "order": 2,
+        "text": "She had surgical replacement of an aortic valve with a metallic prosthesis 10 months ago. She has well-controlled hypertension and chronic atrial fibrillation on anticoagulation. No recent dental work.",
+        "category": "history"
+      },
+      {
+        "order": 3,
+        "text": "Blood tests: WBC 10,2 ×10^9/L, CRP 38 mg/L. Repeated blood cultures grew organisms in multiple sets but with relatively slow time to positivity; Gram stain documented Gram-positive cocci in clusters. Renal and liver function normal.",
+        "category": "lab"
+      },
+      {
+        "order": 4,
+        "text": "Transesophageal echocardiography shows a small, mobile echodensity (~5 mm) adherent to the sewing ring of the prosthetic aortic valve with no paravalvular abscess but mild aortic regurgitation compared with prior study.",
+        "category": "imaging"
+      },
+      {
+        "order": 5,
+        "text": "During urgent valve replacement for prosthetic valve endocarditis, culture of the excised prosthetic valve grew catalase-positive, coagulase-negative, novobiocin-sensitive Gram-positive cocci from both valve tissue and sonicate fluid; postoperative antibiotics were adjusted accordingly.",
+        "category": "exposure"
+      }
+    ],
+    "difficulty": "medium",
+    "explanation": "This subacute prosthetic valve endocarditis with small vegetations on a prosthetic valve and culture of valve material yielding catalase-positive, coagulase-negative, novobiocin-sensitive Gram-positive cocci is characteristic of Staphylococcus epidermidis. S. epidermidis is an important cause of prosthetic valve endocarditis because of its ability to form biofilm on prosthetic material; management often requires valve surgery plus prolonged targeted antibiotics.",
+    "source": "ai_generated",
+    "validated": true,
+    "createdAt": "2026-03-27T15:41:08.092Z",
+    "style": "mgh_case_report"
+  },
+  {
+    "id": "path-freeplay-staphylococcus-epidermidis-medium-1774626127593-8-1",
+    "pathogenId": "staphylococcus-epidermidis",
+    "pathogenKind": "bacterium",
+    "model": "gpt-5-mini",
+    "pool": "freeplay",
+    "hints": [
+      {
+        "order": 1,
+        "text": "A 57-year-old woman is seen for a 3‑month history of worsening right knee pain and stiffness with intermittent serous drainage from the anterior incision. She ambulates with a cane; she is afebrile and the surgical scar shows a small sinus tract with minimal surrounding erythema.",
+        "category": "presentation"
+      },
+      {
+        "order": 2,
+        "text": "She had an elective total knee arthroplasty for osteoarthritis nine months earlier. Her diabetes mellitus type 2 is treated with metformin. The early postoperative course was unremarkable; she received standard perioperative prophylactic antibiotics at the time of surgery.",
+        "category": "history"
+      },
+      {
+        "order": 3,
+        "text": "Inflammatory markers are modestly raised: CRP 38 mg/L, ESR 46 mm/h. Synovial aspiration yields cloudy fluid with WBC 12.0 × 10^9/L and 85% neutrophils; Gram stain shows Gram‑positive cocci in clusters.",
+        "category": "lab"
+      },
+      {
+        "order": 4,
+        "text": "Plain radiographs of the knee show a radiolucent line and subtle subsidence around the tibial component when compared with immediate postoperative images, suggesting component loosening.",
+        "category": "imaging"
+      },
+      {
+        "order": 5,
+        "text": "Intraoperative cultures obtained when the prosthesis was removed grew small, white colonies after 48–72 h. The isolate was catalase‑positive, coagulase‑negative, novobiocin‑sensitive and produced adherent slime on explanted prosthetic material; cure required exchange arthroplasty plus prolonged targeted antibiotic therapy.",
+        "category": "exposure"
+      }
+    ],
+    "difficulty": "medium",
+    "explanation": "This presentation is typical for a chronic prosthetic joint infection due to a skin‑commensal, coagulase‑negative Gram‑positive coccus that is novobiocin‑sensitive and forms biofilm on prosthetic material. Those microbiologic and clinical features identify Staphylococcus epidermidis as the most likely pathogen.",
+    "source": "ai_generated",
+    "validated": true,
+    "createdAt": "2026-03-27T15:42:07.593Z",
+    "style": "mgh_case_report"
+  },
+  {
+    "id": "path-freeplay-staphylococcus-epidermidis-hard-1774626186569-9-2",
+    "pathogenId": "staphylococcus-epidermidis",
+    "pathogenKind": "bacterium",
+    "model": "gpt-5-mini",
+    "pool": "freeplay",
+    "hints": [
+      {
+        "order": 1,
+        "text": "A 58-year-old man reports 6 weeks of low‑grade fever, night sweats and increasing fatigue. He notices exertional breathlessness and a new early diastolic murmur on auscultation. He had a bioprosthetic aortic valve implanted 8 months ago for aortic stenosis.",
+        "category": "presentation"
+      },
+      {
+        "order": 2,
+        "text": "He underwent a dental scaling without antibiotic prophylaxis 7 weeks ago. He has no history of intravenous drug use. Postoperative course after valve replacement was uncomplicated; he has intermittent painless erythema at the pacemaker insertion site placed 2 years earlier but no prior device infections.",
+        "category": "history"
+      },
+      {
+        "order": 3,
+        "text": "Transoesophageal echocardiography demonstrates a 6 mm echodense mass attached to the sewing ring of the bioprosthetic aortic valve with mild paravalvular regurgitation; no abscess cavity is visualised.",
+        "category": "imaging"
+      },
+      {
+        "order": 4,
+        "text": "Empirical intravenous amoxicillin and gentamicin were started for presumed prosthetic valve endocarditis. Despite appropriate serum levels, blood cultures drawn on serial days remained positive, and fevers persisted. After multidisciplinary review, the prosthetic valve was explanted and replaced.",
+        "category": "treatment_response"
+      },
+      {
+        "order": 5,
+        "text": "Valve tissue culture yielded multiple plates of small, white, non‑haemolytic colonies after 48–72 h. Microscopy: gram‑positive cocci in clusters. The isolates were catalase positive, plasma coagulase test negative, novobiocin sensitive and showed robust biofilm production on prosthetic material; molecular testing confirmed mecA gene absence. These isolates matched the organism repeatedly grown from peripheral blood cultures.",
+        "category": "lab"
+      }
+    ],
+    "difficulty": "hard",
+    "explanation": "Late‑onset prosthetic valve endocarditis with indolent course, echocardiographic sewing‑ring vegetation, persistent bacteraemia despite standard empiric therapy, and identical organisms from blood and explanted valve tissue indicate a biofilm‑forming skin organism with tropism for prosthetic material. The microbiology picture—gram‑positive cocci in clusters, catalase positive, coagulase negative, novobiocin sensitive, strong biofilm formation and concordant valve/blood cultures—is diagnostic of the novobiocin‑sensitive coagulase‑negative skin staphylococcal species commonly responsible for prosthetic valve infections (Staphylococcus epidermidis).",
+    "source": "ai_generated",
+    "validated": true,
+    "createdAt": "2026-03-27T15:43:06.569Z",
+    "style": "mgh_case_report"
+  },
+  {
+    "id": "path-freeplay-staphylococcus-saprophyticus-easy-1774626354788-11-1",
+    "pathogenId": "staphylococcus-saprophyticus",
+    "pathogenKind": "bacterium",
+    "model": "gpt-5-mini",
+    "pool": "freeplay",
+    "hints": [
+      {
+        "order": 1,
+        "text": "A 32‑year‑old postpartum woman presents on day 6 after delivery with dysuria, urinary urgency and low‑grade fever (measured 37.8°C at home). She reports suprapubic tenderness but no costovertebral angle pain.",
+        "category": "presentation"
+      },
+      {
+        "order": 2,
+        "text": "G1P1 after an uncomplicated vaginal delivery. A urinary catheter was placed for 18 hours during labour. She is breastfeeding, otherwise healthy, and received no antibiotic therapy since delivery.",
+        "category": "history"
+      },
+      {
+        "order": 3,
+        "text": "Pelvic ultrasound performed to exclude retained products and assess the urinary tract: no retained products, bladder wall mildly thickened but no stones; kidneys normal without hydronephrosis.",
+        "category": "imaging"
+      },
+      {
+        "order": 4,
+        "text": "The only procedural exposure was the intrapartum urinary catheter; she also describes increased perineal care with frequent sitting in public clinic chairs while awaiting postpartum checks.",
+        "category": "exposure"
+      },
+      {
+        "order": 5,
+        "text": "Urine dipstick: leucocyte esterase positive, nitrite negative. Midstream urine culture yielded a single predominant colony type: Gram‑positive cocci in clusters, catalase positive, coagulase‑negative phenotype that was resistant to novobiocin and showed urease positivity; antimicrobial testing indicated susceptibility to nitrofurantoin and trimethoprim‑sulfamethoxazole.",
+        "category": "lab"
+      }
+    ],
+    "difficulty": "easy",
+    "explanation": "Postpartum woman with a short interval catheter exposure followed by cystitis. The culture phenotype — Gram‑positive cocci in clusters, catalase positive, coagulase‑negative, novobiocin resistance and urease production — strongly points to Staphylococcus saprophyticus as the cause of her uncomplicated urinary infection; the organism’s susceptibility pattern supports standard oral therapy (e.g., nitrofurantoin) in this setting.",
+    "source": "ai_generated",
+    "validated": true,
+    "createdAt": "2026-03-27T15:45:54.788Z",
+    "style": "mgh_case_report"
+  },
+  {
+    "id": "path-freeplay-staphylococcus-saprophyticus-medium-1774626504404-13-1",
+    "pathogenId": "staphylococcus-saprophyticus",
+    "pathogenKind": "bacterium",
+    "model": "gpt-5-mini",
+    "pool": "freeplay",
+    "hints": [
+      {
+        "order": 1,
+        "text": "A 31‑year‑old woman attends the outpatient clinic with three days of progressive dysuria, urinary urgency, suprapubic pain and low‑grade fever (oral temperature 37.9 °C). Symptoms began approximately 48 hours after an elective diagnostic cystoscopy for intermittent microscopic haematuria.",
+        "category": "presentation"
+      },
+      {
+        "order": 2,
+        "text": "Her past medical history is unremarkable. The cystoscopy was uncomplicated but involved brief urethral instrumentation and a short trial of a clean intermittent catheter during the procedure; she did not receive peri‑procedural antibiotic prophylaxis. She uses an intrauterine contraceptive device and reports no recent new sexual partner.",
+        "category": "history"
+      },
+      {
+        "order": 3,
+        "text": "Urinalysis: leukocyte esterase positive, nitrite negative. Peripheral white cell count 11.2 × 10^9/L, C‑reactive protein 28 mg/L. Urine culture preliminarily grew small, yellowish colonies; Gram stain of colonies: gram‑positive cocci in clusters. Routine susceptibility testing was pending.",
+        "category": "lab"
+      },
+      {
+        "order": 4,
+        "text": "Renal and bladder ultrasound shows no upper tract dilatation and no calculi; bladder wall is mildly thickened consistent with acute cystitis, without perivesical fluid collection.",
+        "category": "imaging"
+      },
+      {
+        "order": 5,
+        "text": "She had minimal symptom improvement after 48 hours of empiric oral ciprofloxacin and was switched to nitrofurantoin once microbiology returned: the isolate was susceptible to nitrofurantoin and trimethoprim‑sulfamethoxazole but resistant to novobiocin. Symptoms resolved within 48 hours of targeted therapy change.",
+        "category": "treatment_response"
+      }
+    ],
+    "difficulty": "medium",
+    "explanation": "Post‑instrumentation lower urinary tract infection with a catalase‑positive, coagulase‑negative gram‑positive coccus that is novobiocin‑resistant and responds to nitrofurantoin points to Staphylococcus saprophyticus. Although commonly associated with sexually active young women, it can cause symptomatic infection after urethral instrumentation. Novobiocin resistance among coagulase‑negative gram‑positive cocci is the key microbiological discriminator prompting identification of this organism and guiding therapy.",
+    "source": "ai_generated",
+    "validated": true,
+    "createdAt": "2026-03-27T15:48:24.404Z",
+    "style": "mgh_case_report"
+  },
+  {
+    "id": "path-freeplay-staphylococcus-saprophyticus-hard-1774626589152-14-0",
+    "pathogenId": "staphylococcus-saprophyticus",
+    "pathogenKind": "bacterium",
+    "model": "gpt-5-mini",
+    "pool": "freeplay",
+    "hints": [
+      {
+        "order": 1,
+        "text": "A 23-year-old woman presents to a community clinic with 48 hours of dysuria, urinary frequency and suprapubic discomfort. She reports recent onset of visible haematuria and a new sexual partner 3 days ago. She is afebrile; examination shows suprapubic tenderness without costovertebral angle tenderness.",
+        "category": "presentation"
+      },
+      {
+        "order": 2,
+        "text": "No prior urinary tract infections. Uses combined oral contraceptive pills and occasionally spermicidal lubricant. Not pregnant, no diabetes, no recent antibiotic exposure and no urinary instrumentation.",
+        "category": "history"
+      },
+      {
+        "order": 3,
+        "text": "Point-of-care bladder scan demonstrates a post-void residual of 30 mL. Renal and pelvic ultrasound obtained to exclude calculi or obstruction are unremarkable.",
+        "category": "imaging"
+      },
+      {
+        "order": 4,
+        "text": "Primary-care clinician prescribed a 5‑day course of oral nitrofurantoin empirically. After 72 hours she reports only partial improvement and returns because the laboratory has called with culture results.",
+        "category": "treatment_response"
+      },
+      {
+        "order": 5,
+        "text": "Midstream urine: leucocyte esterase positive, nitrite negative. Microscopy—numerous leukocytes, no Gram-negative bacilli. Culture: >10^5 CFU/mL of small, pale yellow colonies; Gram-positive cocci in clusters, catalase-positive, coagulase-negative, urease-positive; isolate resistant to novobiocin.",
+        "category": "lab"
+      }
+    ],
+    "difficulty": "hard",
+    "explanation": "Classic acute cystitis in a young, sexually active woman with pyuria and nitrite-negative urine suggests a non‑Enterobacteriaceae cause. The isolate is a Gram‑positive, catalase‑positive coccus in clusters that is coagulase‑negative and urease‑positive and shows novobiocin resistance — a phenotype characteristic of Staphylococcus saprophyticus, which is a frequent cause of uncomplicated lower urinary tract infection in this patient group.",
+    "source": "ai_generated",
+    "validated": true,
+    "createdAt": "2026-03-27T15:49:49.152Z",
+    "style": "mgh_case_report"
+  },
+  {
+    "id": "path-freeplay-staphylococcus-saprophyticus-hard-1774626589152-14-1",
+    "pathogenId": "staphylococcus-saprophyticus",
+    "pathogenKind": "bacterium",
+    "model": "gpt-5-mini",
+    "pool": "freeplay",
+    "hints": [
+      {
+        "order": 1,
+        "text": "A 67-year-old man presents to the emergency department with 24 hours of fever to 38.2 °C, rigors, acute dysuria and cloudy urine. Symptoms began shortly after removal of a short-term indwelling urinary catheter.",
+        "category": "presentation"
+      },
+      {
+        "order": 2,
+        "text": "History of benign prostatic hyperplasia managed with an α‑blocker; recently required catheterisation for acute urinary retention while traveling. Type 2 diabetes mellitus on metformin, glycaemic control reported as good. No recent antibiotic therapy prior to hospital admission.",
+        "category": "history"
+      },
+      {
+        "order": 3,
+        "text": "Ultrasound bladder scan demonstrates a large post-void residual of 220 mL. Renal ultrasound shows no hydronephrosis and no renal calculi.",
+        "category": "imaging"
+      },
+      {
+        "order": 4,
+        "text": "The only notable exposure was an in-hospital urethral catheter in place for 36 hours; insertion was described as straightforward with a single staff operator and standard aseptic technique documented.",
+        "category": "exposure"
+      },
+      {
+        "order": 5,
+        "text": "Urinalysis: leucocyte esterase positive, nitrite negative. Urine culture: >10^5 CFU/mL of small, white colonies. Gram stain: Gram-positive cocci in clusters. Isolate is catalase-positive, coagulase-negative, urease-positive and resistant to novobiocin.",
+        "category": "lab"
+      }
+    ],
+    "difficulty": "hard",
+    "explanation": "A post‑instrumentation urinary infection in a man expands the differential, but the microbiology is decisive: a coagulase‑negative, catalase‑positive Gram‑positive coccus in clusters that is urease‑positive and novobiocin‑resistant is most consistent with Staphylococcus saprophyticus. Although more commonly community‑acquired in young women, this organism can cause infection after urinary manipulation.",
+    "source": "ai_generated",
+    "validated": true,
+    "createdAt": "2026-03-27T15:49:49.152Z",
+    "style": "mgh_case_report"
+  },
+  {
+    "id": "path-freeplay-streptococcus-pneumoniae-easy-1774626635244-15-0",
+    "pathogenId": "streptococcus-pneumoniae",
+    "pathogenKind": "bacterium",
+    "model": "gpt-5-mini",
+    "pool": "freeplay",
+    "hints": [
+      {
+        "order": 1,
+        "text": "A 72-year-old man presents to the emergency clinic with 48 hours of fever, shaking chills, pleuritic right-sided chest pain and a productive cough. He reports expectorating thick, orange-brown sputum and feels markedly short of breath on minimal exertion.",
+        "category": "presentation"
+      },
+      {
+        "order": 2,
+        "text": "Medical history: COPD treated with inhaled corticosteroid/long-acting bronchodilator, former smoker (40 pack-years), and well-controlled type 2 diabetes. He did not receive seasonal influenza vaccine this year and reports no prior pneumococcal vaccination.",
+        "category": "history"
+      },
+      {
+        "order": 3,
+        "text": "On arrival: T 39.2 °C, HR 112/min, RR 24/min, SpO2 90% on room air. Blood tests: leukocytes 16.2 × 10^9/L, neutrophils predominating; CRP 185 mg/L. Sputum Gram stain shows numerous neutrophils and gram-positive, lancet-shaped diplococci in pairs.",
+        "category": "lab"
+      },
+      {
+        "order": 4,
+        "text": "Chest radiograph demonstrates a dense lobar consolidation of the right middle lobe with air bronchograms and no effusion. Point-of-care lung ultrasound at the bedside confirms hepatization of that lobe.",
+        "category": "imaging"
+      },
+      {
+        "order": 5,
+        "text": "Blood cultures drawn in the ED later yield alpha-hemolytic, bile-soluble colonies that are optochin-sensitive. The patient was started on intravenous benzylpenicillin and defervesced with clinical improvement within 24–36 hours.",
+        "category": "treatment_response"
+      }
+    ],
+    "difficulty": "easy",
+    "explanation": "Clinical picture (acute lobar consolidation, high fever, pleuritic chest pain, rust-coloured sputum), gram stain showing gram-positive lancet-shaped diplococci, and culture characteristics (alpha-hemolysis, optochin sensitivity, bile solubility) identify Streptococcus pneumoniae as the causative organism. Rapid clinical response to penicillin supports susceptibility.",
+    "source": "ai_generated",
+    "validated": true,
+    "createdAt": "2026-03-27T15:50:35.244Z",
+    "style": "mgh_case_report"
+  }
+]

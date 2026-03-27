@@ -1,0 +1,278 @@
+"use client";
+
+import { useState, useRef, useEffect } from "react";
+import { ORGANISMS } from "@/lib/organisms";
+import type { MatchResult } from "@/lib/types";
+
+interface GuessInputProps {
+  onGuess: (input: string) => void;
+  onSkip: () => void;
+  hintsRevealed: number;
+  guessesRemaining: number;
+  disabled?: boolean;
+  matchGuess: (input: string) => MatchResult;
+}
+
+export default function GuessInput({
+  onGuess,
+  onSkip,
+  hintsRevealed,
+  guessesRemaining,
+  disabled,
+  matchGuess,
+}: GuessInputProps) {
+  const [input, setInput] = useState("");
+  const [suggestions, setSuggestions] = useState<string[]>([]);
+  const [selectedIdx, setSelectedIdx] = useState(-1);
+  const [feedback, setFeedback] = useState<string | null>(null);
+  const [focused, setFocused] = useState(false);
+  const inputRef = useRef<HTMLInputElement>(null);
+
+  const organismsByCanonical = ORGANISMS.map((organism) => ({
+    canonical: organism.canonical,
+    searchNames: [
+      organism.canonical,
+      ...organism.abbreviations,
+      ...organism.commonNames,
+    ],
+  }));
+
+  useEffect(() => {
+    if (input.length < 2) {
+      setSuggestions([]);
+      setSelectedIdx(-1);
+      return;
+    }
+
+    const lower = input.toLowerCase();
+    const filtered = organismsByCanonical
+      .filter(({ searchNames }) =>
+        searchNames.some((name) => name.toLowerCase().includes(lower))
+      )
+      .map(({ canonical }) => canonical)
+      .slice(0, 7);
+    setSuggestions(filtered);
+    setSelectedIdx(-1);
+  }, [input]);
+
+  function handleSubmit(value?: string) {
+    const guess = (value ?? input).trim();
+    if (!guess || disabled) return;
+
+    const result = matchGuess(guess);
+    if (!result.matched) {
+      setFeedback(
+        result.reason === "ambiguous"
+          ? "Ambiguous — use the full pathogen name."
+          : "Not recognised — check spelling or use the full pathogen name."
+      );
+      return;
+    }
+
+    setFeedback(null);
+    setInput("");
+    setSuggestions([]);
+    onGuess(result.organism.canonical);
+  }
+
+  function handleKeyDown(e: React.KeyboardEvent<HTMLInputElement>) {
+    if (e.key === "ArrowDown") {
+      e.preventDefault();
+      setSelectedIdx((i) => Math.min(i + 1, suggestions.length - 1));
+    } else if (e.key === "ArrowUp") {
+      e.preventDefault();
+      setSelectedIdx((i) => Math.max(i - 1, -1));
+    } else if (e.key === "Enter") {
+      e.preventDefault();
+      if (selectedIdx >= 0 && suggestions[selectedIdx]) {
+        setInput(suggestions[selectedIdx]);
+        setSuggestions([]);
+        setSelectedIdx(-1);
+      } else if (!input.trim()) {
+        if (canSkip) {
+          setFeedback(null);
+          onSkip();
+        }
+      } else {
+        handleSubmit();
+      }
+    } else if (e.key === "Escape") {
+      setSuggestions([]);
+      setSelectedIdx(-1);
+    }
+  }
+
+  const canSkip = hintsRevealed < 5 && guessesRemaining > 1 && !disabled;
+
+  return (
+    <div>
+      {/* Input row */}
+      <div style={{ position: "relative" }}>
+        <div
+          style={{
+            display: "flex",
+            alignItems: "center",
+            gap: "8px",
+            padding: "5px 5px 5px 14px",
+            border: focused
+              ? "1px solid var(--accent-border)"
+              : feedback
+              ? "1px solid rgba(0,113,227,0.4)"
+              : "1px solid var(--border)",
+            borderRadius: "10px",
+            background: "var(--surface-subtle)",
+            boxShadow: focused ? "0 0 0 3px rgba(0, 113, 227, 0.08)" : "none",
+            transition: "border-color 150ms, box-shadow 150ms",
+          }}
+        >
+          <input
+            ref={inputRef}
+            type="text"
+            value={input}
+            onChange={(e) => {
+              setInput(e.target.value);
+              setFeedback(null);
+            }}
+            onKeyDown={handleKeyDown}
+            onBlur={() =>
+              setTimeout(() => {
+                setSuggestions([]);
+                setFocused(false);
+              }, 150)
+            }
+            onFocus={() => setFocused(true)}
+            disabled={disabled}
+            placeholder="Start typing the pathogen name"
+            autoComplete="off"
+            autoCorrect="off"
+            autoCapitalize="off"
+            spellCheck={false}
+            style={{
+              flex: 1,
+              minWidth: 0,
+              background: "transparent",
+              border: "none",
+              outline: "none",
+              fontFamily: "var(--font-sans)",
+              fontSize: "15px",
+              color: "var(--fg)",
+              padding: "7px 0",
+              caretColor: "var(--accent)",
+            }}
+          />
+
+          <button
+            onClick={() => handleSubmit()}
+            disabled={disabled || !input.trim()}
+            style={{
+              background: input.trim() && !disabled ? "var(--accent)" : "var(--surface-muted)",
+              border: "none",
+              borderRadius: "7px",
+              cursor: input.trim() && !disabled ? "pointer" : "default",
+              fontFamily: "var(--font-sans)",
+              fontSize: "13px",
+              fontWeight: 600,
+              color: input.trim() && !disabled ? "white" : "var(--fg-3)",
+              padding: "8px 14px",
+              transition: "background 150ms, color 150ms",
+              flexShrink: 0,
+            }}
+          >
+            Submit
+          </button>
+        </div>
+
+        {suggestions.length > 0 && (
+          <div
+            style={{
+              position: "absolute",
+              top: "calc(100% + 6px)",
+              left: 0,
+              right: 0,
+              zIndex: 20,
+              background: "var(--surface)",
+              border: "1px solid var(--border)",
+              borderRadius: "12px",
+              boxShadow: "0 8px 24px rgba(15,23,42,0.10)",
+              overflow: "hidden",
+            }}
+          >
+            {suggestions.map((s, i) => (
+              <div
+                key={s}
+                onMouseDown={() => {
+                  setInput(s);
+                  setSuggestions([]);
+                  setTimeout(() => inputRef.current?.focus(), 0);
+                }}
+                style={{
+                  padding: "9px 14px",
+                  fontFamily: "var(--font-sans)",
+                  fontSize: "13.5px",
+                  cursor: "pointer",
+                  color: i === selectedIdx ? "var(--fg)" : "var(--fg-2)",
+                  backgroundColor: i === selectedIdx ? "var(--accent-soft)" : "transparent",
+                  borderBottom: i < suggestions.length - 1 ? "1px solid var(--border)" : "none",
+                }}
+              >
+                {s}
+              </div>
+            ))}
+          </div>
+        )}
+      </div>
+
+      {/* Footer row */}
+      <div
+        style={{
+          display: "flex",
+          justifyContent: "space-between",
+          alignItems: "center",
+          gap: "12px",
+          marginTop: "7px",
+          minHeight: "18px",
+        }}
+      >
+        <span
+          style={{
+            fontFamily: "var(--font-sans)",
+            fontSize: "12px",
+            color: feedback ? "var(--accent-strong)" : "var(--fg-3)",
+            lineHeight: 1.4,
+          }}
+        >
+          {feedback ?? "Wrong guesses and passes reveal the next clue."}
+        </span>
+
+        {canSkip && (
+          <button
+            onClick={onSkip}
+            style={{
+              background: "transparent",
+              border: "1px solid var(--border)",
+              borderRadius: "999px",
+              cursor: "pointer",
+              fontFamily: "var(--font-sans)",
+              fontSize: "12px",
+              fontWeight: 500,
+              color: "var(--fg-3)",
+              padding: "5px 12px",
+              transition: "color 150ms, border-color 150ms",
+              flexShrink: 0,
+            }}
+            onMouseEnter={(e) => {
+              e.currentTarget.style.color = "var(--fg)";
+              e.currentTarget.style.borderColor = "var(--accent-border)";
+            }}
+            onMouseLeave={(e) => {
+              e.currentTarget.style.color = "var(--fg-3)";
+              e.currentTarget.style.borderColor = "var(--border)";
+            }}
+          >
+            Pass
+          </button>
+        )}
+      </div>
+    </div>
+  );
+}

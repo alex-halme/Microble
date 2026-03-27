@@ -1,0 +1,362 @@
+[
+  {
+    "id": "case-001",
+    "organismId": "staphylococcus-aureus",
+    "hints": [
+      {
+        "order": 1,
+        "text": "A 34-year-old construction worker presents to the ED with a painful, warm, fluctuant lump on his forearm that has been growing for 4 days. He reports no fever.",
+        "category": "presentation"
+      },
+      {
+        "order": 2,
+        "text": "He works outdoors and frequently sustains minor cuts and abrasions. He mentions several co-workers at his job site have had similar skin lesions recently.",
+        "category": "history"
+      },
+      {
+        "order": 3,
+        "text": "CBC shows a leukocytosis of 13,000/μL with a left shift. Blood cultures are pending. Incision and drainage yields thick, creamy purulent material.",
+        "category": "lab"
+      },
+      {
+        "order": 4,
+        "text": "Gram stain of the pus reveals clusters of gram-positive cocci. The organism tests coagulase-positive.",
+        "category": "lab"
+      },
+      {
+        "order": 5,
+        "text": "Susceptibility testing returns resistance to oxacillin and all beta-lactam antibiotics. The infection team recommends IV vancomycin.",
+        "category": "treatment_response"
+      }
+    ],
+    "difficulty": "easy",
+    "explanation": "Staphylococcus aureus is the most common cause of skin and soft tissue infections, including furuncles and abscesses. The coagulase-positive, gram-positive cocci in clusters are classic. Methicillin-resistant strains (MRSA) are increasingly prevalent in community settings and require vancomycin or alternatives like daptomycin.",
+    "source": "handcrafted",
+    "validated": true,
+    "createdAt": "2026-03-27"
+  },
+  {
+    "id": "case-002",
+    "organismId": "streptococcus-pneumoniae",
+    "hints": [
+      {
+        "order": 1,
+        "text": "A 68-year-old retired teacher presents with a 3-day history of productive cough, fever of 38.9°C, and mild confusion. She is a non-smoker with well-controlled type 2 diabetes.",
+        "category": "presentation"
+      },
+      {
+        "order": 2,
+        "text": "She received her most recent pneumococcal vaccine over 7 years ago. Her husband was recently ill with an upper respiratory infection.",
+        "category": "history"
+      },
+      {
+        "order": 3,
+        "text": "Chest X-ray reveals a right lower lobe consolidation with air bronchograms. WBC is 19,000/μL. Procalcitonin is elevated at 3.2 ng/mL.",
+        "category": "imaging"
+      },
+      {
+        "order": 4,
+        "text": "A urine antigen test returns positive. Blood cultures grow lancet-shaped gram-positive diplococci that are alpha-hemolytic on blood agar.",
+        "category": "lab"
+      },
+      {
+        "order": 5,
+        "text": "The organism is optochin-sensitive and bile-soluble. It is the most common cause of lobar pneumonia, bacterial meningitis, and otitis media worldwide.",
+        "category": "lab"
+      }
+    ],
+    "difficulty": "easy",
+    "explanation": "Streptococcus pneumoniae (Pneumococcus) is the leading cause of community-acquired pneumonia. Key identifiers: lancet-shaped gram-positive diplococci, alpha-hemolysis, optochin sensitivity, bile solubility, and a positive urine pneumococcal antigen test. Elderly patients and those with diabetes are at increased risk.",
+    "source": "handcrafted",
+    "validated": true,
+    "createdAt": "2026-03-27"
+  },
+  {
+    "id": "case-003",
+    "organismId": "clostridioides-difficile",
+    "hints": [
+      {
+        "order": 1,
+        "text": "A 72-year-old woman hospitalized for a hip replacement develops profuse, watery, foul-smelling diarrhea (8–10 stools/day) on day 5 post-operatively.",
+        "category": "presentation"
+      },
+      {
+        "order": 2,
+        "text": "She received a 5-day course of cefazolin perioperatively. Her medical history includes two prior hospitalizations in the past 18 months.",
+        "category": "exposure"
+      },
+      {
+        "order": 3,
+        "text": "WBC is 22,000/μL. Stool is guaiac-positive but no gross blood. CT abdomen shows thickening of the colon wall and a 'accordion sign' on oral contrast.",
+        "category": "imaging"
+      },
+      {
+        "order": 4,
+        "text": "Stool testing is positive for toxin A and toxin B by ELISA. The laboratory also confirms presence of the organism's toxigenic gene by PCR.",
+        "category": "lab"
+      },
+      {
+        "order": 5,
+        "text": "The organism is an anaerobic, gram-positive, spore-forming rod. First-line treatment is oral vancomycin or fidaxomicin. Fecal microbiota transplant is considered for recurrent cases.",
+        "category": "treatment_response"
+      }
+    ],
+    "difficulty": "easy",
+    "explanation": "Clostridioides difficile is the leading cause of antibiotic-associated diarrhea and pseudomembranous colitis. Risk factors: recent antibiotic exposure, hospitalization, advanced age. Toxins A and B mediate mucosal damage. Treatment shifted from metronidazole to oral vancomycin or fidaxomicin as first-line.",
+    "source": "handcrafted",
+    "validated": true,
+    "createdAt": "2026-03-27"
+  },
+  {
+    "id": "case-004",
+    "organismId": "neisseria-meningitidis",
+    "hints": [
+      {
+        "order": 1,
+        "text": "A 19-year-old college freshman living in a dormitory presents to the student health center with a sudden-onset severe headache, fever of 40.1°C, and neck stiffness that began 8 hours ago.",
+        "category": "presentation"
+      },
+      {
+        "order": 2,
+        "text": "He has not received any vaccinations in the past 5 years and shares a room with 3 other students. Two students on his floor were recently treated for 'sinus infections.'",
+        "category": "history"
+      },
+      {
+        "order": 3,
+        "text": "On exam, he has Kernig's and Brudzinski's signs. Vitals show tachycardia and hypotension. A non-blanching petechial rash is noted on his trunk and lower extremities.",
+        "category": "presentation"
+      },
+      {
+        "order": 4,
+        "text": "CSF analysis: opening pressure 340 mmH2O, WBC 2,400 (95% PMNs), protein 180 mg/dL, glucose 28 mg/dL. Gram stain shows gram-negative diplococci.",
+        "category": "lab"
+      },
+      {
+        "order": 5,
+        "text": "Blood cultures grow kidney-shaped, oxidase-positive gram-negative diplococci. The organism requires X and V factors — wait, no, only oxidase. It grows on chocolate agar and Thayer-Martin medium. Serogroup B is identified.",
+        "category": "lab"
+      }
+    ],
+    "difficulty": "medium",
+    "explanation": "Neisseria meningitidis is the leading cause of bacterial meningitis in adolescents and young adults. The triad of headache, fever, and meningismus with a petechial/purpuric rash is classic. Dormitory living and unvaccinated status are key risk factors. Gram-negative diplococci in CSF and blood cultures, oxidase-positive.",
+    "source": "handcrafted",
+    "validated": true,
+    "createdAt": "2026-03-27"
+  },
+  {
+    "id": "case-005",
+    "organismId": "mycobacterium-tuberculosis",
+    "hints": [
+      {
+        "order": 1,
+        "text": "He reports a 3-week history of productive cough with occasional blood-tinged sputum. He works at a community center and lives in a crowded apartment with 8 family members.",
+        "category": "presentation"
+      },
+      {
+        "order": 2,
+        "text": "A 31-year-old man from Vietnam who arrived in the United States 6 months ago presents with 3 months of progressive fatigue, night sweats, a 6 kg weight loss, and a low-grade afternoon fever.",
+        "category": "history"
+      },
+      {
+        "order": 3,
+        "text": "Chest X-ray reveals bilateral upper lobe infiltrates with a 2 cm cavitary lesion in the right upper lobe. There is bilateral hilar adenopathy.",
+        "category": "imaging"
+      },
+      {
+        "order": 4,
+        "text": "Sputum smear shows acid-fast bacilli using Ziehl-Neelsen staining. Interferon-gamma release assay (IGRA) is positive. PCR confirms the species.",
+        "category": "lab"
+      },
+      {
+        "order": 5,
+        "text": "The organism grows very slowly on Löwenstein-Jensen medium (6–8 weeks). Standard treatment involves a 2-month intensive phase with four drugs followed by a 4-month continuation phase with two drugs.",
+        "category": "treatment_response"
+      }
+    ],
+    "difficulty": "easy",
+    "explanation": "Mycobacterium tuberculosis causes pulmonary tuberculosis, characterized by constitutional symptoms (night sweats, weight loss, fever), hemoptysis, and upper lobe cavitary lesions on CXR. Acid-fast staining, IGRA, and culture on specialized media are diagnostic. Treatment: RIPE (rifampin, isoniazid, pyrazinamide, ethambutol) for 6 months total.",
+    "source": "handcrafted",
+    "validated": true,
+    "createdAt": "2026-03-27"
+  },
+  {
+    "id": "case-006",
+    "organismId": "helicobacter-pylori",
+    "hints": [
+      {
+        "order": 1,
+        "text": "A 45-year-old accountant presents with a 6-month history of epigastric burning pain that worsens with fasting and is partially relieved by eating. He has taken over-the-counter antacids with minimal relief.",
+        "category": "presentation"
+      },
+      {
+        "order": 2,
+        "text": "He emigrated from Peru 10 years ago and grew up in a rural area with limited access to clean water. He does not take NSAIDs and does not smoke or drink alcohol.",
+        "category": "history"
+      },
+      {
+        "order": 3,
+        "text": "Upper endoscopy shows a well-defined 1 cm ulcer on the lesser curvature of the stomach with surrounding mucosal edema. Rapid urease test (CLO test) on antral biopsy returns positive.",
+        "category": "lab"
+      },
+      {
+        "order": 4,
+        "text": "The organism is microaerophilic, gram-negative, and curved. It produces large amounts of urease, which allows it to survive in the acidic stomach by creating a protective ammonia cloud.",
+        "category": "lab"
+      },
+      {
+        "order": 5,
+        "text": "Non-invasive testing options include a urea breath test and stool antigen test. Standard eradication therapy involves a proton pump inhibitor combined with two antibiotics for 14 days.",
+        "category": "treatment_response"
+      }
+    ],
+    "difficulty": "easy",
+    "explanation": "Helicobacter pylori is the leading cause of peptic ulcer disease and a WHO Group 1 carcinogen for gastric cancer. Its urease production is the basis for the CLO test, urea breath test, and its ability to survive in gastric acid. Eradication with triple or quadruple therapy reduces ulcer recurrence dramatically.",
+    "source": "handcrafted",
+    "validated": true,
+    "createdAt": "2026-03-27"
+  },
+  {
+    "id": "case-007",
+    "organismId": "borrelia-burgdorferi",
+    "hints": [
+      {
+        "order": 1,
+        "text": "A 9-year-old boy living in coastal Connecticut presents in July with a 5-day history of fatigue, low-grade fever, and a painless expanding circular rash on his left thigh that started as a small red spot.",
+        "category": "presentation"
+      },
+      {
+        "order": 2,
+        "text": "He spent last weekend camping with his family in a wooded area near their home. His parents recall removing a small tick from his thigh about 10 days ago.",
+        "category": "exposure"
+      },
+      {
+        "order": 3,
+        "text": "The rash is now 12 cm in diameter with central clearing, giving a bull's-eye appearance. There is no significant lymphadenopathy. CBC and metabolic panel are normal.",
+        "category": "presentation"
+      },
+      {
+        "order": 4,
+        "text": "Serologic testing is sent (ELISA followed by Western blot). If untreated, this infection can later cause unilateral or bilateral facial nerve palsy, carditis with AV block, or large-joint arthritis.",
+        "category": "lab"
+      },
+      {
+        "order": 5,
+        "text": "The causative spirochete is transmitted by the deer tick (Ixodes scapularis) in the northeastern United States. It cannot be routinely cultured but is identified by serology or PCR. Oral doxycycline for 14–21 days is first-line treatment.",
+        "category": "history"
+      }
+    ],
+    "difficulty": "easy",
+    "explanation": "Borrelia burgdorferi causes Lyme disease, the most common tick-borne illness in North America. The pathognomonic erythema migrans (bull's-eye rash) appears 3–30 days after an Ixodes tick bite. Later stages involve neurologic (Bell's palsy, meningitis), cardiac (AV block), and rheumatologic (large-joint arthritis) manifestations.",
+    "source": "handcrafted",
+    "validated": true,
+    "createdAt": "2026-03-27"
+  },
+  {
+    "id": "case-008",
+    "organismId": "pseudomonas-aeruginosa",
+    "hints": [
+      {
+        "order": 1,
+        "text": "This organism is the most common life-limiting chronic airway pathogen in cystic fibrosis patients. Its mucoid phenotype (alginate capsule) allows biofilm formation that is extremely difficult to eradicate.",
+        "category": "presentation"
+      },
+      {
+        "order": 2,
+        "text": "A 27-year-old woman with cystic fibrosis is admitted for a pulmonary exacerbation. She has had 3 prior admissions this year for similar episodes. Her FEV1 has declined from 55% to 41% predicted over the past 2 years.",
+        "category": "history"
+      },
+      {
+        "order": 3,
+        "text": "She presents with increased sputum production, dyspnea, and a new fever. Chest CT shows worsening bilateral bronchiectasis, mucus plugging, and new patchy infiltrates.",
+        "category": "imaging"
+      },
+      {
+        "order": 4,
+        "text": "Sputum culture grows a mucoid gram-negative rod with a characteristic fruity odor. The organism produces a blue-green pigment visible in the culture medium.",
+        "category": "lab"
+      },
+      {
+        "order": 5,
+        "text": "The isolate is oxidase-positive and non-fermentative. Susceptibility testing shows resistance to all beta-lactams, fluoroquinolones, and aminoglycosides except colistin.",
+        "category": "lab"
+      }
+    ],
+    "difficulty": "medium",
+    "explanation": "Pseudomonas aeruginosa is the dominant chronic respiratory pathogen in cystic fibrosis, correlating with accelerated lung function decline. Its mucoid phenotype (alginate-overproducing variant) allows biofilm formation resistant to antibiotics and host defenses. Pyocyanin produces the characteristic blue-green color. Multidrug resistance is common.",
+    "source": "handcrafted",
+    "validated": true,
+    "createdAt": "2026-03-27"
+  },
+  {
+    "id": "case-009",
+    "organismId": "listeria-monocytogenes",
+    "hints": [
+      {
+        "order": 1,
+        "text": "A 3-day-old male neonate born at 36 weeks gestation is transferred to the NICU for fever (38.4°C), poor feeding, and irritability that began within hours of birth.",
+        "category": "presentation"
+      },
+      {
+        "order": 2,
+        "text": "His mother developed a flu-like illness with fever, myalgias, and mild diarrhea at 34 weeks gestation after consuming a soft cheese at a dinner party. She was not treated.",
+        "category": "exposure"
+      },
+      {
+        "order": 3,
+        "text": "The neonate's CSF shows 350 WBC (60% mononuclear), protein 210 mg/dL, glucose 28 mg/dL. Blood and CSF cultures are sent. Chest X-ray shows diffuse granulomatous infiltrates.",
+        "category": "lab"
+      },
+      {
+        "order": 4,
+        "text": "CSF gram stain reveals gram-positive rods. The organism is facultatively anaerobic and grows well at refrigeration temperatures (4°C), exhibiting characteristic tumbling motility.",
+        "category": "lab"
+      },
+      {
+        "order": 5,
+        "text": "The organism crosses the placenta during maternal bacteremia and can cause early-onset neonatal sepsis and meningitis. It is inherently resistant to cephalosporins; ampicillin is the treatment of choice.",
+        "category": "treatment_response"
+      }
+    ],
+    "difficulty": "medium",
+    "explanation": "Listeria monocytogenes causes listeriosis in immunocompromised individuals, pregnant women, neonates, and the elderly. Contaminated soft cheeses, deli meats, and unpasteurized dairy are common sources. Uniquely grows at refrigerator temperatures (4°C) and is cephalosporin-resistant (treat with ampicillin ± gentamicin).",
+    "source": "handcrafted",
+    "validated": true,
+    "createdAt": "2026-03-27"
+  },
+  {
+    "id": "case-010",
+    "organismId": "rickettsia-rickettsii",
+    "hints": [
+      {
+        "order": 1,
+        "text": "A 10-year-old boy from rural North Carolina presents in June with 4 days of high fever (40°C), severe headache, myalgias, and malaise. His parents report he looks 'very sick' — much worse than with usual childhood illnesses.",
+        "category": "presentation"
+      },
+      {
+        "order": 2,
+        "text": "He spent last weekend hiking in the woods and camping. His father removed a tick from behind the boy's ear approximately 1 week before symptom onset.",
+        "category": "exposure"
+      },
+      {
+        "order": 3,
+        "text": "On day 4, a rash appears — initially small, pink, blanching macules on his wrists and ankles, which then spreads centrally to the trunk over the next 24 hours.",
+        "category": "presentation"
+      },
+      {
+        "order": 4,
+        "text": "CBC shows thrombocytopenia (platelets 62,000/μL), mild leukopenia, hyponatremia, and elevated transaminases. Blood cultures are negative. Serologic testing (IFA) is sent.",
+        "category": "lab"
+      },
+      {
+        "order": 5,
+        "text": "The causative organism is an obligate intracellular pathogen transmitted by Dermacentor ticks. It cannot be grown on standard agar. Doxycycline must be started empirically without waiting for confirmatory serology — delays in treatment are associated with mortality.",
+        "category": "treatment_response"
+      }
+    ],
+    "difficulty": "medium",
+    "explanation": "Rickettsia rickettsii causes Rocky Mountain Spotted Fever (RMSF), the most lethal tick-borne illness in the US. The centripetal rash (wrists/ankles → trunk), thrombocytopenia, and history of tick exposure in an endemic area are key. Doxycycline must be started empirically; waiting for confirmation is dangerous. Despite the name, most cases occur in the Southeast.",
+    "source": "handcrafted",
+    "validated": true,
+    "createdAt": "2026-03-27"
+  }
+]

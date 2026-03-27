@@ -1,0 +1,242 @@
+[
+  {
+    "id": "path-daily-adenovirus-easy-1774628461477-0-0",
+    "pathogenId": "adenovirus",
+    "pathogenKind": "virus",
+    "model": "gpt-5-mini",
+    "pool": "daily",
+    "hints": [
+      {
+        "order": 1,
+        "text": "A 20-year-old male university rower presents with 72 hours of fever (maximum 39.2°C), sore throat and acute onset bilateral conjunctival injection with watery discharge. He reports photophobia and odynophagia; on examination he has tender, mobile anterior cervical lymphadenopathy and injected conjunctiva without purulent crusting. He has missed two training sessions because of malaise and eye pain.",
+        "category": "presentation"
+      },
+      {
+        "order": 2,
+        "text": "Previously healthy, no chronic medications, no known immunodeficiency and up to date with routine vaccinations. He returned 4 days ago from a weekend regatta where teammates slept in shared accommodation and used the team’s chlorinated cooling pool between races; several teammates developed sore throat and red eyes beginning 48 hours after the event.",
+        "category": "history"
+      },
+      {
+        "order": 3,
+        "text": "Blood tests: white blood cell count 7.8 × 10^9/L with neutrophils 5.0 × 10^9/L and lymphocytes 2.3 × 10^9/L; C-reactive protein 28 mg/L. Rapid antigen test for group A streptococcus from a throat swab negative. Bacterial cultures from conjunctival swabs show no growth; cytology of conjunctival aspirate shows a lymphocyte-predominant inflammatory infiltrate.",
+        "category": "lab"
+      },
+      {
+        "order": 4,
+        "text": "Chest radiograph is clear without focal consolidation. Neck ultrasound demonstrates multiple small (≤ 1.5 cm) reactive lymph nodes in the anterior cervical chain without abscess or necrosis.",
+        "category": "imaging"
+      },
+      {
+        "order": 5,
+        "text": "Multiplex PCR performed on conjunctival and throat swabs (returned within 24 hours) detected a non-enveloped, double-stranded DNA respiratory virus known to cause outbreaks of pharyngitis with conjunctivitis among close-contact groups and after exposure at communal swimming facilities; identical PCR results were obtained from three teammates.",
+        "category": "exposure"
+      }
+    ],
+    "difficulty": "easy",
+    "explanation": "The presentation of acute fever, pharyngitis and bilateral conjunctivitis in a cluster of close-contact athletes after a regatta, together with negative bacterial cultures and a PCR positive for a non-enveloped dsDNA respiratory virus, indicates infection with adenovirus causing a pharyngoconjunctival syndrome. Diagnosis is supported by rapid onset among teammates and conjunctival/throat PCR concordance. Management in an immunocompetent young adult is supportive (analgesia, hydration, topical lubricants for eyes, infection control measures); antibiotics are not indicated. In immunocompromised hosts or severe pneumonia, antiviral options and specialist input may be required.",
+    "source": "ai_generated",
+    "validated": true,
+    "createdAt": "2026-03-27T16:21:01.477Z",
+    "style": "mgh_case_report"
+  },
+  {
+    "id": "path-daily-ascaris-lumbricoides-easy-1774628526816-2-0",
+    "pathogenId": "ascaris-lumbricoides",
+    "pathogenKind": "parasite",
+    "model": "gpt-5-mini",
+    "pool": "daily",
+    "hints": [
+      {
+        "order": 1,
+        "text": "A 24-year-old woman presents to a regional clinic with five days of crampy periumbilical abdominal pain, progressive abdominal distension and bilious vomiting. She reports reduced stool output but no overt gastrointestinal bleeding. On examination she is afebrile, mildly tachycardic, with abdominal distension, visible peristalsis and diffuse mild tenderness without rebound; bowel sounds are hyperactive.",
+        "category": "presentation"
+      },
+      {
+        "order": 2,
+        "text": "She grew up and lives in a farming village and works harvesting leafy vegetables. She recalls using untreated human waste as fertiliser on a family plot until adolescence. No chronic medical conditions, not pregnant, and she has never received regular deworming. She notes long-standing poor appetite and has lost 4 kg over the past year.",
+        "category": "history"
+      },
+      {
+        "order": 3,
+        "text": "Full blood count shows haemoglobin 95 g/L, white blood cell count 14.2 × 10^9/L with eosinophils 2.6 × 10^9/L. C-reactive protein 8 mg/L. A fresh stool wet mount prepared in clinic later that day demonstrates numerous large, oval eggs measuring approximately 50–75 µm with a thick, variably mamillated outer layer.",
+        "category": "lab"
+      },
+      {
+        "order": 4,
+        "text": "Plain abdominal radiograph demonstrates multiple dilated loops of small bowel with air–fluid levels. Focused abdominal ultrasound shows several long, tubular, echogenic structures within the jejunal lumen with a central anechoic tract; some structures show gentle movement with peristalsis.",
+        "category": "imaging"
+      },
+      {
+        "order": 5,
+        "text": "During observation the patient passes a pale, cylindrical, mobile intact specimen in her stool measuring approximately 20 cm in length with tapered ends; the specimen is photographed and submitted for identification.",
+        "category": "exposure"
+      }
+    ],
+    "difficulty": "easy",
+    "explanation": "This presentation—intestinal obstruction in a young adult from a rural, agriculture-based setting with a history of exposure to untreated human faeces, microcytic anaemia, marked eosinophilia, stool microscopy showing large mammillated eggs ~50–75 µm, imaging revealing tubular intraluminal structures, and passage of a long pale cylindrical helminth—is diagnostic of infection with Ascaris lumbricoides. First-line therapy for uncomplicated intestinal infection is oral benzimidazole (albendazole or mebendazole); obstructive complications may require nasogastric decompression and surgical evaluation.",
+    "source": "ai_generated",
+    "validated": true,
+    "createdAt": "2026-03-27T16:22:06.816Z",
+    "style": "mgh_case_report"
+  },
+  {
+    "id": "path-daily-bacillus-anthracis-easy-1774628603733-4-0",
+    "pathogenId": "bacillus-anthracis",
+    "pathogenKind": "bacterium",
+    "model": "gpt-5-mini",
+    "pool": "daily",
+    "hints": [
+      {
+        "order": 1,
+        "text": "A 34-year-old male artisanal leatherworker presents with a 4-day history of a single lesion on the dorsal aspect of his right forearm. He describes a small pruritic papule that enlarged and ulcerated; on examination there is a 3-cm central black eschar with a surrounding tense, non-pitting oedema extending well beyond the margins of the lesion. He has a low-grade fever of 38.2°C and a tender ipsilateral axillary lymph node; distal perfusion and motor function are preserved.",
+        "category": "presentation"
+      },
+      {
+        "order": 2,
+        "text": "Previously well, no diabetes or chronic lung disease, not taking immunosuppressive medications, HIV test last year was negative. He did not receive any specific occupational vaccination. The lesion progressed rapidly over 48–72 hours despite application of over-the-counter topical antibiotic ointment; he reports no prior antibiotic prescription for this episode.",
+        "category": "history"
+      },
+      {
+        "order": 3,
+        "text": "Blood tests: white cell count 14.6 × 10^9/L with neutrophils 11.8 × 10^9/L, CRP 86 mg/L. Material scraped from the lesion sent for microscopy shows large Gram-positive bacilli arranged singly and in short chains. After 24 hours on blood agar the wound culture grew large, grey, non-haemolytic colonies; capsule visualisation was reported on wet-mount preparation.",
+        "category": "lab"
+      },
+      {
+        "order": 4,
+        "text": "Soft-tissue ultrasound of the forearm demonstrates marked subcutaneous oedema surrounding the ulcer without a discrete fluid collection; there is no gas in the soft tissues and plain radiograph shows no bony involvement.",
+        "category": "imaging"
+      },
+      {
+        "order": 5,
+        "text": "On directed questioning he recalls trimming and handling several unprocessed goat hides at the small tannery where he works three days before the lesion appeared; he sustained a small abrasion on that forearm while handling the raw material. Two co-workers subsequently developed similar skin lesions and the tannery had recently imported hides from a rural region where livestock had been reported to die unexpectedly.",
+        "category": "exposure"
+      }
+    ],
+    "difficulty": "easy",
+    "explanation": "The combination of a painless black eschar with extensive non-pitting surrounding oedema, rapid progression from papule to ulcer, occupational contact with unprocessed animal hides, and identification of large Gram-positive, non-haemolytic bacilli with a capsule on culture is most consistent with Bacillus anthracis causing cutaneous infection. Management includes prompt targeted antimicrobial therapy (for example a fluoroquinolone or doxycycline in adults) and notification to public-health authorities because of the zoonotic and public-health implications; antitoxin and escalation of care are considered for systemic disease.",
+    "source": "ai_generated",
+    "validated": true,
+    "createdAt": "2026-03-27T16:23:23.733Z",
+    "style": "mgh_case_report"
+  },
+  {
+    "id": "path-daily-bacillus-cereus-easy-1774628637407-5-0",
+    "pathogenId": "bacillus-cereus",
+    "pathogenKind": "bacterium",
+    "model": "gpt-5-mini",
+    "pool": "daily",
+    "hints": [
+      {
+        "order": 1,
+        "text": "A 24-year-old man presented to a community clinic with abrupt-onset profuse vomiting that began approximately 3 hours after a catered business lunch; he reported 12 episodes over 6 hours, light-headedness and one episode of near-syncope. He denied diarrhoea, fever or bloody stools. On arrival he was tachycardic (110 beats/min), blood pressure 95/60 mmHg and appeared dry with decreased skin turgor; abdominal examination was soft and non-tender.",
+        "category": "presentation"
+      },
+      {
+        "order": 2,
+        "text": "Previously healthy, no regular medications, no recent antibiotics and no chronic illness. He ate several dishes at the luncheon and sat with colleagues; three coworkers developed similar vomiting within a comparable interval. He had not travelled recently and had no known immunosuppression.",
+        "category": "history"
+      },
+      {
+        "order": 3,
+        "text": "Laboratory tests: white blood cell count 8.5 × 10^9/L, C-reactive protein 3 mg/L, sodium 137 mmol/L, potassium 3.8 mmol/L. A stool specimen showed no fecal leukocytes; Gram stain of the stool specimen demonstrated large, boxy Gram-positive rods, some with refractile spores. Blood cultures remained sterile after 48 hours.",
+        "category": "lab"
+      },
+      {
+        "order": 4,
+        "text": "Contrast-enhanced CT abdomen performed to exclude surgical causes showed no bowel-wall thickening, no focal inflammatory changes, no obstruction and no free intraperitoneal air or fluid; overall appearance argued against invasive enteritis.",
+        "category": "imaging"
+      },
+      {
+        "order": 5,
+        "text": "Public-health follow-up found the buffet included a rice-based fried dish that had been prepared the previous evening, left at room temperature, then briefly reheated before the luncheon. A sample of the leftover fried rice cultured a rapidly growing, beta-haemolytic, spore-forming Gram-positive rod matching the organism seen in the patient’s stool; multiple attendees who ate that dish reported similar short-interval vomiting-only illness.",
+        "category": "exposure"
+      }
+    ],
+    "difficulty": "easy",
+    "explanation": "The combination of very short incubation (≈1–6 hours), predominant vomiting without inflammatory diarrhoea, rapid improvement with supportive care, stool microscopy showing large, spore-forming Gram-positive rods, and a common exposure to reheated rice strongly points to the foodborne emetic illness caused by Bacillus cereus. CT showed no enteritis, supporting a toxin-mediated process rather than invasive infection. Management is primarily fluid resuscitation and antiemetics; antibiotics are not indicated for the typical emetic syndrome. Public-health measures include identifying and removing contaminated food and reviewing safe cooling/reheating practices to prevent spore germination and toxin production.",
+    "source": "ai_generated",
+    "validated": true,
+    "createdAt": "2026-03-27T16:23:57.407Z",
+    "style": "mgh_case_report"
+  },
+  {
+    "id": "path-daily-campylobacter-jejuni-easy-1774628734548-8-0",
+    "pathogenId": "campylobacter-jejuni",
+    "pathogenKind": "bacterium",
+    "model": "gpt-5-mini",
+    "pool": "daily",
+    "hints": [
+      {
+        "order": 1,
+        "text": "A 24-year-old man presents to the clinic with 48 hours of profuse, crampy lower abdominal pain and 8–10 loose bowel motions per day that have become streaked with blood. He reports subjective fevers and two episodes of non‑bilious vomiting. On examination he is febrile 38.5 °C, pulse 110/min, mildly dehydrated, and tender in the right lower quadrant without peritonism.",
+        "category": "presentation"
+      },
+      {
+        "order": 2,
+        "text": "Previously healthy, no regular medications and no recent antibiotics. He is a graduate student and ate at a backyard barbecue 3 days before symptom onset; he recalls eating undercooked poultry. No recent travel outside the country, no sick household contacts, and no immunosuppression.",
+        "category": "history"
+      },
+      {
+        "order": 3,
+        "text": "Blood tests show leukocytosis 14.2 × 10^9/L with neutrophil predominance and CRP 76 mg/L. Serum potassium 3.2 mmol/L. Stool microscopy demonstrates numerous fecal leukocytes and RBCs; routine stool culture and PCR panel are pending.",
+        "category": "lab"
+      },
+      {
+        "order": 4,
+        "text": "Contrast-enhanced CT abdomen performed to evaluate focal tenderness shows segmental mural thickening and mucosal hyperenhancement of the terminal ileum and adjacent ascending colon with mild pericolic fat stranding, consistent with acute ileocolitis.",
+        "category": "imaging"
+      },
+      {
+        "order": 5,
+        "text": "He was started on oral azithromycin after fluid resuscitation and potassium replacement; diarrhoea and pain improved substantially within 48 hours. Final microbiology report from stool culture: motile, curved Gram‑negative rods, oxidase positive, with characteristic darting motility on wet prep; isolates grew optimally at 42 °C and produced a positive hippurate hydrolysis test.",
+        "category": "treatment_response"
+      }
+    ],
+    "difficulty": "easy",
+    "explanation": "This presentation—acute onset bloody diarrhoea with fever and prominent right‑sided ileocolitis after eating undercooked poultry, leukocytosis and fecal leukocytes—followed by rapid clinical response to a macrolide and stool culture showing motile, curved, oxidase‑positive Gram‑negative rods that grow at 42 °C and are hippurate‑positive is diagnostic for Campylobacter jejuni. Management in uncomplicated cases focuses on hydration and electrolyte correction; macrolide therapy accelerates recovery and shortens shedding in symptomatic patients.",
+    "source": "ai_generated",
+    "validated": true,
+    "createdAt": "2026-03-27T16:25:34.548Z",
+    "style": "mgh_case_report"
+  },
+  {
+    "id": "path-daily-chlamydia-trachomatis-easy-1774628768666-9-0",
+    "pathogenId": "chlamydia-trachomatis",
+    "pathogenKind": "bacterium",
+    "model": "gpt-5-mini",
+    "pool": "daily",
+    "hints": [
+      {
+        "order": 1,
+        "text": "A 23-year-old woman presents to a sexual health clinic with a 10-day history of mucopurulent vaginal discharge, mild dysuria, and intermenstrual spotting. She reports lower abdominal discomfort but no high fever or vomiting. On pelvic examination her cervix is friable with a mucopurulent endocervical discharge and mild cervical motion tenderness; she is using combined oral contraception and is not pregnant.",
+        "category": "presentation"
+      },
+      {
+        "order": 2,
+        "text": "She reports a new male sexual partner four weeks earlier and inconsistent condom use since then. No history of intravenous drug use. She has one prior treated sexually transmitted infection five years ago. She is HIV-negative on recent testing and otherwise healthy.",
+        "category": "history"
+      },
+      {
+        "order": 3,
+        "text": "Endocervical swab Gram stain shows abundant polymorphonuclear leukocytes but no intracellular Gram-negative diplococci; culture for Neisseria gonorrhoeae is negative. Nucleic acid amplification testing (NAAT) on the endocervical specimen is positive for the targeted genital pathogen. Full blood count shows WBC 7.8 × 10^9/L and C-reactive protein 11 mg/L; urine pregnancy test negative.",
+        "category": "lab"
+      },
+      {
+        "order": 4,
+        "text": "Transvaginal ultrasound demonstrates normal-appearing ovaries without adnexal masses and only small volume pelvic free fluid; no tubo-ovarian abscess is seen. The scan is otherwise unremarkable, supporting a diagnosis limited to the cervix/upper genital tract rather than advanced pelvic abscess.",
+        "category": "imaging"
+      },
+      {
+        "order": 5,
+        "text": "Her recent male partner experienced two days of clear urethral discharge and dysuria shortly after their trip abroad; his urine NAAT returned positive for the same target sequence detected in her endocervical swab. Both were offered single-dose oral macrolide therapy and partner notification was arranged.",
+        "category": "exposure"
+      }
+    ],
+    "difficulty": "easy",
+    "explanation": "Young, sexually active patient with mucopurulent cervicitis, abundant neutrophils on Gram stain without visible intracellular Gram-negative diplococci, negative gonococcal culture, and a positive NAAT is most consistent with infection by Chlamydia trachomatis. The partner's symptomatic urethritis with a concordant positive urine NAAT and clinical improvement after single-dose macrolide therapy support this diagnosis. Transvaginal ultrasound excludes complicated pelvic abscess, keeping the presentation within uncomplicated cervicitis/early pelvic inflammatory spectrum.",
+    "source": "ai_generated",
+    "validated": true,
+    "createdAt": "2026-03-27T16:26:08.666Z",
+    "style": "mgh_case_report"
+  }
+]

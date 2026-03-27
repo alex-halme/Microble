@@ -1,0 +1,11 @@
+.DS_Store
+.next/
+node_modules/
+.env
+.env.*
+data/microble.db
+data/microble.db-shm
+data/microble.db-wal
+tsconfig.tsbuildinfo
+.vscode/
+.claude/
