@@ -16,6 +16,7 @@ export async function POST(request: NextRequest) {
   const payload = (await request.json().catch(() => ({}))) as {
     completedIds?: string[];
     excludeId?: string;
+    activeCaseId?: string;
     pathogenTypes?: FreeplayPathogenFilter[];
     difficulty?: FreeplayDifficultyFilter;
   };
@@ -23,6 +24,8 @@ export async function POST(request: NextRequest) {
   const completedIds = Array.isArray(payload.completedIds) ? payload.completedIds : [];
   const excludeId =
     typeof payload.excludeId === "string" ? payload.excludeId : undefined;
+  const activeCaseId =
+    typeof payload.activeCaseId === "string" ? payload.activeCaseId : undefined;
   const filters = {
     pathogenTypes: Array.isArray(payload.pathogenTypes)
       ? payload.pathogenTypes.filter((value): value is FreeplayPathogenFilter =>
@@ -40,9 +43,17 @@ export async function POST(request: NextRequest) {
   const remaining = allCases.filter(
     (caseData) => !completedSet.has(caseData.id) && caseData.id !== excludeId
   );
+  const restoredCase = activeCaseId
+    ? remaining.find((caseData) => caseData.id === activeCaseId)
+    : null;
 
   return NextResponse.json({
-    caseData: remaining.length > 0 ? toPublicCase(pickRandom(remaining)) : null,
+    caseData:
+      restoredCase != null
+        ? toPublicCase(restoredCase)
+        : remaining.length > 0
+        ? toPublicCase(pickRandom(remaining))
+        : null,
     totalCases: allCases.length,
     completedMatchingCount,
   });

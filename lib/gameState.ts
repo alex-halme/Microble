@@ -3,6 +3,7 @@ import type { GameState, GameStatus } from "./types";
 // 5 turns total: 4 wrong to reveal all 5 hints, then 1 final attempt.
 const MAX_GUESSES = 5;
 const FREEPLAY_STREAK_KEY = "microble-freeplay-streak";
+const FREEPLAY_CURRENT_CASE_KEY = "microble-freeplay-current-case";
 
 // ─── Storage keys ─────────────────────────────────────────────────────────────
 
@@ -54,6 +55,37 @@ export function clearGameState(storageKey: string): void {
   }
 }
 
+export function getCurrentFreeplayCaseId(): string | null {
+  if (typeof window === "undefined") return null;
+
+  try {
+    const value = localStorage.getItem(FREEPLAY_CURRENT_CASE_KEY);
+    return value && value.length > 0 ? value : null;
+  } catch {
+    return null;
+  }
+}
+
+export function setCurrentFreeplayCaseId(caseId: string): void {
+  if (typeof window === "undefined") return;
+
+  try {
+    localStorage.setItem(FREEPLAY_CURRENT_CASE_KEY, caseId);
+  } catch {
+    // Ignore storage failures
+  }
+}
+
+export function clearCurrentFreeplayCaseId(): void {
+  if (typeof window === "undefined") return;
+
+  try {
+    localStorage.removeItem(FREEPLAY_CURRENT_CASE_KEY);
+  } catch {
+    // Ignore storage failures
+  }
+}
+
 export function getCompletedFreeplayCaseIds(caseIds?: string[]): string[] {
   if (typeof window === "undefined") return [];
 
@@ -87,6 +119,7 @@ export function resetFreeplayProgress(caseIds?: string[]): void {
   }
 
   resetFreeplayStreak();
+  clearCurrentFreeplayCaseId();
 }
 
 export function getFreeplayStreak(): number {

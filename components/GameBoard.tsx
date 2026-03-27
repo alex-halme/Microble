@@ -6,7 +6,7 @@ import type { CaseReveal, GameState, PublicMicrobleCase } from "@/lib/types";
 import { ORGANISMS } from "@/lib/organisms";
 import { matchGuess } from "@/lib/matcher";
 import {
-  clearGameState,
+  clearCurrentFreeplayCaseId,
   loadGameState,
   saveGameState,
   createInitialState,
@@ -57,13 +57,6 @@ export default function GameBoard({
     let saved = loadGameState(storageKey);
     if (saved && saved.caseId !== caseData.id) saved = null;
 
-    // Free play should always start a selected case fresh; only completed
-    // cases are persisted to keep them out of the rotation.
-    if (mode === "freeplay" && saved && !isGameOver(saved)) {
-      clearGameState(storageKey);
-      saved = null;
-    }
-
     const initial = saved ?? createInitialState(caseData.id, mode, date);
     const shouldAutoShow = isGameOver(initial) && !initial.resultSeenAt;
     const hydratedState = shouldAutoShow ? markResultSeen(initial) : initial;
@@ -96,6 +89,14 @@ export default function GameBoard({
     setState(trackedState);
     saveGameState(storageKey, trackedState);
   }, [mode, state, storageKey]);
+
+  useEffect(() => {
+    if (mode !== "freeplay" || !state || !isGameOver(state)) {
+      return;
+    }
+
+    clearCurrentFreeplayCaseId();
+  }, [mode, state]);
 
   useEffect(() => {
     if (mode !== "daily") return;
@@ -384,7 +385,11 @@ export default function GameBoard({
 
           {/* Clue list */}
           <div ref={hintsRegionRef} className="gameboard-hints" style={{ padding: "14px 22px" }}>
-            <HintList hints={caseData.hints} revealed={state.hintsRevealed} />
+            <HintList
+              hints={caseData.hints}
+              revealed={state.hintsRevealed}
+              focusNewestOnMount={mode === "freeplay" && !gameOver && state.hintsRevealed > 1}
+            />
           </div>
 
           {/* Divider + input area */}

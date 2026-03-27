@@ -15,30 +15,87 @@ const CATEGORY_LABELS: Record<string, string> = {
 interface HintListProps {
   hints: Hint[];
   revealed: number;
+  focusNewestOnMount?: boolean;
 }
 
-export default function HintList({ hints, revealed }: HintListProps) {
+export default function HintList({
+  hints,
+  revealed,
+  focusNewestOnMount = false,
+}: HintListProps) {
   const visible = hints.slice(0, revealed);
   const newest = visible.length - 1;
   const remaining = 5 - revealed;
   const newestHintRef = useRef<HTMLElement | null>(null);
   const previousRevealedRef = useRef(revealed);
+  const mountedFocusRef = useRef(false);
+
+  function scrollNewestHint(behavior: ScrollBehavior) {
+    if (
+      typeof window === "undefined" ||
+      !window.matchMedia("(max-width: 768px)").matches
+    ) {
+      return;
+    }
+
+    window.requestAnimationFrame(() => {
+      window.requestAnimationFrame(() => {
+        const hint = newestHintRef.current;
+        if (!hint) return;
+
+        const rect = hint.getBoundingClientRect();
+        const headerHeight =
+          document.querySelector<HTMLElement>(".site-header")?.getBoundingClientRect()
+            .height ?? 0;
+        const inputTrayHeight =
+          document
+            .querySelector<HTMLElement>(".gameboard-input-region")
+            ?.getBoundingClientRect().height ?? 0;
+
+        const topInset = headerHeight + 12;
+        const bottomInset = inputTrayHeight + 12;
+        const availableBottom = window.innerHeight - bottomInset;
+        const availableHeight = availableBottom - topInset;
+
+        let delta = 0;
+
+        if (rect.height <= availableHeight) {
+          if (rect.top < topInset) {
+            delta = rect.top - topInset;
+          } else if (rect.bottom > availableBottom) {
+            delta = rect.bottom - availableBottom;
+          }
+        } else {
+          delta = rect.top - topInset;
+        }
+
+        if (Math.abs(delta) > 1) {
+          window.scrollTo({
+            top: Math.max(0, window.scrollY + delta),
+            behavior,
+          });
+        }
+      });
+    });
+  }
+
+  useEffect(() => {
+    if (!focusNewestOnMount || revealed <= 1 || mountedFocusRef.current) {
+      return;
+    }
+
+    mountedFocusRef.current = true;
+    scrollNewestHint("auto");
+  }, [focusNewestOnMount, revealed]);
 
   useEffect(() => {
     const previousRevealed = previousRevealedRef.current;
 
     if (
       revealed > previousRevealed &&
-      previousRevealed > 0 &&
-      typeof window !== "undefined" &&
-      window.matchMedia("(max-width: 768px)").matches
+      previousRevealed > 0
     ) {
-      window.requestAnimationFrame(() => {
-        newestHintRef.current?.scrollIntoView({
-          behavior: "smooth",
-          block: "start",
-        });
-      });
+      scrollNewestHint("smooth");
     }
 
     previousRevealedRef.current = revealed;
@@ -137,9 +194,13 @@ export default function HintList({ hints, revealed }: HintListProps) {
             background: "transparent",
             display: "flex",
             alignItems: "center",
+            justifyContent: "center",
           }}
         >
-          <span className="label" style={{ color: "var(--fg-3)", fontSize: "10px" }}>
+          <span
+            className="label"
+            style={{ color: "var(--fg-3)", fontSize: "10px", textAlign: "center" }}
+          >
             {remaining} more clue{remaining !== 1 ? "s" : ""} will appear
           </span>
         </div>

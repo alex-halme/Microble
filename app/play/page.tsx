@@ -10,8 +10,11 @@ import {
   type FreeplayPathogenFilter,
 } from "@/lib/freeplayFilters";
 import {
+  clearCurrentFreeplayCaseId,
   getCompletedFreeplayCaseIds,
+  getCurrentFreeplayCaseId,
   resetFreeplayProgress,
+  setCurrentFreeplayCaseId,
 } from "@/lib/gameState";
 
 const PATHOGEN_FILTER_OPTIONS: Array<{
@@ -497,12 +500,15 @@ export default function PlayPage() {
   const syncProgress = useCallback(
     async (excludeId?: string) => {
       const completed = getCompletedFreeplayCaseIds();
+      const activeCaseId =
+        excludeId !== undefined ? undefined : getCurrentFreeplayCaseId() ?? undefined;
       const response = await fetch("/api/freeplay", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({
           completedIds: completed,
           excludeId,
+          activeCaseId,
           pathogenTypes,
           difficulty,
         }),
@@ -514,6 +520,11 @@ export default function PlayPage() {
       };
 
       setCurrentCase(payload.caseData);
+      if (payload.caseData) {
+        setCurrentFreeplayCaseId(payload.caseData.id);
+      } else {
+        clearCurrentFreeplayCaseId();
+      }
       setTotalCases(payload.totalCases);
       setCompletedMatchingCount(payload.completedMatchingCount);
       setHydrated(true);
@@ -526,6 +537,7 @@ export default function PlayPage() {
   }, [syncProgress]);
 
   const handleNewGame = useCallback(() => {
+    clearCurrentFreeplayCaseId();
     void syncProgress(currentCase?.id);
   }, [currentCase?.id, syncProgress]);
 

@@ -1,13 +1,16 @@
 import { beforeEach, afterEach, describe, expect, it } from "vitest";
 import {
   applyCorrectGuess,
+  clearCurrentFreeplayCaseId,
   clearGameState,
   createInitialState,
   freeplaylKey,
   getCompletedFreeplayCaseIds,
+  getCurrentFreeplayCaseId,
   getFreeplayStreak,
   markResultSeen,
   resetFreeplayProgress,
+  setCurrentFreeplayCaseId,
   setFreeplayStreak,
   saveGameState,
 } from "../lib/gameState";
@@ -117,5 +120,21 @@ describe("free play progress helpers", () => {
     resetFreeplayProgress(["case-a"]);
 
     expect(getFreeplayStreak()).toBe(0);
+  });
+
+  it("stores and clears the current free-play case id", () => {
+    setCurrentFreeplayCaseId("case-a");
+    expect(getCurrentFreeplayCaseId()).toBe("case-a");
+
+    clearCurrentFreeplayCaseId();
+    expect(getCurrentFreeplayCaseId()).toBeNull();
+  });
+
+  it("clears the current free-play case id when free-play progress is reset", () => {
+    setCurrentFreeplayCaseId("case-a");
+
+    resetFreeplayProgress(["case-a"]);
+
+    expect(getCurrentFreeplayCaseId()).toBeNull();
   });
 });
