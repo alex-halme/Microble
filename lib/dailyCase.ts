@@ -2,9 +2,11 @@ import type { MicrobleCase } from "./types";
 
 /**
  * UTC epoch for day 0. All daily case arithmetic is relative to this date.
- * Change only at launch — altering it will shift all daily cases.
+ * Keep this in the past so the selector never collapses pre-launch dates to day 0.
+ * Altering it will shift all daily cases.
  */
-const EPOCH = new Date("2026-04-01T00:00:00Z");
+const EPOCH = new Date("2026-01-01T00:00:00Z");
+const DAY_MS = 86_400_000;
 
 /**
  * Returns the zero-based index for today in UTC.
@@ -25,6 +27,15 @@ export function getDailyIndex(): number {
 
 function getSafeDailyIndex(dayIndex = getDailyIndex()): number {
   return Math.max(dayIndex, 0);
+}
+
+function getUtcDayStartForIndex(dayIndex: number): number {
+  return EPOCH.getTime() + getSafeDailyIndex(dayIndex) * DAY_MS;
+}
+
+function isVisibleByDayIndex(caseData: MicrobleCase, dayIndex: number): boolean {
+  const createdAt = Date.parse(caseData.createdAt);
+  return Number.isFinite(createdAt) && createdAt < getUtcDayStartForIndex(dayIndex);
 }
 
 function hashString(input: string): number {
@@ -55,6 +66,31 @@ function buildDailyRanking(
     .map((entry) => entry.index);
 }
 
+function buildRemainingDailyPool(
+  cases: MicrobleCase[],
+  dayIndex: number
+): MicrobleCase[] {
+  const used = new Set<string>();
+  const safeDayIndex = getSafeDailyIndex(dayIndex);
+
+  for (let day = 0; day < safeDayIndex; day += 1) {
+    const available = cases.filter(
+      (caseData) => isVisibleByDayIndex(caseData, day) && !used.has(caseData.id)
+    );
+
+    if (available.length === 0) {
+      break;
+    }
+
+    const picked = available[buildDailyRanking(available, day, "daily")[0]];
+    used.add(picked.id);
+  }
+
+  return cases.filter(
+    (caseData) => isVisibleByDayIndex(caseData, safeDayIndex) && !used.has(caseData.id)
+  );
+}
+
 function getDeterministicFallbackPosition(
   fallbackCases: MicrobleCase[],
   dayIndex = getDailyIndex()
@@ -73,16 +109,27 @@ export function getDailyCasePosition(
   if (casesLength <= 0) {
     throw new Error("No cases available");
   }
-  return buildDailyRanking(cases, dayIndex, "daily")[0];
+  const remaining = buildRemainingDailyPool(cases, dayIndex);
+  if (remaining.length <= 0) {
+    throw new Error("No daily cases remaining");
+  }
+
+  const picked = remaining[buildDailyRanking(remaining, dayIndex, "daily")[0]];
+  const position = cases.findIndex((caseData) => caseData.id === picked.id);
+  if (position < 0) {
+    throw new Error("Selected daily case is missing from source pool");
+  }
+
+  return position;
 }
 
 /**
  * Select today's daily case.
- * Fresh dedicated daily cases are served in a deterministic shuffled order once.
- * This keeps the daily case random-looking while still giving every user the same case on the
- * same UTC day and ensuring each dedicated daily case is used once before the app falls back.
- * After the dedicated daily pool is depleted, a deterministic fallback selection is made from
- * the free-play pool so there is still exactly one shared case per UTC day.
+ * Dedicated daily cases are chosen randomly-looking but without replacement from the cases that
+ * were already visible by the start of that UTC day. Once a dedicated daily case has been used,
+ * it drops out of future daily selection and becomes eligible for free play after that day.
+ * When no dedicated daily cases remain, a deterministic fallback selection is made from the
+ * free-play pool so there is still exactly one shared case per UTC day.
  */
 export function getDailyCase(
   dailyCases: MicrobleCase[],
@@ -93,7 +140,8 @@ export function getDailyCase(
     throw new Error("No cases available");
   }
 
-  if (dailyCases.length > 0) {
+  const remainingDailyCases = buildRemainingDailyPool(dailyCases, dayIndex);
+  if (remainingDailyCases.length > 0) {
     return dailyCases[getDailyCasePosition(dailyCases, dayIndex)];
   }
 
@@ -106,9 +154,8 @@ export function getDailyCase(
 
 /**
  * Returns previously featured daily cases that should now be eligible for free play.
- * Before the dedicated daily pool has been fully used, this is the list of earlier cases.
- * Once the daily pool is depleted and the app falls back to free play for the daily case,
- * every dedicated daily case becomes eligible for free play.
+ * These are the daily cases already used on earlier UTC days. The current day's daily case stays
+ * out of free play until the day changes.
  */
 export function getExpiredDailyCases(
   cases: MicrobleCase[],
@@ -119,17 +166,22 @@ export function getExpiredDailyCases(
   const safeDayIndex = getSafeDailyIndex(dayIndex);
   if (safeDayIndex === 0) return [];
 
-  const currentDailyId = cases[getDailyCasePosition(cases, safeDayIndex)].id;
-  const seen = new Map<string, MicrobleCase>();
+  const used = new Map<string, MicrobleCase>();
 
   for (let day = 0; day < safeDayIndex; day += 1) {
-    const caseData = cases[getDailyCasePosition(cases, day)];
-    if (caseData.id !== currentDailyId) {
-      seen.set(caseData.id, caseData);
+    const available = cases.filter(
+      (caseData) => isVisibleByDayIndex(caseData, day) && !used.has(caseData.id)
+    );
+
+    if (available.length === 0) {
+      break;
     }
+
+    const caseData = available[buildDailyRanking(available, day, "daily")[0]];
+    used.set(caseData.id, caseData);
   }
 
-  return [...seen.values()];
+  return [...used.values()];
 }
 
 /**

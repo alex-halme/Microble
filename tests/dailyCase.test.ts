@@ -20,7 +20,7 @@ const baseCase = (id: string): MicrobleCase => ({
   explanation: "Synthetic test case.",
   source: "ai_generated",
   validated: true,
-  createdAt: "2026-03-27T00:00:00.000Z",
+  createdAt: "2025-12-31T00:00:00.000Z",
 });
 
 const CASES = [baseCase("a"), baseCase("b"), baseCase("c"), baseCase("d")];
@@ -37,7 +37,7 @@ describe("daily case helpers", () => {
   });
 
   it("chooses from the full daily pool even after many days", () => {
-    const chosen = getDailyCase(CASES, FALLBACK_CASES, 40).id;
+    const chosen = getDailyCase(CASES, FALLBACK_CASES, 2).id;
 
     expect(CASES.map((caseData) => caseData.id)).toContain(chosen);
   });
@@ -49,9 +49,15 @@ describe("daily case helpers", () => {
     expect(CASES.map((caseData) => caseData.id)).toContain(getDailyCase(CASES, FALLBACK_CASES, 2).id);
   });
 
-  it("falls back deterministically to the free-play pool when no dedicated daily cases exist", () => {
-    const first = getDailyCase([], FALLBACK_CASES, 8).id;
-    const second = getDailyCase([], FALLBACK_CASES, 8).id;
+  it("uses each dedicated daily case at most once before falling back", () => {
+    const chosen = [0, 1, 2, 3].map((day) => getDailyCase(CASES, FALLBACK_CASES, day).id);
+
+    expect(new Set(chosen).size).toBe(CASES.length);
+  });
+
+  it("falls back deterministically to the free-play pool when dedicated daily cases are exhausted", () => {
+    const first = getDailyCase(CASES, FALLBACK_CASES, 8).id;
+    const second = getDailyCase(CASES, FALLBACK_CASES, 8).id;
 
     expect(first).toBe(second);
     expect(FALLBACK_CASES.map((caseData) => caseData.id)).toContain(first);
@@ -73,6 +79,12 @@ describe("daily case helpers", () => {
     const expired = getExpiredDailyCases(CASES, 25).map((caseData) => caseData.id);
 
     expect(expired.every((id) => CASES.some((caseData) => caseData.id === id))).toBe(true);
+  });
+
+  it("releases every dedicated daily case after the daily pool is exhausted", () => {
+    const expired = getExpiredDailyCases(CASES, 8).map((caseData) => caseData.id);
+
+    expect(new Set(expired)).toEqual(new Set(CASES.map((caseData) => caseData.id)));
   });
 
   it("makes yesterday's daily case eligible for free play while keeping today's daily case out", () => {
