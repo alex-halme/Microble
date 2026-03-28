@@ -92,7 +92,7 @@ export default function GuessInput({
     }
   }
 
-  const canSkip = hintsRevealed < 5 && guessesRemaining > 1 && !disabled;
+  const canSkip = guessesRemaining > 0 && !disabled;
 
   return (
     <div className="guess-input-shell">

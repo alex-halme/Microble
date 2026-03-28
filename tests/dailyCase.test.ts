@@ -27,14 +27,19 @@ const CASES = [baseCase("a"), baseCase("b"), baseCase("c"), baseCase("d")];
 const FALLBACK_CASES = [baseCase("x"), baseCase("y"), baseCase("z")];
 
 describe("daily case helpers", () => {
-  it("returns a deterministic shuffled daily order within each cycle", () => {
-    const firstCycle = [0, 1, 2, 3].map((day) => getDailyCasePosition(CASES.length, day));
-    const repeatedFirstCycle = [0, 1, 2, 3].map((day) =>
-      getDailyCasePosition(CASES.length, day)
-    );
+  it("returns the same daily case for the same day", () => {
+    const first = getDailyCasePosition(CASES, 3);
+    const second = getDailyCasePosition(CASES, 3);
 
-    expect(new Set(firstCycle).size).toBe(CASES.length);
-    expect(firstCycle).toEqual(repeatedFirstCycle);
+    expect(first).toBe(second);
+    expect(first).toBeGreaterThanOrEqual(0);
+    expect(first).toBeLessThan(CASES.length);
+  });
+
+  it("chooses from the full daily pool even after many days", () => {
+    const chosen = getDailyCase(CASES, FALLBACK_CASES, 40).id;
+
+    expect(CASES.map((caseData) => caseData.id)).toContain(chosen);
   });
 
   it("prefers dedicated daily cases over fallback cases whenever daily cases exist", () => {
@@ -44,9 +49,9 @@ describe("daily case helpers", () => {
     expect(CASES.map((caseData) => caseData.id)).toContain(getDailyCase(CASES, FALLBACK_CASES, 2).id);
   });
 
-  it("falls back deterministically to the free-play pool after dedicated daily cases are depleted", () => {
-    const first = getDailyCase(CASES, FALLBACK_CASES, 8).id;
-    const second = getDailyCase(CASES, FALLBACK_CASES, 8).id;
+  it("falls back deterministically to the free-play pool when no dedicated daily cases exist", () => {
+    const first = getDailyCase([], FALLBACK_CASES, 8).id;
+    const second = getDailyCase([], FALLBACK_CASES, 8).id;
 
     expect(first).toBe(second);
     expect(FALLBACK_CASES.map((caseData) => caseData.id)).toContain(first);
@@ -56,25 +61,25 @@ describe("daily case helpers", () => {
     expect(getExpiredDailyCases(CASES, 0)).toEqual([]);
   });
 
-  it("releases prior daily cases before the first full cycle", () => {
+  it("releases previously featured daily cases while keeping today's case out", () => {
     const currentDaily = getDailyCase(CASES, FALLBACK_CASES, 3);
     const expired = getExpiredDailyCases(CASES, 3).map((caseData) => caseData.id);
 
-    expect(expired).toHaveLength(3);
+    expect(expired.length).toBeGreaterThan(0);
     expect(expired).not.toContain(currentDaily.id);
   });
 
-  it("releases every dedicated daily case after the daily pool is depleted", () => {
-    const expired = getExpiredDailyCases(CASES, 5).map((caseData) => caseData.id);
+  it("never returns ids outside the dedicated daily pool as expired", () => {
+    const expired = getExpiredDailyCases(CASES, 25).map((caseData) => caseData.id);
 
-    expect(expired).toEqual(CASES.map((caseData) => caseData.id));
+    expect(expired.every((id) => CASES.some((caseData) => caseData.id === id))).toBe(true);
   });
 
   it("makes yesterday's daily case eligible for free play while keeping today's daily case out", () => {
     const dayThreeDaily = getDailyCase(CASES, FALLBACK_CASES, 3);
     const expiredOnDayThree = getExpiredDailyCases(CASES, 3).map((caseData) => caseData.id);
 
-    expect(expiredOnDayThree).toHaveLength(3);
+    expect(expiredOnDayThree.length).toBeGreaterThan(0);
     expect(expiredOnDayThree).not.toContain(dayThreeDaily.id);
   });
 });

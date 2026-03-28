@@ -1,5 +1,6 @@
 import { beforeEach, afterEach, describe, expect, it } from "vitest";
 import {
+  applySkip,
   applyCorrectGuess,
   clearCurrentFreeplayCaseId,
   clearGameState,
@@ -125,6 +126,18 @@ describe("free play progress helpers", () => {
 
     expect(solved.status).toBe("won");
     expect(solved.hintsRevealed).toBe(5);
+  });
+
+  it("marks the game lost when the last remaining turn is used as a pass", () => {
+    const skippedOut = applySkip({
+      ...createInitialState("case-a", "freeplay"),
+      guesses: ["one", "two", "three", "four"],
+      hintsRevealed: 5,
+    });
+
+    expect(skippedOut.status).toBe("lost");
+    expect(skippedOut.guesses.at(-1)).toBeNull();
+    expect(skippedOut.hintsRevealed).toBe(5);
   });
 
   it("resets the persisted free-play streak when free-play progress is cleared", () => {
