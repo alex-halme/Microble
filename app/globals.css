@@ -280,13 +280,6 @@ body {
     font-size: 14px !important;
   }
 
-  .guess-suggestions {
-    top: auto !important;
-    bottom: calc(100% + 6px) !important;
-    max-height: min(240px, 36vh);
-    overflow-y: auto !important;
-  }
-
   .guess-input-footer {
     margin-top: 8px !important;
     align-items: center !important;

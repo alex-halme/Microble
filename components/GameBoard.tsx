@@ -49,6 +49,7 @@ export default function GameBoard({
   const [submittingGuess, setSubmittingGuess] = useState(false);
   const [inputFocused, setInputFocused] = useState(false);
   const [isCompactMobile, setIsCompactMobile] = useState(false);
+  const [showGuessSheet, setShowGuessSheet] = useState(false);
   const boardShellRef = useRef<HTMLDivElement | null>(null);
   const hintsRegionRef = useRef<HTMLDivElement | null>(null);
   const initialFocusCaseRef = useRef<string | null>(null);
@@ -84,6 +85,7 @@ export default function GameBoard({
     setReveal(null);
     setSubmittingGuess(false);
     setInputFocused(false);
+    setShowGuessSheet(false);
   }, [caseData.id, mode, date, storageKey]);
 
   useEffect(() => {
@@ -563,6 +565,41 @@ export default function GameBoard({
               </div>
             )}
 
+            {!gameOver && state.guesses.length > 0 && isCompactMobile && (
+              <div
+                style={{
+                  marginTop: "10px",
+                  display: "flex",
+                  justifyContent: "space-between",
+                  alignItems: "center",
+                  gap: "10px",
+                  flexWrap: "wrap",
+                }}
+              >
+                <button
+                  type="button"
+                  onClick={() => setShowGuessSheet(true)}
+                  style={{
+                    padding: "8px 14px",
+                    borderRadius: "999px",
+                    border: "1px solid var(--border)",
+                    background: "rgba(255,255,255,0.92)",
+                    color: "var(--fg)",
+                    fontFamily: "var(--font-sans)",
+                    fontSize: "13px",
+                    fontWeight: 600,
+                    cursor: "pointer",
+                    boxShadow: "0 8px 20px rgba(15, 23, 42, 0.08)",
+                  }}
+                >
+                  View guesses
+                </button>
+                <span className="label" style={{ color: "var(--fg-3)" }}>
+                  {state.guesses.length} logged
+                </span>
+              </div>
+            )}
+
             {/* Guess history shown below input when playing */}
             {!gameOver && state.guesses.length > 0 && !isCompactMobile && (
               <div className="gameboard-active-history" style={{ marginTop: "10px" }}>
@@ -583,6 +620,71 @@ export default function GameBoard({
           showNewGame={mode === "freeplay"}
           newGameLabel={newGameLabel}
         />
+      )}
+
+      {showGuessSheet && state && state.guesses.length > 0 && (
+        <div
+          onClick={() => setShowGuessSheet(false)}
+          className="guess-sheet-overlay"
+          style={{
+            position: "fixed",
+            inset: 0,
+            zIndex: 55,
+            background: "rgba(15, 23, 42, 0.18)",
+            backdropFilter: "blur(12px)",
+            display: "flex",
+            alignItems: "flex-end",
+            justifyContent: "center",
+            padding: "18px 12px calc(12px + env(safe-area-inset-bottom))",
+          }}
+        >
+          <div
+            onClick={(event) => event.stopPropagation()}
+            style={{
+              width: "100%",
+              maxWidth: "520px",
+              maxHeight: "72vh",
+              overflowY: "auto",
+              background: "var(--surface-modal)",
+              border: "1px solid var(--border)",
+              borderRadius: "24px",
+              boxShadow: "var(--shadow-soft)",
+              padding: "18px 18px calc(18px + env(safe-area-inset-bottom))",
+            }}
+          >
+            <div
+              style={{
+                display: "flex",
+                justifyContent: "space-between",
+                alignItems: "center",
+                gap: "12px",
+                marginBottom: "14px",
+              }}
+            >
+              <span className="label" style={{ color: "var(--fg-2)" }}>
+                Guesses
+              </span>
+              <button
+                type="button"
+                onClick={() => setShowGuessSheet(false)}
+                style={{
+                  padding: "8px 14px",
+                  borderRadius: "999px",
+                  border: "1px solid var(--border)",
+                  background: "var(--surface-subtle)",
+                  color: "var(--fg)",
+                  fontFamily: "var(--font-sans)",
+                  fontSize: "13px",
+                  fontWeight: 600,
+                  cursor: "pointer",
+                }}
+              >
+                Done
+              </button>
+            </div>
+            <GuessHistory guesses={state.guesses} correctIndex={correctIndex} />
+          </div>
+        </div>
       )}
     </>
   );

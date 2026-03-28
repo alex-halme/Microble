@@ -1,7 +1,6 @@
 "use client";
 
 import { useState, useRef, useEffect } from "react";
-import { ORGANISMS } from "@/lib/organisms";
 import type { MatchResult } from "@/lib/types";
 
 interface GuessInputProps {
@@ -26,21 +25,10 @@ export default function GuessInput({
   onFocusChange,
 }: GuessInputProps) {
   const [input, setInput] = useState("");
-  const [suggestions, setSuggestions] = useState<string[]>([]);
-  const [selectedIdx, setSelectedIdx] = useState(-1);
   const [feedback, setFeedback] = useState<string | null>(null);
   const [focused, setFocused] = useState(false);
   const [compactLayout, setCompactLayout] = useState(false);
   const inputRef = useRef<HTMLInputElement>(null);
-
-  const organismsByCanonical = ORGANISMS.map((organism) => ({
-    canonical: organism.canonical,
-    searchNames: [
-      organism.canonical,
-      ...organism.abbreviations,
-      ...organism.commonNames,
-    ],
-  }));
 
   useEffect(() => {
     if (typeof window === "undefined") return;
@@ -51,24 +39,6 @@ export default function GuessInput({
     media.addEventListener("change", update);
     return () => media.removeEventListener("change", update);
   }, []);
-
-  useEffect(() => {
-    if (input.length < 2) {
-      setSuggestions([]);
-      setSelectedIdx(-1);
-      return;
-    }
-
-    const lower = input.toLowerCase();
-    const filtered = organismsByCanonical
-      .filter(({ searchNames }) =>
-        searchNames.some((name) => name.toLowerCase().includes(lower))
-      )
-      .map(({ canonical }) => canonical)
-      .slice(0, 7);
-    setSuggestions(filtered);
-    setSelectedIdx(-1);
-  }, [input]);
 
   useEffect(() => {
     if (!autoFocus || disabled || typeof window === "undefined") {
@@ -104,25 +74,14 @@ export default function GuessInput({
 
     setFeedback(null);
     setInput("");
-    setSuggestions([]);
     inputRef.current?.focus({ preventScroll: true });
     onGuess(result.organism.canonical);
   }
 
   function handleKeyDown(e: React.KeyboardEvent<HTMLInputElement>) {
-    if (e.key === "ArrowDown") {
+    if (e.key === "Enter") {
       e.preventDefault();
-      setSelectedIdx((i) => Math.min(i + 1, suggestions.length - 1));
-    } else if (e.key === "ArrowUp") {
-      e.preventDefault();
-      setSelectedIdx((i) => Math.max(i - 1, -1));
-    } else if (e.key === "Enter") {
-      e.preventDefault();
-      if (selectedIdx >= 0 && suggestions[selectedIdx]) {
-        setInput(suggestions[selectedIdx]);
-        setSuggestions([]);
-        setSelectedIdx(-1);
-      } else if (!input.trim()) {
+      if (!input.trim()) {
         if (canSkip) {
           setFeedback(null);
           onSkip();
@@ -130,9 +89,6 @@ export default function GuessInput({
       } else {
         handleSubmit();
       }
-    } else if (e.key === "Escape") {
-      setSuggestions([]);
-      setSelectedIdx(-1);
     }
   }
 
@@ -148,7 +104,7 @@ export default function GuessInput({
             display: "flex",
             alignItems: "center",
             gap: "8px",
-            padding: "5px 5px 5px 14px",
+            padding: compactLayout ? "8px 12px" : "5px 5px 5px 14px",
             border: focused
               ? "1px solid var(--accent-border)"
               : feedback
@@ -171,7 +127,6 @@ export default function GuessInput({
             onKeyDown={handleKeyDown}
             onBlur={() =>
               setTimeout(() => {
-                setSuggestions([]);
                 setFocused(false);
                 onFocusChange?.(false);
               }, 150)
@@ -211,70 +166,29 @@ export default function GuessInput({
             }}
           />
 
-          <button
-            className="guess-submit-button"
-            onClick={() => handleSubmit()}
-            disabled={disabled || !input.trim()}
-            style={{
-              background: input.trim() && !disabled ? "var(--accent)" : "var(--surface-muted)",
-              border: "none",
-              borderRadius: "7px",
-              cursor: input.trim() && !disabled ? "pointer" : "default",
-              fontFamily: "var(--font-sans)",
-              fontSize: "13px",
-              fontWeight: 600,
-              color: input.trim() && !disabled ? "white" : "var(--fg-3)",
-              padding: "8px 14px",
-              transition: "background 150ms, color 150ms",
-              flexShrink: 0,
-            }}
-          >
-            Submit
-          </button>
+          {!compactLayout && (
+            <button
+              className="guess-submit-button"
+              onClick={() => handleSubmit()}
+              disabled={disabled || !input.trim()}
+              style={{
+                background: input.trim() && !disabled ? "var(--accent)" : "var(--surface-muted)",
+                border: "none",
+                borderRadius: "7px",
+                cursor: input.trim() && !disabled ? "pointer" : "default",
+                fontFamily: "var(--font-sans)",
+                fontSize: "13px",
+                fontWeight: 600,
+                color: input.trim() && !disabled ? "white" : "var(--fg-3)",
+                padding: "8px 14px",
+                transition: "background 150ms, color 150ms",
+                flexShrink: 0,
+              }}
+            >
+              Submit
+            </button>
+          )}
         </div>
-
-        {suggestions.length > 0 && (
-          <div
-            className="guess-suggestions"
-            style={{
-              position: "absolute",
-              top: compactLayout ? "auto" : "calc(100% + 6px)",
-              bottom: compactLayout ? "calc(100% + 6px)" : "auto",
-              left: 0,
-              right: 0,
-              zIndex: 20,
-              background: "var(--surface)",
-              border: "1px solid var(--border)",
-              borderRadius: "12px",
-              boxShadow: "0 8px 24px rgba(15,23,42,0.10)",
-              overflow: "hidden",
-              maxHeight: compactLayout ? "min(240px, 36vh)" : "none",
-              overflowY: compactLayout ? "auto" : "hidden",
-            }}
-          >
-            {suggestions.map((s, i) => (
-              <div
-                key={s}
-                onMouseDown={() => {
-                  setInput(s);
-                  setSuggestions([]);
-                  setTimeout(() => inputRef.current?.focus(), 0);
-                }}
-                style={{
-                  padding: "9px 14px",
-                  fontFamily: "var(--font-sans)",
-                  fontSize: "13.5px",
-                  cursor: "pointer",
-                  color: i === selectedIdx ? "var(--fg)" : "var(--fg-2)",
-                  backgroundColor: i === selectedIdx ? "var(--accent-soft)" : "transparent",
-                  borderBottom: i < suggestions.length - 1 ? "1px solid var(--border)" : "none",
-                }}
-              >
-                {s}
-              </div>
-            ))}
-          </div>
-        )}
       </div>
 
       {/* Footer row */}
@@ -300,6 +214,29 @@ export default function GuessInput({
         >
           {feedback ?? "Wrong guesses and passes reveal the next clue."}
         </span>
+
+        {compactLayout && (
+          <button
+            className="guess-submit-button"
+            onClick={() => handleSubmit()}
+            disabled={disabled || !input.trim()}
+            style={{
+              background: input.trim() && !disabled ? "var(--accent)" : "var(--surface-muted)",
+              border: "none",
+              borderRadius: "999px",
+              cursor: input.trim() && !disabled ? "pointer" : "default",
+              fontFamily: "var(--font-sans)",
+              fontSize: "13px",
+              fontWeight: 600,
+              color: input.trim() && !disabled ? "white" : "var(--fg-3)",
+              padding: "8px 16px",
+              transition: "background 150ms, color 150ms",
+              flexShrink: 0,
+            }}
+          >
+            Submit
+          </button>
+        )}
 
         {canSkip && (
           <button

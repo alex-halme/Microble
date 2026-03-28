@@ -230,6 +230,7 @@ export function applyCorrectGuess(state: GameState, guess: string): GameState {
   return {
     ...state,
     guesses: [...state.guesses, guess],
+    hintsRevealed: 5,
     status: "won",
     completedAt: new Date().toISOString(),
   };

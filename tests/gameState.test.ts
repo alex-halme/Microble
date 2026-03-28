@@ -114,6 +114,19 @@ describe("free play progress helpers", () => {
     expect(markResultSeen(seen)).toEqual(seen);
   });
 
+  it("reveals all clues when a case is solved", () => {
+    const solved = applyCorrectGuess(
+      {
+        ...createInitialState("case-a", "freeplay"),
+        hintsRevealed: 2,
+      },
+      "Staphylococcus aureus"
+    );
+
+    expect(solved.status).toBe("won");
+    expect(solved.hintsRevealed).toBe(5);
+  });
+
   it("resets the persisted free-play streak when free-play progress is cleared", () => {
     setFreeplayStreak(4);
 
