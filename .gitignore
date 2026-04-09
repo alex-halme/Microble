@@ -9,3 +9,5 @@ data/microble.db-wal
 tsconfig.tsbuildinfo
 .vscode/
 .claude/
+CLAUDE.md
+PROJECT.md
