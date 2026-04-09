@@ -97,7 +97,7 @@ export function getCompletedFreeplayCaseIds(caseIds?: string[]): string[] {
 
   return candidateIds.filter((caseId) => {
     const state = loadGameState(freeplaylKey(caseId));
-    return state?.mode === "freeplay" && isGameOver(state);
+    return state != null && isGameOver(state);
   });
 }
 

@@ -38,7 +38,7 @@ const CASES_PER_REQUEST = 4;
 const MAX_RETRIES = 2;
 const MIN_TOTAL_HINT_CHARS = 520;
 const MIN_EXPLANATION_CHARS = 140;
-const MAX_CONCURRENT_REQUESTS = 4;
+const MAX_CONCURRENT_REQUESTS = 8;
 const EARLY_COVERAGE_TARGETS: Record<GenerationPool, number> = {
   daily: 1,
   freeplay: 2,
@@ -907,28 +907,27 @@ async function main() {
   const allCases = [...existingCases];
   let added = 0;
   let rejected = 0;
+  let nextJobIndex = 0;
 
-  for (let start = 0; start < jobs.length; start += MAX_CONCURRENT_REQUESTS) {
-    const chunk = jobs.slice(start, start + MAX_CONCURRENT_REQUESTS);
-
-    chunk.forEach((job, offset) => {
+  async function worker(): Promise<void> {
+    while (true) {
+      const index = nextJobIndex++;
+      if (index >= jobs.length) break;
+      const job = jobs[index];
       process.stdout.write(
-        `[${start + offset + 1}/${jobs.length}] ${job.pathogen.canonical} (${job.difficulty}, ${job.count})... `
+        `[${index + 1}/${jobs.length}] ${job.pathogen.canonical} (${job.difficulty}, ${job.count})... `
       );
-    });
-
-    const chunkResults = await Promise.all(
-      chunk.map((job, offset) => generateCasesForJob(client, job, start + offset))
-    );
-
-    chunkResults.forEach((cases, offset) => {
-      const job = chunk[offset];
+      const cases = await generateCasesForJob(client, job, index);
       added += cases.length;
       rejected += job.count - cases.length;
       allCases.push(...cases);
       console.log(`${cases.length}/${job.count} accepted`);
-    });
+    }
   }
+
+  await Promise.all(
+    Array.from({ length: Math.min(MAX_CONCURRENT_REQUESTS, jobs.length) }, worker)
+  );
 
   saveCases(pool, allCases);
 

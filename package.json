@@ -10,7 +10,8 @@
     "test:watch": "vitest",
     "generate": "tsx scripts/generate-cases.ts",
     "generate:batch": "tsx scripts/generate-cases.ts --batch",
-    "generate:pathogens": "tsx scripts/generate-pathogen-cases.ts"
+    "generate:pathogens": "tsx scripts/generate-pathogen-cases.ts",
+    "fix:difficulties": "tsx scripts/fix-difficulties.ts"
   },
   "dependencies": {
     "@vercel/analytics": "^2.0.1",

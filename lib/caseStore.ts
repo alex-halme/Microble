@@ -85,7 +85,7 @@ function normalizeStoredRecord(record: StoredCaseRecord): StoredCaseRecord {
 
   const pathogen = PATHOGEN_PLAN_BY_ID.get(normalizedAnswers.organismId);
   const difficulty =
-    record.source === "ai_generated" && pathogen
+    pathogen
       ? applyTierDifficultyFloor(pathogen.tier, record.difficulty)
       : record.difficulty;
 

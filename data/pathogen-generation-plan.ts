@@ -50,7 +50,7 @@ const DAILY_TARGETS_BY_TIER: Record<PathogenTier, number> = {
 const DIFFICULTY_MIX_BY_TIER: Record<PathogenTier, DifficultyDistribution> = {
   usmle_core: { easy: 0.45, medium: 0.35, hard: 0.2 },
   usmle_extended: { easy: 0, medium: 0.65, hard: 0.35 },
-  rare_bonus: { easy: 0, medium: 0.25, hard: 0.75 },
+  rare_bonus: { easy: 0, medium: 0, hard: 1.0 },
 };
 
 export function applyTierDifficultyFloor(

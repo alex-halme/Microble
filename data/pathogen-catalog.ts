@@ -96,6 +96,9 @@ export const PATHOGEN_CATALOG: PathogenCatalogEntry[] = [
   { id: "pasteurella-multocida", canonical: "Pasteurella multocida", kind: "bacterium", tier: "usmle_extended", group: "bacteria_gram_negative", dailyEligible: true },
   { id: "bartonella-henselae", canonical: "Bartonella henselae", kind: "bacterium", tier: "usmle_extended", group: "bacteria_gram_negative", dailyEligible: true },
   { id: "bartonella-quintana", canonical: "Bartonella quintana", kind: "bacterium", tier: "rare_bonus", group: "bacteria_gram_negative", dailyEligible: true },
+  { id: "moraxella-catarrhalis", canonical: "Moraxella catarrhalis", kind: "bacterium", tier: "usmle_extended", group: "bacteria_gram_negative", dailyEligible: true },
+  { id: "eikenella-corrodens", canonical: "Eikenella corrodens", kind: "bacterium", tier: "usmle_extended", group: "bacteria_gram_negative", dailyEligible: true },
+  { id: "capnocytophaga-canimorsus", canonical: "Capnocytophaga canimorsus", kind: "bacterium", tier: "usmle_extended", group: "bacteria_gram_negative", dailyEligible: true },
   { id: "treponema-pallidum", canonical: "Treponema pallidum", kind: "bacterium", tier: "usmle_core", group: "bacteria_gram_negative", dailyEligible: true },
   { id: "borrelia-burgdorferi", canonical: "Borrelia burgdorferi", kind: "bacterium", tier: "usmle_core", group: "bacteria_gram_negative", dailyEligible: true },
   { id: "leptospira-interrogans", canonical: "Leptospira interrogans", kind: "bacterium", tier: "usmle_extended", group: "bacteria_gram_negative", dailyEligible: true },
@@ -127,6 +130,7 @@ export const PATHOGEN_CATALOG: PathogenCatalogEntry[] = [
   { id: "human-herpesvirus-8", canonical: "Human herpesvirus 8", kind: "virus", tier: "usmle_extended", group: "virus_dna", dailyEligible: true },
   { id: "molluscum-contagiosum-virus", canonical: "Molluscum contagiosum virus", kind: "virus", tier: "usmle_extended", group: "virus_dna", dailyEligible: true },
   { id: "variola-virus", canonical: "Variola virus", kind: "virus", tier: "usmle_extended", group: "virus_dna", dailyEligible: true },
+  { id: "mpox-virus", canonical: "Mpox virus", kind: "virus", tier: "usmle_extended", group: "virus_dna", dailyEligible: true },
   { id: "hepatitis-b-virus", canonical: "Hepatitis B virus", kind: "virus", tier: "usmle_core", group: "virus_dna", dailyEligible: true },
   { id: "adenovirus", canonical: "Adenovirus", kind: "virus", tier: "usmle_core", group: "virus_dna", dailyEligible: true },
   { id: "human-papillomavirus", canonical: "Human papillomavirus", kind: "virus", tier: "usmle_core", group: "virus_dna", dailyEligible: true },
@@ -168,6 +172,7 @@ export const PATHOGEN_CATALOG: PathogenCatalogEntry[] = [
   { id: "hantavirus", canonical: "Hantavirus", kind: "virus", tier: "usmle_extended", group: "virus_rna", dailyEligible: true },
   { id: "crimean-congo-hemorrhagic-fever-virus", canonical: "Crimean-Congo hemorrhagic fever virus", kind: "virus", tier: "rare_bonus", group: "virus_rna", dailyEligible: true },
   { id: "hepatitis-d-virus", canonical: "Hepatitis D virus", kind: "virus", tier: "usmle_extended", group: "virus_rna", dailyEligible: true },
+  { id: "mers-cov", canonical: "MERS-CoV", kind: "virus", tier: "usmle_extended", group: "virus_rna", dailyEligible: true },
 
   // Parasites: protozoa
   { id: "giardia-lamblia", canonical: "Giardia lamblia", kind: "parasite", tier: "usmle_core", group: "parasite_protozoa", dailyEligible: true },
@@ -179,6 +184,7 @@ export const PATHOGEN_CATALOG: PathogenCatalogEntry[] = [
   { id: "naegleria-fowleri", canonical: "Naegleria fowleri", kind: "parasite", tier: "usmle_core", group: "parasite_protozoa", dailyEligible: true },
   { id: "acanthamoeba-species", canonical: "Acanthamoeba species", kind: "parasite", tier: "usmle_extended", group: "parasite_protozoa", dailyEligible: true },
   { id: "balantidium-coli", canonical: "Balantidium coli", kind: "parasite", tier: "rare_bonus", group: "parasite_protozoa", dailyEligible: true },
+  { id: "microsporidia", canonical: "Microsporidia", kind: "parasite", tier: "usmle_extended", group: "parasite_protozoa", dailyEligible: true },
   { id: "trypanosoma-brucei", canonical: "Trypanosoma brucei", kind: "parasite", tier: "usmle_core", group: "parasite_protozoa", dailyEligible: true },
   { id: "babesia-microti", canonical: "Babesia microti", kind: "parasite", tier: "usmle_core", group: "parasite_protozoa", dailyEligible: true },
   { id: "trypanosoma-cruzi", canonical: "Trypanosoma cruzi", kind: "parasite", tier: "usmle_core", group: "parasite_protozoa", dailyEligible: true },
@@ -237,6 +243,7 @@ export const PATHOGEN_CATALOG: PathogenCatalogEntry[] = [
   { id: "epidermophyton-floccosum", canonical: "Epidermophyton floccosum", kind: "fungus", tier: "usmle_extended", group: "fungus_dermatophyte", dailyEligible: true },
   { id: "candida-auris", canonical: "Candida auris", kind: "fungus", tier: "rare_bonus", group: "fungus_yeast", dailyEligible: true },
   { id: "talaromyces-marneffei", canonical: "Talaromyces marneffei", kind: "fungus", tier: "rare_bonus", group: "fungus_dimorphic", dailyEligible: true },
+  { id: "paracoccidioides-brasiliensis", canonical: "Paracoccidioides brasiliensis", kind: "fungus", tier: "rare_bonus", group: "fungus_dimorphic", dailyEligible: true },
 ];
 
 export const PATHOGEN_CATALOG_COUNTS = {
