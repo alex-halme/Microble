@@ -431,7 +431,7 @@
         "category": "treatment_response"
       }
     ],
-    "difficulty": "hard",
+    "difficulty": "easy",
     "explanation": "Presentation (fever, pharyngitis, ‘sandpaper’ rash and strawberry tongue) is consistent with toxin‑mediated pharyngotonsillitis. Laboratory identification of a beta‑haemolytic, catalase‑negative, gram‑positive coccus in chains that is bacitracin‑sensitive and PYR‑positive points to Streptococcus pyogenes. Rapid clinical response to penicillin supports the diagnosis. Distinguishing features from other causes of purulent pharyngitis include the characteristic rash and the organism’s bacitracin susceptibility and PYR positivity.",
     "source": "ai_generated",
     "validated": true,
@@ -7338,6 +7338,526 @@
     "source": "ai_generated",
     "validated": true,
     "createdAt": "2026-03-27T21:41:18.254Z",
+    "style": "mgh_case_report",
+    "model": "gpt-5-mini"
+  },
+  {
+    "id": "path-freeplay-trichomonas-vaginalis-medium-1775741474020-4-0",
+    "pathogenId": "trichomonas-vaginalis",
+    "pathogenKind": "parasite",
+    "pool": "freeplay",
+    "hints": [
+      {
+        "order": 1,
+        "text": "A 29-year-old woman presents to a sexual health clinic with a 10-day history of vaginal irritation, intermittent malodorous discharge, and discomfort with intercourse. She describes a yellow-green discharge and mild dysuria; on speculum exam there is copious yellow-green discharge and diffuse vulvovaginal erythema, and she is afebrile.",
+        "category": "presentation"
+      },
+      {
+        "order": 2,
+        "text": "She is otherwise healthy, not pregnant, and started a new male sexual partner about six weeks before symptom onset with inconsistent condom use. She had one prior episode of vaginitis treated empirically two years ago and reports no recent antibiotic use or overseas travel.",
+        "category": "history"
+      },
+      {
+        "order": 3,
+        "text": "High vaginal pH is 5.2. Microscopy of vaginal fluid shows numerous polymorphonuclear leukocytes, no budding yeast on KOH, and no clue cells on wet prep. NAATs for Chlamydia trachomatis and Neisseria gonorrhoeae are negative, and peripheral white cell count is 7.8 × 10^9/L.",
+        "category": "lab"
+      },
+      {
+        "order": 4,
+        "text": "Transvaginal ultrasound shows a normal-sized uterus and ovaries with no adnexal masses or tubo-ovarian abscess. There is no pelvic free fluid and the cervix appears structurally normal apart from superficial mucosal erythema.",
+        "category": "imaging"
+      },
+      {
+        "order": 5,
+        "text": "Her male partner developed urethral discharge and was examined; microscopy of his urethral swab revealed motile, pear-shaped flagellated protozoa. He received partner treatment and his urethral symptoms resolved promptly.",
+        "category": "exposure"
+      }
+    ],
+    "difficulty": "medium",
+    "explanation": "Vaginal discharge with raised vaginal pH and abundant neutrophils with negative tests for yeast and common bacterial STIs points toward a non-bacterial, protozoan cause. Identification of motile, flagellated protozoa on the partner's urethral microscopy and the sexual exposure history confirm a sexually transmitted protozoan infection as the diagnosis for this patient.",
+    "source": "ai_generated",
+    "validated": true,
+    "createdAt": "2026-04-09T13:31:14.020Z",
+    "style": "mgh_case_report",
+    "model": "gpt-5-mini"
+  },
+  {
+    "id": "path-freeplay-treponema-pallidum-easy-1775741480117-3-0",
+    "pathogenId": "treponema-pallidum",
+    "pathogenKind": "bacterium",
+    "pool": "freeplay",
+    "hints": [
+      {
+        "order": 1,
+        "text": "A 24-year-old man presents to an urban sexual health clinic with a 10-day history of a painless ulcer on the distal shaft of the penis. He reports no fever or dysuria, and examination shows a single well-demarcated clean-based ulcer about 1.2 cm in diameter and a firm, non-tender 2 cm left inguinal lymph node.",
+        "category": "presentation"
+      },
+      {
+        "order": 2,
+        "text": "He is otherwise healthy, not on HIV pre-exposure prophylaxis, and had unprotected vaginal intercourse with a new partner three weeks before symptom onset. He denies prior sexually transmitted infection diagnoses and has not taken antibiotics since the exposure.",
+        "category": "history"
+      },
+      {
+        "order": 3,
+        "text": "Dark-field microscopy of lesion exudate showed motile helical organisms with corkscrew motility. A non-specific antibody screening test returned reactive at a titre of 1:32, and a specific confirmatory serologic assay for the suspected pathogen was positive. Peripheral blood count WBC 6.8 × 10^9/L.",
+        "category": "lab"
+      },
+      {
+        "order": 4,
+        "text": "Ultrasound of the groin demonstrated multiple enlarged oval left inguinal lymph nodes, largest 2.1 cm, with preserved fatty hilum and increased vascularity but no fluid collection or abscess.",
+        "category": "imaging"
+      },
+      {
+        "order": 5,
+        "text": "He later learned that the new partner developed a painless genital sore a few days after their encounter and was treated at another clinic with a single intramuscular dose of long-acting penicillin.",
+        "category": "exposure"
+      }
+    ],
+    "difficulty": "easy",
+    "explanation": "A painless genital chancre with non-tender regional lymphadenopathy, motile corkscrew organisms on dark-field microscopy, a reactive non-treponemal titre and a positive confirmatory serologic assay indicate infection with Treponema pallidum. The partner history and response to single-dose long-acting penicillin support this diagnosis.",
+    "source": "ai_generated",
+    "validated": true,
+    "createdAt": "2026-04-09T13:31:20.117Z",
+    "style": "mgh_case_report",
+    "model": "gpt-5-mini"
+  },
+  {
+    "id": "path-freeplay-capnocytophaga-canimorsus-medium-1775741513396-9-0",
+    "pathogenId": "capnocytophaga-canimorsus",
+    "pathogenKind": "bacterium",
+    "pool": "freeplay",
+    "hints": [
+      {
+        "order": 1,
+        "text": "A 58-year-old man presents to the emergency department with 36 hours of fever, progressive confusion, and lightheadedness. He is febrile to 39.2°C, blood pressure 86/52 mmHg, pulse 118 min−1, and has a diffuse petechial rash on both lower limbs and a small area of erythema on the right forearm without obvious purulence.",
+        "category": "presentation"
+      },
+      {
+        "order": 2,
+        "text": "Medical history is notable for splenectomy after motor vehicle trauma 12 years earlier and daily heavy alcohol use. He lives alone, works part time doing maintenance, and reports no chronic immunosuppressive medications.",
+        "category": "history"
+      },
+      {
+        "order": 3,
+        "text": "Laboratory studies show leukocytes 2.3 × 10^9/L, platelets 42 × 10^9/L, lactate 5.8 mmol/L, creatinine 210 μmol/L, C-reactive protein 320 mg/L, and INR 2.1. Two sets of blood cultures flagged positive at 48 hours and Gram stain from broth reveals thin, fusiform Gram-negative rods.",
+        "category": "lab"
+      },
+      {
+        "order": 4,
+        "text": "Contrast CT of the head shows several small cortical and subcortical haemorrhagic lesions consistent with septic embolic infarcts. Ultrasound of the right forearm shows soft tissue oedema but no drainable fluid collection.",
+        "category": "imaging"
+      },
+      {
+        "order": 5,
+        "text": "On further questioning the family reports he was bitten on the right forearm by a neighbour's dog three days before symptom onset; the puncture was small and he rinsed it at home.",
+        "category": "exposure"
+      }
+    ],
+    "difficulty": "medium",
+    "explanation": "Severe sepsis with petechiae, DIC, and septic emboli in an asplenic patient suggests a fulminant bacteremia. Growth of thin fusiform Gram-negative rods from blood cultures together with a recent dog bite points to a fastidious zoonotic organism transmitted by dog bites or saliva. These features make a dog-associated Gram-negative fusiform rod the most likely cause in this case.",
+    "source": "ai_generated",
+    "validated": true,
+    "createdAt": "2026-04-09T13:31:53.396Z",
+    "style": "mgh_case_report",
+    "model": "gpt-5-mini"
+  },
+  {
+    "id": "path-freeplay-trypanosoma-cruzi-hard-1775742668246-4-0",
+    "pathogenId": "trypanosoma-cruzi",
+    "pathogenKind": "parasite",
+    "pool": "freeplay",
+    "hints": [
+      {
+        "order": 1,
+        "text": "A 52-year-old man presents to clinic with nine months of progressive exertional dyspnea and several episodes of near-syncope. He also reports intermittent palpitations and reduced exercise tolerance; on examination blood pressure 100/70 mmHg, irregular pulse 56/min, elevated jugular venous pressure to 6 cm, displaced apical impulse and bilateral ankle pitting oedema.",
+        "category": "presentation"
+      },
+      {
+        "order": 2,
+        "text": "He was born and raised on a small farm in rural Bolivia and emigrated to the city 28 years ago. He has no history of hypertension, diabetes, heavy alcohol use, or coronary artery disease, and no family history of cardiomyopathy.",
+        "category": "history"
+      },
+      {
+        "order": 3,
+        "text": "NT-proBNP is 2 100 ng/L, high-sensitivity troponin T is within reference range, haemoglobin 128 g/L, white cell count 6.2 × 10^9/L, C-reactive protein 4 mg/L. Serologic testing for common viral causes of myocarditis and HIV are negative.",
+        "category": "lab"
+      },
+      {
+        "order": 4,
+        "text": "Transthoracic echocardiography shows a dilated left ventricle with global hypokinesis, LVEF 28% and a discrete thin-walled apical aneurysm with regional akinesis. Coronary angiography demonstrates unobstructed epicardial coronary arteries.",
+        "category": "imaging"
+      },
+      {
+        "order": 5,
+        "text": "On directed questioning he recalls childhood residence in a mud-walled home where nocturnal blood-feeding reduviid insects nested in the walls and household members reported insect bites to the face. A distant cousin who lived in the same village died in middle age of progressive heart failure.",
+        "category": "exposure"
+      }
+    ],
+    "difficulty": "hard",
+    "explanation": "Dilated cardiomyopathy with a discrete apical aneurysm and conduction disturbance in a patient from rural Bolivia strongly suggests chronic infection acquired in childhood from triatomine vector exposure. Normal coronaries and negative viral tests make ischemic and common viral causes unlikely. The epidemiology and cardiac phenotype point to chronic infection by a protozoan transmitted by reduviid insects.",
+    "source": "ai_generated",
+    "validated": true,
+    "createdAt": "2026-04-09T13:51:08.246Z",
+    "style": "mgh_case_report",
+    "model": "gpt-5-mini"
+  },
+  {
+    "id": "path-freeplay-viridans-streptococci-easy-1775742672020-5-0",
+    "pathogenId": "viridans-streptococci",
+    "pathogenKind": "bacterium",
+    "pool": "freeplay",
+    "hints": [
+      {
+        "order": 1,
+        "text": "A 57-year-old man presented with two weeks of low-grade fevers, malaise, and progressive exertional dyspnoea. On arrival his temperature was 38.1°C and cardiac examination revealed a new grade 3/6 holosystolic murmur at the apex radiating to the axilla.",
+        "category": "presentation"
+      },
+      {
+        "order": 2,
+        "text": "He has known mitral valve prolapse with chronic mild regurgitation diagnosed five years earlier and takes no regular cardiovascular medications. He denied intravenous drug use, recent indwelling lines, or recent respiratory infections.",
+        "category": "history"
+      },
+      {
+        "order": 3,
+        "text": "Blood tests showed haemoglobin 102 g/L, white cell count 9.8 × 10^9/L and C-reactive protein 46 mg/L. Two of three sets of blood cultures became positive at 48 hours for gram-positive cocci in chains; colony growth on blood agar showed greenish alpha-haemolysis and the isolates were optochin-resistant.",
+        "category": "lab"
+      },
+      {
+        "order": 4,
+        "text": "Transoesophageal echocardiography demonstrated an 8 mm mobile vegetation attached to the atrial surface of the posterior mitral leaflet with new moderate mitral regurgitation and no periannular abscess.",
+        "category": "imaging"
+      },
+      {
+        "order": 5,
+        "text": "The patient underwent a dental extraction for an abscessed molar 10 days before symptom onset and reported poor dentition without any antibiotic prophylaxis.",
+        "category": "exposure"
+      }
+    ],
+    "difficulty": "easy",
+    "explanation": "Subacute presentation with a new mitral regurgitant murmur, mobile mitral vegetation on TOE, and blood cultures growing alpha-haemolytic, optochin-resistant gram-positive cocci in chains after a recent dental procedure points to viridans streptococci endocarditis. The oral source and organism features explain the clinical picture and guide penicillin-based therapy.",
+    "source": "ai_generated",
+    "validated": true,
+    "createdAt": "2026-04-09T13:51:12.020Z",
+    "style": "mgh_case_report",
+    "model": "gpt-5-mini"
+  },
+  {
+    "id": "path-freeplay-coxiella-burnetii-medium-1775742672691-7-0",
+    "pathogenId": "coxiella-burnetii",
+    "pathogenKind": "bacterium",
+    "pool": "freeplay",
+    "hints": [
+      {
+        "order": 1,
+        "text": "A 54-year-old woman presents to the regional hospital with 3 weeks of persistent fevers, night sweats, increasing fatigue and a dry cough. On arrival she is febrile 38.4°C, heart rate 106/min, blood pressure 118/70 mmHg, oxygen saturation 95% on room air, and examination shows a mechanical valve click with a new soft systolic murmur at the apex and mild right upper quadrant tenderness with palpable hepatomegaly.",
+        "category": "presentation"
+      },
+      {
+        "order": 2,
+        "text": "She underwent mitral valve replacement with a mechanical prosthesis 18 months earlier and takes long-term anticoagulation. She has no history of intravenous drug use, recent dental procedures, or indwelling lines. Symptoms began while she was at home after a short stay away from the city two to five weeks earlier.",
+        "category": "history"
+      },
+      {
+        "order": 3,
+        "text": "Laboratory testing shows white blood cell count 7.4 × 10^9/L, haemoglobin 118 g/L, platelets 160 × 10^9/L, C-reactive protein 96 mg/L, ALT 156 U/L and AST 132 U/L. Three sets of aerobic and anaerobic blood cultures remained sterile after 7 days. Routine respiratory PCR panels and serology for common atypical respiratory pathogens were negative.",
+        "category": "lab"
+      },
+      {
+        "order": 4,
+        "text": "Transthoracic then transoesophageal echocardiography demonstrates a small, poorly mobile echodensity on the sewing ring of the mitral prosthesis with mild paravalvular regurgitation, findings judged suspicious for prosthetic valve infection. Chest radiograph shows a small right lower zone airspace opacity without cavitation.",
+        "category": "imaging"
+      },
+      {
+        "order": 5,
+        "text": "On further questioning she reports assisting with lambing on a small mixed farm four weeks before symptom onset and handled placentas and bedding in an enclosed barn without respiratory protection; the household also consumed unpasteurised goat milk during that visit. This exposure raised suspicion for a zoonotic cause of culture-negative prosthetic valve endocarditis.",
+        "category": "exposure"
+      }
+    ],
+    "difficulty": "medium",
+    "explanation": "Culture-negative prosthetic valve endocarditis with concurrent atypical respiratory symptoms and transaminitis after close contact with parturient small ruminants strongly points to a zoonotic intracellular bacterial cause. The combination of sterile blood cultures, prosthetic valve involvement, and the specific farm exposures supports the diagnosis in this patient.",
+    "source": "ai_generated",
+    "validated": true,
+    "createdAt": "2026-04-09T13:51:12.691Z",
+    "style": "mgh_case_report",
+    "model": "gpt-5-mini"
+  },
+  {
+    "id": "path-freeplay-sarcoptes-scabiei-hard-1775742673062-2-0",
+    "pathogenId": "sarcoptes-scabiei",
+    "pathogenKind": "parasite",
+    "pool": "freeplay",
+    "hints": [
+      {
+        "order": 1,
+        "text": "A 78-year-old woman resident of a long-term care facility presents with an 8-week history of progressive, severe pruritus. The itch is markedly worse at night and has caused poor sleep and repeated scratching. On examination she has widespread excoriated papules and erosions on the trunk and proximal limbs and thick, yellowish crusted plaques with fissuring on both palms. Temperature 37.2°C. She has lost 3 kg and requires help with dressing.",
+        "category": "presentation"
+      },
+      {
+        "order": 2,
+        "text": "Medical history is notable for giant cell arteritis treated with oral prednisolone 30 mg daily for the past 3 months. Facility nursing notes record an initial treatment with a potent topical corticosteroid that gave little benefit. There is no recent travel, no new systemic antibiotics, and no known insect bites.",
+        "category": "history"
+      },
+      {
+        "order": 3,
+        "text": "Full blood count shows WBC 14.8 × 10^9/L with eosinophils 2.9 × 10^9/L and haemoglobin 118 g/L. C-reactive protein is 18 mg/L. A superficial swab from an eroded area grew Staphylococcus aureus sensitive to flucloxacillin.",
+        "category": "lab"
+      },
+      {
+        "order": 4,
+        "text": "Clinical photographs show confluent hyperkeratotic crusted plaques on the palmar surfaces and dorsal hands, with deep fissuring and embedded scale. Bedside dermatoscopy reveals numerous short linear whitish tracks within the thick crusts but no single focal ulcer or necrotic lesion.",
+        "category": "imaging"
+      },
+      {
+        "order": 5,
+        "text": "Over the next two weeks several other residents and two nursing staff reported new-onset nocturnal pruritus. Direct skin scrapings of the crusted plaques examined by light microscopy demonstrated numerous oval arthropod bodies and clusters of eggs within the superficial keratin layer. Facility contacts were screened and symptomatic contacts began topical therapy.",
+        "category": "exposure"
+      }
+    ],
+    "difficulty": "medium",
+    "explanation": "Prolonged systemic corticosteroids and the hyperkeratotic crusted plaques suggest an uncontrolled infestation in an immunosuppressed host. The rapid spread through close contacts in the care home and light microscopy showing multiple mites and eggs in the stratum corneum confirm a contagious burrowing mite infestation. This clinical picture fits the severe, crusted form seen in immunosuppressed residents.",
+    "source": "ai_generated",
+    "validated": true,
+    "createdAt": "2026-04-09T13:51:13.062Z",
+    "style": "mgh_case_report",
+    "model": "gpt-5-mini"
+  },
+  {
+    "id": "path-freeplay-trypanosoma-brucei-medium-1775742673836-3-0",
+    "pathogenId": "trypanosoma-brucei",
+    "pathogenKind": "parasite",
+    "pool": "freeplay",
+    "hints": [
+      {
+        "order": 1,
+        "text": "A 28-year-old man presented to a district hospital with three weeks of intermittent high fevers, worsening frontal headache, and increasing daytime sleepiness with nocturnal insomnia. He returned four weeks ago from a six-week agricultural project in rural central Africa; on exam temperature 38.6 C, a tender 3 cm posterior cervical lymph node, slowed speech, and a mildly broad-based gait were noted.",
+        "category": "presentation"
+      },
+      {
+        "order": 2,
+        "text": "During the trip he slept in simple riverside huts and spent long days clearing brush along riverbanks. He had numerous insect bites, received routine vaccinations before travel, has no chronic illness, and tested HIV negative on screening performed on admission.",
+        "category": "history"
+      },
+      {
+        "order": 3,
+        "text": "Full blood count showed haemoglobin 105 g/L, white cell count 13.2 × 10^9/L, platelets 210 × 10^9/L. Giemsa-stained peripheral blood film revealed motile extracellular flagellated protozoa with an undulating membrane and a single anterior flagellum, about 15–25 µm in length. Lumbar puncture produced CSF with 120 × 10^6/L nucleated cells (lymphocyte predominant), protein 1.2 g/L and glucose 2.2 mmol/L.",
+        "category": "lab"
+      },
+      {
+        "order": 4,
+        "text": "Brain MRI demonstrated diffuse T2 hyperintensity in periventricular white matter and basal ganglia with mild leptomeningeal enhancement, without focal abscess or restricted diffusion. Radiologic impression was meningoencephalitic involvement consistent with an infectious inflammatory process.",
+        "category": "imaging"
+      },
+      {
+        "order": 5,
+        "text": "The patient recalled a painful daytime bite from a large horsefly-like insect while clearing brush, and a small tender ulcer formed at the site and healed over two weeks. Local health workers reported other villagers with progressive sleep disturbance and neurologic decline after identical exposures to that apparent tsetse fly habitat.",
+        "category": "exposure"
+      }
+    ],
+    "difficulty": "medium",
+    "explanation": "The combination of relapsing fevers, posterior cervical lymphadenopathy, neurocognitive decline, motile extracellular flagellated protozoa on blood film, CSF pleocytosis, and a history of daytime bites in rural central Africa supports infection with Trypanosoma brucei. CSF findings and MRI indicate central nervous system involvement requiring stage-appropriate therapy and staging-guided management.",
+    "source": "ai_generated",
+    "validated": true,
+    "createdAt": "2026-04-09T13:51:13.836Z",
+    "style": "mgh_case_report",
+    "model": "gpt-5-mini"
+  },
+  {
+    "id": "path-freeplay-ancylostoma-duodenale-medium-1775742684307-0-0",
+    "pathogenId": "ancylostoma-duodenale",
+    "pathogenKind": "parasite",
+    "pool": "freeplay",
+    "hints": [
+      {
+        "order": 1,
+        "text": "A 29-year-old man presents to a rural clinic with 3 months of progressive fatigue and exertional dyspnoea. He also reports intermittent crampy lower abdominal discomfort and two episodes of dark, loose stools; on exam he is pale, heart rate 108/min, blood pressure 110/68 mmHg with a 12 mmHg orthostatic systolic drop, and a tender erythematous papule on the plantar surface of his right foot.",
+        "category": "presentation"
+      },
+      {
+        "order": 2,
+        "text": "He is a subsistence rice farmer who emigrated from northern India six months earlier and describes daily work barefoot in irrigated paddies. He denies menorrhagia or overt bleeding, took a 4-week course of oral iron prescribed by a primary clinician without symptomatic improvement, and has no chronic medical conditions or regular medications.",
+        "category": "history"
+      },
+      {
+        "order": 3,
+        "text": "Full blood count shows haemoglobin 82 g/L, MCV 68 fL, platelet count 420 × 10^9/L, white cell count 12.1 × 10^9/L with eosinophils 1.6 × 10^9/L. Serum ferritin 8 µg/L and transferrin saturation is low. Two separate stool tests are positive for fecal occult blood.",
+        "category": "lab"
+      },
+      {
+        "order": 4,
+        "text": "A chest radiograph obtained for an intermittent dry cough shows a patchy right lower zone air‑space opacity; the finding resolved on a follow-up radiograph two weeks later. Abdominal ultrasound shows no structural cause for blood loss.",
+        "category": "imaging"
+      },
+      {
+        "order": 5,
+        "text": "He reports handling fresh human night soil used as fertiliser at the fields and sometimes eating uncooked greens from those plots. He brought a 1 cm pale threadlike object he noticed in his stool; duodenal aspirate and stool concentration recovered adult worms whose buccal capsules contained a pair of prominent oral teeth and numerous thin-shelled ovoid eggs on microscopy.",
+        "category": "exposure"
+      }
+    ],
+    "difficulty": "medium",
+    "explanation": "Progressive microcytic anaemia with low ferritin, eosinophilia, transient pulmonary infiltrates and barefoot exposure in an endemic region point to an intestinal blood‑feeding nematode. Visualization of adults with prominent oral teeth in duodenal aspirate confirms Ancylostoma duodenale as the cause of the chronic blood loss and anaemia.",
+    "source": "ai_generated",
+    "validated": true,
+    "createdAt": "2026-04-09T13:51:24.307Z",
+    "style": "mgh_case_report",
+    "model": "gpt-5-mini"
+  },
+  {
+    "id": "path-freeplay-bk-virus-medium-1775742694999-6-0",
+    "pathogenId": "bk-virus",
+    "pathogenKind": "virus",
+    "pool": "freeplay",
+    "hints": [
+      {
+        "order": 1,
+        "text": "A 48-year-old woman presents to the transplant clinic 13 months after a deceased-donor kidney transplant with 3 weeks of progressive oliguria, fatigue and new peripheral oedema. Her blood pressure is 155/95 mmHg and temperature 37.8°C; the transplanted kidney is mildly tender on palpation. Her baseline serum creatinine since discharge was 90 µmol/L, now 320 µmol/L.",
+        "category": "presentation"
+      },
+      {
+        "order": 2,
+        "text": "She takes tacrolimus, mycophenolate mofetil and prednisone for maintenance immunosuppression. Five months ago she had an acute cellular rejection treated with high-dose corticosteroids. She reports no recent urinary tract instrumentation, no current dysuria or obstructive symptoms, and no recent aminoglycosides or radiographic contrast exposure.",
+        "category": "history"
+      },
+      {
+        "order": 3,
+        "text": "Serum WBC 6.5 × 10^9/L, CRP 14 mg/L. Urinalysis shows 1+ protein, microscopic haematuria and pyuria. Urine culture is sterile at 48 hours. Serum creatinine is 320 µmol/L and tacrolimus trough is within the previously targeted range.",
+        "category": "lab"
+      },
+      {
+        "order": 4,
+        "text": "Doppler ultrasound of the allograft demonstrates preserved arterial flow and no hydronephrosis. The cortex is diffusely echogenic and the resistive index is 0.82, findings more suggestive of an intrinsic parenchymal process than obstructive uropathy.",
+        "category": "imaging"
+      },
+      {
+        "order": 5,
+        "text": "Routine transplant surveillance urine nucleic-acid test returns 7.4 × 10^6 copies/mL of viral DNA and plasma viral DNA is 3.8 × 10^4 copies/mL. Urine cytology shows epithelial cells with markedly enlarged hyperchromatic intranuclear inclusions consistent with reactivation of a latent urinary tract virus after immunosuppression.",
+        "category": "exposure"
+      }
+    ],
+    "difficulty": "medium",
+    "explanation": "A renal allograft recipient with rising creatinine, sterile pyuria, high-level viruria and viraemia and viral cytopathic changes is most consistent with BK virus nephropathy from reactivation under immunosuppression. Initial management is reduction of immunosuppression and confirmation with allograft biopsy and viral immunostaining.",
+    "source": "ai_generated",
+    "validated": true,
+    "createdAt": "2026-04-09T13:51:34.999Z",
+    "style": "mgh_case_report",
+    "model": "gpt-5-mini"
+  },
+  {
+    "id": "path-freeplay-eikenella-corrodens-medium-1775742715048-8-0",
+    "pathogenId": "eikenella-corrodens",
+    "pathogenKind": "bacterium",
+    "pool": "freeplay",
+    "hints": [
+      {
+        "order": 1,
+        "text": "A 34-year-old right-handed man presented to the emergency department 48 hours after progressive pain and swelling of the dorsum of his right hand. He was febrile to 38.3°C, had a 1-cm puncture wound over the second metacarpophalangeal joint, marked tenderness with tense soft-tissue swelling, and reduced active extension of the index finger.",
+        "category": "presentation"
+      },
+      {
+        "order": 2,
+        "text": "He was previously healthy, worked as a bartender, smoked about 10 cigarettes per day and drank alcohol socially. He denied diabetes, HIV risk factors, recent dental procedures, immunosuppressive therapy, or prior antibiotics for this problem; he waited two days before seeking care because symptoms seemed minor at first.",
+        "category": "history"
+      },
+      {
+        "order": 3,
+        "text": "White blood cell count 13.8 × 10^9/L and C-reactive protein 110 mg/L. Purulent fluid aspirated from the wound showed numerous polymorphonuclear leukocytes and a small number of thin gram-negative bacilli on Gram stain; aerobic cultures produced pinpoint, slow-growing colonies after 48 hours.",
+        "category": "lab"
+      },
+      {
+        "order": 4,
+        "text": "Plain radiographs demonstrated soft-tissue swelling without gas. MRI of the hand revealed fluid tracking in the extensor tendon sheath of the index finger and cortical irregularity at the second metacarpal consistent with early osteomyelitis.",
+        "category": "imaging"
+      },
+      {
+        "order": 5,
+        "text": "On repeat history he admitted to a bar altercation three days earlier during which his knuckle contacted another person’s mouth. The isolate from the wound was a fastidious, slow-growing gram-negative bacillus that was resistant to clindamycin and metronidazole yet susceptible to ampicillin and third-generation cephalosporins.",
+        "category": "exposure"
+      }
+    ],
+    "difficulty": "medium",
+    "explanation": "A clenched-fist (human bite) injury with progressive hand cellulitis, tenosynovitis and early osteomyelitis plus a fastidious gram-negative bacillus from the wound that is resistant to clindamycin points to an oral-flora pathogen commonly implicated in human bite infections. The growth pattern and susceptibility profile make that organism the most likely cause in this clinical context.",
+    "source": "ai_generated",
+    "validated": true,
+    "createdAt": "2026-04-09T13:51:55.048Z",
+    "style": "mgh_case_report",
+    "model": "gpt-5-mini"
+  },
+  {
+    "id": "path-freeplay-hepatitis-c-virus-hard-1775742758069-1-0",
+    "pathogenId": "hepatitis-c-virus",
+    "pathogenKind": "virus",
+    "pool": "freeplay",
+    "hints": [
+      {
+        "order": 1,
+        "text": "A 54-year-old woman presents to clinic with six months of progressive fatigue, intermittent right upper quadrant discomfort, and new numbness and burning in the soles of both feet. On examination she has scattered palpable purpura over the lower legs and mild, non-tender hepatomegaly; blood pressure 128/78 mmHg, no fever, gait preserved.",
+        "category": "presentation"
+      },
+      {
+        "order": 2,
+        "text": "She reports a history of an emergency blood transfusion after a road traffic collision in 1991 and denies intravenous drug use or heavy alcohol consumption. She has had years of intermittent joint pains and noted darkening of urine several times in the past year, but never required hospital admission for liver disease.",
+        "category": "history"
+      },
+      {
+        "order": 3,
+        "text": "Blood tests show ALT 120 U/L and AST 95 U/L, platelet count 120 × 10^9/L, creatinine 130 μmol/L. Complement C4 is low at 0.06 g/L, rheumatoid factor elevated, and serum cryoglobulins are detected; urinalysis shows proteinuria of 1.4 g/day with microscopic haematuria.",
+        "category": "lab"
+      },
+      {
+        "order": 4,
+        "text": "Abdominal ultrasound demonstrates a heterogenous, slightly nodular liver contour with a 15 cm spleen and mild portal hypertension. Transient elastography measures liver stiffness 16.5 kPa, consistent with advanced fibrosis.",
+        "category": "imaging"
+      },
+      {
+        "order": 5,
+        "text": "Serology returned reactive for antibody against a blood-borne hepatotropic single-stranded RNA virus and nucleic acid amplification detected viral RNA at 2.3 × 10^6 IU/mL. The combination of the remote transfusion exposure and positive serology with detectable viraemia provides the specific infectious link to her chronic liver disease and systemic immune-complex manifestations.",
+        "category": "exposure"
+      }
+    ],
+    "difficulty": "hard",
+    "explanation": "The picture is chronic infection with a blood-borne hepatotropic single-stranded RNA virus acquired by transfusion decades earlier. Ongoing viraemia with elevated transaminases and elastography-proven fibrosis explains the hepatomegaly and portal hypertension. Low C4, positive cryoglobulins, palpable purpura, neuropathy and proteinuric renal involvement reflect immune-complex mediated disease from chronic infection.",
+    "source": "ai_generated",
+    "validated": true,
+    "createdAt": "2026-04-09T13:52:38.070Z",
+    "style": "mgh_case_report",
+    "model": "gpt-5-mini"
+  },
+  {
+    "id": "path-freeplay-gardnerella-vaginalis-medium-1775742772937-9-0",
+    "pathogenId": "gardnerella-vaginalis",
+    "pathogenKind": "bacterium",
+    "pool": "freeplay",
+    "hints": [
+      {
+        "order": 1,
+        "text": "A 28-year-old woman presents to the sexual health clinic with 5 days of increased vaginal discharge and a noticeable malodour that she first noticed after her last period. She has mild vulvar pruritus but no fever or dysuria, is afebrile and hemodynamically stable. On pelvic examination there is a thin, homogenous greyish discharge coating the vaginal walls, the cervix is non-tender and there is no adnexal tenderness.",
+        "category": "presentation"
+      },
+      {
+        "order": 2,
+        "text": "She completed a 7-day course of oral amoxicillin for sinusitis 2 weeks ago and reports intermittent vaginal douching. She has a new male sexual partner this month and uses condoms inconsistently. No history of recent sexually transmitted infection, not pregnant, no intrauterine device in place.",
+        "category": "history"
+      },
+      {
+        "order": 3,
+        "text": "Vaginal pH measured 5.2. A KOH whiff test produced a fishy odour. Wet mount microscopy shows numerous epithelial cells with small bacteria obscuring cell borders, only sparse polymorphonuclear leukocytes and no motile protozoa. Gram stain of the secretion demonstrates many small gram-variable coccobacillary organisms adherent to epithelial cells with reduced lactobacillary morphotypes.",
+        "category": "lab"
+      },
+      {
+        "order": 4,
+        "text": "Transvaginal ultrasound was obtained to exclude pelvic inflammatory disease and shows a normal-sized uterus and ovaries, no free pelvic fluid and no tubo-ovarian complex.",
+        "category": "imaging"
+      },
+      {
+        "order": 5,
+        "text": "She was prescribed oral metronidazole and reported marked reduction of malodour and discharge within 48 hours, with near complete resolution at one week follow-up.",
+        "category": "treatment_response"
+      }
+    ],
+    "difficulty": "medium",
+    "explanation": "The combination of recent broad-spectrum antibiotic exposure and douching, a thin homogenous discharge with pH >4.5 and a positive whiff test, plus epithelial cells coated with small coccobacilli and few neutrophils, points to bacterial vaginosis due to Gardnerella vaginalis. Rapid improvement with oral nitroimidazole supports that diagnosis and the absence of motile protozoa on wet mount argues against trichomoniasis.",
+    "source": "ai_generated",
+    "validated": true,
+    "createdAt": "2026-04-09T13:52:52.937Z",
     "style": "mgh_case_report",
     "model": "gpt-5-mini"
   }

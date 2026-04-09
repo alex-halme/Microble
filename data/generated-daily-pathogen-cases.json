@@ -3845,7 +3845,7 @@
         "category": "lab"
       }
     ],
-    "difficulty": "hard",
+    "difficulty": "medium",
     "explanation": "Immunosuppressed, institutionalized patient with thick hyperkeratotic crusting, low itch, outbreak among contacts, dermoscopic linear burrows, rapid response to oral ivermectin plus keratolysis, and mineral oil scrapings showing numerous small oval arthropods with eggs identifies infection by Sarcoptes scabiei presenting as crusted (Norwegian) infestation. Diagnostic and infection-control measures include confirmatory microscopy, keratolytic removal of crusts, systemic antiparasitic therapy, topical treatment of close contacts, and environmental cleaning.",
     "source": "ai_generated",
     "validated": true,
@@ -4450,6 +4450,574 @@
     "source": "ai_generated",
     "validated": true,
     "createdAt": "2026-03-27T21:30:23.848Z",
+    "style": "mgh_case_report",
+    "model": "gpt-5-mini"
+  },
+  {
+    "id": "path-daily-human-papillomavirus-medium-1775741235509-6-0",
+    "pathogenId": "human-papillomavirus",
+    "pathogenKind": "virus",
+    "pool": "daily",
+    "hints": [
+      {
+        "order": 1,
+        "text": "A 32-year-old nulliparous woman presents to outpatient gynecology with three months of intermittent postcoital spotting and heavier bleeding between menses. On speculum examination there is a 2.5 cm friable, exophytic lesion at the cervical os that bleeds easily on contact.",
+        "category": "presentation"
+      },
+      {
+        "order": 2,
+        "text": "She reports five lifetime sexual partners and a new partner six months ago, never received adolescent vaccination against oncogenic cervical pathogens, and has had no prior abnormal cervical screening tests. She is a current smoker and otherwise well, with no known immunosuppression.",
+        "category": "history"
+      },
+      {
+        "order": 3,
+        "text": "Liquid-based cervical cytology returns as low-grade squamous intraepithelial lesion. Routine full blood count is normal and reflex testing for high-risk oncogenic viral DNA has been requested but not yet resulted.",
+        "category": "lab"
+      },
+      {
+        "order": 4,
+        "text": "Pelvic MRI demonstrates a 2.8 cm contrast-enhancing mass confined to the cervix with intact stromal ring and no parametrial extension or suspicious pelvic lymphadenopathy.",
+        "category": "imaging"
+      },
+      {
+        "order": 5,
+        "text": "Cervical punch biopsy performed in clinic shows squamous epithelial dysplasia with striking koilocytotic change. p16 immunostain is diffusely positive and PCR of the biopsy detects high-risk oncogenic viral DNA.",
+        "category": "exposure"
+      }
+    ],
+    "difficulty": "medium",
+    "explanation": "The combination of a friable exophytic cervical lesion, sexual risk factors, and histology showing koilocytosis with strong p16 expression indicates an oncogenic mucosal DNA virus driving squamous dysplasia. PCR confirmation of high-risk viral DNA from the lesion establishes the viral etiology for her cervical neoplasia.",
+    "source": "ai_generated",
+    "validated": true,
+    "createdAt": "2026-04-09T13:27:15.509Z",
+    "style": "mgh_case_report",
+    "model": "gpt-5-mini"
+  },
+  {
+    "id": "path-daily-enterotoxigenic-escherichia-coli-easy-1775741235926-4-0",
+    "pathogenId": "enterotoxigenic-escherichia-coli",
+    "acceptedOrganismIds": [
+      "enterotoxigenic-escherichia-coli",
+      "escherichia-coli"
+    ],
+    "pathogenKind": "bacterium",
+    "pool": "daily",
+    "hints": [
+      {
+        "order": 1,
+        "text": "A 24-year-old woman presented to the emergency clinic with a 24-hour history of profuse watery diarrhoea and crampy lower abdominal pain. She reported approximately ten watery bowel movements since midnight, felt lightheaded when standing, and had dry mucous membranes; blood pressure was 95/60 mmHg and pulse 110 bpm with an orthostatic drop.",
+        "category": "presentation"
+      },
+      {
+        "order": 2,
+        "text": "She was previously healthy, took no regular medications, and had neither chronic gastrointestinal disease nor recent antibiotic use. She denied blood in the stool and had minimal vomiting, no fever, and symptoms began abruptly without a prodrome.",
+        "category": "history"
+      },
+      {
+        "order": 3,
+        "text": "Blood tests showed WBC 8.5 × 10^9/L, sodium 130 mmol/L, bicarbonate 18 mmol/L, creatinine 95 µmol/L. Stool microscopy showed no fecal leukocytes; culture on MacConkey produced lactose-fermenting, oxidase-negative colonies, and a multiplex PCR on the stool detected plasmid-encoded heat-labile and heat-stable enterotoxin genes.",
+        "category": "lab"
+      },
+      {
+        "order": 4,
+        "text": "Point-of-care abdominal ultrasound demonstrated increased small-bowel intraluminal fluid and hyperperistalsis without colonic wall thickening, free fluid, or other focal intra-abdominal pathology.",
+        "category": "imaging"
+      },
+      {
+        "order": 5,
+        "text": "Three days before presentation she returned from a two-week volunteer stay in a coastal village where she drank beverages with local ice and regularly ate street-prepared corn tortillas, salsa and salads; several other volunteers reported brief watery diarrhoea after the same foods.",
+        "category": "exposure"
+      }
+    ],
+    "difficulty": "easy",
+    "explanation": "The patient has acute, non-bloody, traveller-associated watery diarrhoea with signs of mild volume depletion, absence of fecal leukocytes, lactose-fermenting colonies consistent with an enteric Enterobacteriaceae, and detection of plasmid-encoded heat-labile and heat-stable enterotoxin genes. Together these findings support enterotoxin-producing enteric coli acquired from contaminated food or drink as the cause.",
+    "source": "ai_generated",
+    "validated": true,
+    "createdAt": "2026-04-09T13:27:15.926Z",
+    "style": "mgh_case_report",
+    "model": "gpt-5-mini"
+  },
+  {
+    "id": "path-daily-dengue-virus-medium-1775741236232-2-0",
+    "pathogenId": "dengue-virus",
+    "pathogenKind": "virus",
+    "pool": "daily",
+    "hints": [
+      {
+        "order": 1,
+        "text": "A 28-year-old previously healthy woman presents to an urban clinic with 3 days of high fever, severe myalgias and a frontal headache. She returned from a two-week visit to a coastal city in Southeast Asia 6 days earlier and is febrile to 39.5°C, pulse 110/min, blood pressure 100/60 mmHg, with diffuse blanching maculopapular rash on the trunk and mild conjunctival injection.",
+        "category": "presentation"
+      },
+      {
+        "order": 2,
+        "text": "She has no chronic medical conditions and is not pregnant. She took over-the-counter ibuprofen for myalgias for two days before presentation and reports one episode of mild gum bleeding the morning of admission but no melena or haematemesis. She recalls multiple mosquito bites during the trip and had a similar self-limited febrile illness after travel two years ago.",
+        "category": "history"
+      },
+      {
+        "order": 3,
+        "text": "Initial blood tests show leukopenia with white cell count 3.2 × 10^9/L, thrombocytopenia with platelets 75 × 10^9/L and hemoconcentration with haematocrit 0.48 L/L. Serum AST 150 U/L, ALT 110 U/L. Coagulation screen is within institutional limits apart from a mildly prolonged APTT.",
+        "category": "lab"
+      },
+      {
+        "order": 4,
+        "text": "Point-of-care ultrasound shows a small right pleural effusion and minimal free fluid in the hepatorenal recess. Focused abdominal ultrasound demonstrates gallbladder wall thickening measuring 8 mm without biliary stones.",
+        "category": "imaging"
+      },
+      {
+        "order": 5,
+        "text": "On hospital day 4 serum nonstructural protein 1 antigen returned positive and PCR detected single-stranded positive-sense RNA consistent with the circulating outbreak strain from the region visited.",
+        "category": "exposure"
+      }
+    ],
+    "difficulty": "medium",
+    "explanation": "Travel-acquired febrile illness with marked myalgia, leukopenia, thrombocytopenia, hemoconcentration and sonographic evidence of plasma leakage strongly suggests infection with dengue virus. A positive NS1 antigen and RNA by PCR on day 4 confirm acute infection in this clinical context.",
+    "source": "ai_generated",
+    "validated": true,
+    "createdAt": "2026-04-09T13:27:16.232Z",
+    "style": "mgh_case_report",
+    "model": "gpt-5-mini"
+  },
+  {
+    "id": "path-daily-hepatitis-b-virus-medium-1775741241664-5-0",
+    "pathogenId": "hepatitis-b-virus",
+    "pathogenKind": "virus",
+    "pool": "daily",
+    "hints": [
+      {
+        "order": 1,
+        "text": "A 28-year-old previously well man presents to the emergency department with 10 days of fatigue, anorexia and nausea and two days of dark urine and yellowing of the eyes. He reports low-grade fever and right upper quadrant discomfort. On examination he is afebrile at triage, has scleral icterus, a tender liver palpable 2 cm below the right costal margin and no peripheral stigmata of chronic liver disease.",
+        "category": "presentation"
+      },
+      {
+        "order": 2,
+        "text": "He returned six weeks ago from a month-long trip to Southeast Asia where he had a dental extraction in a local clinic. He reports one new sexual partner about seven weeks ago and says he never received the routine childhood vaccine against the viral hepatitis targeted by that programme. He denies injecting drug use, prior liver disease or recent acetaminophen overdose.",
+        "category": "history"
+      },
+      {
+        "order": 3,
+        "text": "Liver tests show ALT 2 300 U/L, AST 1 480 U/L, total bilirubin 145 µmol/L and INR 1.4. Full blood count is within normal limits with platelets 210 × 10^9/L. Acute serology for common hepatotropic viruses was requested and results were pending at that time.",
+        "category": "lab"
+      },
+      {
+        "order": 4,
+        "text": "Right upper quadrant ultrasound demonstrates hepatomegaly with periportal oedema and increased parenchymal echogenicity. Common bile duct and intrahepatic ducts are not dilated and there is no focal hepatic lesion.",
+        "category": "imaging"
+      },
+      {
+        "order": 5,
+        "text": "Serology returned showing a detectable viral surface antigen together with IgM directed against the viral core antigen. Quantitative viral DNA PCR is 8.5 × 10^7 IU/mL. Given high viral load and signs of acute hepatic injury he was counselled and started on oral antiviral therapy.",
+        "category": "exposure"
+      }
+    ],
+    "difficulty": "medium",
+    "explanation": "The subacute onset of jaundice and very high transaminases after a recent sexual and invasive dental exposure in an unvaccinated adult points to an acute infection with a hepatotropic DNA virus. Detection of a viral surface antigen with core-directed IgM and a high viral DNA load confirms acute primary infection and explains the hepatic dysfunction.",
+    "source": "ai_generated",
+    "validated": true,
+    "createdAt": "2026-04-09T13:27:21.664Z",
+    "style": "mgh_case_report",
+    "model": "gpt-5-mini"
+  },
+  {
+    "id": "path-daily-enterohemorrhagic-escherichia-coli-easy-1775741242930-3-0",
+    "pathogenId": "enterohemorrhagic-escherichia-coli",
+    "acceptedOrganismIds": [
+      "enterohemorrhagic-escherichia-coli",
+      "escherichia-coli"
+    ],
+    "pathogenKind": "bacterium",
+    "pool": "daily",
+    "hints": [
+      {
+        "order": 1,
+        "text": "A 19-year-old university student presented to the campus health clinic with 48 hours of severe cramping abdominal pain and frequent bloody diarrhoea. She reported 8 to 10 bowel movements in the prior 24 hours, lightheadedness when standing, pulse 110 beats per minute, blood pressure 98/60 mmHg, afebrile, and examination showed diffuse abdominal tenderness without peritoneal signs.",
+        "category": "presentation"
+      },
+      {
+        "order": 2,
+        "text": "Previously well, no chronic medical conditions, not pregnant, and taking no regular medications. Illness began suddenly 2 days after the weekend, she denied prior antibiotic use and had not taken antimotility agents before presentation.",
+        "category": "history"
+      },
+      {
+        "order": 3,
+        "text": "Admission bloods showed leukocytosis with white cell count 15.2 × 10^9/L, haemoglobin 135 g/L, platelets 210 × 10^9/L, creatinine 78 μmol/L. Stool microscopy revealed numerous red blood cells and polymorphonuclear cells and a fecal occult blood test was positive.",
+        "category": "lab"
+      },
+      {
+        "order": 4,
+        "text": "Contrast CT abdomen demonstrated segmental circumferential thickening and submucosal oedema of the descending colon and sigmoid colon, without perforation or abscess, consistent with acute colitis.",
+        "category": "imaging"
+      },
+      {
+        "order": 5,
+        "text": "Public health interview revealed she ate undercooked ground beef at a campus barbecue two days before symptom onset and several classmates had similar bloody diarrhoea. Residual meat tested by the public health laboratory and her stool were positive for a gene encoding a Shiga-family toxin, and she was managed supportively without antibiotics.",
+        "category": "exposure"
+      }
+    ],
+    "difficulty": "easy",
+    "explanation": "The combination of abrupt bloody diarrhoea after undercooked ground beef, colonic inflammatory changes, and detection of a Shiga-family toxin points to an enterohemorrhagic strain of Escherichia coli. Supportive management and avoidance of antibiotics were chosen because antimicrobial therapy can increase risk of haemolytic uraemic complications in this infection.",
+    "source": "ai_generated",
+    "validated": true,
+    "createdAt": "2026-04-09T13:27:22.930Z",
+    "style": "mgh_case_report",
+    "model": "gpt-5-mini"
+  },
+  {
+    "id": "path-daily-respiratory-syncytial-virus-hard-1775741251444-7-0",
+    "pathogenId": "respiratory-syncytial-virus",
+    "pathogenKind": "virus",
+    "pool": "daily",
+    "hints": [
+      {
+        "order": 1,
+        "text": "A 31-year-old man with newly diagnosed acute lymphoblastic leukaemia was admitted with five days of nasal congestion and dry cough, then 48 hours of increasing dyspnoea and wheeze. He is day 12 after induction chemotherapy, febrile to 38.3°C on arrival, tachypnoeic and hypoxic with oxygen saturation 88% on room air and diffuse expiratory wheeze on auscultation.",
+        "category": "presentation"
+      },
+      {
+        "order": 2,
+        "text": "He received high-dose corticosteroids as part of induction and has profound treatment-related marrow suppression. His partner is a childcare worker and he reports close daily contact over the preceding week with a 9-month-old niece who had been treated at the paediatric unit for bronchiolitis.",
+        "category": "history"
+      },
+      {
+        "order": 3,
+        "text": "Complete blood count shows WBC 0.9 × 10^9/L with neutrophils 0.2 × 10^9/L and lymphocytes 0.1 × 10^9/L. Blood cultures remain sterile at 48 hours. Multiplex respiratory PCR on a nasopharyngeal aspirate returned a single positive viral target with a quantitative result of 1.2 × 10^7 copies/mL, and bacterial sputum culture showed no growth.",
+        "category": "lab"
+      },
+      {
+        "order": 4,
+        "text": "High-resolution CT chest shows diffuse peribronchial cuffing, bilateral perihilar patchy air-space consolidation and centrilobular nodules without lobar collapse or focal cavitation, changes most consistent with small-airway viral bronchiolitis and viral pneumonitis rather than bacterial lobar pneumonia.",
+        "category": "imaging"
+      },
+      {
+        "order": 5,
+        "text": "Infection control notified the team of a recent paediatric ward cluster: six infants with bronchiolitis had positive rapid immunofluorescent tests on nasopharyngeal washings; laboratory cytology from those washes demonstrated multinucleated epithelial syncytia with strong staining for the viral fusion protein targeted by the hospital assay. The timing and the infant cluster provide the most discriminating link to the patient’s illness.",
+        "category": "exposure"
+      }
+    ],
+    "difficulty": "hard",
+    "explanation": "An immunocompromised adult with small-airway viral pneumonitis, high nasopharyngeal viral load, and recent close contact with infants from a bronchiolitis ward cluster points to the seasonal bronchiolitogenic respiratory virus. The cytologic finding of multinucleated epithelial cells with positive immunofluorescent staining for the virus' fusion protein in the infant cluster is the confirming epidemiologic clue. Together these findings identify the viral cause responsible for severe bronchiolitis in infants and serious lower respiratory disease in immunosuppressed adults.",
+    "source": "ai_generated",
+    "validated": true,
+    "createdAt": "2026-04-09T13:27:31.444Z",
+    "style": "mgh_case_report",
+    "model": "gpt-5-mini"
+  },
+  {
+    "id": "path-daily-sporothrix-schenckii-medium-1775741368353-8-0",
+    "pathogenId": "sporothrix-schenckii",
+    "pathogenKind": "fungus",
+    "pool": "daily",
+    "hints": [
+      {
+        "order": 1,
+        "text": "A 52-year-old woman presents to the outpatient clinic with a 5-week history of a slowly enlarging lesion on the dorsal aspect of her right index finger. It began after a minor puncture, now measures about 1.8 cm with a shallow central ulcer, raised violaceous border, mild serous drainage, and a single small tender subcutaneous nodule at the wrist; she is afebrile and has preserved finger motion.",
+        "category": "presentation"
+      },
+      {
+        "order": 2,
+        "text": "She has type 2 diabetes with recent HbA1c 7.8% and takes metformin. Primary care prescribed two courses of oral flucloxacillin without improvement and no systemic symptoms developed over the course of weeks.",
+        "category": "history"
+      },
+      {
+        "order": 3,
+        "text": "Blood tests show WBC 7.6 × 10^9/L and C-reactive protein 12 mg/L. Excisional biopsy of the finger lesion demonstrated chronic granulomatous inflammation with multinucleated giant cells; Gram and Ziehl-Neelsen stains were negative and periodic acid Schiff stain showed rare yeast-like forms. Routine bacterial and mycobacterial cultures remained sterile at 7 days; fungal culture was submitted.",
+        "category": "lab"
+      },
+      {
+        "order": 4,
+        "text": "Ultrasound of the forearm shows multiple small, discrete hypoechoic subcutaneous nodules forming a linear chain from the wrist toward the mid-forearm, confined to the superficial soft tissues without tendon or bone involvement.",
+        "category": "imaging"
+      },
+      {
+        "order": 5,
+        "text": "On further questioning she reports pruning roses and sustaining a thorn prick to that finger three days before the lesion appeared and that she had recently handled a bag of sphagnum moss while repotting plants. After 10 days the submitted fungal culture grew a slow-forming mould at 25 °C and converted to narrow, cigar-shaped yeast forms at 37 °C on subculture.",
+        "category": "exposure"
+      }
+    ],
+    "difficulty": "medium",
+    "explanation": "Subacute cutaneous ulcer after a thorn puncture with linear nodular spread along lymphatics, granulomatous inflammation on biopsy, and isolation of a thermally dimorphic fungus that forms cigar-shaped yeasts is consistent with infection by Sporothrix schenckii. The occupational gardening exposure and failure of beta-lactam therapy further support this diagnosis.",
+    "source": "ai_generated",
+    "validated": true,
+    "createdAt": "2026-04-09T13:29:28.353Z",
+    "style": "mgh_case_report",
+    "model": "gpt-5-mini"
+  },
+  {
+    "id": "path-daily-bartonella-henselae-medium-1775742429764-7-0",
+    "pathogenId": "bartonella-henselae",
+    "pathogenKind": "bacterium",
+    "pool": "daily",
+    "hints": [
+      {
+        "order": 1,
+        "text": "A 26-year-old previously healthy woman presents with three weeks of progressive left axillary swelling and intermittent low-grade fevers. The swelling limits shoulder movement, and on examination there is a 4 cm tender, warm, matted lymph node in the left axilla with an overlying faint erythematous patch, temperature 37.9 °C.",
+        "category": "presentation"
+      },
+      {
+        "order": 2,
+        "text": "Symptoms began insidiously and she completed a seven-day course of an oral beta-lactam prescribed in primary care with minimal change. She has no chronic illness, takes no regular medications, denies recent travel, known tuberculosis contact, or high-risk sexual exposures.",
+        "category": "history"
+      },
+      {
+        "order": 3,
+        "text": "Blood tests show WBC 12.3 × 10^9/L, neutrophils 8.5 × 10^9/L, CRP 48 mg/L. Two sets of peripheral blood cultures remain sterile at 72 hours. Fine needle aspirate of the node yielded scant purulent fluid, Gram stain without organisms, and routine culture negative.",
+        "category": "lab"
+      },
+      {
+        "order": 4,
+        "text": "Ultrasound of the axilla demonstrates a 4.2 cm complex lymph node with central hypoechogenicity and peripheral vascularity, compatible with necrotic lymphadenitis. No other abnormal nodes are seen on focused CT of the chest and axilla.",
+        "category": "imaging"
+      },
+      {
+        "order": 5,
+        "text": "On directed questioning she recalls being scratched on the left forearm by an unfamiliar kitten about three weeks before onset, with a small papule at the scratch site that healed. Household exposure to cats was confirmed.",
+        "category": "exposure"
+      }
+    ],
+    "difficulty": "medium",
+    "explanation": "Regional tender axillary lymphadenitis after a kitten scratch, sterile routine cultures from node aspirate, and ultrasound evidence of central necrosis point to infection with the cat-associated fastidious organism that causes localized lymphadenopathy. Lack of response to a beta-lactam and the temporal relationship to the scratch support this diagnosis.",
+    "source": "ai_generated",
+    "validated": true,
+    "createdAt": "2026-04-09T13:47:09.764Z",
+    "style": "mgh_case_report",
+    "model": "gpt-5-mini"
+  },
+  {
+    "id": "path-daily-viridans-streptococci-easy-1775742431774-4-0",
+    "pathogenId": "viridans-streptococci",
+    "pathogenKind": "bacterium",
+    "pool": "daily",
+    "hints": [
+      {
+        "order": 1,
+        "text": "A 56-year-old man presented with three weeks of low-grade fevers, fatigue, night sweats and progressive exertional dyspnoea. On examination he was febrile 38.3°C, heart rate 96/min, and had a new holosystolic murmur best heard at the apex with palpable splenomegaly 3 cm below the costal margin.",
+        "category": "presentation"
+      },
+      {
+        "order": 2,
+        "text": "He has known degenerative mitral valve prolapse diagnosed five years earlier and otherwise good health. Two weeks before symptom onset he underwent an uncomplicated extraction of an infected lower molar; he denied intravenous drug use and had no prior valve surgery.",
+        "category": "history"
+      },
+      {
+        "order": 3,
+        "text": "Blood tests showed WBC 11.5 × 10^9/L and CRP 78 mg/L. Three separate blood culture sets became positive within 48 hours for Gram-positive cocci in chains; colonies on blood agar produced a greenish zone consistent with alpha-haemolysis and were resistant to optochin.",
+        "category": "lab"
+      },
+      {
+        "order": 4,
+        "text": "Transoesophageal echocardiography identified an 8 mm mobile vegetation on the posterior mitral leaflet with new moderate mitral regurgitation and no periannular complication.",
+        "category": "imaging"
+      },
+      {
+        "order": 5,
+        "text": "High-dose intravenous benzylpenicillin was started and fevers subsided within 48 hours; repeat blood cultures after 72 hours of therapy were sterile. The laboratory final report described a penicillin-susceptible, alpha-haemolytic, optochin-resistant oral-flora organism and the patient completed six weeks of targeted therapy with clinical cure.",
+        "category": "treatment_response"
+      }
+    ],
+    "difficulty": "easy",
+    "explanation": "Subacute native mitral valve endocarditis following a recent dental extraction with multiple blood cultures yielding alpha-haemolytic, optochin-resistant Gram-positive cocci in chains that are penicillin-sensitive indicates viridans streptococci as the most likely pathogen.",
+    "source": "ai_generated",
+    "validated": true,
+    "createdAt": "2026-04-09T13:47:11.774Z",
+    "style": "mgh_case_report",
+    "model": "gpt-5-mini"
+  },
+  {
+    "id": "path-daily-acinetobacter-baumannii-hard-1775742439903-5-0",
+    "pathogenId": "acinetobacter-baumannii",
+    "pathogenKind": "bacterium",
+    "pool": "daily",
+    "hints": [
+      {
+        "order": 1,
+        "text": "A 49-year-old previously independent man presented 9 days after a motorway collision with fever and a painful draining wound over his left tibia. He is on the orthopaedic ward, temperature 38.9°C, heart rate 112/min, blood pressure 105/66 mmHg, and the external-fixator site has greyish purulent discharge and surrounding erythema extending several centimetres.",
+        "category": "presentation"
+      },
+      {
+        "order": 2,
+        "text": "At the referring hospital he underwent irrigation and external fixation of an open tibial fracture, required intubation for 4 days for pulmonary contusion, and received intravenous cefuroxime for 48 hours then piperacillin-tazobactam for a presumed ventilator-associated chest infection. He has no chronic liver or renal disease, no diabetes, and no recent travel outside the region.",
+        "category": "history"
+      },
+      {
+        "order": 3,
+        "text": "White blood cell count 16.5 × 10^9/L, C-reactive protein 182 mg/L. A wound swab Gram stain showed pleomorphic Gram-negative coccobacillary organisms in heavy growth. Two sets of blood cultures were drawn and are pending.",
+        "category": "lab"
+      },
+      {
+        "order": 4,
+        "text": "CT of the lower leg demonstrates a fluid collection tracking along the external-fixator tract with cortical irregularity of the tibial diaphysis and periosteal reaction consistent with early contiguous osteomyelitis around the pin sites. There is no radiographic evidence of intrathoracic infection.",
+        "category": "imaging"
+      },
+      {
+        "order": 5,
+        "text": "Definitive cultures from the wound and one blood culture grew an oxidase-negative, non-lactose-fermenting Gram-negative coccobacillus. Antimicrobial susceptibility showed resistance to cephalosporins, carbapenems, fluoroquinolones and aminoglycosides, with retained susceptibility only to polymyxin and tigecycline. The same organism was recovered from the dressing trolley and ward sink at the referring hospital.",
+        "category": "exposure"
+      }
+    ],
+    "difficulty": "hard",
+    "explanation": "Nosocomial multidrug-resistant Gram-negative coccobacilli causing wound and bloodstream infection after trauma and ICU care, plus recovery from hospital surfaces, indicate a healthcare-associated environmental organism. The resistance profile and propensity to persist on dry surfaces support a diagnosis of Acinetobacter baumannii infection. Early hardware involvement explains the osteomyelitis and need to target therapy and infection control.",
+    "source": "ai_generated",
+    "validated": true,
+    "createdAt": "2026-04-09T13:47:19.903Z",
+    "style": "mgh_case_report",
+    "model": "gpt-5-mini"
+  },
+  {
+    "id": "path-daily-trypanosoma-cruzi-hard-1775742440036-3-0",
+    "pathogenId": "trypanosoma-cruzi",
+    "pathogenKind": "parasite",
+    "pool": "daily",
+    "hints": [
+      {
+        "order": 1,
+        "text": "A 54-year-old man presents to the cardiology clinic with nine months of progressive exertional dyspnoea and two episodes of syncope this month. He also reports orthopnea and reduced exercise tolerance; on examination his pulse is 42 beats per minute, blood pressure 110/70 mmHg, jugular venous pressure is elevated, and there is a laterally displaced apex beat with bibasilar crackles.",
+        "category": "presentation"
+      },
+      {
+        "order": 2,
+        "text": "He has no history of hypertension or diabetes and denies prior myocardial infarction. Three years ago he received a permanent pacemaker for complete atrioventricular block, and over the last two years he has developed progressive dysphagia to solids with nocturnal regurgitation and weight loss of 4 kg.",
+        "category": "history"
+      },
+      {
+        "order": 3,
+        "text": "Full blood count normal with white cell count 6.2 × 10^9/L and haemoglobin 132 g/L. BNP is 910 ng/L, high-sensitivity troponin is within reference range, and serology returned strongly positive for parasite-specific IgG by two independent assays; blood PCR intermittently detected parasite DNA.",
+        "category": "lab"
+      },
+      {
+        "order": 4,
+        "text": "Transthoracic echocardiography shows a markedly dilated left ventricle, left ventricular ejection fraction 28%, and a thin-walled apical aneurysmal segment with an attached mural thrombus. Chest radiograph confirms cardiomegaly and ECG (prior to pacemaker) demonstrated complete heart block and right bundle-branch conduction delay.",
+        "category": "imaging"
+      },
+      {
+        "order": 5,
+        "text": "He was born and raised in a rural highland community in Bolivia and lived in a mud-adobe house with cracked walls and thatch roofing until emigrating 24 years ago. As a child he recalled frequent nocturnal insect bites to the face and several older relatives died of progressive heart failure in middle age.",
+        "category": "exposure"
+      }
+    ],
+    "difficulty": "hard",
+    "explanation": "Chronic infection with Trypanosoma cruzi explains the combination of non-ischaemic dilated cardiomyopathy with a classic left ventricular apical aneurysm, conduction system disease requiring a pacemaker, chronic oesophageal dysphagia from enteric nervous system damage, and positive parasite serology/PCR in a patient from rural Bolivia. Ischaemic disease is less likely given the clinical history and lack of coronary risk factors. The exposure history and family clustering support chronic acquisition in childhood.",
+    "source": "ai_generated",
+    "validated": true,
+    "createdAt": "2026-04-09T13:47:20.036Z",
+    "style": "mgh_case_report",
+    "model": "gpt-5-mini"
+  },
+  {
+    "id": "path-daily-actinomyces-israelii-medium-1775742470724-6-0",
+    "pathogenId": "actinomyces-israelii",
+    "pathogenKind": "bacterium",
+    "pool": "daily",
+    "hints": [
+      {
+        "order": 1,
+        "text": "A 46-year-old man presented to the ambulatory clinic with a 6-week history of progressive left submandibular swelling and intermittent purulent drainage. The mass is firm, mildly tender, and has produced two small cutaneous sinuses over the past 2 weeks; he reports difficulty opening his mouth and has lost 3 kg since symptoms began.",
+        "category": "presentation"
+      },
+      {
+        "order": 2,
+        "text": "His past medical history includes type 2 diabetes with recent HbA1c 8.2% and a 20 pack-year smoking history. He had a short 5-day course of oral cephalexin prescribed by his general practitioner without improvement, takes no immunosuppressive medication, and denies recent travel or animal bites.",
+        "category": "history"
+      },
+      {
+        "order": 3,
+        "text": "Blood tests showed WBC 12.6 × 10^9/L and CRP 48 mg/L, random plasma glucose 12.1 mmol/L. An aspirate from one sinus was sent for culture; aerobic swab grew mixed oral streptococci, Gram stain of the purulent fluid demonstrated many neutrophils and no acid-fast bacilli, and routine aerobic cultures remained sterile at 48 hours.",
+        "category": "lab"
+      },
+      {
+        "order": 4,
+        "text": "Contrast CT of the neck demonstrated a multiloculated low-density collection in the left submandibular and submental spaces that tracked across fascial planes with multiple cutaneous sinus tracts and focal cortical erosion of the adjacent mandible.",
+        "category": "imaging"
+      },
+      {
+        "order": 5,
+        "text": "On return visit the sinuses discharged thick yellowish granular material; the patient then recalled a difficult lower molar extraction about 10 weeks before symptom onset. The granules were submitted for anaerobic culture and after prolonged incubation yielded a slow-growing filamentous gram-positive anaerobe with susceptibility to penicillin.",
+        "category": "exposure"
+      }
+    ],
+    "difficulty": "medium",
+    "explanation": "A chronic, slowly progressive cervicofacial mass that crosses fascial planes and produces cutaneous sinuses after recent dental manipulation suggests infection by an oral anaerobic filamentous organism. The presence of yellow granular discharge and isolation of a slow-growing filamentous gram-positive anaerobe sensitive to penicillin supports that diagnosis in this patient.",
+    "source": "ai_generated",
+    "validated": true,
+    "createdAt": "2026-04-09T13:47:50.724Z",
+    "style": "mgh_case_report",
+    "model": "gpt-5-mini"
+  },
+  {
+    "id": "path-daily-bk-virus-medium-1775742549510-9-0",
+    "pathogenId": "bk-virus",
+    "pathogenKind": "virus",
+    "pool": "daily",
+    "hints": [
+      {
+        "order": 1,
+        "text": "A 49-year-old man presents to clinic with a 6-week history of progressive fatigue and reduced urine output following a kidney transplant. He reports one episode of visible haematuria, has lost appetite, and on examination his blood pressure is 150/92 mmHg with mild tenderness over the right iliac fossa at the transplant site.",
+        "category": "presentation"
+      },
+      {
+        "order": 2,
+        "text": "End-stage kidney disease from hypertensive nephrosclerosis. He received a deceased-donor renal transplant 9 months ago and is on tacrolimus, mycophenolate mofetil and prednisolone. He had a steroid-treated acute cellular rejection episode 3 months ago but no recent urinary tract instrumentation.",
+        "category": "history"
+      },
+      {
+        "order": 3,
+        "text": "Serum creatinine has risen from a baseline of 90 µmol/L to 210 µmol/L. Urinalysis shows 15–20 RBC/HPF and 10–15 WBC/HPF with negative routine bacterial culture. Tacrolimus trough is within target range.",
+        "category": "lab"
+      },
+      {
+        "order": 4,
+        "text": "Doppler ultrasound of the graft shows preserved arterial flow and no hydronephrosis. There is no perinephric fluid collection and kidney size is slightly reduced compared with immediate post-transplant imaging.",
+        "category": "imaging"
+      },
+      {
+        "order": 5,
+        "text": "Quantitative plasma viral DNA assay reports 6.4 × 10^4 copies/mL. Urine cytology shows epithelial cells with large basophilic intranuclear inclusions and renal allograft biopsy demonstrates tubulointerstitial nephritis with viral inclusion-positive nuclei on SV40 immunostain.",
+        "category": "exposure"
+      }
+    ],
+    "difficulty": "medium",
+    "explanation": "Reactivation of a polyomavirus that targets renal tubular epithelium explains rising creatinine, sterile pyuria, haematuria and positive urine cytology after transplant. High plasma viral DNA and SV40 positive inclusions on graft biopsy confirm the diagnosis of BK virus nephropathy, which is managed primarily by reducing immunosuppression.",
+    "source": "ai_generated",
+    "validated": true,
+    "createdAt": "2026-04-09T13:49:09.510Z",
+    "style": "mgh_case_report",
+    "model": "gpt-5-mini"
+  },
+  {
+    "id": "path-daily-bartonella-quintana-hard-1775742611925-8-0",
+    "pathogenId": "bartonella-quintana",
+    "pathogenKind": "bacterium",
+    "pool": "daily",
+    "hints": [
+      {
+        "order": 1,
+        "text": "A 47-year-old man presented to the emergency department with three weeks of low-grade fevers, progressive fatigue, and exertional dyspnea. He reported a 5 kg weight loss and night sweats; on examination temperature was 38.1°C, he had pallor, a new early diastolic decrescendo murmur at the left sternal border and a palpable spleen 2 cm below the costal margin.",
+        "category": "presentation"
+      },
+      {
+        "order": 2,
+        "text": "He has a history of alcohol dependence and has been sleeping intermittently in crowded shelters and rough sleeping over the past six months. He denied intravenous drug use and had no prosthetic cardiac material; he had poor dentition but no recent dental procedures and a rapid HIV test on admission was negative.",
+        "category": "history"
+      },
+      {
+        "order": 3,
+        "text": "Haematology and inflammatory markers showed haemoglobin 86 g/L, white cell count 8.6 × 10^9/L, platelets 160 × 10^9/L, CRP 98 mg/L and ESR 68 mm/h. Three separate sets of routine aerobic and anaerobic blood cultures incubated for five days remained negative.",
+        "category": "lab"
+      },
+      {
+        "order": 4,
+        "text": "Transoesophageal echocardiography demonstrated a 12 mm mobile vegetation on the aortic valve with cusp perforation and moderate to severe regurgitation, prompting urgent surgery. Contrast CT of the abdomen showed two small wedge-shaped splenic infarcts consistent with embolic phenomena.",
+        "category": "imaging"
+      },
+      {
+        "order": 5,
+        "text": "Social work inspection of his belongings documented numerous body lice on clothing and recent lice bites; he had months of incomplete access to laundry and showers. Microbiology of the excised valve tissue returned PCR positivity for DNA from a fastidious intracellular gram-negative bacillus known to be transmitted by body lice.",
+        "category": "exposure"
+      }
+    ],
+    "difficulty": "hard",
+    "explanation": "The combination of subacute culture-negative endocarditis with valve destruction, embolic splenic infarcts, chronic anaemia, prolonged exposure to body lice and PCR confirmation from valve tissue is most consistent with infection by Bartonella quintana. Routine blood cultures are often negative and diagnosis frequently requires molecular testing of tissue in this epidemiological context.",
+    "source": "ai_generated",
+    "validated": true,
+    "createdAt": "2026-04-09T13:50:11.925Z",
     "style": "mgh_case_report",
     "model": "gpt-5-mini"
   }

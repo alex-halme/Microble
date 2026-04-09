@@ -282,6 +282,53 @@ function buildForbiddenTokens(pathogen: PathogenGenerationPlanEntry): string[] {
   return [...tokens];
 }
 
+interface PatternCheck {
+  label: string;
+  pattern: RegExp;
+}
+
+const EARLY_CLINICAL_GIVEAWAY_PATTERNS: PatternCheck[] = [
+  { label: "strawberry tongue", pattern: /\bstrawberry(?:-appearing)? tongue\b/i },
+  { label: "sandpaper rash", pattern: /\bsandpaper rash\b/i },
+  { label: "Koplik spots", pattern: /\bkoplik\b/i },
+  { label: "pseudomembrane", pattern: /\bpseudomembrane\b/i },
+  { label: "erythema migrans", pattern: /\berythema migrans\b/i },
+  { label: "chancre", pattern: /\bchancre\b/i },
+  { label: "nocturnal pruritus", pattern: /\bnocturnal pruritus\b|\bitch is markedly worse at night\b|\bnew nocturnal itch\b/i },
+  { label: "interdigital involvement", pattern: /\binterdigital\b/i },
+  { label: "burrows", pattern: /\bburrow\w*\b/i },
+  { label: "rice-water stool", pattern: /\brice[- ]water\b/i },
+  { label: "currant-jelly stool", pattern: /\bcurrant[- ]jelly\b/i },
+  { label: "inspiratory whoop", pattern: /\bwhoop(?:ing)?\b/i },
+];
+
+const EARLY_TECHNICAL_GIVEAWAY_PATTERNS: PatternCheck[] = [
+  { label: "dark-field microscopy", pattern: /\bdark[- ]field\b/i },
+  { label: "koilocytosis", pattern: /\bkoilocyt\w*\b/i },
+  { label: "Shiga toxin naming", pattern: /\bshiga\b/i },
+  { label: "NS1 naming", pattern: /\bns1\b/i },
+  { label: "surface/core antigen wording", pattern: /\b(?:surface|core) antigen\b/i },
+  { label: "viral DNA or RNA wording", pattern: /\bviral (?:dna|rna)\b/i },
+  { label: "p16 marker", pattern: /\bp16\b/i },
+  { label: "clue cells", pattern: /\bclue cells?\b/i },
+  { label: "whiff test", pattern: /\bwhiff test\b/i },
+  { label: "fishy odor", pattern: /\bfishy odou?r\b/i },
+  { label: "immunofluorescence", pattern: /\bimmunofluores\w*\b/i },
+  { label: "syncytia", pattern: /\bsyncyti\w*\b/i },
+  {
+    label: "heat-labile or heat-stable toxin wording",
+    pattern: /\bheat-(?:labile|stable)\b/i,
+  },
+  { label: "cigar-shaped yeast wording", pattern: /\bcigar-shaped\b/i },
+  { label: "corkscrew motility wording", pattern: /\bcorkscrew motility\b/i },
+];
+
+function findPatternLabels(text: string, patterns: PatternCheck[]): string[] {
+  return patterns
+    .filter(({ pattern }) => pattern.test(text))
+    .map(({ label }) => label);
+}
+
 function looksLikePatientPresentation(text: string): boolean {
   const hasAge =
     /\b\d{1,3}-year-old\b/i.test(text) ||
@@ -291,16 +338,36 @@ function looksLikePatientPresentation(text: string): boolean {
     /\bneonate\b/i.test(text) ||
     /\binfant\b/i.test(text);
   const hasPatientAnchor =
-    /\b(man|woman|male|female|boy|girl|patient|student|traveler|child|adult|retiree|worker)\b/i.test(
+    /\b(man|woman|male|female|boy|girl|patient|student|traveler|traveller|child|adult|retiree|worker|volunteer|teacher)\b/i.test(
       text
     );
-  const hasClinicalCue =
-    /\b(presents?|presented|reports?|developed|arrives?|comes?|has|with)\b/i.test(text) &&
-    /\b(fever|cough|headache|diarrhea|pain|rash|dyspnea|vomiting|dysuria|confusion|meningismus|seizure|ulcer|lesion|discharge|weakness)\b/i.test(
+  const hasPresentationVerb =
+    /\b(presents?|presented|reports?|developed|arrives?|came|comes?|admitted|brought|referred|seen)\b/i.test(
+      text
+    );
+  const hasSymptoms =
+    /\b(fever|cough|headache|diarrh(?:ea|e?a)|pain|rash|dyspn(?:ea|oea)|vomiting|dysuria|confusion|meningismus|seizure|ulcer|lesion|discharge|weakness|fatigue|spotting|bleeding|jaundice|pruritus|swelling|rigors|myalgia|arthralgia|dyspnoea)\b/i.test(
+      text
+    );
+  const hasTimeCourse =
+    /\b\d+\s?(?:hours?|days?|weeks?|months?|years?)\b/i.test(text) ||
+    /\b(acute|subacute|progressive|gradual|abrupt|sudden|intermittent)\b/i.test(text);
+  const hasSetting =
+    /\b(emergency department|emergency clinic|clinic|outpatient|ward|triage|hospital|sexual health clinic|gynecology|gynaecology)\b/i.test(
+      text
+    );
+  const hasObjectiveDetail =
+    /\b(temperature|temp(?:erature)?|blood pressure|bp\b|pulse|heart rate|oxygen saturation|spo2|febrile|afebrile|tachycard|hypoxi|hypotens|jaundiced|scleral icterus|tender|fluctuant|murmur|crackles|wheeze|wheez|lymphadenopathy|hepatomegaly|visual acuity|speculum examination|on examination|exam(?:ination)? shows)\b/i.test(
       text
     );
 
-  return (hasAge || hasPatientAnchor) && hasClinicalCue;
+  return (
+    (hasAge || hasPatientAnchor) &&
+    hasPresentationVerb &&
+    hasSymptoms &&
+    (hasTimeCourse || hasSetting) &&
+    hasObjectiveDetail
+  );
 }
 
 function containsForbiddenLabUnits(text: string): string[] {
@@ -384,12 +451,16 @@ function validateCaseOutput(
   job: GenerationJob
 ): ValidationResult {
   const errors: string[] = [];
+  const isNonCorePathogen = job.pathogen.tier !== "usmle_core";
+  const isRareBonusPathogen = job.pathogen.tier === "rare_bonus";
   const forbiddenTokens = buildForbiddenTokens(job.pathogen);
   const firstHint = output.hints.find((hint) => hint.order === 1) ?? output.hints[0];
+  const secondHint = output.hints.find((hint) => hint.order === 2);
   const totalHintChars = output.hints.reduce((sum, hint) => sum + hint.text.length, 0);
   const concreteHintCount = output.hints.filter((hint) =>
     hasConcreteClinicalDetail(hint.text)
   ).length;
+  const earlyHintText = [firstHint?.text, secondHint?.text].filter(Boolean).join(" ");
 
   if (output.difficulty !== job.difficulty) {
     errors.push(
@@ -405,6 +476,86 @@ function validateCaseOutput(
     }
     if (!looksLikePatientPresentation(firstHint.text)) {
       errors.push("Hint 1 does not read like a patient presentation vignette");
+    }
+  }
+
+  if (output.difficulty !== "easy" && firstHint) {
+    const firstHintGiveaways = findPatternLabels(
+      firstHint.text,
+      EARLY_CLINICAL_GIVEAWAY_PATTERNS
+    );
+    if (firstHintGiveaways.length > 0) {
+      errors.push(
+        `Hint 1 is too giveaway-heavy for ${output.difficulty} (${firstHintGiveaways.join(
+          ", "
+        )})`
+      );
+    }
+  }
+
+  if (isNonCorePathogen && secondHint) {
+    const secondHintGiveaways = findPatternLabels(
+      secondHint.text,
+      EARLY_CLINICAL_GIVEAWAY_PATTERNS
+    );
+    if (secondHintGiveaways.length > 0) {
+      errors.push(
+        `Hint 2 is too giveaway-heavy for ${job.pathogen.tier} (${secondHintGiveaways.join(
+          ", "
+        )})`
+      );
+    }
+  }
+
+  if (output.difficulty === "hard" && secondHint) {
+    const secondHintGiveaways = findPatternLabels(
+      secondHint.text,
+      EARLY_CLINICAL_GIVEAWAY_PATTERNS
+    );
+    if (secondHintGiveaways.length > 0) {
+      errors.push(
+        `Hint 2 is too giveaway-heavy for hard (${secondHintGiveaways.join(", ")})`
+      );
+    }
+  }
+
+  if (output.difficulty !== "easy" && earlyHintText) {
+    const technicalGiveaways = findPatternLabels(
+      earlyHintText,
+      EARLY_TECHNICAL_GIVEAWAY_PATTERNS
+    );
+    if (technicalGiveaways.length > 0) {
+      errors.push(
+        `Hints 1-2 reveal discriminating technical clues too early (${technicalGiveaways.join(
+          ", "
+        )})`
+      );
+    }
+  }
+
+  if (isNonCorePathogen && earlyHintText) {
+    const nonCoreTechnicalGiveaways = findPatternLabels(
+      earlyHintText,
+      EARLY_TECHNICAL_GIVEAWAY_PATTERNS
+    );
+    if (nonCoreTechnicalGiveaways.length > 0) {
+      errors.push(
+        `Hints 1-2 are too technically revealing for ${job.pathogen.tier} (${nonCoreTechnicalGiveaways.join(
+          ", "
+        )})`
+      );
+    }
+  }
+
+  if (isRareBonusPathogen && firstHint) {
+    const rareBonusOvertExposure =
+      /\b(dog bite|cat bite|tick bite|thorn prick|undercooked ground beef|oysters?|freshwater swimming|contact lens|bird(?:s| cage)?|parrot|mosquito bites?)\b/i.test(
+        firstHint.text
+      );
+    if (rareBonusOvertExposure) {
+      errors.push(
+        "Hint 1 is too overtly keyed to a rare-bonus pathogen exposure"
+      );
     }
   }
 
@@ -696,20 +847,26 @@ function buildGenerationJobs(
 function buildTierDifficultyGuidance(pathogen: PathogenGenerationPlanEntry): string {
   switch (pathogen.tier) {
     case "usmle_extended":
-      return "This is an extended-coverage pathogen. Even when the requested label is medium, avoid making the opening presentation feel too obvious or too textbook.";
+      return "This is an extended-coverage pathogen. Even when the requested label is medium, keep the first two hints restrained and differential-preserving. Do not spend the opening clues on classic buzzwords, signature microscopy, or a dead-obvious exposure-pattern combination.";
     case "rare_bonus":
-      return "This is a rare-bonus pathogen. Difficulty should reflect that rarity: avoid easy giveaway framing and make the case require meaningful integration of later clues.";
+      return "This is a rare-bonus pathogen. Difficulty should reflect that rarity. The first two hints must stay broad enough that a well-prepared learner still needs later clues. Do not front-load signature exposures, hallmark named findings, or highly specific diagnostic language.";
     default:
       return "This is a core pathogen. The requested difficulty may still range from classic/easier to subtle/harder depending on the prompt.";
   }
 }
 
-async function generateCasesForJob(
-  client: OpenAI,
+function buildGenerationUserPrompt(
   job: GenerationJob,
-  sequenceIndex: number
-): Promise<PathogenCaseCandidate[]> {
-  const userPrompt = `Generate exactly ${job.count} distinct ${job.difficulty} clinical mystery cases for the pathogen "${job.pathogen.canonical}".
+  retryFeedback: string[]
+): string {
+  const retrySection =
+    retryFeedback.length > 0
+      ? `\nPrevious attempt feedback. Fix every issue below in the next output:\n- ${retryFeedback.join(
+          "\n- "
+        )}\n`
+      : "";
+
+  return `Generate exactly ${job.count} distinct ${job.difficulty} clinical mystery cases for the pathogen "${job.pathogen.canonical}".
 
 Pathogen class: ${job.pathogen.kind}
 Pool target: ${job.pool}
@@ -727,14 +884,22 @@ Each case must:
 - make hint 1 a concrete patient vignette, never a generic background clue
 - make hint 1 literally read like a vignette opening, ideally beginning with "A [age]-year-old..." or an equivalent patient-first construction
 - make hint 1 specific enough that a learner could form a real differential diagnosis from it alone
-- make hint 1 include age, time course, setting, key symptoms, and at least one nontrivial detail such as an exposure, comorbidity, severity marker, or examination finding
+- make hint 1 include age, time course, setting, key symptoms, and at least one nontrivial objective detail such as a vital sign, examination finding, functional limitation, or severity marker
 - make the first two sentences of hint 1 describe the patient, setting, time course, and at least one concrete examination, severity, or exposure detail
+- keep hint 1 clinically rich but not diagnostically overcompressed
 - if difficulty is "easy", hint 1 may be fairly classic and suggestive
 - if difficulty is "medium", hint 1 should be clinically plausible but not strongly diagnostic on its own; avoid stacking hallmark findings or a signature board-style presentation in the opening clue
 - if difficulty is "medium", hold back at least one major discriminator for hints 3-5
+- if difficulty is "medium", do not use classic buzzwords or highly specific microscopy, histology, toxin, antigen, or nucleic-acid clues in hints 1-2
+- if the pathogen is extended-coverage or rare-bonus, make hints 1-2 more restrained than you would for a core pathogen at the same label
+- if the pathogen is extended-coverage or rare-bonus, avoid pairing a signature exposure with a signature syndrome in hints 1-2
 - if difficulty is "hard", hint 1 should be deliberately non-obvious from a pathogen-identification standpoint; the learner should need multiple later hints to narrow the answer confidently
 - if difficulty is "hard", avoid the signature giveaway presentation and avoid stacking multiple classic hallmark findings into hint 1
+- if difficulty is "hard", hint 2 may add context, but it must not collapse the differential to a single pathogen
 - if difficulty is "hard", reserve the most pathogen-specific clue for hint 4 or hint 5
+- if difficulty is "hard", do not use named classic findings such as "strawberry tongue", "sandpaper rash", "Koplik spots", "erythema migrans", "pseudomembrane", "chancre", or similarly signature board-style buzzwords in hints 1-2
+- if difficulty is "hard", do not mention distinctive microscopy, named antigen tests, toxin names, or signature histopathology in hints 1-2
+- if the pathogen is rare-bonus, hint 1 must not revolve around an iconic single exposure that nearly names the organism by itself
 - ensure hint 1 is the "presentation" category
 - use "history" for patient-specific background such as medical history, immune status, procedures, vaccination status, or illness course
 - use European / SI-style lab units whenever laboratory values are given
@@ -747,17 +912,25 @@ Each case must:
 - avoid making the case depend on specifically US-only agencies, insurance, or holiday framing unless clinically essential
 - never use filler terms like "classically", "typically", "this organism is", "this infection is", or "is associated with"
 - for hepatitis viruses, generic disease-level wording like acute hepatitis or transaminitis is acceptable, but never include subtype labels like hepatitis A/B/C/D/E or abbreviations such as HAV, HBV, HCV, HDV, or HEV
-- occasional US references are acceptable, but the case should still read clearly to a global medical audience
+- occasional US references are acceptable, but the case should still read clearly to a global medical audience${retrySection}
 
 Return JSON only.
 
 Exact output shape:
 ${OUTPUT_SHAPE_EXAMPLE}`;
+}
 
+async function generateCasesForJob(
+  client: OpenAI,
+  job: GenerationJob,
+  sequenceIndex: number
+): Promise<PathogenCaseCandidate[]> {
   const BatchOutputSchema = buildBatchOutputSchema(job.count);
+  let retryFeedback: string[] = [];
 
   for (let attempt = 0; attempt <= MAX_RETRIES; attempt++) {
     try {
+      const userPrompt = buildGenerationUserPrompt(job, retryFeedback);
       const response = await client.chat.completions.create({
         model: MODEL,
         response_format: { type: "json_object" },
@@ -772,6 +945,7 @@ ${OUTPUT_SHAPE_EXAMPLE}`;
 
       const parsed = BatchOutputSchema.safeParse(JSON.parse(raw));
       if (!parsed.success) {
+        retryFeedback = parsed.error.issues.map((issue) => issue.message);
         console.warn(
           `  Schema error (attempt ${attempt + 1}):`,
           parsed.error.issues.map((issue) => issue.message).join("; ")
@@ -781,12 +955,14 @@ ${OUTPUT_SHAPE_EXAMPLE}`;
       }
 
       const results: PathogenCaseCandidate[] = [];
+      const validationFeedback = new Set<string>();
       let caseIndex = 0;
 
       for (const rawCase of parsed.data.cases) {
         const caseOutput = normalizeCaseOutput(rawCase, job);
         const validation = validateCaseOutput(caseOutput, job);
         if (!validation.valid) {
+          validation.errors.forEach((error) => validationFeedback.add(error));
           console.warn(
             `  Case ${caseIndex + 1} failed validation:`,
             validation.errors.join("; ")
@@ -821,6 +997,12 @@ ${OUTPUT_SHAPE_EXAMPLE}`;
           style: "mgh_case_report",
         });
         caseIndex += 1;
+      }
+
+      if (results.length === 0 && validationFeedback.size > 0 && attempt < MAX_RETRIES) {
+        retryFeedback = [...validationFeedback];
+        await sleep(1500 * (attempt + 1));
+        continue;
       }
 
       return results;

@@ -7,8 +7,8 @@ import {
 
 describe("pathogen generation plan", () => {
   it("builds separate daily and free-play quotas", () => {
-    expect(PATHOGEN_GENERATION_PLAN_TOTALS.freeplay.total).toBe(2268);
-    expect(PATHOGEN_GENERATION_PLAN_TOTALS.daily.total).toBe(380);
+    expect(PATHOGEN_GENERATION_PLAN_TOTALS.freeplay.total).toBe(2332);
+    expect(PATHOGEN_GENERATION_PLAN_TOTALS.daily.total).toBe(387);
   });
 
   it("keeps quota difficulty counts balanced to the pool totals", () => {
