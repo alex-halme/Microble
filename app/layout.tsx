@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Analytics } from "@vercel/analytics/next";
 import TopNav from "@/components/TopNav";
+import packageJson from "../package.json";
 import "./globals.css";
 
 export const metadata: Metadata = {
@@ -12,6 +13,13 @@ export const metadata: Metadata = {
     type: "website",
   },
 };
+
+const APP_COMMIT_SHA =
+  process.env.VERCEL_GIT_COMMIT_SHA?.slice(0, 7) ??
+  process.env.NEXT_PUBLIC_VERCEL_GIT_COMMIT_SHA?.slice(0, 7);
+const APP_VERSION_LABEL = APP_COMMIT_SHA
+  ? `v${packageJson.version} (${APP_COMMIT_SHA})`
+  : `v${packageJson.version}`;
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
@@ -44,22 +52,48 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
               display: "flex",
               alignItems: "center",
               justifyContent: "space-between",
+              flexWrap: "wrap",
               gap: "16px",
             }}
           >
-            <a
-              href="/"
+            <div
               style={{
-                fontFamily: "var(--font-display)",
-                fontSize: "20px",
-                fontWeight: 600,
-                color: "var(--fg)",
-                textDecoration: "none",
-                letterSpacing: "-0.03em",
+                display: "flex",
+                alignItems: "baseline",
+                gap: "10px",
+                minWidth: 0,
+                flexWrap: "wrap",
               }}
             >
-              Microble
-            </a>
+              <a
+                href="/"
+                style={{
+                  fontFamily: "var(--font-display)",
+                  fontSize: "20px",
+                  fontWeight: 600,
+                  color: "var(--fg)",
+                  textDecoration: "none",
+                  letterSpacing: "-0.03em",
+                }}
+              >
+                Microble
+              </a>
+
+              <span
+                aria-label={`Application version ${APP_VERSION_LABEL}`}
+                style={{
+                  fontSize: "11px",
+                  lineHeight: 1.2,
+                  fontWeight: 500,
+                  color: "var(--fg-3)",
+                  letterSpacing: "0.01em",
+                  whiteSpace: "nowrap",
+                  opacity: 0.85,
+                }}
+              >
+                {APP_VERSION_LABEL}
+              </span>
+            </div>
 
             <TopNav />
           </div>
