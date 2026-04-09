@@ -27,7 +27,7 @@ Two modes:
 | AI generation | OpenAI `gpt-5-mini` via `openai` SDK |
 | Schema validation | Zod |
 | Script runner | `tsx` |
-| Data storage | SQLite via `better-sqlite3` |
+| Data storage | Flat JSON files in `data/` (read by server at request time) |
 | Deployment target | Vercel (not yet deployed) |
 
 **Important Tailwind v4 notes:**
@@ -56,15 +56,18 @@ components/
   GuessInput.tsx      Text input + autocomplete dropdown + Submit button + Pass button
   GuessHistory.tsx    Typeset list of previous attempts (strings + nulls for skips)
   ResultModal.tsx     Centered result dialog shown on win/loss; share, next case / finish run, close
+  TopNav.tsx          Sticky header with wordmark and mode navigation
 
 lib/
   types.ts            All shared TypeScript interfaces (see Data Models below)
-  organisms.ts        Static dictionary of ~60 organisms — THE source of truth for valid answers
+  organisms.ts        Static dictionary of organisms — THE source of truth for valid answers
   matcher.ts          4-pass answer matching logic (pure function, fully testable)
   gameState.ts        localStorage persistence, state transitions, share text builder
   dailyCase.ts        UTC epoch-based daily case selection
   caseStore.ts        Server-side JSON case storage, sanitization, and pool queries
+  caseAnswers.ts      Accepted answer normalization and subtype-mismatch detection
   generatedCases.ts   Helpers that normalize generated pathogen cases into live game cases
+  freeplayFilters.ts  Pathogen-type and difficulty filter types and case-filtering logic
 
 data/
   daily-cases.json    Optional curated daily fallback JSON
@@ -75,11 +78,18 @@ data/
   generated-daily-pathogen-cases.json Live generated daily pool JSON
 
 scripts/
-  generate-cases.ts   Offline AI case generation pipeline that writes free-play cases into JSON
-  generate-pathogen-cases.ts Broader offline pipeline writing daily/free-play pools into JSON
+  generate-cases.ts          Offline AI case generation pipeline (bacteria-only, legacy)
+  generate-pathogen-cases.ts Broader offline pipeline writing daily/free-play JSON pools
+  fix-difficulties.ts        One-shot script to retroactively apply the tier difficulty floor to all JSON cases
 
 tests/
-  matcher.test.ts     22 unit tests for the matching logic — all passing
+  matcher.test.ts              Answer matching logic
+  gameState.test.ts            localStorage state transitions
+  dailyCase.test.ts            Daily case selection and epoch arithmetic
+  caseStore.test.ts            JSON pool loading and normalization
+  caseAnswers.test.ts          Answer normalization and accepted-ID resolution
+  freeplayFilters.test.ts      Filter logic for freeplay case pool
+  pathogenGenerationPlan.test.ts  Quota plan generation and difficulty distribution
 ```
 
 ---
@@ -116,7 +126,8 @@ interface Hint {
 
 interface MicrobleCase {
   id: string;
-  organismId: string;  // must match an Organism.id in organisms.ts
+  organismId: string;           // must match an Organism.id in organisms.ts
+  acceptedOrganismIds?: string[]; // optional case-specific equivalent correct answers
   hints: [Hint, Hint, Hint, Hint, Hint];  // exactly 5, in order
   difficulty: "easy" | "medium" | "hard";
   explanation: string; // shown in ResultModal after game ends
@@ -132,7 +143,9 @@ interface GameState {
   guesses: (string | null)[]; // string = organism text guess, null = skipped (Pass)
   hintsRevealed: number;      // 1–5 (1 is always shown from game start)
   status: "playing" | "won" | "lost";
-  completedAt?: string;
+  completedAt?: string;       // ISO date string
+  resultSeenAt?: string;      // ISO date string — set when the result modal is dismissed
+  streakAppliedAt?: string;   // ISO date string — guards against double-counting streaks
 }
 
 type MatchResult =
@@ -249,7 +262,7 @@ All components use inline `style={{}}` props (not Tailwind classes) for design-t
 
 ## AI Case Generation (scripts/generate-cases.ts)
 
-**Purpose:** Offline script that generates validated `MicrobleCase` objects and writes them into the SQLite `freeplay` pool. JSON files are now only seed/export artifacts.
+**Purpose:** Offline script that generates validated `MicrobleCase` objects and writes them into the JSON `freeplay` pool.
 
 **Cost strategy:**
 - 3 cases per API call per organism (amortises system prompt tokens)
@@ -275,13 +288,14 @@ OPENAI_API_KEY=sk-...  npm run generate -- --batch-status <id>
 OPENAI_API_KEY=sk-...  npm run generate -- --batch-retrieve <id>
 ```
 
-Output: `data/generated-freeplay-pathogen-cases.json`.
+Output: `data/generated-freeplay-pathogen-cases.json` (for the legacy bacteria-only pipeline).
+The primary pipeline is `generate-pathogen-cases.ts`; see Expanded Pathogen Pipeline below.
 
 ### Expanded Pathogen Pipeline
 
 To support a larger future pool that includes **viruses and parasites** in addition to bacteria, the repo now also contains:
 
-- `data/pathogen-catalog.ts`: broader target list of **164 pathogens** (`71` bacteria, `48` viruses, `45` parasites), intended as the editorial expansion catalog
+- `data/pathogen-catalog.ts`: broader target list of **247 pathogens** across bacteria, viruses, parasites, and fungi — the editorial expansion catalog
 - `data/pathogen-generation-plan.ts`: quota plan that separates **daily** and **free play** generation targets
   - free play target: **2060** AI-generated candidate cases
   - daily candidate target: **324** higher-quality candidate cases
@@ -314,9 +328,9 @@ OPENAI_API_KEY=sk-... npm run generate:pathogens -- --pathogen-id=influenza-a-vi
 These are the next planned phases. They are not implemented yet.
 
 ### Hosted multi-instance storage
-- The app now uses server-side JSON files as its runtime case store.
-- This is appropriate while production is read-only and the game only needs to ship curated snapshots.
-- If the project later needs multi-instance writes or hidden server-managed progression, the next migration target should be a hosted database.
+- The app uses server-side flat JSON files as its runtime case store (read at request time).
+- This works well while case data is generated offline and deployed with the app.
+- If the project later needs multi-instance writes or server-managed progression, the migration target would be a hosted database (Postgres/SQLite on Vercel).
 
 ### Vercel cron for pool replenishment
 - `vercel.json` with a cron entry hitting `/api/admin/generate-cases`
@@ -336,8 +350,9 @@ These are the next planned phases. They are not implemented yet.
 npm run dev       # development server at localhost:3000
 npm run build     # production build (must pass before any deploy)
 npm run test      # vitest unit tests
-npm run generate  # AI case generation (requires OPENAI_API_KEY)
+npm run generate             # AI case generation (requires OPENAI_API_KEY)
 npm run generate:pathogens  # broader pathogen case generation (requires OPENAI_API_KEY)
+npm run fix:difficulties     # retroactively apply tier difficulty floor to all JSON cases
 ```
 
 The build must pass cleanly (`npm run build` exits 0) before any change is considered complete.
@@ -357,4 +372,7 @@ The build must pass cleanly (`npm run build` exits 0) before any change is consi
 | No `src/` directory | The project root is flat. Imports use `@/` alias pointing to the project root |
 | System font stack, not webfonts | Keeps the UI fast, native-feeling, and closer to Apple platform typography without external font loading |
 | `EPOCH = 2026-04-01` | Do not change after launch. Moving the epoch shifts every case assignment globally |
-| Server-side JSON is the live case store | Daily and free-play case selection now read from generated JSON snapshots on the server; the full dataset is not imported into client components |
+| Server-side JSON is the live case store | Daily and free-play case selection reads from generated JSON snapshots on the server; the full dataset is not imported into client components |
+| `rare_bonus` tier is always hard | All rare_bonus cases must have difficulty "hard". The floor in `normalizeStoredRecord` enforces this at runtime; run `fix:difficulties` if you edit JSON files directly |
+| Difficulty floor applies to all sources | `normalizeStoredRecord` in `caseStore.ts` applies `applyTierDifficultyFloor` to every case regardless of `source`. Do not add a source guard back |
+| Free-play completed tracking trusts key prefix | `getCompletedFreeplayCaseIds` in `gameState.ts` checks only the `microble-fp-*` key prefix, not `state.mode`. Do not add the `mode === "freeplay"` check back — it broke tracking for older sessions |
