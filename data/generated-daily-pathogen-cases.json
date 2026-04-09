@@ -2,7 +2,7 @@
   {
     "id": "path-daily-adenovirus-easy-1774628461477-0-0",
     "pathogenId": "adenovirus",
-    "pathogenKind": "bacterium",
+    "pathogenKind": "virus",
     "pool": "daily",
     "hints": [
       {
@@ -32,7 +32,7 @@
       }
     ],
     "difficulty": "easy",
-    "explanation": "The presentation of acute fever, pharyngitis and bilateral conjunctivitis in a cluster of close-contact athletes after a regatta, together with negative bacterial cultures and a PCR positive for a non-enveloped dsDNA respiratory virus, indicates infection with adenovirus causing a pharyngoconjunctival syndrome. Diagnosis is supported by rapid onset among teammates and conjunctival/throat PCR concordance. Management in an immunocompetent young adult is supportive (analgesia, hydration, topical lubricants for eyes, infection control measures); antibiotics are not indicated. In immunocompromised hosts or severe pneumonia, antiviral options and specialist input may be required.",
+    "explanation": "The presentation of acute fever, pharyngitis and bilateral conjunctivitis in a cluster of close-contact athletes after a regatta, together with negative bacterial cultures and a PCR positive for a non-enveloped dsDNA respiratory virus, indicates infection with adenovirus causing a pharyngoconjunctival syndrome. Diagnosis is supported by rapid onset among teammates and conjunctival/throat PCR concordance.",
     "source": "ai_generated",
     "validated": true,
     "createdAt": "2026-03-27T16:21:01.477Z",
@@ -42,7 +42,7 @@
   {
     "id": "path-daily-ascaris-lumbricoides-easy-1774628526816-2-0",
     "pathogenId": "ascaris-lumbricoides",
-    "pathogenKind": "bacterium",
+    "pathogenKind": "parasite",
     "pool": "daily",
     "hints": [
       {
@@ -72,7 +72,7 @@
       }
     ],
     "difficulty": "easy",
-    "explanation": "This presentation—intestinal obstruction in a young adult from a rural, agriculture-based setting with a history of exposure to untreated human faeces, microcytic anaemia, marked eosinophilia, stool microscopy showing large mammillated eggs ~50–75 µm, imaging revealing tubular intraluminal structures, and passage of a long pale cylindrical helminth—is diagnostic of infection with Ascaris lumbricoides. First-line therapy for uncomplicated intestinal infection is oral benzimidazole (albendazole or mebendazole); obstructive complications may require nasogastric decompression and surgical evaluation.",
+    "explanation": "This presentation—intestinal obstruction in a young adult from a rural, agriculture-based setting with a history of exposure to untreated human faeces, microcytic anaemia, marked eosinophilia, stool microscopy showing large mammillated eggs ~50–75 µm, imaging revealing tubular intraluminal structures, and passage of a long pale cylindrical helminth—is diagnostic of infection with Ascaris lumbricoides.",
     "source": "ai_generated",
     "validated": true,
     "createdAt": "2026-03-27T16:22:06.816Z",
@@ -112,7 +112,7 @@
       }
     ],
     "difficulty": "easy",
-    "explanation": "The combination of a painless black eschar with extensive non-pitting surrounding oedema, rapid progression from papule to ulcer, occupational contact with unprocessed animal hides, and identification of large Gram-positive, non-haemolytic bacilli with a capsule on culture is most consistent with Bacillus anthracis causing cutaneous infection. Management includes prompt targeted antimicrobial therapy (for example a fluoroquinolone or doxycycline in adults) and notification to public-health authorities because of the zoonotic and public-health implications; antitoxin and escalation of care are considered for systemic disease.",
+    "explanation": "The combination of a painless black eschar with extensive non-pitting surrounding oedema, rapid progression from papule to ulcer, occupational contact with unprocessed animal hides, and identification of large Gram-positive, non-haemolytic bacilli with a capsule on culture is most consistent with Bacillus anthracis causing cutaneous infection.",
     "source": "ai_generated",
     "validated": true,
     "createdAt": "2026-03-27T16:23:23.733Z",
@@ -152,7 +152,7 @@
       }
     ],
     "difficulty": "easy",
-    "explanation": "The combination of very short incubation (≈1–6 hours), predominant vomiting without inflammatory diarrhoea, rapid improvement with supportive care, stool microscopy showing large, spore-forming Gram-positive rods, and a common exposure to reheated rice strongly points to the foodborne emetic illness caused by Bacillus cereus. CT showed no enteritis, supporting a toxin-mediated process rather than invasive infection. Management is primarily fluid resuscitation and antiemetics; antibiotics are not indicated for the typical emetic syndrome. Public-health measures include identifying and removing contaminated food and reviewing safe cooling/reheating practices to prevent spore germination and toxin production.",
+    "explanation": "CT showed no enteritis, supporting a toxin-mediated process rather than invasive infection. Public-health measures include identifying and removing contaminated food and reviewing safe cooling/reheating practices to prevent spore germination and toxin production.",
     "source": "ai_generated",
     "validated": true,
     "createdAt": "2026-03-27T16:23:57.407Z",
@@ -192,7 +192,7 @@
       }
     ],
     "difficulty": "easy",
-    "explanation": "This presentation—acute onset bloody diarrhoea with fever and prominent right‑sided ileocolitis after eating undercooked poultry, leukocytosis and fecal leukocytes—followed by rapid clinical response to a macrolide and stool culture showing motile, curved, oxidase‑positive Gram‑negative rods that grow at 42 °C and are hippurate‑positive is diagnostic for Campylobacter jejuni. Management in uncomplicated cases focuses on hydration and electrolyte correction; macrolide therapy accelerates recovery and shortens shedding in symptomatic patients.",
+    "explanation": "This presentation—acute onset bloody diarrhoea with fever and prominent right‑sided ileocolitis after eating undercooked poultry, leukocytosis and fecal leukocytes—followed by rapid clinical response to a macrolide and stool culture showing motile, curved, oxidase‑positive Gram‑negative rods that grow at 42 °C and are hippurate‑positive is diagnostic for Campylobacter jejuni.",
     "source": "ai_generated",
     "validated": true,
     "createdAt": "2026-03-27T16:25:34.548Z",
@@ -232,7 +232,7 @@
       }
     ],
     "difficulty": "easy",
-    "explanation": "Young, sexually active patient with mucopurulent cervicitis, abundant neutrophils on Gram stain without visible intracellular Gram-negative diplococci, negative gonococcal culture, and a positive NAAT is most consistent with infection by Chlamydia trachomatis. The partner's symptomatic urethritis with a concordant positive urine NAAT and clinical improvement after single-dose macrolide therapy support this diagnosis. Transvaginal ultrasound excludes complicated pelvic abscess, keeping the presentation within uncomplicated cervicitis/early pelvic inflammatory spectrum.",
+    "explanation": "Young, sexually active patient with mucopurulent cervicitis, abundant neutrophils on Gram stain without visible intracellular Gram-negative diplococci, negative gonococcal culture, and a positive NAAT is most consistent with infection by Chlamydia trachomatis. Transvaginal ultrasound excludes complicated pelvic abscess, keeping the presentation within uncomplicated cervicitis/early pelvic inflammatory spectrum.",
     "source": "ai_generated",
     "validated": true,
     "createdAt": "2026-03-27T16:26:08.666Z",
@@ -272,7 +272,7 @@
       }
     ],
     "difficulty": "easy",
-    "explanation": "The presentation of prolonged paroxysmal nocturnal cough with inspiratory whoop, posttussive vomiting, marked lymphocytosis, incomplete booster immunization, a household infant with apnoea and a positive nasopharyngeal PCR, and a daycare cluster points to Bordetella pertussis. Diagnosis is supported by PCR from a nasopharyngeal specimen; early macrolide therapy reduces transmission and is recommended for cases and close contacts, especially to protect young infants.",
+    "explanation": "The presentation of prolonged paroxysmal nocturnal cough with inspiratory whoop, posttussive vomiting, marked lymphocytosis, incomplete booster immunization, a household infant with apnoea and a positive nasopharyngeal PCR, and a daycare cluster points to Bordetella pertussis.",
     "source": "ai_generated",
     "validated": true,
     "createdAt": "2026-03-27T18:18:29.663Z",
@@ -312,7 +312,7 @@
       }
     ],
     "difficulty": "easy",
-    "explanation": "The clinical picture — an expanding annular rash with central clearing at the site of a recent tick bite, a short incubation period, subsequent cranial nerve VII palsy, early negative routine serology, and rapid clinical improvement after doxycycline — is most consistent with infection caused by Borrelia burgdorferi (early Lyme borreliosis). Early antibody tests can be negative, and clinical diagnosis with prompt antibiotic treatment is appropriate when the characteristic rash and exposure history are present.",
+    "explanation": "The clinical picture — an expanding annular rash with central clearing at the site of a recent tick bite, a short incubation period, subsequent cranial nerve VII palsy, early negative routine serology, and rapid clinical improvement after doxycycline — is most consistent with infection caused by Borrelia burgdorferi (early Lyme borreliosis).",
     "source": "ai_generated",
     "validated": true,
     "createdAt": "2026-03-27T18:19:11.691Z",
@@ -352,7 +352,7 @@
       }
     ],
     "difficulty": "easy",
-    "explanation": "The presentation of acute, afebrile, symmetric cranial nerve dysfunction with dry mouth, descending weakness and early hypoventilation in the setting of a shared meal of inadequately preserved home-canned vegetables and detection of a heat-labile presynaptic neurotoxin indicates foodborne poisoning by Clostridium botulinum (preformed neurotoxin). Diagnostic clues are rapid onset after ingestion, normal sensorium and inflammatory markers, normal brain imaging, and a household cluster; management centers on antitoxin and respiratory support.",
+    "explanation": "The presentation of acute, afebrile, symmetric cranial nerve dysfunction with dry mouth, descending weakness and early hypoventilation in the setting of a shared meal of inadequately preserved home-canned vegetables and detection of a heat-labile presynaptic neurotoxin indicates foodborne poisoning by Clostridium botulinum (preformed neurotoxin).",
     "source": "ai_generated",
     "validated": true,
     "createdAt": "2026-03-27T18:20:22.328Z",
@@ -392,7 +392,7 @@
       }
     ],
     "difficulty": "easy",
-    "explanation": "The combination of an adherent grey pharyngeal membrane with bleeding on removal, airway narrowing, pleomorphic club-shaped Gram-positive bacilli on smear that form grey–black colonies on selective tellurite-containing media, and a tox gene-positive isolate in an unvaccinated child points to Corynebacterium diphtheriae producing an exotoxin. Management priorities include securing the airway, administering diphtheria antitoxin, and starting appropriate antibiotics (for example erythromycin or penicillin) while notifying public-health authorities for contact management and immunisation of susceptible contacts.",
+    "explanation": "The combination of an adherent grey pharyngeal membrane with bleeding on removal, airway narrowing, pleomorphic club-shaped Gram-positive bacilli on smear that form grey–black colonies on selective tellurite-containing media, and a tox gene-positive isolate in an unvaccinated child points to Corynebacterium diphtheriae producing an exotoxin.",
     "source": "ai_generated",
     "validated": true,
     "createdAt": "2026-03-27T18:24:05.003Z",
@@ -432,7 +432,7 @@
       }
     ],
     "difficulty": "easy",
-    "explanation": "The clinical picture—febrile child with acute painful oral ulcers and vesicular lesions on the hands/feet, daycare clustering, and stool PCR identifying a Picornaviridae A-group strain—is diagnostic for infection by Coxsackievirus (A serotypes), the common cause of childhood hand–foot–and–mouth disease and herpangina. Management is supportive (analgesia, hydration); recognition is important for infection control in group childcare settings.",
+    "explanation": "The clinical picture—febrile child with acute painful oral ulcers and vesicular lesions on the hands/feet, daycare clustering, and stool PCR identifying a Picornaviridae A-group strain—is diagnostic for infection by Coxsackievirus (A serotypes), the common cause of childhood hand–foot–and–mouth disease and herpangina.",
     "source": "ai_generated",
     "validated": true,
     "createdAt": "2026-03-27T18:24:42.915Z",
@@ -472,7 +472,7 @@
       }
     ],
     "difficulty": "easy",
-    "explanation": "Profuse watery diarrhoea in an otherwise healthy adult with daycare and recent public-pool exposures, failure to respond to empiric antibacterial therapy, and identification of 4–6 µm acid-fast oocysts on stool stain strongly indicate infection with Cryptosporidium species. Resolution after institution of nitazoxanide and supportive care in an immunocompetent host is typical.",
+    "explanation": "Profuse watery diarrhoea in an otherwise healthy adult with daycare and recent public-pool exposures, failure to.",
     "source": "ai_generated",
     "validated": true,
     "createdAt": "2026-03-27T18:25:14.753Z",
@@ -512,7 +512,7 @@
       }
     ],
     "difficulty": "easy",
-    "explanation": "The combination of recent travel to an endemic area, bloody colitis with stool microscopy showing motile protozoal forms that have ingested red blood cells, and a solitary right‑lobe liver abscess producing sterile brown pus is characteristic of infection by Entamoeba histolytica. Diagnostic clues here are erythrophagocytic trophozoites in stool and sterile aspirate from an amebic liver abscess. Recommended therapy is a tissue-active agent (eg, a nitroimidazole) to treat invasive disease followed by a luminal cysticidal agent (eg, paromomycin or diloxanide furoate) to eradicate intestinal carriage and prevent relapse.",
+    "explanation": "The combination of recent travel to an endemic area, bloody colitis with stool microscopy showing motile protozoal forms that have ingested red blood cells, and a solitary right‑lobe liver abscess producing sterile brown pus is characteristic of infection by Entamoeba histolytica. Diagnostic clues here are erythrophagocytic trophozoites in stool and sterile aspirate from an amebic liver abscess.",
     "source": "ai_generated",
     "validated": true,
     "createdAt": "2026-03-27T18:27:57.584Z",
@@ -552,7 +552,7 @@
       }
     ],
     "difficulty": "easy",
-    "explanation": "Findings are diagnostic of infection with a small, thread-like enteric nematode commonly causing nocturnal perianal pruritus in children. The morning adhesive-tape test demonstrating ovoid, flattened eggs and occasional visualization of the adult on perianal skin confirm the diagnosis. Management includes single-dose oral anthelmintic therapy (with a repeat dose after two weeks to interrupt reinfection), simultaneous treatment of household contacts, and strict hygiene measures (morning bathing, handwashing, laundering bedding and towels) to prevent autoinfection and household spread.",
+    "explanation": "Findings are diagnostic of infection with a small, thread-like enteric nematode commonly causing nocturnal perianal pruritus in children. The morning adhesive-tape test demonstrating ovoid, flattened eggs and occasional visualization of the adult on perianal skin confirm the diagnosis.",
     "source": "ai_generated",
     "validated": true,
     "createdAt": "2026-03-27T18:28:30.869Z",
@@ -592,7 +592,7 @@
       }
     ],
     "difficulty": "easy",
-    "explanation": "The clinical picture is catheter-associated urinary tract infection in an elderly patient with prior exposure to a third‑generation cephalosporin. Microscopy showing Gram‑positive cocci in short chains plus bile‑esculin hydrolysis, growth in 6.5% NaCl and PYR positivity identify the organism as Enterococcus faecalis. The susceptibility pattern (resistant to many cephalosporins but susceptible to ampicillin) and rapid clinical response to ampicillin support this diagnosis.",
+    "explanation": "The clinical picture is catheter-associated urinary tract infection in an elderly patient with prior exposure to a third‑generation cephalosporin. Microscopy showing Gram‑positive cocci in short chains plus bile‑esculin hydrolysis, growth in 6.5% NaCl and PYR positivity identify the organism as Enterococcus faecalis.",
     "source": "ai_generated",
     "validated": true,
     "createdAt": "2026-03-27T18:29:06.103Z",
@@ -677,7 +677,7 @@
       }
     ],
     "difficulty": "easy",
-    "explanation": "This presentation is acute uncomplicated cystitis in a young sexually active woman. Positive nitrite and leukocyte esterase with pyuria point to a urinary tract bacterial infection originating from enteric flora. The culture characteristics—lactose-fermenting, oxidase-negative, indole-positive motile Gram-negative rod—identify Escherichia coli as the causative organism. In the absence of systemic signs or anatomic abnormality, oral therapy guided by susceptibility (for example nitrofurantoin when susceptible) is appropriate.",
+    "explanation": "This presentation is acute uncomplicated cystitis in a young sexually active woman. Positive nitrite and leukocyte esterase with pyuria point to a urinary tract bacterial infection originating from enteric flora. The culture characteristics—lactose-fermenting, oxidase-negative, indole-positive motile Gram-negative rod—identify Escherichia coli as the causative organism.",
     "source": "ai_generated",
     "validated": true,
     "createdAt": "2026-03-27T18:31:30.364Z",
@@ -717,7 +717,7 @@
       }
     ],
     "difficulty": "easy",
-    "explanation": "The combination of prolonged fatty, foul-smelling diarrhoea with weight loss, absent faecal leukocytes, positive faecal fat, motile binucleate trophozoites on wet mount and a history of drinking untreated freshwater strongly indicates infection with Giardia lamblia. Diagnosis is commonly confirmed by stool antigen or microscopy and may be supported by duodenal aspirate or biopsy showing organisms and villous blunting. Effective oral therapies include nitroimidazole agents or nitazoxanide; treatment usually leads to clinical and microbiological cure in immunocompetent hosts.",
+    "explanation": "The combination of prolonged fatty, foul-smelling diarrhoea with weight loss, absent faecal leukocytes, positive faecal fat, motile binucleate trophozoites on wet mount and a history of drinking untreated freshwater strongly indicates infection with Giardia lamblia. Diagnosis is commonly confirmed by stool antigen or microscopy and may be supported by duodenal aspirate or biopsy showing organisms and villous blunting. Effective oral therapies include nitroimidazole agents or nitazoxanide. treatment usually leads to clinical and microbiological cure in immunocompetent hosts.",
     "source": "ai_generated",
     "validated": true,
     "createdAt": "2026-03-27T18:32:03.031Z",
@@ -757,7 +757,7 @@
       }
     ],
     "difficulty": "easy",
-    "explanation": "Presentation of acute febrile stridor, drooling and a thumbprint sign in a young child who missed routine conjugate immunisations points to invasive infection of the epiglottis. The Gram stain showing small pleomorphic Gram-negative coccobacilli plus culture growth requiring haem and NAD, together with beta-lactamase production and clinical response to a third-generation cephalosporin, identify Haemophilus influenzae as the causative organism. Lack of routine conjugate vaccination increases risk for invasive disease from encapsulated strains; beta-lactamase positivity explains potential failure of ampicillin/amoxicillin without a beta-lactamase inhibitor.",
+    "explanation": "Presentation of acute febrile stridor, drooling and a thumbprint sign in a young child who missed routine conjugate immunisations points to invasive infection of the epiglottis. The Gram stain showing small pleomorphic Gram-negative coccobacilli plus culture growth requiring haem and NAD, together with beta-lactamase production and clinical response to a third-generation cephalosporin, identify Haemophilus influenzae as the causative organism. Lack of routine conjugate vaccination increases risk for invasive disease from encapsulated strains. beta-lactamase positivity explains potential failure of ampicillin/amoxicillin without a beta-lactamase inhibitor.",
     "source": "ai_generated",
     "validated": true,
     "createdAt": "2026-03-27T18:32:35.809Z",
@@ -797,7 +797,7 @@
       }
     ],
     "difficulty": "easy",
-    "explanation": "Clinical picture: chronic epigastric pain worse with fasting and nocturnal pain, duodenal ulcer on endoscopy, iron-deficiency anaemia with positive faecal occult blood, positive urea breath test, and symptom resolution plus negative test after targeted eradication therapy — together these findings identify infection with the gastric urease-producing bacterium responsible for most peptic ulcer disease (Helicobacter pylori). Management in this patient was appropriate: acid suppression combined with two antibiotics to eradicate the organism, followed by test-of-cure with a noninvasive urea breath test.",
+    "explanation": "Clinical picture: chronic epigastric pain worse with fasting and nocturnal pain, duodenal ulcer on endoscopy, iron-deficiency anaemia with positive faecal occult blood, positive urea breath test, and symptom resolution plus negative test after targeted eradication.",
     "source": "ai_generated",
     "validated": true,
     "createdAt": "2026-03-27T18:33:10.483Z",
@@ -837,7 +837,7 @@
       }
     ],
     "difficulty": "easy",
-    "explanation": "Diagnosis: recurrent orolabial infection due to Herpes simplex virus type 1. Key supportive data: painful grouped vesicles on the vermillion border with regional lymphadenopathy and fever; history of prior similar episodes triggered by sunlight/stress; Tzanck smear showing multinucleated giant cells and PCR positive for a double-stranded DNA virus; rapid improvement with aciclovir. Management for acute symptomatic episodes uses oral antivirals; counselling includes recognition of triggers and advice about transmission during active lesions.",
+    "explanation": "Diagnosis: recurrent orolabial infection due to Herpes simplex virus type 1. Key supportive data: painful grouped vesicles on the vermillion border with regional lymphadenopathy and fever. history of prior similar episodes triggered by sunlight/stress. Tzanck smear showing multinucleated giant cells and PCR positive for a double-stranded DNA virus. rapid improvement with aciclovir.",
     "source": "ai_generated",
     "validated": true,
     "createdAt": "2026-03-27T18:35:59.125Z",
@@ -877,7 +877,7 @@
       }
     ],
     "difficulty": "easy",
-    "explanation": "This presentation is most consistent with primary genital infection caused by herpes simplex virus type 2. Key supportive features: painful grouped genital vesicles with inguinal adenopathy and dysuria following recent unprotected sexual exposure; cytology showing multinucleated giant epithelial cells; lesion PCR demonstrating an enveloped double-stranded DNA virus; absence of type-specific IgG consistent with a first infection; and rapid clinical response to aciclovir with transmission to the sexual partner. Management includes antiviral therapy for symptom control and counselling about transmission and recurrence.",
+    "explanation": "This presentation is most consistent with primary genital infection caused by herpes simplex virus type 2. Key supportive features: painful grouped genital vesicles with inguinal adenopathy and dysuria following recent unprotected sexual exposure. cytology showing multinucleated giant epithelial cells. lesion PCR demonstrating an enveloped double-stranded DNA virus. absence of type-specific IgG consistent with a first infection. and rapid clinical response to aciclovir with transmission to the sexual partner.",
     "source": "ai_generated",
     "validated": true,
     "createdAt": "2026-03-27T18:36:35.032Z",
@@ -917,7 +917,7 @@
       }
     ],
     "difficulty": "easy",
-    "explanation": "The presentation—acute febrile mononucleosis-like illness with mucocutaneous ulcers, generalized lymphadenopathy, recent high-risk sexual exposure, elevated transaminase and lymphopenia—followed by a very high plasma viral RNA and rapid suppression with combination antiretroviral therapy identifies primary infection with Human immunodeficiency virus 1. The diagnostic arc is supported by the clinical syndrome, imaging showing diffuse small nodes rather than focal abscess, and virologic response to antiretroviral treatment with rising CD4 count.",
+    "explanation": "The diagnostic arc is supported by the clinical syndrome, imaging showing diffuse small nodes rather than focal abscess, and virologic response to antiretroviral treatment with rising CD4 count.",
     "source": "ai_generated",
     "validated": true,
     "createdAt": "2026-03-27T18:37:16.154Z",
@@ -997,7 +997,7 @@
       }
     ],
     "difficulty": "easy",
-    "explanation": "The presentation of lobar right upper‑lobe pneumonia in an older man with heavy alcohol use, thick blood‑tinged (“currant‑jelly”) sputum, Gram‑negative rods on sputum stain, radiographic bulging fissure and mucoid lactose‑fermenting colonies with intrinsic ampicillin resistance that respond to a third‑generation cephalosporin is most consistent with Klebsiella pneumoniae.",
+    "explanation": "The presentation of lobar right upper‑lobe pneumonia in an older man with heavy alcohol use, thick blood‑tinged (“currant‑jelly”) sputum, Gram‑negative rods on sputum stain, radiographic bulging fissure and mucoid lactose‑fermenting colonies with intrinsic ampicillin resistance that.",
     "source": "ai_generated",
     "validated": true,
     "createdAt": "2026-03-27T18:39:10.140Z",
@@ -1037,7 +1037,7 @@
       }
     ],
     "difficulty": "easy",
-    "explanation": "Chronic painless ulcer with rolled edges after nocturnal insect exposure in a rural New World setting, plus identification of small intracellular bodies with an eccentric kinetoplast on Giemsa and positive kinetoplast PCR, indicates infection by a kinetoplastid protozoan of the Leishmania genus causing cutaneous disease. Management decisions (local versus systemic therapy) depend on species, lesion size and location and risk for mucosal involvement; in New World infections evaluation for mucosal involvement and selection of systemic antiprotozoal therapy are important.",
+    "explanation": "Chronic painless ulcer with rolled edges after nocturnal insect exposure in a rural New World setting, plus identification of small intracellular bodies with an eccentric kinetoplast on Giemsa and positive kinetoplast PCR, indicates infection by a kinetoplastid protozoan of the Leishmania genus causing cutaneous disease.",
     "source": "ai_generated",
     "validated": true,
     "createdAt": "2026-03-27T18:40:18.268Z",
@@ -1077,7 +1077,7 @@
       }
     ],
     "difficulty": "easy",
-    "explanation": "Third‑trimester pregnancy with febrile meningitis, neutrophil‑predominant CSF, small Gram‑positive coccobacilli in CSF and blood, and epidemiologic link to unpasteurised dairy that yielded a cold‑tolerant, tumbling, catalase‑positive Gram‑positive rod identify Listeria monocytogenes. Management considerations include intravenous ampicillin (often with gentamicin) and coordination with obstetrics and public health for maternal and fetal surveillance and product recall.",
+    "explanation": "Third‑trimester pregnancy with febrile meningitis, neutrophil‑predominant CSF, small Gram‑positive coccobacilli in CSF and blood, and epidemiologic link to unpasteurised dairy that yielded a cold‑tolerant, tumbling, catalase‑positive Gram‑positive rod identify Listeria monocytogenes.",
     "source": "ai_generated",
     "validated": true,
     "createdAt": "2026-03-27T18:40:55.337Z",
@@ -1117,7 +1117,7 @@
       }
     ],
     "difficulty": "easy",
-    "explanation": "The combination of prodromal fever with cough, coryza and conjunctivitis; a cephalocaudally spreading maculopapular rash that began at the hairline; marked lymphopenia; viral-appearing interstitial chest changes; and a clear exposure to a young unvaccinated contact with buccal enanthem is most consistent with infection by measles virus (rubeola). Diagnosis is confirmed by detection of viral RNA by PCR or by measles-specific IgM serology. Management for this patient is supportive, airborne precautions, and consideration of vitamin A supplementation given risk of respiratory complications.",
+    "explanation": "The combination of prodromal fever with cough, coryza and conjunctivitis. a cephalocaudally spreading maculopapular rash that began at the hairline. marked lymphopenia. viral-appearing interstitial chest changes. and a clear exposure to a young unvaccinated contact with buccal enanthem is most consistent with infection by measles virus (rubeola). Diagnosis is confirmed by detection of viral RNA by PCR or by measles-specific IgM serology.",
     "source": "ai_generated",
     "validated": true,
     "createdAt": "2026-03-27T18:41:28.935Z",
@@ -1157,7 +1157,7 @@
       }
     ],
     "difficulty": "easy",
-    "explanation": "The combination of acute unilateral then bilateral parotid-region swelling, elevated serum amylase, and subsequent orchitis in a postpubertal male during a campus outbreak is typical of infection with Mumps virus. Confirmation came from RT-PCR on a buccal swab and a positive virus-specific IgM; management is supportive, with attention to pain control and monitoring for complications.",
+    "explanation": "The combination of acute unilateral then bilateral parotid-region swelling, elevated serum amylase, and subsequent orchitis in a postpubertal male during a campus outbreak is typical of infection with Mumps virus.",
     "source": "ai_generated",
     "validated": true,
     "createdAt": "2026-03-27T18:42:06.992Z",
@@ -1197,7 +1197,7 @@
       }
     ],
     "difficulty": "easy",
-    "explanation": "The combination of chronic respiratory symptoms, night sweats, weight loss, upper-lobe cavitary disease with tree-in-bud nodularity, a positive interferon-γ release assay, slow-growing rough colonies on Lowenstein–Jensen and acid-fast bacilli on smear points to infection with Mycobacterium tuberculosis. Confirmation is by nucleic acid amplification and culture with susceptibility testing; initial clinical improvement after starting the standard four-drug regimen (isoniazid, rifampicin, pyrazinamide, ethambutol) is typical once appropriate therapy begins.",
+    "explanation": "The combination of chronic respiratory symptoms, night sweats, weight loss, upper-lobe cavitary disease with tree-in-bud nodularity, a positive interferon-γ release assay, slow-growing rough colonies on Lowenstein–Jensen and acid-fast bacilli on smear points to infection with Mycobacterium tuberculosis.",
     "source": "ai_generated",
     "validated": true,
     "createdAt": "2026-03-27T18:43:23.170Z",
@@ -1237,7 +1237,7 @@
       }
     ],
     "difficulty": "easy",
-    "explanation": "Most consistent with Mycoplasma pneumoniae causing community‑acquired 'atypical' (walking) pneumonia in a young adult from a dormitory outbreak. Key clues: subacute dry cough with pharyngitis, normal or mildly elevated inflammatory markers and WBC, positive cold agglutinins with rising specific IgM, interstitial chest X‑ray pattern, and epidemiologic clustering with macrolide responsiveness. Definitive testing can include PCR of respiratory specimens or paired serology; treatment options include macrolides or doxycycline in adults.",
+    "explanation": "Most consistent with Mycoplasma pneumoniae causing community‑acquired 'atypical' (walking) pneumonia in a young adult from a dormitory outbreak. Key clues: subacute dry cough with pharyngitis, normal or mildly elevated inflammatory markers and WBC, positive cold agglutinins with rising specific IgM, interstitial chest X‑ray pattern, and epidemiologic clustering with macrolide responsiveness. Definitive testing can include PCR of respiratory specimens or paired serology. treatment options include macrolides or doxycycline in adults.",
     "source": "ai_generated",
     "validated": true,
     "createdAt": "2026-03-27T18:43:58.093Z",
@@ -1277,7 +1277,7 @@
       }
     ],
     "difficulty": "easy",
-    "explanation": "Acute fulminant meningoencephalitis in a healthy adolescent with rapid onset after forceful nasal exposure to warm freshwater, neutrophilic CSF with very low glucose and negative Gram stain, and MRI involvement of the olfactory bulbs/medial frontal lobes points to primary amoebic meningoencephalitis due to Naegleria fowleri. The exposure history (warm freshwater with nasal aspiration) is the key discriminating clue; diagnosis is supported by the CSF profile and imaging pattern. Early recognition is crucial because the condition progresses rapidly and has a high mortality without urgent targeted therapy.",
+    "explanation": "Acute fulminant meningoencephalitis in a healthy adolescent with rapid onset after forceful nasal exposure to warm freshwater, neutrophilic CSF with very low glucose and negative Gram stain, and MRI involvement of the olfactory bulbs/medial frontal lobes points to primary amoebic meningoencephalitis due to Naegleria fowleri. The exposure history (warm freshwater with nasal aspiration) is the key discriminating clue. diagnosis is supported by the CSF profile and imaging pattern.",
     "source": "ai_generated",
     "validated": true,
     "createdAt": "2026-03-27T18:44:48.030Z",
@@ -1317,7 +1317,7 @@
       }
     ],
     "difficulty": "easy",
-    "explanation": "The patient’s chronic iron‑deficiency anaemia with positive faecal occult blood, peripheral eosinophilia, history of barefoot exposure in wet soil, transient pulmonary infiltrate during a prior cough, and passage of small curved blood‑feeding nematodes with characteristic ovoid thin‑shelled eggs after treatment are consistent with infection by Necator americanus, a blood‑feeding hookworm acquired by larval skin penetration and treated with benzimidazole anthelmintics and iron repletion.",
+    "explanation": "The patient’s chronic iron‑deficiency anaemia with positive faecal occult blood, peripheral eosinophilia, history of barefoot exposure in wet soil, transient pulmonary infiltrate during a prior cough, and passage of small curved blood‑feeding nematodes with characteristic ovoid thin‑shelled eggs after treatment are consistent with infection by Necator americanus, a blood‑feeding hookworm acquired by larval skin penetration and.",
     "source": "ai_generated",
     "validated": true,
     "createdAt": "2026-03-27T18:45:35.471Z",
@@ -1357,7 +1357,7 @@
       }
     ],
     "difficulty": "easy",
-    "explanation": "The presentation of acute mucopurulent cervicitis in a young sexually active patient, plus a Gram stain showing intracellular Gram‑negative diplococci and a partner whose culture grew oxidase‑positive, kidney‑bean‑shaped diplococci that ferment glucose only, identifies Neisseria gonorrhoeae. Management includes appropriate single‑dose parenteral third‑generation cephalosporin therapy per local guidelines, empiric management or testing for chlamydia, and partner notification and treatment. Culture and antimicrobial susceptibility testing are useful given rising resistance.",
+    "explanation": "The presentation of acute mucopurulent cervicitis in a young sexually active patient, plus a Gram stain showing intracellular Gram‑negative diplococci and a partner whose culture grew oxidase‑positive, kidney‑bean‑shaped diplococci that ferment glucose only, identifies Neisseria gonorrhoeae. Culture and antimicrobial susceptibility testing are useful given rising resistance.",
     "source": "ai_generated",
     "validated": true,
     "createdAt": "2026-03-27T18:46:27.248Z",
@@ -1441,7 +1441,7 @@
       }
     ],
     "difficulty": "easy",
-    "explanation": "The clinical picture—acute febrile crampy diarrhoea with some blood, neutrophilic leukocytosis, fecal leukocytes, CT showing ileocolitis, and a point‑source exposure to undercooked poultry—together with a non‑lactose‑fermenting, motile, H2S‑producing gram‑negative bacillus recovered from stool and food, is most consistent with a non‑typhoidal Salmonella enteric infection (foodborne enterocolitis). Management for this previously healthy adult focused on fluid resuscitation and electrolyte replacement; antibiotics were withheld because the illness was self‑limited and he was not immunocompromised, in line with local practice for uncomplicated presentations.",
+    "explanation": "The clinical picture—acute febrile crampy diarrhoea with some blood, neutrophilic leukocytosis, fecal leukocytes, CT showing ileocolitis, and a point‑source exposure to undercooked poultry—together with a non‑lactose‑fermenting, motile, H2S‑producing gram‑negative bacillus recovered from stool and food, is most consistent with a non‑typhoidal Salmonella enteric infection (foodborne enterocolitis).",
     "source": "ai_generated",
     "validated": true,
     "createdAt": "2026-03-27T18:47:52.230Z",
@@ -1521,7 +1521,7 @@
       }
     ],
     "difficulty": "easy",
-    "explanation": "Most likely diagnosis: acute viral croup due to human parainfluenza virus. Supporting features: typical age group, nocturnal barking cough with inspiratory stridor and retractions, subglottic narrowing on neck radiograph, clustering of similar illness in daycare, and negative influenza/RSV tests with a single-virus PCR result from a contact. Management is supportive—single-dose oral dexamethasone and nebulised epinephrine for moderate to severe respiratory distress; antibiotics are not indicated unless a secondary bacterial complication is suspected.",
+    "explanation": "Most likely diagnosis: acute viral croup due to human parainfluenza virus. Supporting features: typical age group, nocturnal barking cough with inspiratory stridor and retractions, subglottic narrowing on neck radiograph, clustering of similar illness in daycare, and negative influenza/RSV tests with a single-virus PCR result from a contact.",
     "source": "ai_generated",
     "validated": true,
     "createdAt": "2026-03-27T18:49:37.481Z",
@@ -1561,7 +1561,7 @@
       }
     ],
     "difficulty": "easy",
-    "explanation": "The combination of a school‑based outbreak of a bright 'cheek' erythema with a subsequent lacy truncal rash in a school‑age child, acute IgM seropositivity with detectable viral DNA, and the maternal seroconversion with foetal hydrops is characteristic of infection with Parvovirus B19. Diagnosis in uncomplicated paediatric cases is clinical, supported by IgM or PCR; treatment is supportive in immunocompetent children. Pregnant contacts require counselling and foetal surveillance because maternal infection can lead to foetal anaemia and non‑immune hydrops fetalis.",
+    "explanation": "The combination of a school‑based outbreak of a bright 'cheek' erythema with a subsequent lacy truncal rash in a school‑age child, acute IgM seropositivity with detectable viral DNA, and the maternal seroconversion with foetal hydrops is characteristic of infection with Parvovirus B19. Diagnosis in uncomplicated paediatric cases is clinical, supported by IgM or PCR. treatment is supportive in immunocompetent children. Pregnant contacts require counselling and foetal surveillance because maternal infection can lead to foetal anaemia and non‑immune hydrops fetalis.",
     "source": "ai_generated",
     "validated": true,
     "createdAt": "2026-03-27T18:51:24.353Z",
@@ -1601,7 +1601,7 @@
       }
     ],
     "difficulty": "easy",
-    "explanation": "This presentation is most consistent with paralytic poliomyelitis caused by poliovirus. Key features: febrile prodrome followed by acute, asymmetric flaccid paralysis with preserved sensation and areflexia; CSF pleocytosis with normal glucose; MRI showing selective anterior horn cell (motor neuron) involvement; enterovirus RNA detected in stool/throat; and absence of childhood immunisation with recent travel to an area reporting clusters of acute flaccid paralysis. Management is primarily supportive (monitoring for respiratory compromise, intensive physiotherapy) and public health notification and contact tracing are essential. Definitive confirmation is by poliovirus-specific PCR and sequencing from stool or throat specimens; prevention is by appropriate immunisation.",
+    "explanation": "This presentation is most consistent with paralytic poliomyelitis caused by poliovirus. Key features: febrile prodrome followed by acute, asymmetric flaccid paralysis with preserved sensation and areflexia. CSF pleocytosis with normal glucose. MRI showing selective anterior horn cell (motor neuron) involvement. enterovirus RNA detected in stool/throat. and absence of childhood immunisation with recent travel to an area reporting clusters of acute flaccid paralysis. Definitive confirmation is by poliovirus-specific PCR and sequencing from stool or throat specimens. prevention is by appropriate immunisation.",
     "source": "ai_generated",
     "validated": true,
     "createdAt": "2026-03-27T18:55:00.858Z",
@@ -1641,7 +1641,7 @@
       }
     ],
     "difficulty": "easy",
-    "explanation": "The presentation—acute otitis externa in a swimmer with greenish discharge—plus Gram-negative rods that are oxidase-positive, non-lactose fermenting and produce a diffusible blue–green pigment, is diagnostic of Pseudomonas aeruginosa infection. Imaging excludes invasive disease; management is canal debridement and topical anti-pseudomonal treatment (for example, topical fluoroquinolone drops) with oral agents reserved for severe or refractory cases.",
+    "explanation": "The presentation—acute otitis externa in a swimmer with greenish discharge—plus Gram-negative rods that are oxidase-positive, non-lactose fermenting and produce a diffusible blue–green pigment, is diagnostic of Pseudomonas aeruginosa infection.",
     "source": "ai_generated",
     "validated": true,
     "createdAt": "2026-03-27T18:55:51.609Z",
@@ -1681,7 +1681,7 @@
       }
     ],
     "difficulty": "easy",
-    "explanation": "The combination of a short incubation after a mammalian bite, prodrome of fever and agitation progressing to encephalopathy with hydrophobia/aphagia-like features, saliva RT-PCR positive for viral RNA, antigen in cutaneous nerves, and MRI limbic/brainstem involvement is diagnostic of infection with the rabies virus. Management considerations include intensive supportive care and public health notification; prevention hinges on timely post-exposure prophylaxis (wound care, passive immunoglobulin, and active vaccination) after high-risk exposures.",
+    "explanation": "The combination of a short incubation after a mammalian bite, prodrome of fever and agitation progressing to encephalopathy with hydrophobia/aphagia-like features, saliva RT-PCR positive for viral RNA, antigen in cutaneous nerves, and MRI limbic/brainstem involvement is diagnostic of infection with the rabies virus.",
     "source": "ai_generated",
     "validated": true,
     "createdAt": "2026-03-27T18:56:26.693Z",
@@ -1721,7 +1721,7 @@
       }
     ],
     "difficulty": "easy",
-    "explanation": "Presentation and exam are consistent with an uncomplicated upper respiratory infection (common cold) in an otherwise healthy adult with recent exposure to children. Modest inflammatory markers and a normal chest radiograph argue against bacterial pneumonia. Multiplex PCR identified a non-enveloped, positive-sense single-stranded RNA virus commonly recovered from outpatient upper respiratory infections; combined with the clinical syndrome and exposure history, the most likely pathogen is rhinovirus. Management is supportive (analgesics, nasal saline, fluids, rest) and avoidance of unnecessary antibiotics; hand hygiene and workplace exclusion while febrile or symptomatic can limit spread.",
+    "explanation": "Presentation and exam are consistent with an uncomplicated upper respiratory infection (common cold) in an otherwise healthy adult with recent exposure to children. Modest inflammatory markers and a normal chest radiograph argue against bacterial pneumonia. Multiplex PCR identified a non-enveloped, positive-sense single-stranded RNA virus commonly recovered from outpatient upper respiratory infections. combined with the clinical syndrome and exposure history, the most likely pathogen is rhinovirus.",
     "source": "ai_generated",
     "validated": true,
     "createdAt": "2026-03-27T18:58:10.204Z",
@@ -1761,7 +1761,7 @@
       }
     ],
     "difficulty": "easy",
-    "explanation": "The combination of high fever, severe headache, rash that began at the wrists and ankles and progressed centrally with later palmar petechiae, thrombocytopenia, hyponatraemia and transaminase elevation in a patient with a recent tick bite in an endemic area indicates infection with Rickettsia rickettsii (Rocky Mountain spotted fever). Empiric treatment with doxycycline should be started promptly; confirmatory testing can include PCR of acute blood samples or paired serology demonstrating seroconversion.",
+    "explanation": "The combination of high fever, severe headache, rash that began at the wrists and ankles and progressed centrally with later palmar petechiae, thrombocytopenia, hyponatraemia and transaminase elevation in a patient with a recent tick bite in an endemic area indicates infection with Rickettsia rickettsii (Rocky Mountain spotted fever). Empiric treatment with doxycycline should be started promptly. confirmatory testing can include PCR of acute blood samples or paired serology demonstrating seroconversion.",
     "source": "ai_generated",
     "validated": true,
     "createdAt": "2026-03-27T18:59:45.680Z",
@@ -1801,7 +1801,7 @@
       }
     ],
     "difficulty": "easy",
-    "explanation": "An infant with acute onset of severe watery diarrhoea and vomiting, signs of dehydration, attendance at a daycare outbreak in winter, negative bacterial studies, and a positive stool antigen for a non-enveloped segmented double-stranded RNA virus is most consistent with rotavirus infection. Incomplete or absent vaccination increases risk; management centres on rehydration and supportive care.",
+    "explanation": "An infant with acute onset of severe watery diarrhoea and vomiting, signs of dehydration, attendance at a daycare outbreak in winter, negative bacterial studies, and a positive stool antigen for a non-enveloped segmented double-stranded RNA virus is most consistent with rotavirus infection.",
     "source": "ai_generated",
     "validated": true,
     "createdAt": "2026-03-27T19:00:38.342Z",
@@ -1841,7 +1841,7 @@
       }
     ],
     "difficulty": "easy",
-    "explanation": "Presentation of a young, unvaccinated pregnant woman with postauricular lymphadenopathy, facial‑onset maculopapular rash, arthralgia and serologic evidence of recent primary infection, combined with a fetal echocardiographic finding of patent ductus arteriosus and a linked daycare case, is diagnostic of rubella virus infection. Early maternal infection carries high risk of congenital cardiac and ocular defects; confirmation was by maternal PCR and seroconversion. Prevention is by preconception vaccination of susceptible individuals.",
+    "explanation": "Presentation of a young, unvaccinated pregnant woman with postauricular lymphadenopathy, facial‑onset maculopapular rash, arthralgia and serologic evidence of recent primary infection, combined with a fetal echocardiographic finding of patent ductus arteriosus and a linked daycare case, is diagnostic of rubella virus infection. Early maternal infection carries high risk of congenital cardiac and ocular defects. confirmation was by maternal PCR and seroconversion. Prevention is by preconception vaccination of susceptible individuals.",
     "source": "ai_generated",
     "validated": true,
     "createdAt": "2026-03-27T19:01:24.414Z",
@@ -1881,7 +1881,7 @@
       }
     ],
     "difficulty": "easy",
-    "explanation": "The patient’s prolonged stepwise fever, relative bradycardia, faint macular trunk lesions, ileocecal inflammation on imaging, recent travel to an endemic area with consumption of untreated food and water, and blood cultures yielding a motile, non–lactose-fermenting Gram-negative bacillus that produces hydrogen sulfide are most consistent with Salmonella enterica serovar Typhi (Salmonella Typhi) bacteremia causing enteric fever. Treatment options for susceptible isolates include third-generation cephalosporins (for example ceftriaxone) or azithromycin; vaccination before travel and safe food/water practices reduce risk.",
+    "explanation": "The patient’s prolonged stepwise fever, relative bradycardia, faint macular trunk lesions, ileocecal inflammation on imaging, recent travel to an endemic area with consumption of untreated food and water, and blood cultures yielding a motile, non–lactose-fermenting Gram-negative bacillus that produces hydrogen sulfide are most consistent with Salmonella enterica serovar Typhi (Salmonella Typhi) bacteremia causing enteric fever. Treatment options for susceptible isolates include third-generation cephalosporins (for example ceftriaxone) or azithromycin. vaccination before travel and safe food/water practices reduce risk.",
     "source": "ai_generated",
     "validated": true,
     "createdAt": "2026-03-27T19:03:15.924Z",
@@ -1961,7 +1961,7 @@
       }
     ],
     "difficulty": "easy",
-    "explanation": "The combination of persistent terminal haematuria, peripheral eosinophilia, sterile pyuria, bladder-wall calcifications with hydroureteronephrosis, and a history of freshwater exposure in sub-Saharan Africa indicates urinary schistosomiasis due to Schistosoma haematobium. Diagnosis is confirmed by finding characteristic eggs in urine; praziquantel is the recommended treatment. Complications to consider include obstructive uropathy and increased long-term risk of squamous cell carcinoma of the bladder.",
+    "explanation": "The combination of persistent terminal haematuria, peripheral eosinophilia, sterile pyuria, bladder-wall calcifications with hydroureteronephrosis, and a history of freshwater exposure in sub-Saharan Africa indicates urinary schistosomiasis due to Schistosoma haematobium. Diagnosis is confirmed by finding characteristic eggs in urine. praziquantel is the recommended treatment. Complications to consider include obstructive uropathy and increased long-term risk of squamous cell carcinoma of the bladder.",
     "source": "ai_generated",
     "validated": true,
     "createdAt": "2026-03-27T19:05:53.404Z",
@@ -2046,7 +2046,7 @@
       }
     ],
     "difficulty": "easy",
-    "explanation": "The presentation of small‑volume bloody diarrhoea with tenesmus, stool neutrophils, CT evidence of left‑sided colitis and an outbreak in a daycare with isolates that are non‑lactose‑fermenting, oxidase negative and non‑motile is most consistent with infection due to Shigella species. Transmission in childcare settings via fecal–oral spread and a low infectious dose explain the cluster. Management includes fluid and electrolyte replacement, infection control measures, and targeted antibiotic therapy guided by susceptibility (commonly oral ciprofloxacin or azithromycin depending on local resistance patterns and patient factors).",
+    "explanation": "The presentation of small‑volume bloody diarrhoea with tenesmus, stool neutrophils, CT evidence of left‑sided colitis and an outbreak in a daycare with isolates that are non‑lactose‑fermenting, oxidase negative and non‑motile is most consistent with infection due to Shigella species. Transmission in childcare settings via fecal–oral spread and a low infectious dose explain the cluster.",
     "source": "ai_generated",
     "validated": true,
     "createdAt": "2026-03-27T19:07:23.109Z",
@@ -2206,7 +2206,7 @@
       }
     ],
     "difficulty": "easy",
-    "explanation": "Presentation (fever, abrupt sore throat, tonsillar exudates, tender anterior cervical lymphadenopathy, absence of cough), Gram-positive cocci in chains on throat specimen, positive rapid antigen for bacterial pharyngitis, and recent exposure to children with a sandpaper rash and strawberry tongue point to Streptococcus pyogenes infection (group A beta-hemolytic streptococcus) causing acute pharyngitis/scarletiform illness. First-line therapy is an oral penicillin or amoxicillin to reduce suppurative complications and prevent transmission.",
+    "explanation": "Presentation (fever, abrupt sore throat, tonsillar exudates, tender anterior cervical lymphadenopathy, absence of cough), Gram-positive cocci in chains on throat specimen, positive rapid antigen for bacterial pharyngitis, and recent exposure to children with a sandpaper rash and strawberry tongue point to Streptococcus pyogenes infection (group A beta-hemolytic streptococcus) causing acute pharyngitis/scarletiform illness.",
     "source": "ai_generated",
     "validated": true,
     "createdAt": "2026-03-27T19:12:27.552Z",
@@ -2246,7 +2246,7 @@
       }
     ],
     "difficulty": "easy",
-    "explanation": "The combination of chronic intermittent diarrhoea and weight loss, an intensely pruritic rapidly migrating serpiginous rash on the buttocks, marked peripheral eosinophilia with elevated IgE, transient pulmonary infiltrates, a history of prolonged barefoot contact with wet soil in an endemic region, and demonstration of motile rhabditiform larvae in stool is diagnostic of Strongyloides stercoralis. Recommended management is oral ivermectin with follow-up stool testing and serology to document eradication.",
+    "explanation": "The combination of chronic intermittent diarrhoea and weight loss, an intensely pruritic rapidly migrating serpiginous rash on the buttocks, marked peripheral eosinophilia with elevated IgE, transient pulmonary infiltrates, a history of prolonged barefoot contact with wet soil in an endemic region, and demonstration of motile rhabditiform larvae in stool is diagnostic of Strongyloides stercoralis.",
     "source": "ai_generated",
     "validated": true,
     "createdAt": "2026-03-27T19:13:20.388Z",
@@ -2286,7 +2286,7 @@
       }
     ],
     "difficulty": "easy",
-    "explanation": "This presentation and workup indicate intestinal infection by the pork tapeworm, Taenia solium. Key clues: recent ingestion of undercooked pork, visible motile proglottids in stool, ova with a radially striated shell on stool microscopy, and demonstration of a scolex with hooklets (which distinguishes the pork tapeworm from the beef tapeworm). Management is oral antiparasitic therapy (e.g., praziquantel or niclosamide per local protocol) with attention to proper disposal of the specimen and counselling about prevention (thorough cooking of pork and hygiene). Consider screening household contacts for infection.",
+    "explanation": "This presentation and workup indicate intestinal infection by the pork tapeworm, Taenia solium. Key clues: recent ingestion of undercooked pork, visible motile proglottids in stool, ova with a radially striated shell on stool microscopy, and demonstration of a scolex with hooklets (which distinguishes the pork tapeworm from the beef tapeworm). Consider screening household contacts for infection.",
     "source": "ai_generated",
     "validated": true,
     "createdAt": "2026-03-27T19:14:26.142Z",
@@ -2326,7 +2326,7 @@
       }
     ],
     "difficulty": "easy",
-    "explanation": "This presentation—the painless indurated genital ulcer with regional non-tender adenopathy, positive non-specific serologic test at high titre, demonstration of slender motile helical organisms on dark-field microscopy, a subsequent maculopapular rash including the palms, and a sexual partner with positive serology and intramuscular penicillin treatment—indicates infection by Treponema pallidum. First-line therapy for early infection in an immunocompetent patient remains a single intramuscular dose of benzathine penicillin; serologic titres are used for baseline and follow-up monitoring.",
+    "explanation": "This presentation—the painless indurated genital ulcer with regional non-tender adenopathy, positive non-specific serologic test at high titre, demonstration of slender motile helical organisms on dark-field microscopy, a subsequent maculopapular rash including the palms, and a sexual partner with positive serology and intramuscular penicillin treatment—indicates infection by Treponema pallidum.",
     "source": "ai_generated",
     "validated": true,
     "createdAt": "2026-03-27T19:15:54.174Z",
@@ -2406,7 +2406,7 @@
       }
     ],
     "difficulty": "easy",
-    "explanation": "The combination of frothy, malodorous yellow-green discharge, cervical punctate erythema, elevated vaginal pH, and demonstration of motile, flagellated protozoa on saline wet mount is diagnostic. Rapid clinical and microscopic cure after a single 2 g oral nitroimidazole dose confirms infection by Trichomonas vaginalis; partner treatment is essential to prevent reinfection.",
+    "explanation": "The combination of frothy, malodorous yellow-green discharge, cervical punctate erythema, elevated vaginal pH, and demonstration of motile, flagellated protozoa on saline wet mount is diagnostic. Rapid clinical and microscopic cure after a single 2 g oral nitroimidazole dose confirms infection by Trichomonas vaginalis. partner treatment is essential to prevent reinfection.",
     "source": "ai_generated",
     "validated": true,
     "createdAt": "2026-03-27T19:17:22.538Z",
@@ -2446,7 +2446,7 @@
       }
     ],
     "difficulty": "easy",
-    "explanation": "The clinical picture—school-age child from an area without routine deworming, chronic bloody diarrhoea with iron-deficiency anaemia and rectal prolapse—together with colonoscopic visualization of thin anterior worms embedded in the colonic mucosa and stool ova that are brown, barrel-shaped with bipolar plugs, identifies Trichuris trichiura infection. Management is anthelmintic therapy (for example mebendazole or albendazole per local guidelines) and addressing iron deficiency and sanitation to prevent reinfection.",
+    "explanation": "The clinical picture—school-age child from an area without routine deworming, chronic bloody diarrhoea with iron-deficiency anaemia and rectal prolapse—together with colonoscopic visualization of thin anterior worms embedded in the colonic mucosa and stool ova that are brown, barrel-shaped with bipolar plugs, identifies Trichuris trichiura infection.",
     "source": "ai_generated",
     "validated": true,
     "createdAt": "2026-03-27T19:17:55.036Z",
@@ -2486,7 +2486,7 @@
       }
     ],
     "difficulty": "easy",
-    "explanation": "Clinical picture of a traveller from sub‑Saharan Africa with an initial painful bite, posterior cervical lymphadenopathy, relapsing fevers, progression to meningoencephalitic symptoms, demonstration of motile extracellular flagellated organisms on Giemsa blood film, CSF lymphocytic pleocytosis, and exposure to tsetse fly is diagnostic of infection by Trypanosoma brucei. Diagnosis is confirmed by microscopy of blood or chancre aspirate, CSF exam for CNS involvement, and can be supported by PCR or specific serology; treatment choices depend on stage (haemolymphatic versus CNS) and include stage‑appropriate antitrypanosomal agents.",
+    "explanation": "Clinical picture of a traveller from sub‑Saharan Africa with an initial painful bite, posterior cervical lymphadenopathy, relapsing fevers, progression to meningoencephalitic symptoms, demonstration of motile extracellular flagellated organisms on Giemsa blood film, CSF lymphocytic pleocytosis, and exposure to tsetse fly is diagnostic of infection by Trypanosoma brucei. Diagnosis is confirmed by microscopy of blood or chancre aspirate, CSF exam for CNS involvement, and can be supported by PCR or specific serology. treatment choices depend on stage (haemolymphatic versus CNS) and include stage‑appropriate antitrypanosomal agents.",
     "source": "ai_generated",
     "validated": true,
     "createdAt": "2026-03-27T19:18:37.688Z",
@@ -2526,7 +2526,7 @@
       }
     ],
     "difficulty": "easy",
-    "explanation": "Presentation is classic for reactivation of Varicella‑zoster virus: unilateral, dermatomal clustered vesicles preceded by neuropathic pain in an older adult with history of primary childhood infection. Tzanck smear showing multinucleated giant cells supports a herpesvirus; PCR and sequencing confirming an alpha‑herpesvirus identical to the child's isolate establishes that the same virus caused both the child's primary illness and the patient's dermatomal reactivation. First-line management is prompt antiviral therapy (e.g., oral valaciclovir or aciclovir started within 72 hours of rash onset) plus analgesia; early treatment reduces acute complications and may lower the risk of prolonged postherpetic neuralgia.",
+    "explanation": "Presentation is classic for reactivation of Varicella‑zoster virus: unilateral, dermatomal clustered vesicles preceded by neuropathic pain in an older adult with history of primary childhood infection. Tzanck smear showing multinucleated giant cells supports a herpesvirus. PCR and sequencing confirming an alpha‑herpesvirus identical to the child's isolate establishes that the same virus caused both the child's primary illness and the patient's dermatomal reactivation.",
     "source": "ai_generated",
     "validated": true,
     "createdAt": "2026-03-27T19:20:12.380Z",
@@ -2566,7 +2566,7 @@
       }
     ],
     "difficulty": "easy",
-    "explanation": "The presentation of sudden, massive, painless watery diarrhoea with 'rice-water' stools after ingestion of contaminated water, rapid intravascular volume depletion with hyponatraemia and hypokalaemia, and many motile, comma-shaped organisms on stool wet mount is most consistent with infection by Vibrio cholerae. Immediate management is aggressive volume repletion; single-dose oral antibiotics can reduce stool volume and duration and public-health measures to secure water are essential.",
+    "explanation": "The presentation of sudden, massive, painless watery diarrhoea with 'rice-water' stools after ingestion of contaminated water, rapid intravascular volume depletion with hyponatraemia and hypokalaemia, and many motile, comma-shaped organisms on stool wet mount is most consistent with infection by Vibrio cholerae.",
     "source": "ai_generated",
     "validated": true,
     "createdAt": "2026-03-27T19:22:03.422Z",
@@ -2606,7 +2606,7 @@
       }
     ],
     "difficulty": "easy",
-    "explanation": "This young adult with febrile diarrhoea, right lower‑quadrant pain, CT evidence of terminal ileitis with mesenteric adenitis, and a recent meal of undercooked pork is most consistent with infection due to Yersinia enterocolitica. The pathogen commonly causes postprandial febrile enteritis with ileal involvement and mesenteric lymphadenitis, and is frequently linked to pork products and unpasteurised pork exposures. Diagnosis is confirmed by stool culture or selective cold‑enrichment techniques; treatment for symptomatic extraintestinal or severe cases includes appropriate antibiotics, while most uncomplicated gastroenteritis is managed supportively.",
+    "explanation": "This young adult with febrile diarrhoea, right lower‑quadrant pain, CT evidence of terminal ileitis with mesenteric adenitis, and a recent meal of undercooked pork is most consistent with infection due to Yersinia enterocolitica. The pathogen commonly causes postprandial febrile enteritis with ileal involvement and mesenteric lymphadenitis, and is frequently linked to pork products and unpasteurised pork exposures.",
     "source": "ai_generated",
     "validated": true,
     "createdAt": "2026-03-27T19:22:50.614Z",
@@ -2646,7 +2646,7 @@
       }
     ],
     "difficulty": "medium",
-    "explanation": "Contact-lens wear, recent topical steroid use, nonresponse to antibiotics, perineural infiltrates and a ring stromal lesion with corneal confocal microscopy showing reflective round cysts point to an amoebic keratitis. The exposure history (tap-water/lake contact while wearing lenses) and growth of motile trophozoites plus double-walled cysts on non-nutrient agar identify Acanthamoeba species as the causative pathogen.",
+    "explanation": "The exposure history (tap-water/lake contact while wearing lenses) and growth of motile trophozoites plus double-walled cysts on non-nutrient agar identify Acanthamoeba species as the causative pathogen.",
     "source": "ai_generated",
     "validated": true,
     "createdAt": "2026-03-27T19:23:42.763Z",
@@ -2686,7 +2686,7 @@
       }
     ],
     "difficulty": "medium",
-    "explanation": "The combination of recent tick exposure in a wooded area, febrile illness with headache and confusion, leukopenia (neutropenia), thrombocytopenia, mild transaminitis, and demonstration of morulae within neutrophils is most consistent with infection by Anaplasma phagocytophilum. Key discriminators from other tick-borne infections include the granulocytic (neutrophil) morulae (rather than monocytic inclusions), absence of an expanding erythematous migratory lesion, and the cytopenias with sterile blood cultures. Confirmation is by PCR on whole blood or by peripheral smear and serology; doxycycline is the recommended empiric therapy pending confirmation.",
+    "explanation": "The combination of recent tick exposure in a wooded area, febrile illness with headache and confusion, leukopenia (neutropenia), thrombocytopenia, mild transaminitis, and demonstration of morulae within neutrophils is most consistent with infection by Anaplasma phagocytophilum. Key discriminators from other tick-borne infections include the granulocytic (neutrophil) morulae (rather than monocytic inclusions), absence of an expanding erythematous migratory lesion, and the cytopenias with sterile blood cultures.",
     "source": "ai_generated",
     "validated": true,
     "createdAt": "2026-03-27T19:24:30.434Z",
@@ -2766,7 +2766,7 @@
       }
     ],
     "difficulty": "medium",
-    "explanation": "The constellation of sudden high fever, severe incapacitating symmetric peripheral arthralgia with synovitis and rash after recent travel to an area with Aedes mosquito transmission, together with early leukopenia, modest thrombocytopenia and elevated transaminases, is most consistent with infection by Chikungunya virus. PCR positivity on an acute specimen confirms infection during the viremic phase; the prominent, often debilitating joint pain with ultrasound evidence of synovitis helps distinguish this from other arboviral and bacterial causes of febrile arthritis.",
+    "explanation": "The constellation of sudden high fever, severe incapacitating symmetric peripheral arthralgia with synovitis and rash after recent travel to an area with Aedes mosquito transmission, together with early leukopenia, modest thrombocytopenia and elevated transaminases, is most consistent with infection by Chikungunya virus. PCR positivity on an acute specimen confirms infection during the viremic phase. the prominent, often debilitating joint pain with ultrasound evidence of synovitis helps distinguish this from other arboviral and bacterial causes of febrile arthritis.",
     "source": "ai_generated",
     "validated": true,
     "createdAt": "2026-03-27T19:28:30.274Z",
@@ -2806,7 +2806,7 @@
       }
     ],
     "difficulty": "medium",
-    "explanation": "Presentation of a subacute, non‑lobar lower respiratory infection with normal white count, minimal inflammatory marker elevation, poor response to a beta‑lactam, positive PCR for an obligate intracellular organism, serologic rise and a school outbreak that required cell‑culture for isolation points to Chlamydophila pneumoniae. Diagnosis was made by nucleic acid detection and paired serology; recommended therapy is with a macrolide or tetracycline rather than a beta‑lactam because of the organism’s intracellular lifecycle and limited susceptibility to beta‑lactams.",
+    "explanation": "Presentation of a subacute, non‑lobar lower respiratory infection with normal white count, minimal inflammatory marker elevation, poor response to a beta‑lactam, positive PCR for an obligate intracellular organism, serologic rise and a school outbreak that required cell‑culture for isolation points to Chlamydophila pneumoniae.",
     "source": "ai_generated",
     "validated": true,
     "createdAt": "2026-03-27T19:29:03.551Z",
@@ -2846,7 +2846,7 @@
       }
     ],
     "difficulty": "medium",
-    "explanation": "This patient has an atypical community‑acquired pneumonia with systemic features and mild transaminase elevation, failed a β‑lactam, and has a clear recent exposure to an ill parrot—an exposure that points to an avian-origin intracellular respiratory pathogen. The combination of single‑lobe consolidation, elevated transaminases, negative routine urinary antigen tests, and bird exposure supports infection with Chlamydophila psittaci. Diagnostic confirmation is by PCR on respiratory specimens or a rising specific antibody titre; tetracyclines (doxycycline) are the treatment of choice and clinical improvement after targeted therapy is expected.",
+    "explanation": "This patient has an atypical community‑acquired pneumonia with systemic features and mild transaminase elevation, failed a β‑lactam, and has a clear recent exposure to an ill parrot—an exposure that points to an avian-origin intracellular respiratory pathogen. The combination of single‑lobe consolidation, elevated transaminases, negative routine urinary antigen tests, and bird exposure supports infection with Chlamydophila psittaci.",
     "source": "ai_generated",
     "validated": true,
     "createdAt": "2026-03-27T19:29:45.960Z",
@@ -2886,7 +2886,7 @@
       }
     ],
     "difficulty": "medium",
-    "explanation": "The combination of subacute febrile illness with atypical pneumonia, modest leukocytosis but marked inflammatory markers and transaminase elevation, sterile blood cultures, poor response to a beta-lactam, and a recent exposure to parturient small ruminants (aerosolized birthing products) strongly suggests infection with Coxiella burnetii. Diagnosis is made with targeted serology (rising phase II antibodies) or PCR on appropriate specimens; first-line therapy for acute disease is doxycycline.",
+    "explanation": "The combination of subacute febrile illness with atypical pneumonia, modest leukocytosis but marked inflammatory markers and transaminase elevation, sterile blood cultures, poor response to a beta-lactam, and a recent exposure to parturient small ruminants (aerosolized birthing products) strongly suggests infection with Coxiella burnetii.",
     "source": "ai_generated",
     "validated": true,
     "createdAt": "2026-03-27T19:30:30.839Z",
@@ -2926,7 +2926,7 @@
       }
     ],
     "difficulty": "medium",
-    "explanation": "Prolonged watery diarrhoea in an immunocompetent adult after probable exposure to imported fresh raspberries, combined with demonstration of 8–10 μm variably acid-fast oocysts that autofluoresce, is most consistent with infection by Cyclospora cayetanensis. Diagnosis is made by identification of the oocysts (or by PCR); treatment of choice is trimethoprim–sulfamethoxazole.",
+    "explanation": "Prolonged watery diarrhoea in an immunocompetent adult after probable exposure to imported fresh raspberries, combined with demonstration of 8–10 μm variably acid-fast oocysts that autofluoresce, is most consistent with infection by Cyclospora cayetanensis. Diagnosis is made by identification of the oocysts (or by PCR). treatment of choice is trimethoprim–sulfamethoxazole.",
     "source": "ai_generated",
     "validated": true,
     "createdAt": "2026-03-27T19:30:53.675Z",
@@ -2966,7 +2966,7 @@
       }
     ],
     "difficulty": "medium",
-    "explanation": "Progressive large-volume watery diarrhoea in a patient with advanced cellular immunodeficiency, repeated negative routine stool tests, imaging showing small-bowel involvement, identification of moderately large acid‑fast oocysts on concentrated stool stain, and rapid clinical and parasitological response to high‑dose trimethoprim–sulfamethoxazole together point to an intestinal coccidian parasite that is diagnosed by modified acid‑fast microscopy and treated with TMP‑SMX.",
+    "explanation": "Progressive large-volume watery diarrhoea in a patient with advanced cellular immunodeficiency, repeated negative routine stool tests, imaging showing small-bowel involvement, identification of moderately large acid‑fast oocysts on concentrated stool stain, and rapid clinical and parasitological response to high‑dose trimethoprim–sulfamethoxazole together point to an intestinal coccidian parasite that is diagnosed by modified acid‑fast microscopy and.",
     "source": "ai_generated",
     "validated": true,
     "createdAt": "2026-03-27T19:31:14.128Z",
@@ -3086,7 +3086,7 @@
       }
     ],
     "difficulty": "hard",
-    "explanation": "The combination of marked haemolytic anaemia with intraerythrocytic ring forms and high parasitaemia, severe disease in a splenectomised patient, and a temporally linked blood transfusion from a donor with recent tick exposure in an endemic area indicates infection with Babesia microti. Diagnosis is confirmed by PCR or specialised parasitology on blood, and severe cases in asplenic patients with high parasitaemia often require antiparasitic therapy and consideration of red cell exchange transfusion.",
+    "explanation": "The combination of marked haemolytic anaemia with intraerythrocytic ring forms and high parasitaemia, severe disease in a splenectomised patient, and a temporally linked blood transfusion from a donor with recent tick exposure in an endemic area indicates infection with Babesia microti.",
     "source": "ai_generated",
     "validated": true,
     "createdAt": "2026-03-27T20:27:59.611Z",
@@ -3126,7 +3126,7 @@
       }
     ],
     "difficulty": "medium",
-    "explanation": "The combination of subacute lobar consolidation that can mimic malignancy, a verrucous ulcerating cutaneous lesion, environmental exposure to freshwater riverbank and decaying wood, and tissue histology showing large thick-walled yeasts with broad-based budding is diagnostic of infection with Blastomyces dermatitidis. Confirmatory culture from clinical specimens or antigen testing supports the diagnosis. Management depends on severity, with oral azole therapy for mild to moderate disease and amphotericin formulations for severe pulmonary or disseminated infection.",
+    "explanation": "The combination of subacute lobar consolidation that can mimic malignancy, a verrucous ulcerating cutaneous lesion, environmental exposure to freshwater riverbank and decaying wood, and tissue histology showing large thick-walled yeasts with broad-based budding is diagnostic of infection with Blastomyces dermatitidis. Confirmatory culture from clinical specimens or antigen testing supports the diagnosis.",
     "source": "ai_generated",
     "validated": true,
     "createdAt": "2026-03-27T20:28:07.299Z",
@@ -3166,7 +3166,7 @@
       }
     ],
     "difficulty": "easy",
-    "explanation": "The presentation of watery diarrhoea after recent broad-spectrum antibiotic exposure, imaging showing colonic wall thickening, marked leukocytosis with acute kidney injury, positive GDH and toxin B PCR, and rapid clinical response to oral vancomycin support a diagnosis of infection with Clostridioides difficile. The laboratory detection of glutamate dehydrogenase plus a toxin B gene confirms toxin-producing strains as the cause of the antibiotic-associated colitis in this patient.",
+    "explanation": "The presentation of watery diarrhoea after recent broad-spectrum. The laboratory detection of glutamate dehydrogenase plus a toxin B gene confirms toxin-producing strains as the cause of the.",
     "source": "ai_generated",
     "validated": true,
     "createdAt": "2026-03-27T20:28:43.133Z",
@@ -3206,7 +3206,7 @@
       }
     ],
     "difficulty": "easy",
-    "explanation": "This presentation represents clostridial myonecrosis due to Clostridium perfringens. The rapid onset of severe pain after a crush injury with soil contamination, palpable crepitus and soft tissue gas on imaging, marked intravascular haemolysis with a rapid fall in haemoglobin, and numerous large Gram-positive bacilli on wound stain together point to this pathogen. The organism's alpha toxin has lecithinase activity that produces the double zone of haemolysis and contributes to muscle destruction and haemolysis. Management is urgent surgical debridement, broad-spectrum antibiotics with high-dose penicillin plus an agent that suppresses toxin production such as clindamycin, and aggressive supportive care for shock and haemolysis.",
+    "explanation": "This presentation represents clostridial myonecrosis due to Clostridium perfringens. The rapid onset of severe pain after a crush injury with soil contamination, palpable crepitus and soft tissue gas on imaging, marked intravascular haemolysis with a rapid fall in haemoglobin, and numerous large Gram-positive bacilli on wound stain together point to this pathogen. The organism's alpha toxin has lecithinase activity that produces the double zone of haemolysis and contributes to muscle destruction and haemolysis.",
     "source": "ai_generated",
     "validated": true,
     "createdAt": "2026-03-27T20:28:59.530Z",
@@ -3246,7 +3246,7 @@
       }
     ],
     "difficulty": "hard",
-    "explanation": "The combination of subacute pulmonary nodules with cavitation, tibial osteomyelitis, peripheral eosinophilia, anti-TNF immunosuppression, and a history of heavy dust exposure in the San Joaquin Valley is most consistent with infection by Coccidioides species. Dissemination to bone and soft tissue is a known complication in immunosuppressed hosts. Diagnostic confirmation is made by culture or histopathology demonstrating large spherules containing endospores and by supportive serology. First-line therapy for uncomplicated pulmonary disease is an azole, while severe disseminated disease often requires amphotericin B followed by prolonged azole therapy.",
+    "explanation": "The combination of subacute pulmonary nodules with cavitation, tibial osteomyelitis, peripheral eosinophilia, anti-TNF immunosuppression, and a history of heavy dust exposure in the San Joaquin Valley is most consistent with infection by Coccidioides species. Dissemination to bone and soft tissue is a known complication in immunosuppressed hosts. Diagnostic confirmation is made by culture or histopathology demonstrating large spherules containing endospores and by supportive serology.",
     "source": "ai_generated",
     "validated": true,
     "createdAt": "2026-03-27T20:29:35.589Z",
@@ -3286,7 +3286,7 @@
       }
     ],
     "difficulty": "medium",
-    "explanation": "This patient with advanced immunosuppression and subacute meningitis has markedly elevated CSF opening pressure, lymphocytic CSF with low glucose and high protein, and an India ink preparation demonstrating encapsulated budding yeast. Imaging shows dilated perivascular spaces that can represent cystic fungal involvement of the basal ganglia. The history of exposure to pigeon droppings further supports infection by Cryptococcus neoformans. Confirmatory tests would include cryptococcal antigen testing of CSF and fungal culture; management requires antifungal induction and intracranial pressure control.",
+    "explanation": "This patient with advanced immunosuppression and subacute meningitis has markedly elevated CSF opening pressure, lymphocytic CSF with low glucose and high protein, and an India ink preparation demonstrating encapsulated budding yeast. Imaging shows dilated perivascular spaces that can represent cystic fungal involvement of the basal ganglia. The history of exposure to pigeon droppings further supports infection by Cryptococcus neoformans.",
     "source": "ai_generated",
     "validated": true,
     "createdAt": "2026-03-27T20:29:34.396Z",
@@ -3326,7 +3326,7 @@
       }
     ],
     "difficulty": "medium",
-    "explanation": "Risk factors in this patient include insulin-treated diabetes, recent systemic and inhaled corticosteroid exposure, and recent broad-spectrum antibiotics. Endoscopy showing adherent white plaques that scrape off plus KOH microscopy demonstrating budding yeast and pseudohyphae indicate a mucosal yeast infection. A positive germ tube test from culture identifies Candida albicans. Other causes of infectious oesophagitis such as herpes simplex virus or cytomegalovirus are less likely given the plaque morphology and absence of viral cytopathic changes on biopsy.",
+    "explanation": "Endoscopy showing adherent white plaques that scrape off plus KOH microscopy demonstrating budding yeast and pseudohyphae indicate a mucosal yeast infection. A positive germ tube test from culture identifies Candida albicans. Other causes of infectious oesophagitis such as herpes simplex virus or cytomegalovirus are less likely given the plaque morphology and absence of viral cytopathic changes on biopsy.",
     "source": "ai_generated",
     "validated": true,
     "createdAt": "2026-03-27T21:19:15.341Z",
@@ -3366,7 +3366,7 @@
       }
     ],
     "difficulty": "hard",
-    "explanation": "Solid-organ transplant recipient who completed short-course antiviral prophylaxis and now presents 3 months post-transplant with fever, colitis, cytopenias, rising creatinine, high-level plasma DNAemia, characteristic enlarged cells with large intranuclear inclusions on biopsy, and rapid clinical and virologic response to intravenous ganciclovir. These findings identify Cytomegalovirus as the pathogen. Confirmatory tests include quantitative DNA PCR and immunohistochemistry on tissue; treatment is intravenous ganciclovir followed by oral valganciclovir with attention to dose adjustment for renal function.",
+    "explanation": "These findings identify Cytomegalovirus as the pathogen. Confirmatory tests include quantitative DNA PCR and immunohistochemistry on tissue. treatment is intravenous ganciclovir followed by oral valganciclovir with attention to dose adjustment for renal function.",
     "source": "ai_generated",
     "validated": true,
     "createdAt": "2026-03-27T21:19:23.956Z",
@@ -3406,7 +3406,7 @@
       }
     ],
     "difficulty": "medium",
-    "explanation": "The combination of a long-standing solitary hepatic cyst with internal septations and peripheral calcification, mild eosinophilia, failure to respond to antibiotics, and close contact with dogs that are fed raw offal points to cystic echinococcosis caused by a tapeworm transmitted through a dog–livestock cycle. Management considerations include anti-parasitic therapy with benzimidazole derivatives and coordinated surgical or percutaneous intervention depending on cyst stage and risk of spillage.",
+    "explanation": "The combination of a long-standing solitary hepatic cyst with internal septations and peripheral calcification, mild eosinophilia, failure to.",
     "source": "ai_generated",
     "validated": true,
     "createdAt": "2026-03-27T21:20:13.335Z",
@@ -3486,7 +3486,7 @@
       }
     ],
     "difficulty": "hard",
-    "explanation": "Chronic infection with the hepatitis C virus best explains this presentation. The patient has chronic liver disease with portal hypertension and thrombocytopenia, extrahepatic manifestations including mixed cryoglobulinaemia with low C4, palpable purpura, peripheral neuropathy and proteinuric renal involvement. The remote transfusion before implementation of screening provides a plausible long-standing exposure. The diagnosis is confirmed by detectable viral RNA and genotype determination. Management focuses on direct‑acting antiviral therapy tailored to genotype and comorbidity, with monitoring for hepatic fibrosis and extrahepatic complications.",
+    "explanation": "Chronic infection with the hepatitis C virus best explains this presentation. The patient has chronic liver disease with portal hypertension and thrombocytopenia, extrahepatic manifestations including mixed cryoglobulinaemia with low C4, palpable purpura, peripheral neuropathy and proteinuric renal involvement. The remote transfusion before implementation of screening provides a plausible long-standing exposure. The diagnosis is confirmed by detectable viral RNA and genotype determination.",
     "source": "ai_generated",
     "validated": true,
     "createdAt": "2026-03-27T21:20:52.388Z",
@@ -3526,7 +3526,7 @@
       }
     ],
     "difficulty": "hard",
-    "explanation": "This patient with an anti-TNF agent and subacute febrile respiratory illness, mucosal ulcers, hepatosplenomegaly and pancytopenia who has a miliary pulmonary pattern and mediastinal lymphadenopathy after heavy exposure to bat guano is most consistent with disseminated infection by Histoplasma capsulatum. Confirmatory testing for this patient would include urine antigen assay and tissue diagnosis from bone marrow or lymph node showing small intracellular yeasts within macrophages, with fungal culture for definitive identification. Management for severe disseminated disease involves initial amphotericin B followed by prolonged oral azole therapy and holding TNF blockade, with close monitoring of organ dysfunction and hematologic recovery.",
+    "explanation": "This patient with an anti-TNF agent and subacute febrile respiratory illness, mucosal ulcers, hepatosplenomegaly and pancytopenia who has a miliary pulmonary pattern and mediastinal lymphadenopathy after heavy exposure to bat guano is most consistent with disseminated infection by Histoplasma capsulatum. Confirmatory testing for this patient would include urine antigen assay and tissue diagnosis from bone marrow or lymph node showing small intracellular yeasts within macrophages, with fungal culture for definitive identification.",
     "source": "ai_generated",
     "validated": true,
     "createdAt": "2026-03-27T21:20:48.478Z",
@@ -3566,7 +3566,7 @@
       }
     ],
     "difficulty": "easy",
-    "explanation": "Community-acquired lobar pneumonia with gastrointestinal symptoms, hyponatraemia, recent hotel exposure and poor response to a beta-lactam suggests an atypical, water-associated cause. Rapid clinical response to therapy directed at atypical pathogens plus a positive urinary antigen and growth on buffered charcoal yeast extract are diagnostic for the specific waterborne, intracellular Gram-negative bacillus implicated in outbreaks from building water systems.",
+    "explanation": "Community-acquired lobar pneumonia with gastrointestinal symptoms, hyponatraemia, recent hotel exposure and poor response to a beta-lactam suggests an atypical, water-associated cause.",
     "source": "ai_generated",
     "validated": true,
     "createdAt": "2026-03-27T21:22:07.375Z",
@@ -3606,7 +3606,7 @@
       }
     ],
     "difficulty": "hard",
-    "explanation": "This is catheter-related fungemia due to the lipid-dependent yeast Malassezia furfur. Key diagnostic clues are bloodstream yeast in a patient receiving lipid-rich parenteral nutrition, failure of growth on routine media with growth only on lipid-supplemented agar, characteristic mixed yeast and short hyphal forms on microscopy, persistent positive cultures despite echinocandin therapy, and rapid clearance after catheter removal, cessation of lipid infusion, and initiation of an azole. Management requires catheter removal, stopping the lipid source and antifungal therapy guided by susceptibility; azoles are usually effective where echinocandins are not.",
+    "explanation": "This is catheter-related fungemia due to the lipid-dependent yeast Malassezia furfur.",
     "source": "ai_generated",
     "validated": true,
     "createdAt": "2026-03-27T21:21:55.715Z",
@@ -3646,7 +3646,7 @@
       }
     ],
     "difficulty": "easy",
-    "explanation": "The combination of chronic hypopigmented, anesthetic skin lesions, focal peripheral nerve enlargement with neuropathy, numerous acid-fast bacilli on slit-skin smear and biopsy, and prolonged residence with a household contact in an endemic region is diagnostic of infection by Mycobacterium leprae. Diagnosis is supported by the multibacillary histology and peripheral nerve imaging. Confirmatory management involves multidrug therapy specific for this pathogen and early initiation reduces progressive neuropathy.",
+    "explanation": "The combination of chronic hypopigmented, anesthetic skin lesions, focal peripheral nerve enlargement with neuropathy, numerous acid-fast bacilli on slit-skin smear and biopsy, and prolonged residence with a household contact in an endemic region is diagnostic of infection by Mycobacterium leprae. Diagnosis is supported by the multibacillary histology and peripheral nerve imaging.",
     "source": "ai_generated",
     "validated": true,
     "createdAt": "2026-03-27T21:21:39.229Z",
@@ -3726,7 +3726,7 @@
       }
     ],
     "difficulty": "medium",
-    "explanation": "The combination of recent travel to an endemic region with mosquito exposure, anaemia, thrombocytopenia and splenomegaly suggests malaria. The thin smear shows low parasitaemia, enlarged infected erythrocytes with amoeboid trophozoites and Schüffner's stippling, features characteristic of Plasmodium vivax. Recurrence after adequate blood-stage therapy alone reflects dormant liver stages that cause relapse, which requires targeted anti-relapse treatment after confirming G6PD status.",
+    "explanation": "The combination of recent travel to an endemic region with mosquito exposure, anaemia, thrombocytopenia and splenomegaly suggests malaria. The thin smear shows low parasitaemia, enlarged infected erythrocytes with amoeboid trophozoites and Schüffner's stippling, features characteristic of Plasmodium vivax.",
     "source": "ai_generated",
     "validated": true,
     "createdAt": "2026-03-27T21:22:38.722Z",
@@ -3806,50 +3806,10 @@
       }
     ],
     "difficulty": "hard",
-    "explanation": "This patient with profound neutropenia, recent triazole exposure and hospital construction developed a rapidly progressive angioinvasive fungal pneumonia. Histology shows broad, pauciseptate, ribbon-like hyphae with wide-angle branching and culture with rhizoids on unbranched sporangiophores. These findings identify a member of the Mucorales, most consistent with Rhizopus species. Management required urgent surgical debridement when possible and high-dose liposomal amphotericin B rather than continued triazole therapy.",
+    "explanation": "This patient with profound neutropenia, recent triazole exposure and hospital construction developed a rapidly progressive angioinvasive fungal pneumonia. Histology shows broad, pauciseptate, ribbon-like hyphae with wide-angle branching and culture with rhizoids on unbranched sporangiophores. These findings identify a member of the Mucorales, most consistent with Rhizopus species.",
     "source": "ai_generated",
     "validated": true,
     "createdAt": "2026-03-27T21:23:11.359Z",
-    "style": "mgh_case_report",
-    "model": "gpt-5-mini"
-  },
-  {
-    "id": "path-daily-sarcoptes-scabiei-hard-1774646599592-21-0",
-    "pathogenId": "sarcoptes-scabiei",
-    "pathogenKind": "parasite",
-    "pool": "daily",
-    "hints": [
-      {
-        "order": 1,
-        "text": "A 72-year-old male resident of a long-term care facility presents with a 3-month history of progressive thick, yellowish crusting and scaling over both hands, interdigital spaces, soles and scalp. The lesions are fissured and painful with some serous discharge. He reports surprisingly little pruritus. Facility clinicians prescribed emollients and medium-potency topical corticosteroids without benefit. Low-grade fever to 37.8 °C and a 3 kg weight loss over 6 weeks are noted.",
-        "category": "presentation"
-      },
-      {
-        "order": 2,
-        "text": "Past medical history includes chronic lymphocytic leukaemia treated with purine analogue chemotherapy 5 months ago and a prolonged oral corticosteroid taper for a drug reaction. He is bedbound and requires help for washing. Staff report that several other residents developed new nocturnal itch and superficial rash in the prior month. No recent travel or fresh water exposures.",
-        "category": "history"
-      },
-      {
-        "order": 3,
-        "text": "Dermoscopic examination of palmar and interdigital regions shows numerous linear serpiginous tracks beneath adherent crust, each terminating in a small dark triangular focus. High-resolution clinical photographs document thick hyperkeratosis with fissuring and yellowish scale rather than isolated papules.",
-        "category": "imaging"
-      },
-      {
-        "order": 4,
-        "text": "He failed empiric topical antifungal therapy and two courses of oral antibiotics. After a single supervised dose of oral ivermectin combined with mechanical keratolytic debridement of crusts, the thick scales began to slough and odour and serous discharge decreased within 7 days. Several symptomatic staff improved after application of a prescribed topical agent.",
-        "category": "treatment_response"
-      },
-      {
-        "order": 5,
-        "text": "Mineral oil skin scrapings obtained from beneath the crust yielded numerous oval translucent arthropods approximately 0.3–0.4 mm in length with a stout rounded body and four pairs of short legs visible anteriorly, together with multiple ovoid eggs and dark faecal pellets on microscopy. Peripheral blood eosinophils were 1.6 × 10^9/L, CRP 22 mg/L.",
-        "category": "lab"
-      }
-    ],
-    "difficulty": "medium",
-    "explanation": "Immunosuppressed, institutionalized patient with thick hyperkeratotic crusting, low itch, outbreak among contacts, dermoscopic linear burrows, rapid response to oral ivermectin plus keratolysis, and mineral oil scrapings showing numerous small oval arthropods with eggs identifies infection by Sarcoptes scabiei presenting as crusted (Norwegian) infestation. Diagnostic and infection-control measures include confirmatory microscopy, keratolytic removal of crusts, systemic antiparasitic therapy, topical treatment of close contacts, and environmental cleaning.",
-    "source": "ai_generated",
-    "validated": true,
-    "createdAt": "2026-03-27T21:23:19.592Z",
     "style": "mgh_case_report",
     "model": "gpt-5-mini"
   },
@@ -3886,7 +3846,7 @@
       }
     ],
     "difficulty": "easy",
-    "explanation": "The patient has community-acquired lobar pneumonia in an older smoker, precipitated by a recent influenza-like illness. The lobar consolidation, rust-coloured sputum, neutrophilic leukocytosis, and rapid clinical response to a beta-lactam point to an encapsulated gram-positive diplococcus. The microbiology phenotype of alpha-haemolysis with optochin sensitivity and bile solubility identifies Streptococcus pneumoniae. Risk factors present here include advanced age, smoking, and recent viral respiratory infection. Standard management is appropriate beta-lactam therapy guided by susceptibilities and supportive care.",
+    "explanation": "The patient has community-acquired lobar pneumonia in an older smoker, precipitated by a recent influenza-like illness. The lobar consolidation, rust-coloured sputum, neutrophilic leukocytosis, and rapid clinical response to a beta-lactam point to an encapsulated gram-positive diplococcus. The microbiology phenotype of alpha-haemolysis with optochin sensitivity and bile solubility identifies Streptococcus pneumoniae. Risk factors present here include advanced age, smoking, and recent viral respiratory infection.",
     "source": "ai_generated",
     "validated": true,
     "createdAt": "2026-03-27T21:23:52.629Z",
@@ -3926,7 +3886,7 @@
       }
     ],
     "difficulty": "hard",
-    "explanation": "In a solid-organ transplant recipient with recent augmented immunosuppression, multiple ring-enhancing lesions in deep grey structures plus CSF lymphocytic pleocytosis suggest an opportunistic CNS infection. The donor seropositive / recipient seronegative pattern points to donor-derived or primary infection with an intracellular protozoan that reactivates in immunosuppressed hosts and preferentially involves basal ganglia. Correlating epidemiology, imaging distribution, and loss of prophylactic coverage supports the diagnosis of infection by Toxoplasma gondii. Confirmation is by CSF PCR or brain biopsy when needed. First-line therapy is a combination regimen that includes pyrimethamine with a sulfonamide and folinic acid, adjusted for renal function and drug interactions with immunosuppressants.",
+    "explanation": "In a solid-organ transplant recipient with recent augmented immunosuppression, multiple ring-enhancing lesions in deep grey structures plus CSF lymphocytic pleocytosis suggest an opportunistic CNS infection. The donor seropositive / recipient seronegative pattern points to donor-derived or primary infection with an intracellular protozoan that reactivates in immunosuppressed hosts and preferentially involves basal ganglia. Correlating epidemiology, imaging distribution, and loss of prophylactic coverage supports the diagnosis of infection by Toxoplasma gondii. Confirmation is by CSF PCR or brain biopsy when needed.",
     "source": "ai_generated",
     "validated": true,
     "createdAt": "2026-03-27T21:23:47.911Z",
@@ -3966,7 +3926,7 @@
       }
     ],
     "difficulty": "hard",
-    "explanation": "Acute fulminant wound infection and bacteremia in a patient with liver disease after freshwater fish exposure, plus the microbiology profile of a motile, oxidase positive, beta-haemolytic Gram-negative bacillus that grows on MacConkey without salt and is ampicillin resistant but ciprofloxacin susceptible, point to Aeromonas hydrophila. The preceding brief diarrhoeal illness, the freshwater fish injury, rapid culture positivity, and the clinical response after targeted therapy support this diagnosis and distinguish it from saltwater-associated Vibrio species and from typical streptococcal or staphylococcal cellulitis.",
+    "explanation": "Acute fulminant wound infection and bacteremia in a patient with liver disease after freshwater fish exposure, plus the microbiology profile of a motile, oxidase positive, beta-haemolytic Gram-negative bacillus that grows on MacConkey without salt and is ampicillin resistant but ciprofloxacin susceptible, point to Aeromonas hydrophila.",
     "source": "ai_generated",
     "validated": true,
     "createdAt": "2026-03-27T21:25:57.474Z",
@@ -4006,7 +3966,7 @@
       }
     ],
     "difficulty": "hard",
-    "explanation": "The combination of subacute headache with meningeal signs, peripheral and marked CSF eosinophilia, leptomeningeal and cranial nerve root enhancement on MRI, and a history of ingesting raw produce contaminated with small snails points to infection by the nematode that uses rats as definitive hosts and gastropods as intermediate hosts. The incubation interval of about two to three weeks fits. Definitive diagnosis can be made by detection of larvae in CSF or by regionally available serology or PCR. Management focuses on supportive care and control of inflammation, often with corticosteroids. Anthelmintic therapy is considered in many cases but can provoke inflammatory worsening and is used in conjunction with steroids when chosen.",
+    "explanation": "The combination of subacute headache with meningeal signs, peripheral and marked CSF eosinophilia, leptomeningeal and cranial nerve root enhancement on MRI, and a history of ingesting raw produce contaminated with small snails points to infection by the nematode that uses rats as definitive hosts and gastropods as intermediate hosts. The incubation interval of about two to three weeks fits. Definitive diagnosis can be made by detection of larvae in CSF or by regionally available serology or PCR.",
     "source": "ai_generated",
     "validated": true,
     "createdAt": "2026-03-27T21:25:10.371Z",
@@ -4046,7 +4006,7 @@
       }
     ],
     "difficulty": "hard",
-    "explanation": "The combination of a farming exposure with pig contact, prolonged dysentery with colonic ulcers, and identification on fresh stool and tissue of large motile ciliated trophozoites establishes the diagnosis of infection by Balantidium coli. The organism is a large ciliated protozoan that can invade colonic mucosa and produce deep ulcers that mimic other causes of invasive colitis. Diagnosis rests on demonstration of trophozoites in fresh stool or biopsy. Recommended therapy includes tetracycline for 10 days. Metronidazole can be used where tetracycline is not suitable. Public health measures include improving water sanitation and reducing direct contact between pig feces and household water supplies.",
+    "explanation": "The combination of a farming exposure with pig contact, prolonged dysentery with colonic ulcers, and identification on fresh stool and tissue of large motile ciliated trophozoites establishes the diagnosis of infection by Balantidium coli. The organism is a large ciliated protozoan that can invade colonic mucosa and produce deep ulcers that mimic other causes of invasive colitis. Diagnosis rests on demonstration of trophozoites in fresh stool or biopsy. Metronidazole can be used where tetracycline is not suitable.",
     "source": "ai_generated",
     "validated": true,
     "createdAt": "2026-03-27T21:26:36.893Z",
@@ -4086,7 +4046,7 @@
       }
     ],
     "difficulty": "medium",
-    "explanation": "The patient has a subacute febrile illness with night sweats, hepatomegaly, mild transaminitis, relative leukopenia, and lumbar spondylodiscitis. Blood cultures that required prolonged incubation and yielded small faintly staining Gram-negative coccobacilli plus clear exposure to unpasteurised dairy and aborting small ruminants point to infection with Brucella species. Brucella is a cause of osteoarticular infection including spinal involvement and often needs combination antimicrobial therapy with agents chosen for intracellular activity and prolonged duration.",
+    "explanation": "The patient has a subacute febrile illness with night sweats, hepatomegaly, mild transaminitis, relative leukopenia, and lumbar spondylodiscitis. Blood cultures that required prolonged incubation and yielded small faintly staining Gram-negative coccobacilli plus clear exposure to unpasteurised dairy and aborting small ruminants point to infection with Brucella species.",
     "source": "ai_generated",
     "validated": true,
     "createdAt": "2026-03-27T21:27:08.671Z",
@@ -4126,7 +4086,7 @@
       }
     ],
     "difficulty": "hard",
-    "explanation": "This presentation is best explained by bloodstream infection from an environmental non-fermenting gram-negative bacillus acquired via contaminated aqueous solutions used to access a central venous port. The organism's recovery from both the multi-dose saline and an aqueous antiseptic, its ability to cause disease in a neutropenic chemotherapy patient, and the antimicrobial phenotype with resistance to aminoglycosides and polymyxins but susceptibility to trimethoprim-sulfamethoxazole point to Burkholderia cepacia complex. Management priorities are removal of the infected device when feasible, targeted therapy guided by susceptibility testing (agents often used include trimethoprim-sulfamethoxazole or a susceptible cephalosporin), and prompt infection control measures to halt the outbreak and eliminate the contaminated product.",
+    "explanation": "This presentation is best explained by bloodstream infection from an environmental non-fermenting gram-negative bacillus acquired via contaminated aqueous solutions used to access a central venous port. The organism's recovery from both the multi-dose saline and an aqueous antiseptic, its ability to cause disease in a neutropenic chemotherapy patient, and the antimicrobial phenotype with resistance to aminoglycosides and polymyxins but susceptibility to trimethoprim-sulfamethoxazole point to Burkholderia cepacia complex.",
     "source": "ai_generated",
     "validated": true,
     "createdAt": "2026-03-27T21:27:21.771Z",
@@ -4166,7 +4126,7 @@
       }
     ],
     "difficulty": "hard",
-    "explanation": "Subacute cavitary pulmonary disease with weight loss in a patient with poorly controlled diabetes, dissemination with hepatic and splenic microabscesses, and a history of percutaneous exposure to flooded soil in an endemic region points to melioidosis caused by Burkholderia pseudomallei. Blood culture growth of a non-lactose-fermenting Gram-negative bacillus that forms wrinkled colonies and shows intrinsic aminoglycoside resistance but susceptibility to ceftazidime supports that identification. Appropriate management consists of an intensive intravenous agent with activity against this pathogen followed by prolonged oral eradication therapy to reduce risk of relapse.",
+    "explanation": "Subacute cavitary pulmonary disease with weight loss in a patient with poorly controlled diabetes, dissemination with hepatic and splenic microabscesses, and a history of percutaneous exposure to flooded soil in an endemic region points to melioidosis caused by Burkholderia pseudomallei. Blood culture growth of a non-lactose-fermenting Gram-negative bacillus that forms wrinkled colonies and shows intrinsic aminoglycoside resistance but susceptibility to ceftazidime supports that identification.",
     "source": "ai_generated",
     "validated": true,
     "createdAt": "2026-03-27T21:27:18.361Z",
@@ -4206,7 +4166,7 @@
       }
     ],
     "difficulty": "hard",
-    "explanation": "The clinical picture is persistent bloodstream infection with a non-albicans yeast in a patient with prolonged healthcare exposure, multiple indwelling devices and recent broad-spectrum antibiotics. Key discriminating features are low-confidence biochemical identification, growth at 42°C, skin colonisation and recovery from environmental surfaces, plus a phenotype of high-level azole resistance with variable amphotericin and echinocandin susceptibility. Those features point to Candida auris. Management implications include using antifungal therapy guided by full susceptibility testing, aggressive source control, and strict infection control and contact precautions to interrupt transmission.",
+    "explanation": "Key discriminating features are low-confidence biochemical identification, growth at 42°C, skin colonisation and recovery from environmental surfaces, plus a phenotype of high-level azole resistance with variable amphotericin and echinocandin susceptibility. Those features point to Candida auris.",
     "source": "ai_generated",
     "validated": true,
     "createdAt": "2026-03-27T21:28:16.760Z",
@@ -4246,7 +4206,7 @@
       }
     ],
     "difficulty": "medium",
-    "explanation": "An older patient with a long term urinary catheter, recent broad spectrum antibiotics and prior azole exposure developed fungemia with small budding yeasts on microscopy. The isolate demonstrated reduced susceptibility to fluconazole and responded to an echinocandin. These features point to Candida glabrata as the most likely pathogen in this clinical context.",
+    "explanation": "The isolate demonstrated reduced susceptibility to fluconazole and responded to an echinocandin. These features point to Candida glabrata as the most likely pathogen in this clinical context.",
     "source": "ai_generated",
     "validated": true,
     "createdAt": "2026-03-27T21:28:39.007Z",
@@ -4286,7 +4246,7 @@
       }
     ],
     "difficulty": "hard",
-    "explanation": "The chronology, travel to an endemic rural Sahel region about a year earlier, marked subcutaneous eosinophilia, ultrasound demonstration of a long tubular motile structure, and the emergence of a long white female worm when the lesion was immersed point to infection with Dracunculus medinensis. Management focuses on careful progressive extraction of the emerging female, local wound care, prevention of secondary bacterial infection, and public-health measures to prevent future transmission such as provision of safe drinking water and filtration.",
+    "explanation": "The chronology, travel to an endemic rural Sahel region about a year earlier, marked subcutaneous eosinophilia, ultrasound demonstration of a long tubular motile structure, and the emergence of a long white female worm when the lesion was immersed point to infection with Dracunculus medinensis.",
     "source": "ai_generated",
     "validated": true,
     "createdAt": "2026-03-27T21:29:44.090Z",
@@ -4326,7 +4286,7 @@
       }
     ],
     "difficulty": "medium",
-    "explanation": "Most likely diagnosis is infection with an echovirus serotype. The clinical picture is viral (aseptic) meningitis in early summer with mild systemic rash, lymphocytic CSF pleocytosis, negative bacterial cultures and a CSF viral PCR positive for a small non-enveloped single-stranded RNA virus that is not poliovirus. The epidemiology of recent linked cases in daycare attendees and neonates, and matching serotype sequencing from CSF and stool, point to an echovirus serotype that commonly produces community outbreaks of aseptic meningitis. Management is supportive for immunocompetent adults, with notification and infection control for contacts and vigilance for neonatal or severe systemic disease in young infants.",
+    "explanation": "Most likely diagnosis is infection with an echovirus serotype. The clinical picture is viral (aseptic) meningitis in early summer with mild systemic rash, lymphocytic CSF pleocytosis, negative bacterial cultures and a CSF viral PCR positive for a small non-enveloped single-stranded RNA virus that is not poliovirus. The epidemiology of recent linked cases in daycare attendees and neonates, and matching serotype sequencing from CSF and stool, point to an echovirus serotype that commonly produces community outbreaks of aseptic meningitis.",
     "source": "ai_generated",
     "validated": true,
     "createdAt": "2026-03-27T21:29:56.636Z",
@@ -4366,7 +4326,7 @@
       }
     ],
     "difficulty": "medium",
-    "explanation": "The combination of a summer presentation after rural work with deer exposure, progressive febrile illness with headache and confusion, leukopenia, thrombocytopenia, transaminitis and splenomegaly strongly suggests human monocytic ehrlichiosis due to Ehrlichia chaffeensis. Rapid clinical response to doxycycline and detection of DNA from an intracellular mononuclear-cell parasite on PCR support the diagnosis. Diagnosis is commonly confirmed by PCR on whole blood or by visualization of intracytoplasmic morulae in monocytes. Early empiric doxycycline is indicated when this syndrome is suspected because delays in therapy increase morbidity.",
+    "explanation": "The combination of a summer presentation after rural work with deer exposure, progressive febrile illness with headache and confusion, leukopenia, thrombocytopenia, transaminitis and splenomegaly strongly suggests human monocytic ehrlichiosis due to Ehrlichia chaffeensis. Rapid clinical response to doxycycline and detection of DNA from an intracellular mononuclear-cell parasite on PCR support the diagnosis. Diagnosis is commonly confirmed by PCR on whole blood or by visualization of intracytoplasmic morulae in monocytes.",
     "source": "ai_generated",
     "validated": true,
     "createdAt": "2026-03-27T21:29:50.849Z",
@@ -4654,7 +4614,7 @@
       }
     ],
     "difficulty": "easy",
-    "explanation": "The combination of abrupt bloody diarrhoea after undercooked ground beef, colonic inflammatory changes, and detection of a Shiga-family toxin points to an enterohemorrhagic strain of Escherichia coli. Supportive management and avoidance of antibiotics were chosen because antimicrobial therapy can increase risk of haemolytic uraemic complications in this infection.",
+    "explanation": "The combination of abrupt bloody diarrhoea after undercooked ground beef, colonic inflammatory changes, and detection of a Shiga-family toxin points to an enterohemorrhagic strain of Escherichia coli.",
     "source": "ai_generated",
     "validated": true,
     "createdAt": "2026-04-09T13:27:22.930Z",
@@ -4734,7 +4694,7 @@
       }
     ],
     "difficulty": "medium",
-    "explanation": "Subacute cutaneous ulcer after a thorn puncture with linear nodular spread along lymphatics, granulomatous inflammation on biopsy, and isolation of a thermally dimorphic fungus that forms cigar-shaped yeasts is consistent with infection by Sporothrix schenckii. The occupational gardening exposure and failure of beta-lactam therapy further support this diagnosis.",
+    "explanation": "Subacute cutaneous ulcer after a thorn puncture with linear nodular spread along lymphatics, granulomatous inflammation on biopsy, and isolation of a thermally dimorphic fungus that forms cigar-shaped yeasts is consistent with infection by Sporothrix schenckii.",
     "source": "ai_generated",
     "validated": true,
     "createdAt": "2026-04-09T13:29:28.353Z",
@@ -4854,7 +4814,7 @@
       }
     ],
     "difficulty": "hard",
-    "explanation": "Nosocomial multidrug-resistant Gram-negative coccobacilli causing wound and bloodstream infection after trauma and ICU care, plus recovery from hospital surfaces, indicate a healthcare-associated environmental organism. The resistance profile and propensity to persist on dry surfaces support a diagnosis of Acinetobacter baumannii infection. Early hardware involvement explains the osteomyelitis and need to target therapy and infection control.",
+    "explanation": "Nosocomial multidrug-resistant Gram-negative coccobacilli causing wound and bloodstream infection after trauma and ICU care, plus recovery from hospital surfaces, indicate a healthcare-associated environmental organism. The resistance profile and propensity to persist on dry surfaces support a diagnosis of Acinetobacter baumannii infection.",
     "source": "ai_generated",
     "validated": true,
     "createdAt": "2026-04-09T13:47:19.903Z",
@@ -5214,7 +5174,7 @@
       }
     ],
     "difficulty": "medium",
-    "explanation": "A penetrating clenched-fist tooth injury with progressive deep hand space infection focuses the differential on organisms from human saliva. Slow-growing, pitting colonies with susceptibility to beta-lactam combination therapy and clindamycin resistance fit an oral gram-negative bacillus commonly recovered from human bite injuries. Surgical drainage plus targeted beta-lactam therapy is appropriate.",
+    "explanation": "A penetrating clenched-fist tooth injury with progressive deep hand space infection focuses the differential on organisms from human saliva.",
     "source": "ai_generated",
     "validated": true,
     "createdAt": "2026-04-09T14:14:32.070Z",
@@ -5294,7 +5254,7 @@
       }
     ],
     "difficulty": "medium",
-    "explanation": "The combination of thin malodorous discharge, elevated vaginal pH, epithelial cells coated with small bacteria on wet mount and clinical response to nitroimidazole is most consistent with overgrowth of an anaerobic coccobacillary vaginal organism causing bacterial vaginosis. Recent broad-spectrum antibiotic use and douching are plausible predisposing factors. The responsible organism in this clinical context is Gardnerella vaginalis.",
+    "explanation": "The combination of thin malodorous discharge, elevated vaginal pH, epithelial cells coated with small bacteria on wet mount and clinical response to nitroimidazole is most consistent with overgrowth of an anaerobic coccobacillary vaginal organism causing bacterial vaginosis. The responsible organism in this clinical context is Gardnerella vaginalis.",
     "source": "ai_generated",
     "validated": true,
     "createdAt": "2026-04-09T14:14:59.616Z",
@@ -5694,7 +5654,7 @@
       }
     ],
     "difficulty": "hard",
-    "explanation": "The combination of a 1–3 week incubation, recent rural West African travel with rodent exposure, progressive febrile illness with mucosal involvement, leukopenia, thrombocytopenia, marked AST elevation, renal impairment and household clustering points to infection with Lassa virus. Negative malaria and dengue tests and poor response to antibiotics make common tropical bacterial or parasitic causes less likely. The reference laboratory PCR result for a rodent-borne viral haemorrhagic agent confirms the diagnosis in this clinical context.",
+    "explanation": "The combination of a 1–3 week incubation, recent rural West African travel with rodent exposure, progressive febrile illness with mucosal involvement, leukopenia, thrombocytopenia, marked AST elevation, renal impairment and household clustering points to infection with Lassa virus. The reference laboratory PCR result for a rodent-borne viral haemorrhagic agent confirms the diagnosis in this clinical context.",
     "source": "ai_generated",
     "validated": true,
     "createdAt": "2026-04-09T14:16:33.402Z",
@@ -5854,7 +5814,7 @@
       }
     ],
     "difficulty": "medium",
-    "explanation": "Episodic migratory subcutaneous swellings with marked eosinophilia, a motile tubular structure on ultrasound, and a contemporaneous photograph of a translucent motile filament beneath the conjunctiva after daytime biting exposure in central Africa are most consistent with Loa loa infection. The history of a systemic reaction after a community anthelmintic dose raises concern for high microfilarial burden. Definitive confirmation is by identification of the adult worm in the eye or by demonstration of daytime microfilaremia and management requires parasitology-guided therapy.",
+    "explanation": "Episodic migratory subcutaneous swellings with marked eosinophilia, a motile tubular structure on ultrasound, and a contemporaneous photograph of a translucent motile filament beneath the conjunctiva after daytime biting exposure in central Africa are most consistent with Loa loa infection. The history of a systemic reaction after a community anthelmintic dose raises concern for high microfilarial burden.",
     "source": "ai_generated",
     "validated": true,
     "createdAt": "2026-04-09T14:17:13.382Z",
@@ -5894,7 +5854,7 @@
       }
     ],
     "difficulty": "hard",
-    "explanation": "Severe febrile gastroenteritis progressing to hypotension with marked thrombocytopenia, transaminitis, coagulopathy and capillary leak after travel to a bat- and primate-exposure setting is most consistent with infection by Marburg virus. The exposure history and negative bacterial and malaria tests support a viral haemorrhagic fever; diagnosis is confirmed by specific PCR or direct detection of the virus.",
+    "explanation": "Severe febrile gastroenteritis progressing to hypotension with marked thrombocytopenia, transaminitis, coagulopathy and capillary leak after travel to a bat- and primate-exposure setting is most consistent with infection by Marburg virus. The exposure history and negative bacterial and malaria tests support a viral haemorrhagic fever. diagnosis is confirmed by specific PCR or direct detection of the virus.",
     "source": "ai_generated",
     "validated": true,
     "createdAt": "2026-04-09T14:17:19.267Z",
@@ -6054,7 +6014,7 @@
       }
     ],
     "difficulty": "medium",
-    "explanation": "An older smoker with COPD developed a bacterial bronchitic exacerbation. The organism described as an oxidase-positive, beta-lactamase producing gram-negative diplococcus that responds to beta-lactamase inhibitor therapy is most consistent with Moraxella catarrhalis. The clinical setting, lack of lobar consolidation and rapid response to amoxicillin-clavulanate support this diagnosis.",
+    "explanation": "An older smoker with COPD developed a bacterial bronchitic exacerbation. The clinical setting, lack of lobar consolidation and rapid response to amoxicillin-clavulanate support this diagnosis.",
     "source": "ai_generated",
     "validated": true,
     "createdAt": "2026-04-09T14:17:56.601Z",
@@ -6254,7 +6214,7 @@
       }
     ],
     "difficulty": "medium",
-    "explanation": "Rapid-onset hand cellulitis with flexor tenosynovitis after a cat bite, wound Gram stain showing small gram-negative coccobacilli, and growth of rapidly appearing, penicillin-susceptible colonies point to Pasteurella multocida. The organism's usual beta-lactam susceptibility explains failure of anti-staphylococcal monotherapy and supports directed beta-lactam therapy and surgical drainage in this case.",
+    "explanation": "Rapid-onset hand cellulitis with flexor tenosynovitis after a cat bite, wound Gram stain showing small gram-negative coccobacilli, and growth of rapidly appearing, penicillin-susceptible colonies point to Pasteurella multocida.",
     "source": "ai_generated",
     "validated": true,
     "createdAt": "2026-04-09T14:18:51.350Z",
@@ -6334,7 +6294,7 @@
       }
     ],
     "difficulty": "hard",
-    "explanation": "The combination of chronic unilateral cervicofacial lymphadenitis with draining sinus, lack of response to standard antibiotics, rare acid-fast bacilli with a negative tuberculosis NAAT, slow growth on mycobacterial media, and sequencing that identified a slow-growing scotochromogenic nontuberculous mycobacterium supports the diagnosis of Mycobacterium scrofulaceum. Surgical excision plus targeted antimicrobial therapy corresponds with the isolate's susceptibility profile and the clinical course.",
+    "explanation": "The combination of chronic unilateral cervicofacial lymphadenitis with draining sinus, lack of response to standard.",
     "source": "ai_generated",
     "validated": true,
     "createdAt": "2026-04-09T14:19:01.044Z",
@@ -6494,7 +6454,7 @@
       }
     ],
     "difficulty": "medium",
-    "explanation": "The combination of clustered dome-shaped papules in the pubic region after new sexual contact, dermoscopic central core with crown vessels, and extrusion of curd-like material with large eosinophilic intracytoplasmic inclusions points to molluscum contagiosum virus infection. Normal inflammatory markers and negative STI screens support a localized cutaneous viral process in an immunocompetent host. Management options include curettage or cryotherapy for symptom control and lesion removal.",
+    "explanation": "The combination of clustered dome-shaped papules in the pubic region after new sexual contact, dermoscopic central core with crown vessels, and extrusion of curd-like material with large eosinophilic intracytoplasmic inclusions points to molluscum contagiosum virus infection. Normal inflammatory markers and negative STI screens support a localized cutaneous viral process in an immunocompetent host.",
     "source": "ai_generated",
     "validated": true,
     "createdAt": "2026-04-09T14:19:30.141Z",
@@ -6534,7 +6494,7 @@
       }
     ],
     "difficulty": "medium",
-    "explanation": "Nocturnal pruritus focused at the base of coarse terminal hair, failure of antifungal therapy, dermatoscopic identification of eggs glued to hair shafts, and direct visualization of a small wingless arthropod with grasping front legs identify an ectoparasitic louse infestation of terminal hair. Negative scrapings for burrowing mites help exclude scabies. Management requires topical pediculicide, treatment of recent contacts, and decontamination of clothing and bedding.",
+    "explanation": "Nocturnal pruritus focused at the base of coarse terminal hair, failure of. Negative scrapings for burrowing mites help exclude scabies.",
     "source": "ai_generated",
     "validated": true,
     "createdAt": "2026-04-09T14:19:34.003Z",
@@ -6574,7 +6534,7 @@
       }
     ],
     "difficulty": "hard",
-    "explanation": "The combination of intraerythrocytic parasitaemia with a negative rapid antigen test, thrombocytopenia, splenomegaly and recent forest-edge exposure with macaques in Malaysian Borneo points to zoonotic malaria caused by Plasmodium knowlesi. The degree of parasitaemia and early kidney injury explain the patient's systemic features and risk for severe disease. PCR or reference laboratory testing is used to confirm the species and guide definitive therapy.",
+    "explanation": "The combination of intraerythrocytic parasitaemia with a negative rapid antigen test, thrombocytopenia, splenomegaly and recent forest-edge exposure with macaques in Malaysian Borneo points to zoonotic malaria caused by Plasmodium knowlesi. The degree of parasitaemia and early kidney injury explain the patient's systemic features and risk for severe disease.",
     "source": "ai_generated",
     "validated": true,
     "createdAt": "2026-04-09T14:19:45.872Z",
@@ -6854,7 +6814,7 @@
       }
     ],
     "difficulty": "medium",
-    "explanation": "Postoperative catheterised patient with pyelonephritis, Gram-negative rods in urine, and early failure of a first-line cephalosporin points to a hospital-acquired Enterobacterales. The isolate's resistance profile together with the recovery of red-pigmented colonies supports the specific bacterial cause in this case. Treatment should be guided by susceptibilities and removal or replacement of the urinary catheter.",
+    "explanation": "The isolate's resistance profile together with the recovery of red-pigmented colonies supports the specific bacterial cause in this case. Treatment should be guided by susceptibilities and removal or replacement of the urinary catheter.",
     "source": "ai_generated",
     "validated": true,
     "createdAt": "2026-04-09T14:20:15.395Z",
@@ -7014,7 +6974,7 @@
       }
     ],
     "difficulty": "hard",
-    "explanation": "Advanced immunosuppression with systemic febrile illness, pulmonary nodules, lymphadenopathy, hepatosplenomegaly, and papular skin lesions suggested a disseminated opportunistic infection. Lack of response to antibacterial and antituberculous therapy and rapid improvement on amphotericin B indicated a fungal cause. The recovery of a dimorphic fungus that produces a red diffusible pigment and shows intracellular yeast with a transverse septum in tissue establishes the specific diagnosis in this clinical context.",
+    "explanation": "Advanced immunosuppression with systemic febrile illness, pulmonary nodules, lymphadenopathy, hepatosplenomegaly, and papular skin lesions suggested a disseminated opportunistic infection. The recovery of a dimorphic fungus that produces a red diffusible pigment and shows intracellular yeast with a transverse septum in tissue establishes the specific diagnosis in this clinical context.",
     "source": "ai_generated",
     "validated": true,
     "createdAt": "2026-04-09T14:21:00.603Z",
@@ -7094,7 +7054,7 @@
       }
     ],
     "difficulty": "medium",
-    "explanation": "A patient with cirrhosis developed fulminant soft tissue infection with hypotension, haemorrhagic bullae, and rapid Gram‑negative bacteraemia. The combination of recent raw oyster and seawater exposure, curved oxidase‑positive gram‑negative rods from blood culture, and necrotising fasciitis strongly supports Vibrio vulnificus as the cause. Management requires urgent surgical debridement and prompt targeted antibiotics such as doxycycline plus a third‑generation cephalosporin.",
+    "explanation": "A patient with cirrhosis developed fulminant soft tissue infection with hypotension, haemorrhagic bullae, and rapid Gram‑negative bacteraemia. The combination of recent raw oyster and seawater exposure, curved oxidase‑positive gram‑negative rods from blood culture, and necrotising fasciitis strongly supports Vibrio vulnificus as the cause.",
     "source": "ai_generated",
     "validated": true,
     "createdAt": "2026-04-09T14:21:05.646Z",
@@ -7174,7 +7134,7 @@
       }
     ],
     "difficulty": "hard",
-    "explanation": "An older adult with late-summer febrile neuroinvasive illness, lymphocytic CSF pleocytosis and bilateral thalamic and basal ganglia MRI signal suggests a mosquito-borne flavivirus. Public health detection in Culex pools and a convalescent PRNT confirming the local urban Culex-associated virus point to St. Louis encephalitis virus as the cause.",
+    "explanation": "An older adult with late-summer febrile neuroinvasive illness, lymphocytic CSF pleocytosis and bilateral thalamic and basal ganglia MRI signal suggests a mosquito-borne flavivirus. Louis encephalitis virus as the cause.",
     "source": "ai_generated",
     "validated": true,
     "createdAt": "2026-04-09T14:21:32.776Z",
@@ -7214,7 +7174,7 @@
       }
     ],
     "difficulty": "medium",
-    "explanation": "The combination of acute febrile illness with a tender necrotic inguinal bubo, recent rodent die-off with flea exposure, and culture showing bipolar-staining non-lactose fermenting gram-negative coccobacilli is diagnostic for plague due to Yersinia pestis. Prompt parenteral aminoglycoside or fluoroquinolone therapy and public health control measures are indicated.",
+    "explanation": "The combination of acute febrile illness with a tender necrotic inguinal bubo, recent rodent die-off with flea exposure, and culture showing bipolar-staining non-lactose fermenting gram-negative coccobacilli is diagnostic for plague due to Yersinia pestis.",
     "source": "ai_generated",
     "validated": true,
     "createdAt": "2026-04-09T14:21:40.770Z",
@@ -7334,7 +7294,7 @@
       }
     ],
     "difficulty": "medium",
-    "explanation": "The combination of fever, pharyngitis with tender cervical nodes and bilateral non-purulent conjunctivitis in a clustered outbreak among swimmers points to adenoviral pharyngoconjunctival infection. Negative strep and heterophile tests with PCR detection of a non-enveloped double-stranded DNA respiratory virus support that diagnosis. Management in an immunocompetent adult is supportive and focused on hydration and symptom control.",
+    "explanation": "The combination of fever, pharyngitis with tender cervical nodes and bilateral non-purulent conjunctivitis in a clustered outbreak among swimmers points to adenoviral pharyngoconjunctival infection. Negative strep and heterophile tests with PCR detection of a non-enveloped double-stranded DNA respiratory virus support that diagnosis.",
     "source": "ai_generated",
     "validated": true,
     "createdAt": "2026-04-09T14:22:08.012Z",
@@ -7814,7 +7774,7 @@
       }
     ],
     "difficulty": "medium",
-    "explanation": "An intracavitary mobile mycetoma in a patient with an old tuberculous cavity and positive serum precipitin to a filamentous environmental mould indicates fungal colonisation producing an aspergilloma. The history of frequent exposure to decaying vegetation and compost points to an environmental mould acquired from plant material, with Aspergillus fumigatus the most likely species. Diagnostic confirmation is by culture or microscopy of respiratory material or surgically resected tissue, and management is guided by the severity of haemoptysis and overall lung function.",
+    "explanation": "An intracavitary mobile mycetoma in a patient with an old tuberculous cavity and positive serum precipitin to a filamentous environmental mould indicates fungal colonisation producing an aspergilloma. The history of frequent exposure to decaying vegetation and compost points to an environmental mould acquired from plant material, with Aspergillus fumigatus the most likely species.",
     "source": "ai_generated",
     "validated": true,
     "createdAt": "2026-04-09T14:23:28.471Z",
@@ -7934,7 +7894,7 @@
       }
     ],
     "difficulty": "medium",
-    "explanation": "Progressive migratory arthralgia, new unilateral facial nerve palsy, conduction delay and lymphocytic CSF point to a disseminated spirochetal infection acquired after a tick exposure. The history of an expanding targetoid rash following a wooded outing supports the diagnosis of infection with Borrelia burgdorferi. MRI facial nerve enhancement and the combined neurologic and cardiac features are typical of early disseminated disease and warrant targeted antibiotic therapy and cardiac monitoring.",
+    "explanation": "Progressive migratory arthralgia, new unilateral facial nerve palsy, conduction delay and lymphocytic CSF point to a disseminated spirochetal infection acquired after a tick exposure. The history of an expanding targetoid rash following a wooded outing supports the diagnosis of infection with Borrelia burgdorferi.",
     "source": "ai_generated",
     "validated": true,
     "createdAt": "2026-04-09T14:24:10.240Z",
@@ -8014,7 +7974,7 @@
       }
     ],
     "difficulty": "hard",
-    "explanation": "Prolonged paroxysmal cough with posttussive vomiting, marked lymphocytosis, minimal chest radiograph findings and failure to respond to beta-lactam therapy point away from common viral and typical bacterial causes. The occupational exposure and transmission to unprotected neonates who developed apnoea strongly support infection with Bordetella pertussis, confirmed by targeted PCR in the neonate. Identification explains the adult's prolonged course and the public health implications for neonatal contacts.",
+    "explanation": "The occupational exposure and transmission to unprotected neonates who developed apnoea strongly support infection with Bordetella pertussis, confirmed by targeted PCR in the neonate.",
     "source": "ai_generated",
     "validated": true,
     "createdAt": "2026-04-09T14:24:15.774Z",
@@ -8094,7 +8054,7 @@
       }
     ],
     "difficulty": "hard",
-    "explanation": "Central venous access, recent broad-spectrum antibiotics, TPN and chemotherapy-induced neutropenia together predispose to invasive yeast bloodstream infection. The combination of high beta-D-glucan, multifocal hepatic and splenic microabscesses, germ-tube positive budding yeast in blood culture and rapid clinical response after catheter removal and azole therapy supports Candida albicans as the cause.",
+    "explanation": "The combination of high beta-D-glucan, multifocal hepatic and splenic microabscesses, germ-tube positive budding yeast in blood culture and rapid clinical response after catheter removal and azole.",
     "source": "ai_generated",
     "validated": true,
     "createdAt": "2026-04-09T14:24:57.305Z",
@@ -8294,7 +8254,7 @@
       }
     ],
     "difficulty": "easy",
-    "explanation": "Recent broad-spectrum antibiotic use, an adherent white vaginal discharge with vulvar erythema, and KOH microscopy showing budding yeasts and pseudohyphae point to a mucosal Candida infection. Rapid clinical response to single-dose oral azole is consistent with an azole-susceptible mucosal Candida species. The most likely organism in this setting is Candida albicans.",
+    "explanation": "Rapid clinical response to single-dose oral azole is consistent with an azole-susceptible mucosal Candida species. The most likely organism in this setting is Candida albicans.",
     "source": "ai_generated",
     "validated": true,
     "createdAt": "2026-04-09T14:25:39.720Z",
@@ -8334,7 +8294,7 @@
       }
     ],
     "difficulty": "medium",
-    "explanation": "Recent broad-spectrum antibiotic exposure, profuse watery diarrhoea with marked leukocytosis and acute kidney injury, CT evidence of colitis, and a neighbouring ward outbreak with spore contamination all point to toxin-mediated colitis caused by a toxigenic, spore-forming anaerobic bacillus. The combination of these features is most consistent with Clostridioides difficile infection.",
+    "explanation": "The combination of these features is most consistent with Clostridioides difficile infection.",
     "source": "ai_generated",
     "validated": true,
     "createdAt": "2026-04-09T14:25:52.257Z",
@@ -8374,7 +8334,7 @@
       }
     ],
     "difficulty": "hard",
-    "explanation": "Recent broad-spectrum antibiotic exposure followed by severe watery diarrhoea, marked leukocytosis and rising creatinine suggested a fulminant antibiotic-associated colitis. Endoscopic plaques consistent with pseudomembranous colitis plus a positive stool NAAT for a toxin gene and rapid clinical response to oral vancomycin make the diagnosis most likely.",
+    "explanation": "Endoscopic plaques consistent with pseudomembranous colitis plus a positive stool NAAT for a toxin gene and rapid clinical response to oral vancomycin make the diagnosis most likely.",
     "source": "ai_generated",
     "validated": true,
     "createdAt": "2026-04-09T14:26:02.150Z",
@@ -8734,7 +8694,7 @@
       }
     ],
     "difficulty": "medium",
-    "explanation": "The combination of incomplete immunisation and an adherent oropharyngeal membrane with airway narrowing, pleomorphic Gram-positive bacilli on throat culture, and a positive toxin assay identifies toxigenic Corynebacterium diphtheriae as the cause. The CT shows the characteristic mucosal pseudomembrane and oedema that can produce airway compromise and require antitoxin and close supportive care.",
+    "explanation": "The combination of incomplete immunisation and an adherent oropharyngeal membrane with airway narrowing, pleomorphic Gram-positive bacilli on throat culture, and a positive toxin assay identifies toxigenic Corynebacterium diphtheriae as the cause.",
     "source": "ai_generated",
     "validated": true,
     "createdAt": "2026-04-09T14:27:11.781Z",
@@ -9134,7 +9094,7 @@
       }
     ],
     "difficulty": "hard",
-    "explanation": "A large multiloculated hepatic cyst with internal daughter cysts and peripheral calcification, together with eosinophilia and strongly positive cyst-specific IgG, points to a cyst-producing cestode infection of the liver. The patient’s close contact with sheep and working dogs supports transmission via a canine-sheep cycle and explains the imaging and serology findings; careful antiparasitic therapy and controlled removal are indicated because cyst rupture can provoke severe allergic reactions.",
+    "explanation": "A large multiloculated hepatic cyst with internal daughter cysts and peripheral calcification, together with eosinophilia and strongly positive cyst-specific IgG, points to a cyst-producing cestode infection of the liver.",
     "source": "ai_generated",
     "validated": true,
     "createdAt": "2026-04-09T14:29:02.388Z",
@@ -9174,7 +9134,7 @@
       }
     ],
     "difficulty": "medium",
-    "explanation": "A seronegative recipient of a seropositive donor with post‑transplant fever, colitis, cytopenias, and biopsy showing large cells with intranuclear inclusions points to cytomegalovirus disease. The very high plasma viral load and rapid clinical and virologic response to ganciclovir–class therapy confirm the diagnosis.",
+    "explanation": "A seronegative recipient of a seropositive donor with post‑transplant fever, colitis, cytopenias, and biopsy showing large cells with intranuclear inclusions points to cytomegalovirus disease.",
     "source": "ai_generated",
     "validated": true,
     "createdAt": "2026-04-09T14:29:18.155Z",
@@ -9254,7 +9214,7 @@
       }
     ],
     "difficulty": "hard",
-    "explanation": "A solitary right-lobe liver abscess after travel with a preceding brief dysentery episode, odourless thick brown aspirate, trophozoites containing engulfed red blood cells and rapid improvement on nitroimidazole therapy point to an invasive intestinal protozoan that produces liver abscesses. These findings distinguish it from pyogenic bacterial abscesses which usually yield positive cultures and purulent, foul-smelling aspirate.",
+    "explanation": "These findings distinguish it from pyogenic bacterial abscesses which usually yield positive cultures and purulent, foul-smelling aspirate.",
     "source": "ai_generated",
     "validated": true,
     "createdAt": "2026-04-09T14:29:50.654Z",
@@ -9374,7 +9334,7 @@
       }
     ],
     "difficulty": "easy",
-    "explanation": "Chronic RUQ fullness with palpable hepatomegaly, peripheral eosinophilia, positive cestode larval antigen serology, and imaging showing a large hepatic cyst with daughter cysts and laminated membranes are diagnostic of a cystic hepatic infection caused by Echinococcus granulosus. The history of lifelong sheep farming with close contact between dogs and sheep offal provides a plausible exposure pathway. These findings together identify the organism and guide antiparasitic plus surgical or percutaneous management planning.",
+    "explanation": "Chronic RUQ fullness with palpable hepatomegaly, peripheral eosinophilia, positive cestode larval antigen serology, and imaging showing a large hepatic cyst with daughter cysts and laminated membranes are diagnostic of a cystic hepatic infection caused by Echinococcus granulosus. The history of lifelong sheep farming with close contact between dogs and sheep offal provides a plausible exposure pathway.",
     "source": "ai_generated",
     "validated": true,
     "createdAt": "2026-04-09T14:30:08.432Z",
@@ -9458,7 +9418,7 @@
       }
     ],
     "difficulty": "medium",
-    "explanation": "The combination of bloody diarrhoea following consumption of undercooked minced beef, radiologic colitis and microangiopathic haemolytic anaemia with thrombocytopenia and rising creatinine points to enterohaemorrhagic Escherichia coli producing a cytotoxin and causing haemolytic uraemic syndrome. Antimotility agents likely worsened symptoms and antibiotics are generally avoided because they may raise the risk of toxin-mediated renal injury.",
+    "explanation": "The combination of bloody diarrhoea following consumption of undercooked minced beef, radiologic colitis and microangiopathic haemolytic anaemia with thrombocytopenia and rising creatinine points to enterohaemorrhagic Escherichia coli producing a cytotoxin and causing haemolytic uraemic syndrome.",
     "source": "ai_generated",
     "validated": true,
     "createdAt": "2026-04-09T14:30:21.481Z",
@@ -9498,7 +9458,7 @@
       }
     ],
     "difficulty": "hard",
-    "explanation": "An immunosuppressed renal transplant patient with prolonged secretory watery diarrhoea, small-bowel mucosal change and biliary duct dilation, and identification of 4 to 6 μm acid-fast oocysts in stool points to an intestinal coccidian protozoan infection that also causes biliary disease. The clinical course and response after reduction of immunosuppression and antiparasitic therapy support this diagnosis.",
+    "explanation": "An immunosuppressed renal transplant patient with prolonged secretory watery diarrhoea, small-bowel mucosal change and biliary duct dilation, and identification of 4 to 6 μm acid-fast oocysts in stool points to an intestinal coccidian protozoan infection that also causes biliary disease.",
     "source": "ai_generated",
     "validated": true,
     "createdAt": "2026-04-09T14:30:30.270Z",
@@ -9542,7 +9502,7 @@
       }
     ],
     "difficulty": "medium",
-    "explanation": "The patient has traveller's watery diarrhoea with volume depletion and no fecal leukocytes or colonic inflammation, pointing to a small-bowel secretory process. Detection of a coliform carrying plasmid-encoded heat-stable and heat-labile enterotoxin genes confirms Enterotoxigenic Escherichia coli as the cause in this outbreak. Rapid clinical improvement with oral rehydration and targeted antibiotic therapy supported the diagnosis in this case.",
+    "explanation": "The patient has traveller's watery diarrhoea with volume depletion and no fecal leukocytes or colonic inflammation, pointing to a small-bowel secretory process. Detection of a coliform carrying plasmid-encoded heat-stable and heat-labile enterotoxin genes confirms Enterotoxigenic Escherichia coli as the cause in this outbreak.",
     "source": "ai_generated",
     "validated": true,
     "createdAt": "2026-04-09T14:30:50.289Z",
@@ -9750,7 +9710,7 @@
       }
     ],
     "difficulty": "hard",
-    "explanation": "The patient has an acute secretory watery diarrhoea after travel with absent fecal leukocytes, CT without colitis, and detection of plasmid-borne heat-stable and heat-labile enterotoxin genes in stool. These findings identify an enterotoxin-producing small-bowel bacterial pathogen causing traveller's diarrhoea, explaining rapid improvement after targeted antibiotic therapy and rehydration.",
+    "explanation": "The patient has an acute secretory watery diarrhoea after travel with absent fecal leukocytes, CT without colitis, and detection of plasmid-borne heat-stable and heat-labile enterotoxin genes in stool.",
     "source": "ai_generated",
     "validated": true,
     "createdAt": "2026-04-09T14:31:41.049Z",
@@ -9795,7 +9755,7 @@
       }
     ],
     "difficulty": "medium",
-    "explanation": "A diabetic patient with gas within the renal parenchyma and perinephric space meets the picture of emphysematous pyelonephritis. The culture phenotype of a lactose-fermenting, oxidase-negative, indole-positive bacillus with a green metallic sheen on EMB is characteristic of Escherichia coli among Enterobacteriaceae. The clinical course requiring drainage and directed intravenous therapy is concordant with this organism causing a complicated urinary-source sepsis.",
+    "explanation": "A diabetic patient with gas within the renal parenchyma and perinephric space meets the picture of emphysematous pyelonephritis. The culture phenotype of a lactose-fermenting, oxidase-negative, indole-positive bacillus with a green metallic sheen on EMB is characteristic of Escherichia coli among Enterobacteriaceae.",
     "source": "ai_generated",
     "validated": true,
     "createdAt": "2026-04-09T14:31:44.887Z",
@@ -9835,7 +9795,7 @@
       }
     ],
     "difficulty": "medium",
-    "explanation": "Antral gastric ulcer with iron deficiency anaemia in a patient without NSAID exposure suggests an infective cause of chronic gastritis and ulceration. A positive biopsy urease assay and symptom plus haematologic improvement after PPI-based antibiotic therapy confirm eradication and make Helicobacter pylori the most likely pathogen in this clinical context.",
+    "explanation": "Antral gastric ulcer with iron deficiency anaemia in a patient without NSAID exposure suggests an infective cause of chronic gastritis and ulceration.",
     "source": "ai_generated",
     "validated": true,
     "createdAt": "2026-04-09T14:32:00.488Z",
@@ -9880,7 +9840,7 @@
       }
     ],
     "difficulty": "hard",
-    "explanation": "A diabetic patient with recent catheterisation and obstructing ureteric stone developed gas-forming renal infection and septic physiology, features typical of emphysematous pyelonephritis. The microbiology profile of a lactose-fermenting, indole-positive, oxidase-negative Gram-negative rod with a metallic sheen on EMB identifies the causative organism. The clinical course and response to drainage plus cephalosporin therapy support this diagnosis.",
+    "explanation": "A diabetic patient with recent catheterisation and obstructing ureteric stone developed gas-forming renal infection and septic physiology, features typical of emphysematous pyelonephritis. The microbiology profile of a lactose-fermenting, indole-positive, oxidase-negative Gram-negative rod with a metallic sheen on EMB identifies the causative organism.",
     "source": "ai_generated",
     "validated": true,
     "createdAt": "2026-04-09T14:32:08.966Z",
@@ -10000,7 +9960,7 @@
       }
     ],
     "difficulty": "hard",
-    "explanation": "Chronic iron-deficiency anaemia with occult upper GI blood loss, antral-predominant chronic active gastritis, a positive rapid urease test from gastric biopsy, and sustained clinical and haematologic response after targeted triple therapy support infection with Helicobacter pylori. The sequence of negative colonoscopy, poor oral iron response, and eradication-confirmed cure makes other causes of chronic gastritis less likely.",
+    "explanation": "The sequence of negative colonoscopy, poor oral iron response, and eradication-confirmed cure makes other causes of chronic gastritis less likely.",
     "source": "ai_generated",
     "validated": true,
     "createdAt": "2026-04-09T14:32:29.600Z",
@@ -10160,7 +10120,7 @@
       }
     ],
     "difficulty": "hard",
-    "explanation": "The patient has acute liver failure after recent B cell–depleting therapy, with very high transaminases, coagulopathy, and a large increase in viral DNA. Longstanding surface antigen positivity and birth in an endemic area indicate chronic carriage likely acquired perinatally. These features point to reactivation of hepatitis B virus precipitated by immunosuppression.",
+    "explanation": "Longstanding surface antigen positivity and birth in an endemic area indicate chronic carriage likely acquired perinatally. These features point to reactivation of hepatitis B virus precipitated by immunosuppression.",
     "source": "ai_generated",
     "validated": true,
     "createdAt": "2026-04-09T14:33:14.607Z",
@@ -10280,7 +10240,7 @@
       }
     ],
     "difficulty": "medium",
-    "explanation": "Aseptic meningitis with lymphocytic CSF, leptomeningeal enhancement, and recent genital vesicles after a new sexual exposure strongly suggest herpes simplex virus type 2 as the cause. The clinical pattern here fits primary or early recurrent genital infection complicated by meningitis. Confirmation is by CSF PCR for the virus and management includes antiviral therapy such as aciclovir.",
+    "explanation": "Aseptic meningitis with lymphocytic CSF, leptomeningeal enhancement, and recent genital vesicles after a new sexual exposure strongly suggest herpes simplex virus type 2 as the cause. The clinical pattern here fits primary or early recurrent genital infection complicated by meningitis.",
     "source": "ai_generated",
     "validated": true,
     "createdAt": "2026-04-09T14:33:44.076Z",
@@ -10640,7 +10600,7 @@
       }
     ],
     "difficulty": "hard",
-    "explanation": "An older patient with acute febrile respiratory illness during a household outbreak, lymphopenia, bilateral peribronchovascular ground-glass change, and rapid clinical improvement after a neuraminidase inhibitor, with PCR confirmation of a neuraminidase-inhibitor–susceptible seasonal respiratory virus, supports infection with Influenza A virus. The combination of epidemiology, laboratory pattern, imaging, and specific antiviral response distinguishes this diagnosis from typical bacterial pneumonia or other viral causes.",
+    "explanation": "An older patient with acute febrile respiratory illness during a household outbreak, lymphopenia, bilateral peribronchovascular ground-glass change, and rapid clinical improvement after a neuraminidase inhibitor, with PCR confirmation of a neuraminidase-inhibitor–susceptible seasonal respiratory virus, supports infection with Influenza A virus.",
     "source": "ai_generated",
     "validated": true,
     "createdAt": "2026-04-09T14:35:31.615Z",
@@ -10760,7 +10720,7 @@
       }
     ],
     "difficulty": "medium",
-    "explanation": "This presentation is a community-acquired pneumonia that failed to respond to a beta-lactam, with extra-pulmonary features including confusion, diarrhoea, hyponatraemia and mild transaminitis. Recent exposure to warm water sources and recovery of a fastidious organism that requires buffered charcoal yeast extract with L-cysteine and iron for growth point to the causative pathogen. These features together make the waterborne, fastidious Gram-negative bacillus the most likely diagnosis.",
+    "explanation": "This presentation is a community-acquired pneumonia that failed to. Recent exposure to warm water sources and recovery of a fastidious organism that requires buffered charcoal yeast extract with L-cysteine and iron for growth point to the causative pathogen. These features together make the waterborne, fastidious Gram-negative bacillus the most likely diagnosis.",
     "source": "ai_generated",
     "validated": true,
     "createdAt": "2026-04-09T14:36:04.254Z",
@@ -10840,7 +10800,7 @@
       }
     ],
     "difficulty": "hard",
-    "explanation": "The combination of community-onset lobar pneumonia with prominent systemic features, gastrointestinal symptoms, hyponatraemia and a cluster linked to a hotel spa points to a waterborne, fastidious intracellular gram-negative bacillus transmitted in aerosolized warm water. Negative Gram stain of sputum and recent proton-pump inhibitor use increase suspicion. Confirmatory testing is usually by antigen detection or culture on specialised media and disease requires targeted therapy active against intracellular organisms.",
+    "explanation": "The combination of community-onset lobar pneumonia with prominent systemic features, gastrointestinal symptoms, hyponatraemia and a cluster linked to a hotel spa points to a waterborne, fastidious intracellular gram-negative bacillus transmitted in aerosolized warm water. Negative Gram stain of sputum and recent proton-pump inhibitor use increase suspicion.",
     "source": "ai_generated",
     "validated": true,
     "createdAt": "2026-04-09T14:36:07.093Z",
@@ -10960,7 +10920,7 @@
       }
     ],
     "difficulty": "hard",
-    "explanation": "An elderly patient on anti-TNF therapy with subacute fever, brainstem and cerebellar dysfunction, CSF with neutrophilic pleocytosis, and MRI microabscesses after recent ingestion of unpasteurised dairy and refrigerated ready-to-eat foods points to a foodborne intracellular Gram-positive bacillus known to cause central nervous system infection in immunocompromised hosts. The exposure and clinical pattern together narrow the diagnosis to that pathogen.",
+    "explanation": "The exposure and clinical pattern together narrow the diagnosis to that pathogen.",
     "source": "ai_generated",
     "validated": true,
     "createdAt": "2026-04-09T14:36:36.834Z",
@@ -11160,7 +11120,7 @@
       }
     ],
     "difficulty": "medium",
-    "explanation": "Chronic constitutional symptoms with prolonged cough, weight loss, high inflammatory markers, an upper-lobe cavitary lesion and tree-in-bud nodularity indicate an active pulmonary infection with airway spread. Prolonged close household exposure to an untreated person with chronic cavitary pulmonary disease makes infection with Mycobacterium tuberculosis the most likely diagnosis; sputum culture or nucleic acid amplification testing would confirm it.",
+    "explanation": "Chronic constitutional symptoms with prolonged cough, weight loss, high inflammatory markers, an upper-lobe cavitary lesion and tree-in-bud nodularity indicate an active pulmonary infection with airway spread. Prolonged close household exposure to an untreated person with chronic cavitary pulmonary disease makes infection with Mycobacterium tuberculosis the most likely diagnosis. sputum culture or nucleic acid amplification testing would confirm it.",
     "source": "ai_generated",
     "validated": true,
     "createdAt": "2026-04-09T14:37:46.071Z",
@@ -11280,7 +11240,7 @@
       }
     ],
     "difficulty": "hard",
-    "explanation": "Chronic focal vertebral destruction with a large paravertebral abscess in a patient from a high-incidence region and prolonged household contact with someone who had chronic cavitary pulmonary disease strongly suggests reactivation pulmonary pathogen seeding the spine. Negative routine cultures and insidious course fit an acid-fast bacillus requiring prolonged targeted therapy. The most likely pathogen is Mycobacterium tuberculosis.",
+    "explanation": "Chronic focal vertebral destruction with a large paravertebral abscess in a patient from a high-incidence region and prolonged household contact with someone who had chronic cavitary pulmonary disease strongly suggests reactivation pulmonary pathogen seeding the spine. The most likely pathogen is Mycobacterium tuberculosis.",
     "source": "ai_generated",
     "validated": true,
     "createdAt": "2026-04-09T14:38:18.156Z",
@@ -11608,46 +11568,6 @@
     "model": "gpt-5-mini"
   },
   {
-    "id": "path-daily-norovirus-hard-1775745585807-181-0",
-    "pathogenId": "norovirus",
-    "pathogenKind": "virus",
-    "pool": "daily",
-    "hints": [
-      {
-        "order": 1,
-        "text": "A 78-year-old woman from a residential care home presented to the emergency department with 24 hours of profuse vomiting and watery diarrhoea, marked reduction in oral intake, and new-onset confusion. On arrival she was orthostatic with blood pressure 92/58 mmHg, pulse 112/min, temperature 37.8°C, dry mucous membranes and diminished skin turgor.",
-        "category": "presentation"
-      },
-      {
-        "order": 2,
-        "text": "Her medical history includes Alzheimer-type dementia, chronic heart failure and stage 3 chronic kidney disease. She had not received antibiotics in the prior month, takes a loop diuretic, and staff reported several other residents developed similar vomiting and diarrhoea beginning the previous morning after a shared communal meal.",
-        "category": "history"
-      },
-      {
-        "order": 3,
-        "text": "Bloods showed WBC 9.6 × 10^9/L, C-reactive protein 14 mg/L, and acute kidney injury with creatinine 180 μmol/L from a baseline of 85 μmol/L. Stool culture and multiplex bacterial PCR were negative, toxin assay for Clostridioides difficile was negative, and stool microscopy showed no fecal leukocytes.",
-        "category": "lab"
-      },
-      {
-        "order": 4,
-        "text": "Contrast-enhanced abdominal CT demonstrated non-specific mild small-bowel wall thickening and prominent luminal fluid without focal colonic inflammation, obstruction or perforation, features felt most compatible with a diffuse enteric process.",
-        "category": "imaging"
-      },
-      {
-        "order": 5,
-        "text": "Public-health follow-up revealed the residential home had recently hosted a visiting catering team; within 36 hours 32 of 50 residents and 10 of 18 staff developed a similar short-duration illness dominated by vomiting. Environmental and clinical specimens from multiple cases and from high-touch surfaces yielded the same small, non-enveloped single-stranded RNA virus by RT-PCR, with a very short incubation and high attack rate.",
-        "category": "exposure"
-      }
-    ],
-    "difficulty": "hard",
-    "explanation": "Acute onset vomiting-predominant gastroenteritis with rapid spread in a closed setting, high attack rate, environmental contamination, negative bacterial studies and detection of a small non-enveloped single-stranded RNA virus point to norovirus. The elderly patient's dehydration and pre-renal acute kidney injury explain the clinical severity despite the usually self-limited nature of the infection.",
-    "source": "ai_generated",
-    "validated": true,
-    "createdAt": "2026-04-09T14:39:45.807Z",
-    "style": "mgh_case_report",
-    "model": "gpt-5-mini"
-  },
-  {
     "id": "path-daily-nontyphoidal-salmonella-hard-1775745586376-179-0",
     "pathogenId": "nontyphoidal-salmonella",
     "acceptedOrganismIds": [
@@ -11684,7 +11604,7 @@
       }
     ],
     "difficulty": "hard",
-    "explanation": "Bacteremia with a motile oxidase-negative gram-negative bacillus seeding a vascular endograft explains the subacute fever and focal aortic pseudoaneurysm. The preceding brief gastroenteritis and recent direct contact with a pet turtle point to non-typhoidal Salmonella as the pathogen. Management requires combined surgical source control of the infected graft and targeted antimicrobial therapy guided by susceptibility testing.",
+    "explanation": "Bacteremia with a motile oxidase-negative gram-negative bacillus seeding a vascular endograft explains the subacute fever and focal aortic pseudoaneurysm. The preceding brief gastroenteritis and recent direct contact with a pet turtle point to non-typhoidal Salmonella as the pathogen.",
     "source": "ai_generated",
     "validated": true,
     "createdAt": "2026-04-09T14:39:46.376Z",
@@ -11928,7 +11848,7 @@
       }
     ],
     "difficulty": "medium",
-    "explanation": "The rapid onset of vomiting-predominant gastroenteritis, high attack rate among close contacts after a shared exposure, absence of fecal leukocytes, negative bacterial studies, and PCR confirmation for a small non-enveloped ssRNA virus point to norovirus. Management is supportive rehydration and infection control to limit further spread.",
+    "explanation": "The rapid onset of vomiting-predominant gastroenteritis, high attack rate among close contacts after a shared exposure, absence of fecal leukocytes, negative bacterial studies, and PCR confirmation for a small non-enveloped ssRNA virus point to norovirus.",
     "source": "ai_generated",
     "validated": true,
     "createdAt": "2026-04-09T14:40:29.093Z",
@@ -12048,7 +11968,7 @@
       }
     ],
     "difficulty": "easy",
-    "explanation": "Recent travel to West Africa without chemoprophylaxis, intraerythrocytic parasites on blood film, and the combination of hemolytic anaemia, marked thrombocytopenia and acute kidney injury are most consistent with Plasmodium falciparum infection. The laboratory and clinical severity indicate a high parasite burden and need for prompt species-directed antimalarial treatment.",
+    "explanation": "The laboratory and clinical severity indicate a high parasite burden and need for prompt species-directed antimalarial treatment.",
     "source": "ai_generated",
     "validated": true,
     "createdAt": "2026-04-09T14:40:49.758Z",
@@ -12088,7 +12008,7 @@
       }
     ],
     "difficulty": "hard",
-    "explanation": "Recent travel to West Africa with incomplete prophylaxis, profound haemolytic anaemia, thrombocytopenia, acute kidney injury and very high percentage erythrocyte parasitaemia with multiple rings and crescent gametocytes indicate severe infection with Plasmodium falciparum. Rapid decline in parasitaemia after parenteral artemisinin-class therapy further supports that diagnosis and explains the clinical improvement.",
+    "explanation": "Recent travel to West Africa with incomplete prophylaxis, profound haemolytic anaemia, thrombocytopenia, acute kidney injury and very high percentage erythrocyte parasitaemia with multiple rings and crescent gametocytes indicate severe infection with Plasmodium falciparum.",
     "source": "ai_generated",
     "validated": true,
     "createdAt": "2026-04-09T14:40:55.876Z",
@@ -12128,7 +12048,7 @@
       }
     ],
     "difficulty": "hard",
-    "explanation": "Relapsing tertian fevers months after travel, low parasitaemia with enlarged, stippled infected erythrocytes that prefer reticulocytes, and marked splenomegaly with small splenic infarcts point to Plasmodium vivax. The interval relapse reflects dormant hepatic stages that require targeted anti-relapse therapy in addition to blood-stage treatment.",
+    "explanation": "Relapsing tertian fevers months after travel, low parasitaemia with enlarged, stippled infected erythrocytes that prefer reticulocytes, and marked splenomegaly with small splenic infarcts point to Plasmodium vivax.",
     "source": "ai_generated",
     "validated": true,
     "createdAt": "2026-04-09T14:40:58.066Z",
@@ -12368,7 +12288,7 @@
       }
     ],
     "difficulty": "hard",
-    "explanation": "This is late-onset ventilator-associated pneumonia in a patient with diabetes and prior broad-spectrum antibiotics. The clinical isolates match organisms found in the ward water sources, and the blue-green pigment with a characteristic odour together with a non-lactose fermenting Gram-negative rod and the antibiogram point to a waterborne nosocomial Gram-negative bacillus as the causative pathogen.",
+    "explanation": "The clinical isolates match organisms found in the ward water sources, and the blue-green pigment with a characteristic odour together with a non-lactose fermenting Gram-negative rod and the antibiogram point to a waterborne nosocomial Gram-negative bacillus as the causative pathogen.",
     "source": "ai_generated",
     "validated": true,
     "createdAt": "2026-04-09T14:41:47.923Z",
@@ -12608,7 +12528,7 @@
       }
     ],
     "difficulty": "hard",
-    "explanation": "Post-travel chronic non-bloody diarrhoea with bulky, foul-smelling stools and weight loss suggests proximal small-bowel malabsorption. Normal inflammatory imaging and lack of response to antibacterial therapy argue against invasive bacterial enteritis. Identification of pear-shaped, flagellated trophozoites with a ventral adhesive disk and a positive stool antigen confirms an enteric protozoan causing malabsorption in this patient.",
+    "explanation": "Post-travel chronic non-bloody diarrhoea with bulky, foul-smelling stools and weight loss suggests proximal small-bowel malabsorption. Identification of pear-shaped, flagellated trophozoites with a ventral adhesive disk and a positive stool antigen confirms an enteric protozoan causing malabsorption in this patient.",
     "source": "ai_generated",
     "validated": true,
     "createdAt": "2026-04-09T15:54:47.272Z",
@@ -12812,6 +12732,86 @@
     "source": "ai_generated",
     "validated": true,
     "createdAt": "2026-04-09T16:07:43.357Z",
+    "style": "mgh_case_report",
+    "model": "gpt-5-mini"
+  },
+  {
+    "id": "path-daily-sarcoptes-scabiei-medium-1774646599592-21-0",
+    "pathogenId": "sarcoptes-scabiei",
+    "pathogenKind": "parasite",
+    "pool": "daily",
+    "hints": [
+      {
+        "order": 1,
+        "text": "A 72-year-old male resident of a long-term care facility presents with a 3-month history of progressive thick, yellowish crusting and scaling over both hands, interdigital spaces, soles and scalp. The lesions are fissured and painful with some serous discharge. He reports surprisingly little pruritus. Facility clinicians prescribed emollients and medium-potency topical corticosteroids without benefit. Low-grade fever to 37.8 °C and a 3 kg weight loss over 6 weeks are noted.",
+        "category": "presentation"
+      },
+      {
+        "order": 2,
+        "text": "Past medical history includes chronic lymphocytic leukaemia treated with purine analogue chemotherapy 5 months ago and a prolonged oral corticosteroid taper for a drug reaction. He is bedbound and requires help for washing. Staff report that several other residents developed new nocturnal itch and superficial rash in the prior month. No recent travel or fresh water exposures.",
+        "category": "history"
+      },
+      {
+        "order": 3,
+        "text": "Dermoscopic examination of palmar and interdigital regions shows numerous linear serpiginous tracks beneath adherent crust, each terminating in a small dark triangular focus. High-resolution clinical photographs document thick hyperkeratosis with fissuring and yellowish scale rather than isolated papules.",
+        "category": "imaging"
+      },
+      {
+        "order": 4,
+        "text": "He failed empiric topical antifungal therapy and two courses of oral antibiotics. After a single supervised dose of oral ivermectin combined with mechanical keratolytic debridement of crusts, the thick scales began to slough and odour and serous discharge decreased within 7 days. Several symptomatic staff improved after application of a prescribed topical agent.",
+        "category": "treatment_response"
+      },
+      {
+        "order": 5,
+        "text": "Mineral oil skin scrapings obtained from beneath the crust yielded numerous oval translucent arthropods approximately 0.3–0.4 mm in length with a stout rounded body and four pairs of short legs visible anteriorly, together with multiple ovoid eggs and dark faecal pellets on microscopy. Peripheral blood eosinophils were 1.6 × 10^9/L, CRP 22 mg/L.",
+        "category": "lab"
+      }
+    ],
+    "difficulty": "medium",
+    "explanation": "Immunosuppressed, institutionalized patient with thick hyperkeratotic crusting, low itch, outbreak among contacts, dermoscopic linear burrows, rapid response to oral ivermectin plus keratolysis, and mineral oil scrapings showing numerous small oval arthropods with eggs identifies infection by Sarcoptes scabiei presenting as crusted (Norwegian) infestation.",
+    "source": "ai_generated",
+    "validated": true,
+    "createdAt": "2026-03-27T21:23:19.592Z",
+    "style": "mgh_case_report",
+    "model": "gpt-5-mini"
+  },
+  {
+    "id": "path-daily-norovirus-medium-1775745585807-181-0",
+    "pathogenId": "norovirus",
+    "pathogenKind": "virus",
+    "pool": "daily",
+    "hints": [
+      {
+        "order": 1,
+        "text": "A 78-year-old woman from a residential care home presented to the emergency department with 24 hours of profuse vomiting and watery diarrhoea, marked reduction in oral intake, and new-onset confusion. On arrival she was orthostatic with blood pressure 92/58 mmHg, pulse 112/min, temperature 37.8°C, dry mucous membranes and diminished skin turgor.",
+        "category": "presentation"
+      },
+      {
+        "order": 2,
+        "text": "Her medical history includes Alzheimer-type dementia, chronic heart failure and stage 3 chronic kidney disease. She had not received antibiotics in the prior month, takes a loop diuretic, and staff reported several other residents developed similar vomiting and diarrhoea beginning the previous morning after a shared communal meal.",
+        "category": "history"
+      },
+      {
+        "order": 3,
+        "text": "Bloods showed WBC 9.6 × 10^9/L, C-reactive protein 14 mg/L, and acute kidney injury with creatinine 180 μmol/L from a baseline of 85 μmol/L. Stool culture and multiplex bacterial PCR were negative, toxin assay for Clostridioides difficile was negative, and stool microscopy showed no fecal leukocytes.",
+        "category": "lab"
+      },
+      {
+        "order": 4,
+        "text": "Contrast-enhanced abdominal CT demonstrated non-specific mild small-bowel wall thickening and prominent luminal fluid without focal colonic inflammation, obstruction or perforation, features felt most compatible with a diffuse enteric process.",
+        "category": "imaging"
+      },
+      {
+        "order": 5,
+        "text": "Public-health follow-up revealed the residential home had recently hosted a visiting catering team; within 36 hours 32 of 50 residents and 10 of 18 staff developed a similar short-duration illness dominated by vomiting. Environmental and clinical specimens from multiple cases and from high-touch surfaces yielded the same small, non-enveloped single-stranded RNA virus by RT-PCR, with a very short incubation and high attack rate.",
+        "category": "exposure"
+      }
+    ],
+    "difficulty": "medium",
+    "explanation": "Acute onset vomiting-predominant gastroenteritis with rapid spread in a closed setting, high attack rate, environmental contamination, negative bacterial studies and detection of a small non-enveloped single-stranded RNA virus point to norovirus. The elderly patient's dehydration and pre-renal acute kidney injury explain the clinical severity despite the usually self-limited nature of the infection.",
+    "source": "ai_generated",
+    "validated": true,
+    "createdAt": "2026-04-09T14:39:45.807Z",
     "style": "mgh_case_report",
     "model": "gpt-5-mini"
   }

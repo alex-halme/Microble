@@ -1,12 +1,13 @@
 /**
  * scripts/fix-difficulties.ts
  *
- * Retroactively normalize generated-case difficulty labels.
+ * Retroactively normalize generated-case metadata and difficulty labels.
  *
  * This applies:
  * - the editorial tier floor from the pathogen generation plan
  * - conservative downgrades for cases that reveal classic giveaway clues
  *   too early in hints 1-2
+ * - metadata repair for pathogen kind and stale difficulty-coded ids
  *
  * This is safe to run multiple times — it is idempotent.
  *
@@ -38,6 +39,25 @@ interface DifficultyCapRule {
   maxDifficulty: DifficultyLevel;
   pattern: RegExp;
 }
+
+const EXPLANATION_SENTENCE_DROP_PATTERNS = [
+  /\bmanagement\b/i,
+  /\btreated with\b/i,
+  /\bfirst-line\b/i,
+  /\bantibiotic(?:s)?\b/i,
+  /\bantiviral(?:s)?\b/i,
+  /\bantifungal(?:s)?\b/i,
+  /\btherapy\b/i,
+  /\bresponds? to\b/i,
+  /\bsusceptibility pattern\b/i,
+  /\bstandard oral\b/i,
+  /\bconsult(?:ation)?\b/i,
+  /\bpublic health\b/i,
+  /\bcontact precautions?\b/i,
+  /\bchemoprophylaxis\b/i,
+  /\bsupportive care\b/i,
+  /\bwound care\b/i,
+];
 
 const EARLY_DIFFICULTY_CAP_RULES: DifficultyCapRule[] = [
   {
@@ -157,6 +177,98 @@ function findEarlyDifficultyCap(
   return maxDifficulty ? { maxDifficulty, reasons } : null;
 }
 
+function findWholeCaseDifficultyCap(
+  record: StoredCaseRecord
+): { maxDifficulty: DifficultyLevel; reasons: string[] } | null {
+  const firstHint = record.hints[0]?.text ?? "";
+  const secondHint = record.hints[1]?.text ?? "";
+  const earlyText = `${firstHint} ${secondHint}`;
+  const fullText = `${record.hints.map((hint) => hint.text).join(" ")} ${record.explanation}`;
+  const reasons: string[] = [];
+  let maxDifficulty: DifficultyLevel | null = null;
+
+  if (
+    record.pathogenId === "staphylococcus-saprophyticus" &&
+    /\b(dysuria|urinary frequency|suprapubic|acute cystitis|hematuria)\b/i.test(earlyText)
+  ) {
+    maxDifficulty = "medium";
+    reasons.push("classic staphylococcus saprophyticus cystitis syndrome");
+  }
+
+  if (
+    record.pathogenId === "hepatitis-a-virus" &&
+    /\b(daycare|toddlers?|diaper(?:ing|s)?)\b/i.test(earlyText)
+  ) {
+    maxDifficulty = maxDifficulty ? minDifficulty(maxDifficulty, "medium") : "medium";
+    reasons.push("classic daycare fecal-oral hepatitis A exposure");
+  }
+
+  if (
+    record.pathogenId === "norovirus" &&
+    /\b(vomit\w*|watery diarrh\w*)\b/i.test(firstHint) &&
+    /\b(shared meal|food worker|buffet|same ward|communal|outbreak)\b/i.test(earlyText)
+  ) {
+    maxDifficulty = maxDifficulty ? minDifficulty(maxDifficulty, "medium") : "medium";
+    reasons.push("classic norovirus outbreak pattern");
+  }
+
+  if (
+    record.pathogenId === "trypanosoma-cruzi" &&
+    /\bbolivia\b/i.test(earlyText) &&
+    /\bapical aneurysm\b/i.test(fullText)
+  ) {
+    maxDifficulty = maxDifficulty ? minDifficulty(maxDifficulty, "medium") : "medium";
+    reasons.push("Bolivia plus classic Chagas apical aneurysm pattern");
+  }
+
+  return maxDifficulty ? { maxDifficulty, reasons } : null;
+}
+
+function deriveExpectedPathogenKind(record: StoredCaseRecord): StoredCaseRecord["pathogenKind"] {
+  return PATHOGEN_PLAN_BY_ID.get(record.pathogenId)?.kind ?? record.pathogenKind;
+}
+
+function alignDifficultyInCaseId(caseId: string, difficulty: DifficultyLevel): string {
+  return caseId.replace(
+    /-(easy|medium|hard)-(\d+)-(\d+)-(\d+)$/,
+    `-${difficulty}-$2-$3-$4`
+  );
+}
+
+function sanitizeExplanation(explanation: string): string {
+  const normalizedExplanation = explanation.replace(/;\s+/g, ". ");
+  const sentences = normalizedExplanation
+    .split(/(?<=[.?!])\s+/)
+    .map((sentence) => sentence.trim())
+    .filter(Boolean);
+
+  const filtered = sentences
+    .map((sentence) => {
+      let cutoff = -1;
+
+      for (const pattern of EXPLANATION_SENTENCE_DROP_PATTERNS) {
+        const match = pattern.exec(sentence);
+        if (!match) continue;
+        cutoff = cutoff === -1 ? match.index : Math.min(cutoff, match.index);
+      }
+
+      if (cutoff === -1) return sentence;
+      if (cutoff < 60) return "";
+
+      const trimmed = sentence
+        .slice(0, cutoff)
+        .replace(/[,:;.\s-]+$/g, "")
+        .replace(/\b(?:and|or|but)\s*$/i, "")
+        .trim();
+
+      return trimmed ? `${trimmed}.` : "";
+    })
+    .filter(Boolean);
+
+  const candidate = filtered.join(" ").trim();
+  return candidate.length >= 80 ? candidate : explanation;
+}
+
 function correctDifficulty(record: StoredCaseRecord): {
   corrected: DifficultyLevel;
   reasons: string[];
@@ -187,6 +299,17 @@ function correctDifficulty(record: StoredCaseRecord): {
     }
   }
 
+  const wholeCaseCap = findWholeCaseDifficultyCap(record);
+  if (wholeCaseCap) {
+    const clamped = clampDifficulty(corrected, minimum, wholeCaseCap.maxDifficulty);
+    if (clamped !== corrected) {
+      reasons.push(
+        `clinical giveaway ${corrected} → ${clamped} (${wholeCaseCap.reasons.join(", ")})`
+      );
+      corrected = clamped;
+    }
+  }
+
   return { corrected, reasons };
 }
 
@@ -206,14 +329,29 @@ function toInsertable(record: StoredCaseRecord) {
 
 let totalChanged = 0;
 let totalCases = 0;
+let totalMetadataChanged = 0;
+let totalExplanationChanged = 0;
 
 for (const pool of POOLS) {
   const records = listStoredCasesByPool(pool);
   const changed = countDifficultyChanges(records);
+  const metadataChanged = records.filter((record) => {
+    const { corrected } = correctDifficulty(record);
+    const expectedId = alignDifficultyInCaseId(record.id, corrected);
+    const expectedKind = deriveExpectedPathogenKind(record);
+    return expectedId !== record.id || expectedKind !== record.pathogenKind;
+  }).length;
+  const explanationChanged = records.filter(
+    (record) => sanitizeExplanation(record.explanation) !== record.explanation
+  ).length;
   totalChanged += changed;
+  totalMetadataChanged += metadataChanged;
+  totalExplanationChanged += explanationChanged;
   totalCases += records.length;
 
-  console.log(`${pool}: ${records.length} cases, ${changed} difficulty corrections`);
+  console.log(
+    `${pool}: ${records.length} cases, ${changed} difficulty corrections, ${metadataChanged} metadata repairs, ${explanationChanged} explanation trims`
+  );
 
   if (changed > 0) {
     for (const record of records) {
@@ -233,10 +371,15 @@ for (const pool of POOLS) {
       const { corrected } = correctDifficulty(record);
       return toInsertable({
         ...record,
+        id: alignDifficultyInCaseId(record.id, corrected),
         difficulty: corrected,
+        explanation: sanitizeExplanation(record.explanation),
+        pathogenKind: deriveExpectedPathogenKind(record),
       });
     })
   );
 }
 
-console.log(`\nDone. Fixed ${totalChanged} of ${totalCases} cases.`);
+console.log(
+  `\nDone. Fixed ${totalChanged} difficulty labels, ${totalMetadataChanged} metadata issues, and ${totalExplanationChanged} explanations across ${totalCases} cases.`
+);

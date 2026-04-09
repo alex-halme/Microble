@@ -18,6 +18,7 @@ import { z } from "zod";
 import {
   PATHOGEN_GENERATION_PLAN,
   PATHOGEN_GENERATION_PLAN_TOTALS,
+  PATHOGEN_PLAN_BY_ID,
   type DifficultyLevel,
   type GenerationPool,
   type PathogenGenerationPlanEntry,
@@ -155,6 +156,7 @@ Rules:
 14. Never write lab counts in /uL, /μL, /µL, or K/µL. Use SI-style notation such as × 10^9/L, × 10^6/L, mmol/L, mg/L, or g/L.
 15. Do not use generic filler phrases such as "classically", "typically", "this organism is", "this infection is", or "is associated with".
 15a. Explanations should read like short diagnostic reasoning, not a textbook mini-essay. Prefer 2-4 direct sentences explaining why this patient's clues support the diagnosis.
+15b. Keep explanations focused on diagnostic reasoning. Do not add routine treatment, management, public-health, or infection-control recommendations unless they are essential to explain why the diagnosis fits.
 16. US references are allowed when clinically natural, but the case should remain globally legible and should not depend on specifically US-only insurance, agency, or holiday framing.
 17. Medium and hard cases must not be too guessable from hint 1 alone. The opening presentation should support a reasonable differential diagnosis rather than essentially naming the pathogen through a classic board-style syndrome.
 18. Hard cases should require integration of later hints to solve. Hint 1 may be concerning or distinctive, but it should not by itself make the pathogen obvious to a well-prepared student.
@@ -184,7 +186,10 @@ function loadExistingCases(pool: GenerationPool): PathogenCaseCandidate[] {
     id: record.id,
     pathogenId: record.pathogenId,
     acceptedOrganismIds: record.acceptedOrganismIds,
-    pathogenKind: record.pathogenKind ?? "bacterium",
+    pathogenKind:
+      PATHOGEN_PLAN_BY_ID.get(record.pathogenId)?.kind ??
+      record.pathogenKind ??
+      "bacterium",
     model: record.model ?? MODEL,
     pool,
     hints: record.hints,
@@ -440,6 +445,86 @@ function containsUsCentricFraming(text: string): string[] {
     .map((pattern) => pattern.toString());
 }
 
+function containsManagementLanguage(text: string): string[] {
+  const patterns = [
+    /\bmanagement\b/i,
+    /\btreated with\b/i,
+    /\bfirst-line\b/i,
+    /\bantibiotic(?:s)?\b/i,
+    /\bantiviral(?:s)?\b/i,
+    /\bantifungal(?:s)?\b/i,
+    /\btherapy\b/i,
+    /\bconsult(?:ation)?\b/i,
+    /\bpublic health\b/i,
+    /\bcontact precautions?\b/i,
+    /\bchemoprophylaxis\b/i,
+  ];
+
+  return patterns
+    .filter((pattern) => pattern.test(text))
+    .map((pattern) => pattern.toString());
+}
+
+function findPathogenSpecificDifficultyErrors(
+  output: {
+    hints: z.infer<typeof HintSchema>[];
+    difficulty: DifficultyLevel;
+  },
+  job: GenerationJob
+): string[] {
+  const errors: string[] = [];
+  const firstHint = output.hints.find((hint) => hint.order === 1) ?? output.hints[0];
+  const secondHint = output.hints.find((hint) => hint.order === 2);
+  const earlyHintText = [firstHint?.text, secondHint?.text].filter(Boolean).join(" ");
+  const fullHintText = output.hints.map((hint) => hint.text).join(" ");
+
+  if (
+    job.pathogen.id === "staphylococcus-saprophyticus" &&
+    output.difficulty === "hard" &&
+    /\b(dysuria|urinary frequency|suprapubic|acute cystitis|hematuria)\b/i.test(
+      earlyHintText
+    )
+  ) {
+    errors.push(
+      "Hard staphylococcus saprophyticus cases must not read like classic uncomplicated cystitis in hints 1-2"
+    );
+  }
+
+  if (
+    job.pathogen.id === "hepatitis-a-virus" &&
+    output.difficulty === "hard" &&
+    /\b(daycare|toddlers?|diaper(?:ing|s)?)\b/i.test(earlyHintText)
+  ) {
+    errors.push(
+      "Hard hepatitis A cases must not reveal the classic daycare fecal-oral exposure pattern in hints 1-2"
+    );
+  }
+
+  if (
+    job.pathogen.id === "norovirus" &&
+    output.difficulty === "hard" &&
+    /\b(vomit\w*|watery diarrh\w*|non-bloody vomiting)\b/i.test(firstHint?.text ?? "") &&
+    /\b(shared meal|food worker|buffet|same ward|communal|outbreak)\b/i.test(earlyHintText)
+  ) {
+    errors.push(
+      "Hard norovirus cases must not reveal the classic outbreak and shared-exposure pattern in hints 1-2"
+    );
+  }
+
+  if (
+    job.pathogen.id === "trypanosoma-cruzi" &&
+    output.difficulty === "hard" &&
+    /\bbolivia\b/i.test(earlyHintText) &&
+    /\bapical aneurysm\b/i.test(fullHintText)
+  ) {
+    errors.push(
+      "Hard Trypanosoma cruzi cases must not pair Bolivia with the classic apical aneurysm pattern"
+    );
+  }
+
+  return errors;
+}
+
 function validateCaseOutput(
   output: z.infer<typeof HintSchema> extends never
     ? never
@@ -559,6 +644,8 @@ function validateCaseOutput(
     }
   }
 
+  errors.push(...findPathogenSpecificDifficultyErrors(output, job));
+
   if (totalHintChars < MIN_TOTAL_HINT_CHARS) {
     errors.push(
       `Case is too shallow (${totalHintChars} total hint characters, need at least ${MIN_TOTAL_HINT_CHARS})`
@@ -619,6 +706,12 @@ function validateCaseOutput(
 
   for (const usPattern of containsUsCentricFraming(output.explanation)) {
     errors.push(`Explanation uses US-centered framing (${usPattern})`);
+  }
+
+  for (const managementPattern of containsManagementLanguage(output.explanation)) {
+    errors.push(
+      `Explanation drifts into management rather than diagnosis (${managementPattern})`
+    );
   }
 
   return { valid: errors.length === 0, errors };

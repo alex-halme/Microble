@@ -88,12 +88,14 @@ function normalizeStoredRecord(record: StoredCaseRecord): StoredCaseRecord {
     pathogen
       ? applyTierDifficultyFloor(pathogen.tier, record.difficulty)
       : record.difficulty;
+  const pathogenKind = pathogen?.kind ?? record.pathogenKind;
 
   return {
     ...record,
     pathogenId: normalizedAnswers.organismId,
     acceptedOrganismIds: normalizedAnswers.acceptedOrganismIds,
     difficulty,
+    pathogenKind,
   };
 }
 
