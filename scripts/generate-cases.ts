@@ -28,7 +28,9 @@ import {
   detectSubtypeMismatchForTarget,
   getAcceptedOrganismIdsForCase,
 } from "../lib/caseAnswers.js";
-import type { MicrobleCase, Hint, HintCategory, Organism } from "../lib/types.js";
+import { buildCaseExplanation } from "../lib/caseExplanation.js";
+import { generateEducationalExplanations } from "../lib/caseExplanationGeneration.js";
+import type { MicrobleCase, Hint, Organism } from "../lib/types.js";
 
 // ─── Config ───────────────────────────────────────────────────────────────────
 
@@ -36,7 +38,6 @@ const MODEL = "gpt-5-mini";
 const CASES_PER_ORGANISM = 3; // cases generated per API call per organism
 const MAX_RETRIES = 2;
 const MIN_TOTAL_HINT_CHARS = 520;
-const MIN_EXPLANATION_CHARS = 140;
 
 // ─── Zod schema ───────────────────────────────────────────────────────────────
 
@@ -62,7 +63,7 @@ const HintSchema = z.object({
 const CaseOutputSchema = z.object({
   hints: z.array(HintSchema).length(5),
   difficulty: z.enum(["easy", "medium", "hard"]),
-  explanation: z.string().min(50).max(1000),
+  explanation: z.string().min(50).max(1000).optional(),
 });
 
 const BatchOutputSchema = z.object({
@@ -91,7 +92,7 @@ RULES (strictly enforced):
 11. Avoid US-centered assumptions unless location is essential; prefer globally legible terminology and settings.
 12. Medium and hard cases must not be too guessable from hint 1 alone. The presentation should support a differential diagnosis rather than immediately revealing the organism through a classic textbook syndrome.
 13. Avoid LLM-style punctuation mannerisms. Do not use semicolons, em dashes, or en dashes in hints or explanations. Prefer short, direct sentences with commas or full stops.
-14. Explanations should read like short diagnostic reasoning, not a textbook mini-essay. Prefer 2-4 direct sentences explaining why this patient's clues support the diagnosis.
+14. Do not include extra narrative fields beyond the requested JSON shape.
 
 OUTPUT: Return a JSON object with a "cases" array containing exactly ${CASES_PER_ORGANISM} distinct case objects.
 Each case must be a different clinical scenario for the same organism (different patient, setting, or presentation).`;
@@ -245,12 +246,6 @@ function validateCase(
     );
   }
 
-  if (output.explanation.length < MIN_EXPLANATION_CHARS) {
-    errors.push(
-      `Explanation is too brief (${output.explanation.length} chars, need at least ${MIN_EXPLANATION_CHARS})`
-    );
-  }
-
   if (concreteHintCount < 3) {
     errors.push("Case lacks enough concrete clinical detail across hints");
   }
@@ -277,17 +272,9 @@ function validateCase(
     }
   }
 
-  for (const genericPattern of containsGenericCasePhrasing(output.explanation)) {
-    errors.push(`Explanation uses generic phrasing (${genericPattern})`);
-  }
-
   const subtypeMismatch = detectSubtypeMismatchForTarget(organism.id, output);
   if (subtypeMismatch) {
     errors.push(subtypeMismatch);
-  }
-
-  for (const usPattern of containsUsCentricFraming(output.explanation)) {
-    errors.push(`Explanation uses US-centered framing (${usPattern})`);
   }
 
   return { valid: errors.length === 0, errors };
@@ -309,7 +296,6 @@ Make the first two sentences of hint 1 describe the patient, setting, time cours
 US references are acceptable when natural to the case, but the vignette should not depend on specifically US-only agencies, insurance, or holiday framing.
 If you label a case "medium", keep hint 1 clinically suggestive but not strongly diagnostic on its own; do not stack several classic hallmark findings at once, and hold back at least one important discriminator for later hints.
 If you label a case "hard", make hint 1 genuinely non-obvious from a pathogen-identification standpoint: start with a plausible but broader clinical presentation, avoid the signature giveaway syndrome, and reserve the most pathogen-specific clue for hint 4 or hint 5.
-Write the explanation as short diagnostic reasoning for this case, not as a generic pathogen mini-essay.
 Remember: do NOT include "${organism.genus ?? ""}", "${organism.species ?? ""}", or any of these in the hints: ${[...organism.abbreviations, ...organism.commonNames].join(", ") || "none"}`;
 
   for (let attempt = 0; attempt <= MAX_RETRIES; attempt++) {
@@ -336,7 +322,10 @@ Remember: do NOT include "${organism.genus ?? ""}", "${organism.species ?? ""}",
         return [];
       }
 
-      const results: MicrobleCase[] = [];
+      const validCaseOutputs: Array<{
+        caseOutput: CaseOutput;
+        caseIndex: number;
+      }> = [];
       let caseIndex = 0;
 
       for (const caseOutput of parsed.data.cases) {
@@ -350,14 +339,27 @@ Remember: do NOT include "${organism.genus ?? ""}", "${organism.species ?? ""}",
           continue;
         }
 
-        const microbleCase: MicrobleCase = {
-          id: `gen-${organism.id}-${Date.now()}-${caseIndex}`,
+        validCaseOutputs.push({ caseOutput, caseIndex });
+        caseIndex++;
+      }
+
+      const generatedExplanations = await generateEducationalExplanations(
+        client,
+        validCaseOutputs.map(({ caseOutput, caseIndex }) => ({
+          id: `gen-${organism.id}-${caseIndex}`,
           organismId: organism.id,
-          acceptedOrganismIds: getAcceptedOrganismIdsForCase({
-            organismId: organism.id,
-            hints: caseOutput.hints,
-            explanation: caseOutput.explanation,
-          }),
+          hints: caseOutput.hints,
+        })),
+        MODEL
+      );
+
+      const results: MicrobleCase[] = [];
+      for (const { caseOutput, caseIndex } of validCaseOutputs) {
+        const explanation =
+          generatedExplanations.get(`gen-${organism.id}-${caseIndex}`) ??
+          buildCaseExplanation(organism.id, caseOutput.hints);
+
+        const microbleCase: MicrobleCase = {
           hints: caseOutput.hints.sort((a, b) => a.order - b.order) as [
             Hint,
             Hint,
@@ -365,15 +367,21 @@ Remember: do NOT include "${organism.genus ?? ""}", "${organism.species ?? ""}",
             Hint,
             Hint
           ],
+          explanation,
+          id: `gen-${organism.id}-${Date.now()}-${caseIndex}`,
+          organismId: organism.id,
+          acceptedOrganismIds: getAcceptedOrganismIdsForCase({
+            organismId: organism.id,
+            hints: caseOutput.hints,
+            explanation,
+          }),
           difficulty: caseOutput.difficulty,
-          explanation: caseOutput.explanation,
           source: "ai_generated",
           validated: true,
           createdAt: new Date().toISOString(),
         };
 
         results.push(microbleCase);
-        caseIndex++;
       }
 
       return results;
@@ -481,27 +489,45 @@ async function retrieveBatchResults(
     if (!parsed.success) { rejected++; continue; }
 
     let caseIdx = 0;
+    const validCaseOutputs: Array<{ caseOutput: CaseOutput; caseIdx: number }> = [];
     for (const caseOutput of parsed.data.cases) {
       const validation = validateCase(caseOutput, organism);
       if (!validation.valid) { rejected++; caseIdx++; continue; }
+      validCaseOutputs.push({ caseOutput, caseIdx });
+      caseIdx++;
+    }
+
+    const generatedExplanations = await generateEducationalExplanations(
+      client,
+      validCaseOutputs.map(({ caseOutput, caseIdx }) => ({
+        id: `batch-${organism.id}-${caseIdx}`,
+        organismId: organism.id,
+        hints: caseOutput.hints,
+      })),
+      MODEL
+    );
+
+    for (const { caseOutput, caseIdx } of validCaseOutputs) {
+      const explanation =
+        generatedExplanations.get(`batch-${organism.id}-${caseIdx}`) ??
+        buildCaseExplanation(organism.id, caseOutput.hints);
 
       existingCases.push({
+        hints: caseOutput.hints.sort((a, b) => a.order - b.order) as [Hint, Hint, Hint, Hint, Hint],
+        explanation,
         id: `gen-${organism.id}-batch-${batchId.slice(-6)}-${caseIdx}`,
         organismId: organism.id,
         acceptedOrganismIds: getAcceptedOrganismIdsForCase({
           organismId: organism.id,
           hints: caseOutput.hints,
-          explanation: caseOutput.explanation,
+          explanation,
         }),
-        hints: caseOutput.hints.sort((a, b) => a.order - b.order) as [Hint, Hint, Hint, Hint, Hint],
         difficulty: caseOutput.difficulty,
-        explanation: caseOutput.explanation,
         source: "ai_generated",
         validated: true,
         createdAt: new Date().toISOString(),
       });
       added++;
-      caseIdx++;
     }
   }
 

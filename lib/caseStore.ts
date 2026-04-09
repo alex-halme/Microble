@@ -3,6 +3,7 @@ import path from "path";
 import { PATHOGEN_PLAN_BY_ID, applyTierDifficultyFloor } from "../data/pathogen-generation-plan";
 import { ORGANISM_MAP } from "./organisms";
 import { normalizeCaseAnswers } from "./caseAnswers";
+import { buildCaseExplanation, isEducationalCaseExplanation } from "./caseExplanation";
 import { getDailyCase, getExpiredDailyCases } from "./dailyCase";
 import { dedupeCasesById } from "./generatedCases";
 import type {
@@ -95,6 +96,12 @@ function normalizeStoredRecord(record: StoredCaseRecord): StoredCaseRecord {
     pathogenId: normalizedAnswers.organismId,
     acceptedOrganismIds: normalizedAnswers.acceptedOrganismIds,
     difficulty,
+    explanation: isEducationalCaseExplanation(
+      record.explanation,
+      normalizedAnswers.organismId
+    )
+      ? record.explanation
+      : buildCaseExplanation(normalizedAnswers.organismId, record.hints),
     pathogenKind,
   };
 }
@@ -392,4 +399,5 @@ export function toPublicCase(caseData: MicrobleCase): PublicMicrobleCase {
 
 export const __testing = {
   filterCasesVisibleAtDayStart,
+  normalizeStoredRecord,
 };

@@ -1,3 +1,4 @@
+import { buildCaseExplanation, isEducationalCaseExplanation } from "./caseExplanation";
 import { ORGANISM_MAP } from "./organisms";
 import type { Hint, MicrobleCase } from "./types";
 
@@ -26,6 +27,15 @@ export function normalizeGeneratedPathogenCases(
           hints: caseData.hints as MicrobleCase["hints"],
           organismId: caseData.pathogenId,
           acceptedOrganismIds: caseData.acceptedOrganismIds,
+          explanation: isEducationalCaseExplanation(
+            caseData.explanation,
+            caseData.pathogenId
+          )
+            ? caseData.explanation
+            : buildCaseExplanation(
+                caseData.pathogenId,
+                caseData.hints as MicrobleCase["hints"]
+              ),
         }) as MicrobleCase
     );
 }

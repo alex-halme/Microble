@@ -11,7 +11,8 @@
     "generate": "tsx scripts/generate-cases.ts",
     "generate:batch": "tsx scripts/generate-cases.ts --batch",
     "generate:pathogens": "tsx scripts/generate-pathogen-cases.ts",
-    "fix:difficulties": "tsx scripts/fix-difficulties.ts"
+    "fix:difficulties": "tsx scripts/fix-difficulties.ts",
+    "refresh:explanations": "tsx scripts/refresh-case-explanations.ts"
   },
   "dependencies": {
     "@vercel/analytics": "^2.0.1",

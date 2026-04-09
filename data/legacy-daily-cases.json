@@ -30,7 +30,7 @@
       }
     ],
     "difficulty": "easy",
-    "explanation": "Staphylococcus aureus is the most common cause of skin and soft tissue infections, including furuncles and abscesses. The coagulase-positive, gram-positive cocci in clusters are classic. Methicillin-resistant strains (MRSA) are increasingly prevalent in community settings and require vancomycin or alternatives like daptomycin.",
+    "explanation": "The diagnosis is Staphylococcus aureus. The presentation fits because a painful, warm, fluctuant lump on his forearm that has been growing for 4 days. Another key clue in the laboratory workup was the organism tests coagulase-positive. A further clue in the laboratory workup was CBC shows a leukocytosis of 13,000/μL with a left shift. Taken together, these case-specific findings support Staphylococcus aureus.",
     "source": "handcrafted",
     "validated": true,
     "createdAt": "2026-03-27"
@@ -66,7 +66,7 @@
       }
     ],
     "difficulty": "easy",
-    "explanation": "Streptococcus pneumoniae (Pneumococcus) is the leading cause of community-acquired pneumonia. Key identifiers: lancet-shaped gram-positive diplococci, alpha-hemolysis, optochin sensitivity, bile solubility, and a positive urine pneumococcal antigen test. Elderly patients and those with diabetes are at increased risk.",
+    "explanation": "The diagnosis is Streptococcus pneumoniae. The presentation fits because a 3-day history of productive cough, fever of 38.9°C, and mild confusion. Another key clue is that blood cultures grow lancet-shaped gram-positive diplococci that are alpha-hemolytic on blood agar. A further clue is that it is the most common cause of lobar pneumonia, bacterial meningitis, and otitis media worldwide. Taken together, these case-specific findings support Streptococcus pneumoniae.",
     "source": "handcrafted",
     "validated": true,
     "createdAt": "2026-03-27"
@@ -102,7 +102,7 @@
       }
     ],
     "difficulty": "easy",
-    "explanation": "Clostridioides difficile is the leading cause of antibiotic-associated diarrhea and pseudomembranous colitis. Risk factors: recent antibiotic exposure, hospitalization, advanced age. Toxins A and B mediate mucosal damage. Treatment shifted from metronidazole to oral vancomycin or fidaxomicin as first-line.",
+    "explanation": "The diagnosis is Clostridioides difficile. The presentation fits because a 72-year-old woman hospitalized for a hip replacement develops profuse, watery, foul-smelling diarrhea (8-10 stools/day) on day 5 post-operatively. Another key clue is that the laboratory also confirms presence of the organism's toxigenic gene by PCR. A further clue is that the organism is an anaerobic, gram-positive, spore-forming rod. Taken together, these case-specific findings support Clostridioides difficile.",
     "source": "handcrafted",
     "validated": true,
     "createdAt": "2026-03-27"
@@ -138,7 +138,7 @@
       }
     ],
     "difficulty": "medium",
-    "explanation": "Neisseria meningitidis is the leading cause of bacterial meningitis in adolescents and young adults. The triad of headache, fever, and meningismus with a petechial/purpuric rash is classic. Dormitory living and unvaccinated status are key risk factors. Gram-negative diplococci in CSF and blood cultures, oxidase-positive.",
+    "explanation": "The diagnosis is Neisseria meningitidis. The presentation fits because a sudden-onset severe headache, fever of 40.1°C, and neck stiffness that began 8 hours ago. Another key clue is that it grows on chocolate agar and Thayer-Martin medium. A further clue is that gram stain shows gram-negative diplococci. Taken together, these case-specific findings support Neisseria meningitidis.",
     "source": "handcrafted",
     "validated": true,
     "createdAt": "2026-03-27"
@@ -174,7 +174,7 @@
       }
     ],
     "difficulty": "easy",
-    "explanation": "Mycobacterium tuberculosis causes pulmonary tuberculosis, characterized by constitutional symptoms (night sweats, weight loss, fever), hemoptysis, and upper lobe cavitary lesions on CXR. Acid-fast staining, IGRA, and culture on specialized media are diagnostic. Treatment: RIPE (rifampin, isoniazid, pyrazinamide, ethambutol) for 6 months total.",
+    "explanation": "The diagnosis is Mycobacterium tuberculosis. The presentation fits because the patient reports a 3-week history of productive cough with occasional blood-tinged sputum. Another key clue is that PCR confirms the species. A further clue is that the organism grows very slowly on Löwenstein-Jensen medium (6-8 weeks). Taken together, these case-specific findings support Mycobacterium tuberculosis.",
     "source": "handcrafted",
     "validated": true,
     "createdAt": "2026-03-27"
@@ -210,7 +210,7 @@
       }
     ],
     "difficulty": "easy",
-    "explanation": "Helicobacter pylori is the leading cause of peptic ulcer disease and a WHO Group 1 carcinogen for gastric cancer. Its urease production is the basis for the CLO test, urea breath test, and its ability to survive in gastric acid. Eradication with triple or quadruple therapy reduces ulcer recurrence dramatically.",
+    "explanation": "The diagnosis is Helicobacter pylori. The presentation fits because a 6-month history of epigastric burning pain that worsens with fasting and is partially relieved by eating. Another key clue is that rapid urease test (CLO test) on antral biopsy returns positive. A further clue in the laboratory workup was it produces large amounts of urease, which allows it to survive in the acidic stomach by creating a protective ammonia cloud. Taken together, these case-specific findings support Helicobacter pylori.",
     "source": "handcrafted",
     "validated": true,
     "createdAt": "2026-03-27"
@@ -246,7 +246,7 @@
       }
     ],
     "difficulty": "easy",
-    "explanation": "Borrelia burgdorferi causes Lyme disease, the most common tick-borne illness in North America. The pathognomonic erythema migrans (bull's-eye rash) appears 3–30 days after an Ixodes tick bite. Later stages involve neurologic (Bell's palsy, meningitis), cardiac (AV block), and rheumatologic (large-joint arthritis) manifestations.",
+    "explanation": "The diagnosis is Borrelia burgdorferi. The presentation fits because in July with a 5-day history of fatigue, low-grade fever, and a painless expanding circular rash on his left thigh that started as a small red spot. Another key clue in the laboratory workup was if untreated, this infection can later cause unilateral or bilateral facial nerve palsy, carditis with AV block, or large-joint arthritis. A further clue is that it cannot be routinely cultured but is identified by serology or PCR. Taken together, these case-specific findings support Borrelia burgdorferi.",
     "source": "handcrafted",
     "validated": true,
     "createdAt": "2026-03-27"
@@ -282,7 +282,7 @@
       }
     ],
     "difficulty": "medium",
-    "explanation": "Pseudomonas aeruginosa is the dominant chronic respiratory pathogen in cystic fibrosis, correlating with accelerated lung function decline. Its mucoid phenotype (alginate-overproducing variant) allows biofilm formation resistant to antibiotics and host defenses. Pyocyanin produces the characteristic blue-green color. Multidrug resistance is common.",
+    "explanation": "The diagnosis is Pseudomonas aeruginosa. The presentation fits because this organism is the most common life-limiting chronic airway pathogen in cystic fibrosis patients. Another key clue is that susceptibility testing shows resistance to all beta-lactams, fluoroquinolones, and aminoglycosides except colistin. A further clue is that the organism produces a blue-green pigment visible in the culture medium. Taken together, these case-specific findings support Pseudomonas aeruginosa.",
     "source": "handcrafted",
     "validated": true,
     "createdAt": "2026-03-27"
@@ -318,7 +318,7 @@
       }
     ],
     "difficulty": "medium",
-    "explanation": "Listeria monocytogenes causes listeriosis in immunocompromised individuals, pregnant women, neonates, and the elderly. Contaminated soft cheeses, deli meats, and unpasteurized dairy are common sources. Uniquely grows at refrigerator temperatures (4°C) and is cephalosporin-resistant (treat with ampicillin ± gentamicin).",
+    "explanation": "The diagnosis is Listeria monocytogenes. The presentation fits because a 3-day-old male neonate born at 36 weeks gestation is transferred to the NICU for fever (38.4°C), poor feeding, and irritability that began within hours of birth. Another key clue is that the organism is facultatively anaerobic and grows well at refrigeration temperatures (4°C), exhibiting characteristic tumbling motility. A further clue is that chest X-ray shows diffuse granulomatous infiltrates. Taken together, these case-specific findings support Listeria monocytogenes.",
     "source": "handcrafted",
     "validated": true,
     "createdAt": "2026-03-27"
@@ -354,7 +354,7 @@
       }
     ],
     "difficulty": "medium",
-    "explanation": "Rickettsia rickettsii causes Rocky Mountain Spotted Fever (RMSF), the most lethal tick-borne illness in the US. The centripetal rash (wrists/ankles → trunk), thrombocytopenia, and history of tick exposure in an endemic area are key. Doxycycline must be started empirically; waiting for confirmation is dangerous. Despite the name, most cases occur in the Southeast.",
+    "explanation": "The diagnosis is Rickettsia rickettsii. The presentation fits because in June with 4 days of high fever (40°C), severe headache, myalgias, and malaise. Another key clue is that blood cultures are negative. A further clue is that doxycycline must be started empirically without waiting for confirmatory serology - delays in treatment are associated with mortality. Taken together, these case-specific findings support Rickettsia rickettsii.",
     "source": "handcrafted",
     "validated": true,
     "createdAt": "2026-03-27"

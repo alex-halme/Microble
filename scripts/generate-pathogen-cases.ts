@@ -32,13 +32,14 @@ import {
   detectSubtypeMismatchForTarget,
   getAcceptedOrganismIdsForCase,
 } from "../lib/caseAnswers.js";
+import { buildCaseExplanation } from "../lib/caseExplanation.js";
+import { generateEducationalExplanations } from "../lib/caseExplanationGeneration.js";
 import type { Hint } from "../lib/types.js";
 
 const MODEL = "gpt-5-mini";
 const CASES_PER_REQUEST = 4;
 const MAX_RETRIES = 2;
 const MIN_TOTAL_HINT_CHARS = 520;
-const MIN_EXPLANATION_CHARS = 140;
 const MAX_CONCURRENT_REQUESTS = 8;
 const EARLY_COVERAGE_TARGETS: Record<GenerationPool, number> = {
   daily: 1,
@@ -155,8 +156,8 @@ Rules:
 13. Avoid US-centered assumptions unless location is essential; prefer globally legible terminology and settings.
 14. Never write lab counts in /uL, /μL, /µL, or K/µL. Use SI-style notation such as × 10^9/L, × 10^6/L, mmol/L, mg/L, or g/L.
 15. Do not use generic filler phrases such as "classically", "typically", "this organism is", "this infection is", or "is associated with".
-15a. Explanations should read like short diagnostic reasoning, not a textbook mini-essay. Prefer 2-4 direct sentences explaining why this patient's clues support the diagnosis.
-15b. Keep explanations focused on diagnostic reasoning. Do not add routine treatment, management, public-health, or infection-control recommendations unless they are essential to explain why the diagnosis fits.
+15a. Do not include extra narrative fields beyond the requested JSON shape.
+15b. Keep each hint focused on the patient rather than on generic management or public-health advice.
 16. US references are allowed when clinically natural, but the case should remain globally legible and should not depend on specifically US-only insurance, agency, or holiday framing.
 17. Medium and hard cases must not be too guessable from hint 1 alone. The opening presentation should support a reasonable differential diagnosis rather than essentially naming the pathogen through a classic board-style syndrome.
 18. Hard cases should require integration of later hints to solve. Hint 1 may be concerning or distinctive, but it should not by itself make the pathogen obvious to a well-prepared student.
@@ -175,8 +176,7 @@ const OUTPUT_SHAPE_EXAMPLE = `{
         { "order": 4, "category": "imaging", "text": "..." },
         { "order": 5, "category": "exposure", "text": "..." }
       ],
-      "difficulty": "easy",
-      "explanation": "..."
+      "difficulty": "easy"
     }
   ]
 }`;
@@ -445,26 +445,6 @@ function containsUsCentricFraming(text: string): string[] {
     .map((pattern) => pattern.toString());
 }
 
-function containsManagementLanguage(text: string): string[] {
-  const patterns = [
-    /\bmanagement\b/i,
-    /\btreated with\b/i,
-    /\bfirst-line\b/i,
-    /\bantibiotic(?:s)?\b/i,
-    /\bantiviral(?:s)?\b/i,
-    /\bantifungal(?:s)?\b/i,
-    /\btherapy\b/i,
-    /\bconsult(?:ation)?\b/i,
-    /\bpublic health\b/i,
-    /\bcontact precautions?\b/i,
-    /\bchemoprophylaxis\b/i,
-  ];
-
-  return patterns
-    .filter((pattern) => pattern.test(text))
-    .map((pattern) => pattern.toString());
-}
-
 function findPathogenSpecificDifficultyErrors(
   output: {
     hints: z.infer<typeof HintSchema>[];
@@ -652,12 +632,6 @@ function validateCaseOutput(
     );
   }
 
-  if (output.explanation.length < MIN_EXPLANATION_CHARS) {
-    errors.push(
-      `Explanation is too brief (${output.explanation.length} chars, need at least ${MIN_EXPLANATION_CHARS})`
-    );
-  }
-
   if (concreteHintCount < 3) {
     errors.push("Case lacks enough concrete clinical detail across hints");
   }
@@ -695,23 +669,9 @@ function validateCaseOutput(
     }
   }
 
-  for (const genericPattern of containsGenericCasePhrasing(output.explanation)) {
-    errors.push(`Explanation uses generic phrasing (${genericPattern})`);
-  }
-
   const subtypeMismatch = detectSubtypeMismatchForTarget(job.pathogen.id, output);
   if (subtypeMismatch) {
     errors.push(subtypeMismatch);
-  }
-
-  for (const usPattern of containsUsCentricFraming(output.explanation)) {
-    errors.push(`Explanation uses US-centered framing (${usPattern})`);
-  }
-
-  for (const managementPattern of containsManagementLanguage(output.explanation)) {
-    errors.push(
-      `Explanation drifts into management rather than diagnosis (${managementPattern})`
-    );
   }
 
   return { valid: errors.length === 0, errors };
@@ -734,9 +694,7 @@ function normalizeCaseOutput(
   return {
     hints: normalizedHints,
     difficulty: rawCase.difficulty ?? job.difficulty,
-    explanation:
-      rawCase.explanation ??
-      `AI-generated ${job.difficulty} case for ${job.pathogen.canonical}. Review clinically before publishing.`,
+    explanation: buildCaseExplanation(job.pathogen.id, normalizedHints),
   };
 }
 
@@ -998,8 +956,7 @@ Each case must:
 - use European / SI-style lab units whenever laboratory values are given
 - if you mention blood counts, prefer notation like "14.2 × 10^9/L"; never use /uL, /μL, /µL, K/uL, or K/µL
 - use exactly the JSON field names "order", "category", and "text" inside hints
-- include a top-level "difficulty" and "explanation" for every case
-- write the explanation as short diagnostic reasoning for this case, not as a generic pathogen mini-essay
+- include a top-level "difficulty" for every case
 - include no extra keys such as "patient", "vignette", or "diagnosis"
 - avoid generic pathogen facts that are not explicitly tied to this patient
 - avoid making the case depend on specifically US-only agencies, insurance, or holiday framing unless clinically essential
@@ -1047,7 +1004,10 @@ async function generateCasesForJob(
         return [];
       }
 
-      const results: PathogenCaseCandidate[] = [];
+      const validCaseOutputs: Array<{
+        caseOutput: ReturnType<typeof normalizeCaseOutput>;
+        caseIndex: number;
+      }> = [];
       const validationFeedback = new Set<string>();
       let caseIndex = 0;
 
@@ -1064,13 +1024,34 @@ async function generateCasesForJob(
           continue;
         }
 
+        validCaseOutputs.push({ caseOutput, caseIndex });
+        caseIndex += 1;
+      }
+
+      const generatedExplanations = await generateEducationalExplanations(
+        client,
+        validCaseOutputs.map(({ caseOutput, caseIndex }) => ({
+          id: `path-${job.pool}-${job.pathogen.id}-${job.difficulty}-${sequenceIndex}-${caseIndex}`,
+          organismId: job.pathogen.id,
+          hints: caseOutput.hints,
+        })),
+        MODEL
+      );
+
+      const results: PathogenCaseCandidate[] = [];
+      for (const { caseOutput, caseIndex } of validCaseOutputs) {
+        const explanation =
+          generatedExplanations.get(
+            `path-${job.pool}-${job.pathogen.id}-${job.difficulty}-${sequenceIndex}-${caseIndex}`
+          ) ?? buildCaseExplanation(job.pathogen.id, caseOutput.hints);
+
         results.push({
           id: `path-${job.pool}-${job.pathogen.id}-${job.difficulty}-${Date.now()}-${sequenceIndex}-${caseIndex}`,
           pathogenId: job.pathogen.id,
           acceptedOrganismIds: getAcceptedOrganismIdsForCase({
             organismId: job.pathogen.id,
             hints: caseOutput.hints,
-            explanation: caseOutput.explanation,
+            explanation,
           }),
           pathogenKind: job.pathogen.kind,
           model: MODEL,
@@ -1083,13 +1064,12 @@ async function generateCasesForJob(
             Hint
           ],
           difficulty: caseOutput.difficulty,
-          explanation: caseOutput.explanation,
+          explanation,
           source: "ai_generated",
           validated: true,
           createdAt: new Date().toISOString(),
           style: "mgh_case_report",
         });
-        caseIndex += 1;
       }
 
       if (results.length === 0 && validationFeedback.size > 0 && attempt < MAX_RETRIES) {
