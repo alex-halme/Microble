@@ -272,7 +272,11 @@ function validateCase(
     }
   }
 
-  const subtypeMismatch = detectSubtypeMismatchForTarget(organism.id, output);
+  const subtypeMismatch = detectSubtypeMismatchForTarget(organism.id, {
+    ...output,
+    explanation:
+      output.explanation ?? buildCaseExplanation(organism.id, output.hints),
+  });
   if (subtypeMismatch) {
     errors.push(subtypeMismatch);
   }

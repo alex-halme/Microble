@@ -30,7 +30,7 @@
       }
     ],
     "difficulty": "easy",
-    "explanation": "The diagnosis is Staphylococcus aureus. The presentation fits because a painful, warm, fluctuant lump on his forearm that has been growing for 4 days. Another key clue in the laboratory workup was the organism tests coagulase-positive. A further clue in the laboratory workup was CBC shows a leukocytosis of 13,000/μL with a left shift. Taken together, these case-specific findings support Staphylococcus aureus.",
+    "explanation": "This is an acute purulent skin and soft tissue infection caused by coagulase-positive Staphylococcus aureus, with oxacillin resistance indicating methicillin-resistant S. aureus (MRSA). A fluctuant, warm abscess yielding thick purulence and clusters of gram-positive cocci that are coagulase-positive points specifically to S. aureus rather than streptococci or skin commensals, and the reported oxacillin resistance confirms a methicillin-resistant strain rather than a beta-lactam susceptible one. Methicillin resistance in S. aureus is usually due to the mecA gene which encodes an altered penicillin-binding protein PBP2a that confers resistance to all beta-lactam antibiotics.",
     "source": "handcrafted",
     "validated": true,
     "createdAt": "2026-03-27"
@@ -66,7 +66,7 @@
       }
     ],
     "difficulty": "easy",
-    "explanation": "The diagnosis is Streptococcus pneumoniae. The presentation fits because a 3-day history of productive cough, fever of 38.9°C, and mild confusion. Another key clue is that blood cultures grow lancet-shaped gram-positive diplococci that are alpha-hemolytic on blood agar. A further clue is that it is the most common cause of lobar pneumonia, bacterial meningitis, and otitis media worldwide. Taken together, these case-specific findings support Streptococcus pneumoniae.",
+    "explanation": "This presentation is community-acquired lobar pneumonia due to Streptococcus pneumoniae, supported by characteristic imaging and definitive microbiology findings. The combination of lobar consolidation with systemic inflammatory response, a positive urine pneumococcal antigen, and growth of optochin-sensitive, bile-soluble lancet-shaped alpha-hemolytic gram-positive diplococci identifies S. pneumoniae rather than other alpha-hemolytic streptococci or atypical pathogens. The polysaccharide capsule is the major virulence factor of S. pneumoniae and vaccine-induced immunity targets capsule types, although protection wanes with age and time since vaccination.",
     "source": "handcrafted",
     "validated": true,
     "createdAt": "2026-03-27"
@@ -102,7 +102,7 @@
       }
     ],
     "difficulty": "easy",
-    "explanation": "The diagnosis is Clostridioides difficile. The presentation fits because a 72-year-old woman hospitalized for a hip replacement develops profuse, watery, foul-smelling diarrhea (8-10 stools/day) on day 5 post-operatively. Another key clue is that the laboratory also confirms presence of the organism's toxigenic gene by PCR. A further clue is that the organism is an anaerobic, gram-positive, spore-forming rod. Taken together, these case-specific findings support Clostridioides difficile.",
+    "explanation": "This is antibiotic-associated pseudomembranous colitis caused by toxigenic Clostridioides difficile following perioperative antibiotic exposure. New-onset profuse watery diarrhea after cefazolin, marked leukocytosis, CT findings of colonic wall thickening with an accordion sign, and stool positive for toxins A and B plus a toxigenic gene by PCR distinguish C. difficile infection from other causes of hospital-onset diarrhea. C. difficile forms hardy spores that persist in the environment and resist alcohol-based hand rubs, so spore-mediated transmission via contaminated surfaces and hands is a key factor in outbreaks.",
     "source": "handcrafted",
     "validated": true,
     "createdAt": "2026-03-27"
@@ -138,7 +138,7 @@
       }
     ],
     "difficulty": "medium",
-    "explanation": "The diagnosis is Neisseria meningitidis. The presentation fits because a sudden-onset severe headache, fever of 40.1°C, and neck stiffness that began 8 hours ago. Another key clue is that it grows on chocolate agar and Thayer-Martin medium. A further clue is that gram stain shows gram-negative diplococci. Taken together, these case-specific findings support Neisseria meningitidis.",
+    "explanation": "This is fulminant meningococcal meningitis and meningococcemia caused by Neisseria meningitidis serogroup B, presenting with rapid-onset meningitis and a petechial rash. The sudden severe meningitis in a college dorm resident with a non-blanching petechial rash, neutrophilic CSF with low glucose, and oxidase-positive kidney-shaped gram-negative diplococci growing on Thayer-Martin medium pinpoint N. meningitidis rather than other gram-negative organisms. Close-quarter living facilitates respiratory droplet transmission of N. meningitidis and the organism can trigger rapid septic shock with disseminated intravascular coagulation and adrenal hemorrhage known as Waterhouse-Friderichsen syndrome.",
     "source": "handcrafted",
     "validated": true,
     "createdAt": "2026-03-27"
@@ -174,7 +174,7 @@
       }
     ],
     "difficulty": "easy",
-    "explanation": "The diagnosis is Mycobacterium tuberculosis. The presentation fits because the patient reports a 3-week history of productive cough with occasional blood-tinged sputum. Another key clue is that PCR confirms the species. A further clue is that the organism grows very slowly on Löwenstein-Jensen medium (6-8 weeks). Taken together, these case-specific findings support Mycobacterium tuberculosis.",
+    "explanation": "This presentation is active pulmonary tuberculosis causing upper lobe cavitary disease in a recent immigrant with systemic symptoms and documented acid fast bacilli. PCR confirmation and a positive IGRA support Mycobacterium tuberculosis as the species-level diagnosis. The chronic constitutional symptoms, weight loss, night sweats, hemoptysis, bilateral upper lobe infiltrates with a cavitary lesion, positive Ziehl-Neelsen sputum smear, and very slow growth on Löwenstein-Jensen medium together point to M. tuberculosis rather than rapid-growing mycobacteria or typical bacterial pneumonias. The epidemiologic risk from endemic origin and a positive IGRA further increase the likelihood of true tuberculosis infection. Mycobacterium tuberculosis produces cord factor that correlates with virulence and it preferentially causes apical cavitary lesions because the bacilli favor oxygen-rich areas of the lung.",
     "source": "handcrafted",
     "validated": true,
     "createdAt": "2026-03-27"
@@ -210,7 +210,7 @@
       }
     ],
     "difficulty": "easy",
-    "explanation": "The diagnosis is Helicobacter pylori. The presentation fits because a 6-month history of epigastric burning pain that worsens with fasting and is partially relieved by eating. Another key clue is that rapid urease test (CLO test) on antral biopsy returns positive. A further clue in the laboratory workup was it produces large amounts of urease, which allows it to survive in the acidic stomach by creating a protective ammonia cloud. Taken together, these case-specific findings support Helicobacter pylori.",
+    "explanation": "This is peptic ulcer disease due to Helicobacter pylori infection, demonstrated by a gastric ulcer on endoscopy and a positive rapid urease test on biopsy. The organism is the most likely cause given the clinical features and biopsy result. Epigastric pain that improves with food, a well defined gastric ulcer on the lesser curvature, a positive CLO test, and isolation of a curved microaerophilic, urease producing gram negative rod distinguish H. pylori from NSAID related or malignant ulcers. The patient’s epidemiologic background of growing up in a resource limited area also raises the pretest probability of H. pylori exposure. H. pylori’s high urease activity generates ammonia that buffers gastric acid and allows the organism to colonize the antral mucosa, and noninvasive testing such as urea breath testing or stool antigen can be used to confirm active infection.",
     "source": "handcrafted",
     "validated": true,
     "createdAt": "2026-03-27"
@@ -246,7 +246,7 @@
       }
     ],
     "difficulty": "easy",
-    "explanation": "The diagnosis is Borrelia burgdorferi. The presentation fits because in July with a 5-day history of fatigue, low-grade fever, and a painless expanding circular rash on his left thigh that started as a small red spot. Another key clue in the laboratory workup was if untreated, this infection can later cause unilateral or bilateral facial nerve palsy, carditis with AV block, or large-joint arthritis. A further clue is that it cannot be routinely cultured but is identified by serology or PCR. Taken together, these case-specific findings support Borrelia burgdorferi.",
+    "explanation": "This is early localized Lyme disease due to Borrelia burgdorferi, presenting with a classic expanding erythema migrans rash after an Ixodes tick bite in an endemic area. The diagnosis is primarily clinical at this stage. A painless, expanding circular rash with central clearing developing about a week to two weeks after a tick exposure in coastal New England is characteristic of erythema migrans and is much more specific for Lyme disease than for other tick borne infections. The epidemiology, seasonality, and typical progression to possible neurologic, cardiac, or arthritic complications further support B. burgdorferi as the causative spirochete. Borrelia burgdorferi is difficult to culture in routine labs so early localized disease is diagnosed clinically and serologic tests may be negative during the first few weeks after infection.",
     "source": "handcrafted",
     "validated": true,
     "createdAt": "2026-03-27"
@@ -282,7 +282,7 @@
       }
     ],
     "difficulty": "medium",
-    "explanation": "The diagnosis is Pseudomonas aeruginosa. The presentation fits because this organism is the most common life-limiting chronic airway pathogen in cystic fibrosis patients. Another key clue is that susceptibility testing shows resistance to all beta-lactams, fluoroquinolones, and aminoglycosides except colistin. A further clue is that the organism produces a blue-green pigment visible in the culture medium. Taken together, these case-specific findings support Pseudomonas aeruginosa.",
+    "explanation": "This is chronic pulmonary infection with Pseudomonas aeruginosa, demonstrated by a mucoid, oxidase positive, nonfermenting gram negative rod producing blue green pigment in a person with cystic fibrosis. The organism explains the progressive bronchiectasis and recurrent exacerbations. The combination of cystic fibrosis with a mucoid colony morphology, characteristic fruity odor, blue green pigment production, oxidase positivity, nonfermenting metabolism, and broad antibiotic resistance is diagnostic for Pseudomonas aeruginosa rather than other gram negative pathogens. The mucoid phenotype and biofilm formation account for persistent airway colonization despite prior treatments. Pseudomonas produces an alginate rich mucoid capsule that enables biofilm formation and chronic airway persistence, and it secretes pigments such as pyocyanin that contribute to virulence and the blue green colony color.",
     "source": "handcrafted",
     "validated": true,
     "createdAt": "2026-03-27"
@@ -318,7 +318,7 @@
       }
     ],
     "difficulty": "medium",
-    "explanation": "The diagnosis is Listeria monocytogenes. The presentation fits because a 3-day-old male neonate born at 36 weeks gestation is transferred to the NICU for fever (38.4°C), poor feeding, and irritability that began within hours of birth. Another key clue is that the organism is facultatively anaerobic and grows well at refrigeration temperatures (4°C), exhibiting characteristic tumbling motility. A further clue is that chest X-ray shows diffuse granulomatous infiltrates. Taken together, these case-specific findings support Listeria monocytogenes.",
+    "explanation": "Early-onset neonatal listeriosis causing sepsis and meningitis due to Listeria monocytogenes. Maternal febrile illness after eating soft cheese, a neonate with fever, CSF pleocytosis with high protein and low glucose, gram-positive rods, and an organism that grows at refrigeration temperatures with tumbling motility point specifically to Listeria rather than other gram-positive rods or typical neonatal pathogens. Listeria is a facultative intracellular, beta-hemolytic organism that can cross the placenta and is notable for growth at 4°C and characteristic tumbling motility.",
     "source": "handcrafted",
     "validated": true,
     "createdAt": "2026-03-27"
@@ -354,7 +354,7 @@
       }
     ],
     "difficulty": "medium",
-    "explanation": "The diagnosis is Rickettsia rickettsii. The presentation fits because in June with 4 days of high fever (40°C), severe headache, myalgias, and malaise. Another key clue is that blood cultures are negative. A further clue is that doxycycline must be started empirically without waiting for confirmatory serology - delays in treatment are associated with mortality. Taken together, these case-specific findings support Rickettsia rickettsii.",
+    "explanation": "Rocky Mountain spotted fever due to Rickettsia rickettsii presenting with severe febrile illness and a rash that begins on the wrists and ankles and spreads centrally. A recent tick exposure in summer, marked systemic toxicity with severe headache and myalgias, thrombocytopenia, hyponatremia, elevated transaminases, and a centrifugal rash starting on wrists and ankles fit an obligate intracellular rickettsial infection and distinguish it from viral exanthems or common bacterial infections. Rickettsia rickettsii targets endothelial cells causing vasculitis, which produces the characteristic peripheral-to-central rash and can lead to widespread organ dysfunction.",
     "source": "handcrafted",
     "validated": true,
     "createdAt": "2026-03-27"

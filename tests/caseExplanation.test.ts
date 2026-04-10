@@ -78,7 +78,7 @@ describe("case explanation builder", () => {
     );
   });
 
-  it("preserves educational stored explanations during normalization", () => {
+  it("preserves good stored explanations during normalization", () => {
     const explanation =
       "Bacillus cereus is the best fit because the abrupt vomiting-only illness after reheated rice points to the emetic toxin syndrome rather than an invasive enteric infection. The matching spore-forming Gram-positive rod in both stool and leftover food makes that interpretation much more specific than a generic food poisoning history alone. A useful teaching point is that the emetic form is driven by a preformed heat-stable toxin, which explains the very short incubation period.";
 
@@ -101,16 +101,22 @@ describe("case explanation builder", () => {
     expect(normalized.explanation).toBe(explanation);
   });
 
-  it("distinguishes educational explanations from fallback summaries", () => {
-    const educationalExplanation =
+  it("accepts both rich explanations and fluent fallback summaries", () => {
+    const richExplanation =
       "Bacillus cereus is the best fit because this abrupt vomiting-predominant illness began only a few hours after reheated rice, which points to the emetic toxin syndrome rather than invasive gastroenteritis. The growth of a spore-forming Gram-positive rod from the implicated food supports that interpretation and helps distinguish it from common viral foodborne illness. A useful teaching point is that B. cereus causes two classic syndromes, with the reheated-rice pattern reflecting a preformed heat-stable toxin.";
 
     expect(
-      isEducationalCaseExplanation(educationalExplanation, "bacillus-cereus")
+      isEducationalCaseExplanation(richExplanation, "bacillus-cereus")
     ).toBe(true);
     expect(
       isEducationalCaseExplanation(
         buildCaseExplanation("bacillus-cereus", bacillusCereusHints),
+        "bacillus-cereus"
+      )
+    ).toBe(true);
+    expect(
+      isEducationalCaseExplanation(
+        "Fulminant post-traumatic endophthalmitis after soil contamination, rapid progression despite.",
         "bacillus-cereus"
       )
     ).toBe(false);

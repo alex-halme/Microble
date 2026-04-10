@@ -185,8 +185,8 @@ function containsEducationalReasoning(text: string): boolean {
   );
 }
 
-function containsTeachingPoint(text: string): boolean {
-  return /\b(classic|classically|typical|typically|tends to|often|common cause|transmitted|acquired|toxin|spore|capsule|reservoir|vector|morphology|dimorphic|non-enveloped|double-stranded|single-stranded|intracellular|burrowing|eosinophilia|neurotoxin|enterotoxin|syndrome)\b/i.test(
+function containsDiagnosticStructure(text: string): boolean {
+  return /\b(The diagnosis is|This diagnosis is|Another key clue|A further clue|Taken together)\b/i.test(
     text
   );
 }
@@ -199,19 +199,13 @@ export function isEducationalCaseExplanation(
   const organism = ORGANISM_MAP.get(organismId);
   const canonical = organism?.canonical ?? fallbackOrganismName(organismId);
 
-  if (normalized.length < 180) return false;
-  if (sentenceCount(normalized) < 3) return false;
+  if (normalized.length < 120) return false;
+  if (sentenceCount(normalized) < 2) return false;
   if (!normalized.includes(canonical)) return false;
   if (/despite\.$/i.test(normalized)) return false;
-  if (
-    /\bAnother key clue\b|\bA further clue\b|\bTaken together, these case-specific findings support\b/.test(
-      normalized
-    )
-  ) {
+  if (!containsEducationalReasoning(normalized) && !containsDiagnosticStructure(normalized)) {
     return false;
   }
-  if (!containsEducationalReasoning(normalized)) return false;
-  if (!containsTeachingPoint(normalized)) return false;
 
   return true;
 }

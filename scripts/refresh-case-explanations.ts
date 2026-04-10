@@ -31,6 +31,19 @@ const targetArg = process.argv
   .slice(2)
   .find((arg) => arg.startsWith("--file="))
   ?.slice("--file=".length);
+const modelArg =
+  process.argv
+    .slice(2)
+    .find((arg) => arg.startsWith("--model="))
+    ?.slice("--model=".length) ?? "gpt-5-mini";
+
+function isFallbackTemplateExplanation(explanation: string): boolean {
+  return (
+    /\bAnother key clue\b/.test(explanation) ||
+    /\bA further clue\b/.test(explanation) ||
+    /Taken together, these case-specific findings support/.test(explanation)
+  );
+}
 
 function loadJsonFile(filePath: string): CaseLike[] {
   if (!fs.existsSync(filePath)) return [];
@@ -55,26 +68,26 @@ async function main() {
 
     const records = loadJsonFile(filePath);
     console.log(`Refreshing ${path.basename(filePath)} (${records.length} records)...`);
-    const inputs: ExplanationGenerationInput[] = records
-      .map((record) => {
-        const organismId = record.organismId ?? record.pathogenId;
-        if (!organismId || !Array.isArray(record.hints) || record.hints.length !== 5) {
-          return null;
-        }
-        if (
-          record.explanation &&
-          isEducationalCaseExplanation(record.explanation, organismId)
-        ) {
-          return null;
-        }
+    const inputs: ExplanationGenerationInput[] = [];
+    for (const record of records) {
+      const organismId = record.organismId ?? record.pathogenId;
+      if (!organismId || !Array.isArray(record.hints) || record.hints.length !== 5) {
+        continue;
+      }
+      if (
+        record.explanation &&
+        isEducationalCaseExplanation(record.explanation, organismId) &&
+        !isFallbackTemplateExplanation(record.explanation)
+      ) {
+        continue;
+      }
 
-        return {
-          id: record.id,
-          organismId,
-          hints: record.hints,
-        };
-      })
-      .filter((record): record is ExplanationGenerationInput => !!record);
+      inputs.push({
+        id: record.id,
+        organismId,
+        hints: record.hints,
+      });
+    }
     let changed = 0;
 
     let updated = [...records];
@@ -87,7 +100,7 @@ async function main() {
         )} (${start + 1}-${Math.min(start + chunk.length, inputs.length)} of ${inputs.length})`
       );
 
-      const generated = await generateEducationalExplanations(client, chunk);
+      const generated = await generateEducationalExplanations(client, chunk, modelArg);
 
       updated = updated.map((record) => {
         const organismId = record.organismId ?? record.pathogenId;
